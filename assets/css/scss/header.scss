@@ -36,14 +36,6 @@
 	}
 }
 
-ul.main-menu-level-1  > li  > a {
-	text-transform: uppercase;		
-	font-weight: 400;
-}
-ul.main-menu-level-2  > li > a {
-	display: none;
-}
-
 #main-menu-mobile {
 	position: absolute;
 	top: 0;
@@ -96,28 +88,6 @@ ul.main-menu-level-2  > li > a {
 	}
 }
 
-#nos-choix-menu-desktop {
-	li a {
-		border: 1px solid $gris_medium;
-		border-radius: 5px;
-		padding: 10px 14px;
-		transition: background 300ms ease-out;
-		&:hover {
-			background-color: $bleu;
-			border-color: $bleu;
-			color: #fff;
-		}
-	}
-}
-#lire-menu-desktop,
-#ecouter-menu-desktop,
-#visionner-menu-desktop {
-	li a {
-		color: #000;
-		font-weight: 700;
-	}
-}
-
 @media screen and (min-width:980px){
 	#panm360-ghost {
 		display: none;
@@ -156,23 +126,82 @@ ul.main-menu-level-2  > li > a {
 		position: static;
 		display: flex;
 		flex-wrap: nowrap;
+		align-items: stretch;
 		justify-content: flex-start;
-		ul.main-menu-level-1 {
-			> li {
-				padding: 0 1em;
-			}
-		}		
-	}
-	#sub-nav-desktop {
-		width: 100vw;
-		margin-left: -50vw;
-		margin-right: -50vw;
-		text-align: center;
-		
-		border: 1px solid red;
-		
+		text-transform: uppercase;		
+		font-weight: 400;
 		li {
-			display: inline-block;	
+			padding: 0 1em;
+
+			&:nth-child(-n+4){
+				a {
+					color: #000;
+					font-weight: 700;
+				}
+			}
+			//nos-choix
+			&:nth-child(1){
+				a {
+					border: 1px solid $gris_medium;
+					border-radius: 5px;
+					padding: 10px 14px;
+					transition: background 300ms ease-out;
+					color: $gris_medium;
+					font-weight: 400;
+					&:hover {
+						background-color: $bleu;
+						border-color: $bleu;
+						color: #fff;
+					}
+				}
+			}
 		}
 	}
+	#sub-nav-desktop {
+		
+		width: 100vw;
+		margin-left: calc( -100vw / 2 + 100% / 2);
+	    margin-right: calc( -100vw / 2 + 100% / 2);
+		max-width: 100vw;
+		text-align: center;
+		background-color: #333;
+		opacity: 0;
+		transition: opacity 300ms ease-out;
+		color: $gris_light_alt;
+		margin-top: 20px;
+		
+		div[class*='menu-'] {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			a::nth-child(1){
+				display: none;
+			}
+		}
+		a {
+			display: block;
+			padding: 15px 10px;
+			color: $gris_light_alt;
+			font-size: 0.9em;
+			text-decoration: none;
+			font-family: $rubik;
+			&:hover {
+				color: $gris_ultra_light;
+			}
+			
+			&.current-menu-item {
+				font-weight: 500;
+				color: #fff;
+			}
+		}
+		span {
+			display: inline-block;
+			padding: 0 10px;
+		}
+		&.active {
+			opacity: 1;
+			transition: opacity 300ms ease-out;
+		}
+	}
+
 }

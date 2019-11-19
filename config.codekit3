@@ -226,7 +226,7 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/assets/css/css/dev.css",
 		"oF": 0,
 		"oS": 0,
@@ -616,6 +616,22 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
+	"/inc/panm360_Walker-menu.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/panm360_Walker-menu.php",
+		"oF": 0
+		},
+	"/inc/panm360_Walker-submenu.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/panm360_Walker-submenu.php",
+		"oF": 0
+		},
 	"/inc/scripts.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -699,6 +715,25 @@
 		"oA": 0,
 		"oAP": "/page.php",
 		"oF": 0
+		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"/rtl.css": {
 		"aP": 1,

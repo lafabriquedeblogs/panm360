@@ -38,9 +38,9 @@
 					<?php echo main_menu_mobile();	?>
 				</div><!-- #desktop -->
 			
-				<div id="main-menu-desktop">
+				<ul id="main-menu-desktop">
 					<?php echo main_menu_desktop();?>
-				</div><!-- #desktop -->
+				</ul><!-- #desktop -->
 				
 			</nav><!-- #site-navigation -->
 		</div><!-- branding-navigation -->
