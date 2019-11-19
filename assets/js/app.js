@@ -8,7 +8,8 @@
 	let content = d.getElementById("content");
 	let colophon = d.getElementById("colophon");
 	let e, g, x, y;
-		
+	let _to_menu;
+	
 	function toggle_menu(){
 		menu_mobile.classList.toggle("open");
 		content.classList.toggle("abracadabra-fixed");
@@ -31,6 +32,10 @@
 		
 	}	
 	
+	function slide_menu( id ){
+		$("#sub-nav-desktop").slick("slickGoTo", id - 1 ,false);
+	}
+	
 	menu_toggle.addEventListener('click', event => {
 		menu_is_open = true;
 		toggle_menu();
@@ -42,7 +47,9 @@
 
 	$(document).ready(function(){
 		
-		let sub_menu_is_open = false;
+		var active_archive_menu_index = $("body.archive #main-menu-desktop .current-menu-ancestor").index();
+		 
+		console.log(active_archive_menu_index);
 		
 		$("#sub-nav-desktop").slick({
 			arrows:false,
@@ -56,23 +63,32 @@
 			
 			if( _index == 0) return;
 			
-			$(this).on("click", function(e){
+			$(this).on("click mouseover", function(e){
 				
 				e.preventDefault();
 				clearTimeout(_to_menu);
 				$("#sub-nav-desktop").addClass("active");
-				$("#sub-nav-desktop").slick("slickGoTo",_index - 1 ,false);
+				slide_menu( _index );
 			});
 		});
 		
-		let _to_menu;
-		
 		$("#masthead").on("mouseleave", function(e){
 			clearTimeout(_to_menu);
+			
+			console.log(active_archive_menu_index);
+			
+			if ( active_archive_menu_index > 0 ){
+				slide_menu( active_archive_menu_index );
+				return;	
+			}
+		
 			_to_menu = setTimeout(function(){
 				$("#sub-nav-desktop").removeClass("active");
-			}, 300);
+			}, 600);
 		});
+		
+		
+		slide_menu( active_archive_menu_index );
 		
 	});
 	reportWindowSize();
