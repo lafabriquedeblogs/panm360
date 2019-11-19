@@ -1,0 +1,178 @@
+#masthead {
+	//border: 1px solid red;
+}
+#panm360-ghost {
+	height: 85px;
+	width: 100%;
+}
+#site-navigation {
+	
+	position: fixed;
+	top:85px;
+	left: -100%;
+	width: 100%;
+	height: calc( 100% + 85px );
+	z-index: 5;
+	background-color: #fff;
+	overflow-y: scroll;
+	transition: left 300ms ease-out;
+	
+	font-family: $rubik;
+	font-size: 1em;
+	
+	ul, li {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	a {
+		color: $gris_dark;
+		text-decoration: none;
+	}
+	&.open {
+		left: 0;
+		transition: left 300ms ease-out;
+	}
+}
+
+ul.main-menu-level-1  > li  > a {
+	text-transform: uppercase;		
+	font-weight: 400;
+}
+ul.main-menu-level-2  > li > a {
+	display: none;
+}
+
+#main-menu-mobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	
+	font-size: 1.5em;
+	
+	li {
+		padding: 0 18px;
+	}
+	
+	ul.main-menu-level-1 {
+		margin-top: 1em;
+		> li > a {
+			font-weight: 700;
+		}
+	}
+	.sub-menu {
+		font-size: 0.85em;
+		a {
+			line-height: 1em;
+		}
+	}	
+}
+#main-menu-desktop{
+	position: absolute;
+	left: -999em;	
+}
+	
+.site-branding {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	height: 85px;
+	background-color: rgba(255,255,255,1);
+	width: 100%;
+	img {
+		position: absolute;
+		left: 18px;
+		top: 18px;
+	}
+	.menu-toggle {
+		position: absolute;
+		top: 18px;
+		right: 18px;
+		z-index: 4;
+	}
+}
+
+#nos-choix-menu-desktop {
+	li a {
+		border: 1px solid $gris_medium;
+		border-radius: 5px;
+		padding: 10px 14px;
+		transition: background 300ms ease-out;
+		&:hover {
+			background-color: $bleu;
+			border-color: $bleu;
+			color: #fff;
+		}
+	}
+}
+#lire-menu-desktop,
+#ecouter-menu-desktop,
+#visionner-menu-desktop {
+	li a {
+		color: #000;
+		font-weight: 700;
+	}
+}
+
+@media screen and (min-width:980px){
+	#panm360-ghost {
+		display: none;
+	}
+	.site-branding {
+		position: static;
+		padding: 0;
+		width: auto;
+		height: auto;
+		background-color: transparent;
+		img {
+			position: static;
+		}
+		.menu-toggle {
+			top: -999em;;
+			right: -999em;
+		}
+	}
+	#branding-navigation{
+		display: flex;
+		align-items: center;
+	}
+
+	#site-navigation {
+		position: static;
+		width: auto;
+		height: auto;
+		background-color: transparent;
+		overflow: visible;
+	}
+	#main-menu-mobile{
+		position: absolute;
+		left: -999em;
+	}
+	#main-menu-desktop{
+		position: static;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		ul.main-menu-level-1 {
+			> li {
+				padding: 0 1em;
+			}
+		}		
+	}
+	#sub-nav-desktop {
+		width: 100vw;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		text-align: center;
+		
+		border: 1px solid red;
+		
+		li {
+			display: inline-block;	
+		}
+	}
+}
