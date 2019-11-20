@@ -10,6 +10,7 @@ html,body{
 
 h1, h2,h3,h4,h5.h6 {
 	font-family: $rubik;
+	font-weight: 500;
 	margin: 0 0 1em;
 }
 
@@ -39,4 +40,8 @@ ul {
 p {
 	padding: 0;
 	margin: 0 0 2em 0;
+}
+
+h1.category-title {
+	text-transform: uppercase;	
 }
