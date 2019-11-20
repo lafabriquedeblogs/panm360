@@ -1,0 +1,33 @@
+#main-menu-mobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	
+	font-size: 1.5em;
+	
+	li {
+		padding: 0 18px;
+	}
+	
+	ul.main-menu-level-1 {
+		margin-top: 1em;
+		> li > a {
+			font-weight: 700;
+		}
+	}
+	.sub-menu {
+		font-size: 0.85em;
+		a {
+			line-height: 1em;
+		}
+	}	
+}
+
+@media screen and (min-width:980px){
+	#main-menu-mobile{
+		position: absolute;
+		left: -999em;
+	}	
+}
