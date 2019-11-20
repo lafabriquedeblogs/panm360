@@ -276,8 +276,9 @@ class panm360_Walker_sub_menu extends Walker_Nav_Menu {
 
 } // Walker_Nav_Menu
 ?>
-
+<svg id="triangle" class="icon"><use xlink:href="#ic_play"></use></svg>
 <div id="sub-nav-desktop">
+	
 	<?php
 		$menu = wp_nav_menu( array(
 			'menu' => 2,

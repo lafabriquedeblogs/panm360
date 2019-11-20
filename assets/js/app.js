@@ -12,6 +12,9 @@
 	let close_searchform = d.getElementById("close-searchform");
 	let e, g, x, y;
 	let _to_menu;
+	let triangle = d.getElementById("triangle");
+	let triangle_x = -20;
+	let active_archive_menu;
 	
 	function toggle_menu(){
 		menu_mobile.classList.toggle("open");
@@ -33,12 +36,21 @@
 			colophon.classList.remove("abracadabra-fixed");
 		}
 		
+		get_element_offsetx( active_archive_menu );
 	}	
 	
 	function slide_menu( id ){
 		$("#sub-nav-desktop").slick("slickGoTo", id - 1 ,false);
 	}
 	
+	function get_element_offsetx( el ){
+		let _x = el.offset().left;
+		let _ow = el.outerWidth(true) / 2;
+		
+		triangle_x = _x + _ow;
+			
+		jQuery(triangle).css("left",triangle_x + "px");		
+	}
 	/*
 		----------------------------------------------------------------------------------------------------
 	*/
@@ -49,11 +61,13 @@
 	});
 	
 	loupe_search.addEventListener('click', event => {
-			search_div.classList.toggle('active');
+		search_div.classList.toggle('active');
 	});
+	
 	close_searchform.addEventListener('click', event => {
-			search_div.classList.remove('active');
+		search_div.classList.remove('active');
 	});
+	
 	w.addEventListener('resize', event => {
 		 reportWindowSize();
 	});
@@ -64,10 +78,9 @@
 	
 	$(document).ready(function(){
 		
+		active_archive_menu = $("body.archive #main-menu-desktop .current-menu-ancestor a");
 		var active_archive_menu_index = $("body.archive #main-menu-desktop .current-menu-ancestor").index();
-		 
-		console.log(active_archive_menu_index);
-		
+		 		
 		$("#sub-nav-desktop").slick({
 			arrows:false,
 			vertical: true,
@@ -90,12 +103,12 @@
 		});
 		
 		$("#masthead").on("mouseleave", function(e){
+		
 			clearTimeout(_to_menu);
-			
-			console.log(active_archive_menu_index);
-			
+					
 			if ( active_archive_menu_index > 0 ){
 				slide_menu( active_archive_menu_index );
+				get_element_offsetx( active_archive_menu );
 				return;	
 			}
 		
@@ -104,11 +117,17 @@
 			}, 600);
 		});
 		
+		$("#main-menu-desktop a").on("mousemove",function(e){
+			let _ok = $(e.target).parent().index();
+			console.log(_ok);
+			
+			if( _ok <= 0 ) return;
+			get_element_offsetx( $(e.target) );
+		});	
 		
 		slide_menu( active_archive_menu_index );
+		get_element_offsetx( active_archive_menu );
 		reportWindowSize();
+	
 	});
-	
-	
-	
 })( jQuery, document , window );
