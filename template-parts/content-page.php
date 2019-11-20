@@ -21,7 +21,7 @@
 	<?php //panm360_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<?phpthe_content();?>
+		<?php the_content();?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
