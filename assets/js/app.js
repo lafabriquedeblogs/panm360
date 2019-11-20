@@ -7,6 +7,9 @@
 	let menu_mobile_open = d.querySelector("#site-navigation.open");
 	let content = d.getElementById("content");
 	let colophon = d.getElementById("colophon");
+	let loupe_search = d.querySelector("#panm-search a");
+	let search_div = d.getElementById("searchform");
+	let close_searchform = d.getElementById("close-searchform");
 	let e, g, x, y;
 	let _to_menu;
 	
@@ -36,11 +39,20 @@
 		$("#sub-nav-desktop").slick("slickGoTo", id - 1 ,false);
 	}
 	
+	/*
+		----------------------------------------------------------------------------------------------------
+	*/
 	menu_toggle.addEventListener('click', event => {
 		menu_is_open = true;
 		toggle_menu();
 	});
 	
+	loupe_search.addEventListener('click', event => {
+			search_div.classList.toggle('active');
+	});
+	close_searchform.addEventListener('click', event => {
+			search_div.classList.remove('active');
+	});
 	w.addEventListener('resize', event => {
 		 reportWindowSize();
 	});
