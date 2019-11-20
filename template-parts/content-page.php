@@ -7,6 +7,15 @@
  * @package panm360
  */
 
+/*
+	
+wp db export local.sql;
+wp search-replace 'panm.test' 'panm.lafabriquedeblogs.dev' --all-tables --precise;
+wp db export dev.sql;
+wp db reset --yes;
+wp db import local.sql;
+*/
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
