@@ -124,7 +124,7 @@ function wps_deregister_styles() {
 }
 
 function panm360_wp_body_open(){
-	include_once( "assets/img/svg/sprite-top-nav.svg");
+	include_once( "assets/img/svg/panm360_sprite.svg");
 
 }
 add_action( 'wp_body_open', 'panm360_wp_body_open' );

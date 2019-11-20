@@ -203,7 +203,7 @@
 		},
 	"/assets/css/main.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -220,8 +220,8 @@
 		"oF": 0
 		},
 	"/assets/css/scss/dev.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -233,8 +233,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/footer.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -246,8 +246,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/general.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -259,8 +259,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/grid.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -272,8 +272,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/header.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -285,8 +285,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/header/menu_desktop.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -298,8 +298,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/header/menu_mobile.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -311,8 +311,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/header/menu_top.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -324,8 +324,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/header/searchform.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -337,8 +337,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/header/submenu_desktop.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -363,8 +363,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/main_menu.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -376,8 +376,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/normalize.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -389,8 +389,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/reset.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -402,8 +402,8 @@
 		"uL": 1
 		},
 	"/assets/css/scss/variables.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -458,51 +458,111 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/img/svg/eject.svg": {
+	"/assets/img/svg/icons/eject.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/svg/eject.svg",
+		"oAP": "/assets/img/svg/icons/eject.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/assets/img/svg/fingerprint.svg": {
+	"/assets/img/svg/icons/fingerprint.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/svg/fingerprint.svg",
+		"oAP": "/assets/img/svg/icons/fingerprint.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/assets/img/svg/microphone.svg": {
+	"/assets/img/svg/icons/microphone.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/svg/microphone.svg",
+		"oAP": "/assets/img/svg/icons/microphone.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/assets/img/svg/search.svg": {
+	"/assets/img/svg/icons/rss.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/svg/search.svg",
+		"oAP": "/assets/img/svg/icons/rss.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/assets/img/svg/sprite-top-nav.svg": {
+	"/assets/img/svg/icons/search.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/svg/sprite-top-nav.svg",
+		"oAP": "/assets/img/svg/icons/search.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/icons/soundcloud.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/icons/soundcloud.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/icons/spotify.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/icons/spotify.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/icons/twitter.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/icons/twitter.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/icons/vimeo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/icons/vimeo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/icons/youtube.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/icons/youtube.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/panm360_sprite.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/panm360_sprite.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -601,7 +661,7 @@
 		},
 	"/assets/vendor/slick/slick-theme.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -626,8 +686,8 @@
 		"sU": 0
 		},
 	"/assets/vendor/slick/slick-theme.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -640,7 +700,7 @@
 		},
 	"/assets/vendor/slick/slick.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -687,8 +747,8 @@
 		"tS": 1
 		},
 	"/assets/vendor/slick/slick.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -789,7 +849,7 @@
 		},
 	"/layouts/content-sidebar.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -799,7 +859,7 @@
 		},
 	"/layouts/sidebar-content.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -844,7 +904,7 @@
 		},
 	"/rtl.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -889,7 +949,7 @@
 		},
 	"/style.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -975,7 +1035,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"allowInjectionReloads": 0,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,
@@ -2824,7 +2884,7 @@
 		"createSourceMap": 0,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 0
+		"shouldRunBless": 1
 		},
 	"languageDefaultsGIF": {
 		"autoOutputAction": 0,
@@ -2975,8 +3035,8 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
 		"useLibsass": 1
 		},
 	"languageDefaultsSLIM": {

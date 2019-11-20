@@ -42,6 +42,7 @@
 	/*
 		----------------------------------------------------------------------------------------------------
 	*/
+	
 	menu_toggle.addEventListener('click', event => {
 		menu_is_open = true;
 		toggle_menu();
@@ -57,6 +58,10 @@
 		 reportWindowSize();
 	});
 
+	/*
+		----------------------------------------------------------------------------------------------------
+	*/
+	
 	$(document).ready(function(){
 		
 		var active_archive_menu_index = $("body.archive #main-menu-desktop .current-menu-ancestor").index();
@@ -101,9 +106,9 @@
 		
 		
 		slide_menu( active_archive_menu_index );
-		
+		reportWindowSize();
 	});
-	reportWindowSize();
+	
 	
 	
 })( jQuery, document , window );
