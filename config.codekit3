@@ -393,6 +393,56 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/svg/eject.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/eject.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/fingerprint.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/fingerprint.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/microphone.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/microphone.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/search.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/search.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/sprite-top-nav.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/sprite-top-nav.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -616,22 +666,6 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
-	"/inc/panm360_Walker-menu.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/inc/panm360_Walker-menu.php",
-		"oF": 0
-		},
-	"/inc/panm360_Walker-submenu.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/inc/panm360_Walker-submenu.php",
-		"oF": 0
-		},
 	"/inc/scripts.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -828,6 +862,38 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/content.php",
+		"oF": 0
+		},
+	"/template-parts/menus/menu-main-desktop.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/menus/menu-main-desktop.php",
+		"oF": 0
+		},
+	"/template-parts/menus/menu-main-mobile.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/menus/menu-main-mobile.php",
+		"oF": 0
+		},
+	"/template-parts/menus/menu-submenu-desktop.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/menus/menu-submenu-desktop.php",
+		"oF": 0
+		},
+	"/template-parts/menus/menu-top.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/menus/menu-top.php",
 		"oF": 0
 		}
 	},

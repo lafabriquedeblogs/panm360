@@ -7,6 +7,7 @@
  * @package panm360
  */
 
+
 if ( ! function_exists( 'panm360_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -121,15 +122,14 @@ add_action( 'widgets_init', 'panm360_widgets_init' );
 function wps_deregister_styles() {
     wp_dequeue_style( 'wp-block-library' );
 }
-/**
- * Custom template tags for this theme.
- */
+
+function panm360_wp_body_open(){
+	include_once( "assets/img/svg/sprite-top-nav.svg");
+
+}
+add_action( 'wp_body_open', 'panm360_wp_body_open' );
+
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/taxonomies.php';
 require get_template_directory() . '/inc/scripts.php';

@@ -275,3 +275,55 @@ class panm360_Walker_sub_menu extends Walker_Nav_Menu {
 	}
 
 } // Walker_Nav_Menu
+?>
+
+<div id="sub-nav-desktop">
+	<?php
+		$menu = wp_nav_menu( array(
+			'menu' => 2,
+			//'container' => '',
+			'depth' => 2,
+			'echo' => false,
+			'items_wrap' => '%3$s',
+			'walker' => new panm360_Walker_sub_menu()
+		) );
+		$menu .= wp_nav_menu( array(
+			'menu' => 286,
+			//'container' => '',
+			'depth' => 0,
+			'echo' => false,
+			'items_wrap' => '%3$s',
+		
+			'walker' => new panm360_Walker_sub_menu()
+		) );
+		$menu .= wp_nav_menu( array(
+			'menu' => 284,
+			//'container' => '',
+			'depth' => 0,
+			'echo' => false,
+			'items_wrap' => '%3$s',
+		
+			'walker' => new panm360_Walker_sub_menu()
+		) );
+		$menu .= wp_nav_menu( array(
+			'menu' => 287,
+			//'container' => '',
+			'depth' => 0,
+			'echo' => false,
+			'items_wrap' => '%3$s',
+		
+			'walker' => new panm360_Walker_sub_menu()
+		) );
+		$menu .= wp_nav_menu( array(
+			'menu' => 285,
+			//'container' => '',
+			'depth' => 0,
+			'echo' => false,
+			'items_wrap' => '%3$s',
+		
+			'walker' => new panm360_Walker_sub_menu()
+		) );
+		
+		echo $menu;		
+	?>
+</div>

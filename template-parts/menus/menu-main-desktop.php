@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Nav Menu API: Walker_Nav_Menu class
  *
@@ -274,3 +275,75 @@ class panm360_Walker extends Walker_Nav_Menu {
 	}
 
 } // Walker_Nav_Menu
+	
+?>
+
+<ul id="main-menu-desktop">
+	<?php
+
+	$menu = wp_nav_menu( array(
+		'menu' => 290,
+		'menu_id' => 'nos-choix-menu-desktop',
+		'menu_class' => 'main-menu-level-1',
+		'container' => '',
+		'depth' => 1,
+		'echo' => false,
+		'items_wrap' => '%3$s',
+		'walker' => new panm360_Walker()
+	) );
+
+	$menu .= wp_nav_menu( array(
+		'menu' => 2,
+		'menu_id' => 'lire-menu-desktop',
+		'menu_class' => 'main-menu-level-1',
+		'container' => '',
+		'depth' => 1,
+		'echo' => false,
+		'items_wrap' => '%3$s',
+		'walker' => new panm360_Walker()
+	) );
+	$menu .= wp_nav_menu( array(
+		'menu' => 286,
+		'menu_id' => 'ecouter-menu-desktop',
+		'menu_class' => 'main-menu-level-1',
+		'container' => '',
+		'depth' => 1,
+		'echo' => false,
+		'items_wrap' => '%3$s',
+		'walker' => new panm360_Walker()
+	) );
+	$menu .= wp_nav_menu( array(
+		'menu' => 284,
+		'menu_id' => 'visionner-menu-desktop',
+		'menu_class' => 'main-menu-level-1',
+		'container' => '',
+		'depth' => 1,
+		'echo' => false,
+		'items_wrap' => '%3$s',
+		'walker' => new panm360_Walker()
+	) );
+	$menu .= wp_nav_menu( array(
+		'menu' => 287,
+		'menu_id' => 'apprendre-menu-desktop',
+		'menu_class' => 'main-menu-level-1',
+		'container' => '',
+		'depth' => 1,
+		'echo' => false,
+		'items_wrap' => '%3$s',
+		'walker' => new panm360_Walker()
+	) );
+	$menu .= wp_nav_menu( array(
+		'menu' => 285,
+		'menu_id' => 'participer-menu-desktop',
+		'menu_class' => 'main-menu-level-1',
+		'container' => '',
+		'depth' => 1,
+		'echo' => false,
+		'items_wrap' => '%3$s',
+		'walker' => new panm360_Walker()
+	) );
+	
+	echo $menu;		
+		
+	?>
+</ul><!-- #desktop -->

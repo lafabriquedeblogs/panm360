@@ -24,3 +24,8 @@ a {
 	height: 1px;
 	opacity: 0;
 }
+
+.hidden {
+	position: absolute;
+	left: -999em;
+}

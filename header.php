@@ -21,12 +21,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'panm360' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		
-		<?php wp_nav_menu(array('menu' => 288)); ?>
+		<?php get_template_part( 'template-parts/menus/menu','top' ); ?>
 		
 		<div id="branding-navigation">
 			<div class="site-branding">
@@ -35,22 +36,16 @@
 			</div><!-- .site-branding -->
 			
 			<nav id="site-navigation" class="main-navigation-desktop">
-				
-				<div id="main-menu-mobile">
-					<?php echo main_menu_mobile();	?>
-				</div><!-- #desktop -->
-			
-				<ul id="main-menu-desktop">
-					<?php echo main_menu_desktop();?>
-				</ul><!-- #desktop -->
-				
+				<?php get_template_part( 'template-parts/menus/menu','main-mobile' ); ?>
+				<?php get_template_part( 'template-parts/menus/menu','main-desktop' ); ?>
 			</nav><!-- #site-navigation -->
+
 		</div><!-- branding-navigation -->
-		<div id="sub-nav-desktop">
-			<?php echo main_sub_menu_desktop();?>
-		</div>	
 		
+		<?php get_template_part( 'template-parts/menus/menu','submenu-desktop' ); ?>
+
 	</header><!-- #masthead -->
+	
 	<div id="panm360-ghost"></div>
 
 	<div id="content" class="site-content">
