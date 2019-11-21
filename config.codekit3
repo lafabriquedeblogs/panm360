@@ -468,6 +468,26 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/svg/icons/eye.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/icons/eye.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/svg/icons/eye_gris.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/svg/icons/eye_gris.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/svg/icons/fingerprint.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -590,7 +610,7 @@
 		"bF": 6,
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "/assets/js/min/app-min.js",
 		"oF": 0,

@@ -15,6 +15,8 @@
 	let triangle = d.getElementById("triangle");
 	let triangle_x = -20;
 	let active_archive_menu;
+	let mouse_noving_on_header = false;
+	let archive_is_defined = d.querySelector(".archive");
 	
 	function toggle_menu(){
 		menu_mobile.classList.toggle("open");
@@ -36,21 +38,25 @@
 			colophon.classList.remove("abracadabra-fixed");
 		}
 		
-		get_element_offsetx( active_archive_menu );
+		move_triangle_subnav_offset_x( active_archive_menu );
 	}	
 	
-	function slide_menu( id ){
+	function go_to_slide_menu( id ){
 		$("#sub-nav-desktop").slick("slickGoTo", id - 1 ,false);
 	}
 	
-	function get_element_offsetx( el ){
+	function move_triangle_subnav_offset_x( el ){
+			
+		if( ! x < 980 && !mouse_noving_on_header && !archive_is_defined) return;	
+		 
 		let _x = el.offset().left;
 		let _ow = el.outerWidth(true) / 2;
 		
 		triangle_x = _x + _ow;
-			
+		
 		jQuery(triangle).css("left",triangle_x + "px");		
 	}
+	
 	/*
 		----------------------------------------------------------------------------------------------------
 	*/
@@ -98,7 +104,7 @@
 				e.preventDefault();
 				clearTimeout(_to_menu);
 				$("#sub-nav-desktop").addClass("active");
-				slide_menu( _index );
+				go_to_slide_menu( _index );
 			});
 		});
 		
@@ -107,27 +113,29 @@
 			clearTimeout(_to_menu);
 					
 			if ( active_archive_menu_index > 0 ){
-				slide_menu( active_archive_menu_index );
-				get_element_offsetx( active_archive_menu );
+				go_to_slide_menu( active_archive_menu_index );
+				move_triangle_subnav_offset_x( active_archive_menu );
 				return;	
 			}
 		
 			_to_menu = setTimeout(function(){
 				$("#sub-nav-desktop").removeClass("active");
-			}, 600);
+				$(triangle).css("left","-20px");
+			}, 100);
 		});
 		
 		$("#main-menu-desktop a").on("mousemove",function(e){
 			let _ok = $(e.target).parent().index();
-			console.log(_ok);
+			mouse_noving_on_header = true;
 			
 			if( _ok <= 0 ) return;
-			get_element_offsetx( $(e.target) );
+			move_triangle_subnav_offset_x( $(e.target) );
 		});	
 		
-		slide_menu( active_archive_menu_index );
-		get_element_offsetx( active_archive_menu );
 		reportWindowSize();
+		go_to_slide_menu( active_archive_menu_index );
+		move_triangle_subnav_offset_x( active_archive_menu );
+		
 	
 	});
 })( jQuery, document , window );
