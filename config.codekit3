@@ -829,6 +829,14 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
+	"/inc/customs_posts_types.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/customs_posts_types.php",
+		"oF": 0
+		},
 	"/inc/scripts.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -884,26 +892,6 @@
 		"oA": 0,
 		"oAP": "/languages/readme.txt",
 		"oF": 0
-		},
-	"/layouts/content-sidebar.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/layouts/content-sidebar-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/layouts/sidebar-content.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/layouts/sidebar-content-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/local.sql": {
 		"cB": 0,

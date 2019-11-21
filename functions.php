@@ -131,6 +131,7 @@ add_action( 'wp_body_open', 'panm360_wp_body_open' );
 
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
+require get_template_directory() . '/inc/customs_posts_types.php';
 require get_template_directory() . '/inc/taxonomies.php';
 require get_template_directory() . '/inc/scripts.php';
 
