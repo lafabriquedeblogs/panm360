@@ -62,6 +62,7 @@ h1.category-title {
 .element {
 	margin-bottom: 36px;
 	a {
+		text-decoration: none;
 		font-family: $rubik;
 		&:hover {
 			text-decoration: underline;
@@ -100,13 +101,13 @@ h1.category-title {
 	font-weight: 500;
 	color: #000;
 }
+
 .author {
 	font-size: 0.625em;
 }
 
 .album{
 	text-align: center;
-	//padding-bottom: 34px;
 	.genre {
 		margin-top: 20px;
 	}
