@@ -62,7 +62,8 @@
 	*/
 	
 	menu_toggle.addEventListener('click', event => {
-		menu_is_open = true;
+		event.preventDefault();
+		//menu_is_open = true;
 		toggle_menu();
 	});
 	

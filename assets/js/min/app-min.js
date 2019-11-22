@@ -65,7 +65,8 @@
 
 
 	  menu_toggle.addEventListener('click', function (event) {
-	    menu_is_open = true;
+	    event.preventDefault(); //menu_is_open = true;
+
 	    toggle_menu();
 	  });
 	  loupe_search.addEventListener('click', function (event) {

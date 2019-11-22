@@ -11,7 +11,33 @@
 		margin-top: 28px;
 	}
 }
+@media (min-width: 535px){
+	.section-content--albums {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;		
+	}
+	.section-content--interviews {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		> * {
+			max-width: calc( 50% - 18px);
+		}
+	}
+	.section-content--panm-at-sat {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		> * {
+			max-width: calc( 50% - 18px);
+		}		
+	}
 
+}
 @media screen and (min-width: 600px){
 	
 	#primary, #masthead{
@@ -45,4 +71,45 @@
 	.wp-block-column:not(:first-child) {
     	margin-left: 36px;
 	}
+	.section-content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		> * {
+			//border: 1px #ccc solid;
+		}
+		a {
+			text-decoration: none;
+		}
+		.aside {
+			width: 100%;
+			max-width:calc( 50% - 18px);
+		}
+	}	
+	.section-content--albums {
+		max-width: calc( 50% - 18px);
+	}
+
+}
+@media (min-width: 980px){
+	.section-content {
+		.aside {
+			width: 100%;
+			max-width: 31.3%;
+		}
+	}
+	.section-content--albums {
+		max-width: 65.7%;
+	}
+	.section-content--interviews {
+		> * {
+			max-width: 31.5%;
+		}
+	}
+	.section-content--panm-at-sat {
+		> * {
+			max-width: 23%;
+		}		
+	}	
 }

@@ -9,12 +9,28 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/2019-11-21-1705.sql": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/2019-11-21-1705.sql",
+		"oF": 0
+		},
 	"/404.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/404.php",
+		"oF": 0
+		},
+	"/accueil.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/accueil.php",
 		"oF": 0
 		},
 	"/archive.php": {
@@ -398,6 +414,19 @@
 		"oA": 1,
 		"oAP": "/assets/css/css/reset.css",
 		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/css/scss/slider_home.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/css/css/slider_home.css",
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
@@ -999,6 +1028,14 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/template-parts/accueil/accueil-slider_home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/accueil/accueil-slider_home.php",
+		"oF": 0
+		},
 	"/template-parts/content-none.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1061,6 +1098,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/menus/menu-top.php",
+		"oF": 0
+		},
+	"/template-parts/modules/element-album.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/element-album.php",
+		"oF": 0
+		},
+	"/template-parts/modules/element-article.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/element-article.php",
 		"oF": 0
 		}
 	},
