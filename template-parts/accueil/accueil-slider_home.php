@@ -11,7 +11,7 @@
 				<p class="author">par: <a href="">Alain Brunet</a></p>
 			</div>
 			<div>
-				<img src="/dev/img/image-featured-home-slider-dev.png" />
+				<img src="/dev/img/image-featured-home-slider-dev.png"  alt="title"/>
 			</div>
 		</div>
 		

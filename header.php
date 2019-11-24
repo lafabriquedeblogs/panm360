@@ -35,7 +35,7 @@
 		
 		<div id="branding-navigation">
 			<div class="site-branding">
-				<a href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png" /></a>
+				<a href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="Panm360"/></a>
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'panm360' ); ?></button>
 			</div><!-- .site-branding -->
 			

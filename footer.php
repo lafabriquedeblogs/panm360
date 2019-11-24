@@ -52,7 +52,7 @@
 		
 		<div id="panm_360_infos">
 			
-			<a id="logo-footer" href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png" /></a>
+			<a id="logo-footer" href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="panm360"/></a>
 			
 			<ul id="menu-infos">
 				<?php
@@ -65,34 +65,40 @@
 			</ul>
 			
 			<ul id="menu-socials">
-				<li id="twitter">
+				<li class="twitter">
 					<a href="https://twitter.com">
 						<svg class="icon"><use xlink:href="#twitter"></use></svg>
+						<span class="screen-reader-text">Twitter</span>
 					</a>
 				</li>
-				<li id="youtube">
+				<li class="youtube">
 					<a href="https://youtube.com">
 						<svg class="icon"><use xlink:href="#youtube"></use></svg>
+						<span class="screen-reader-text">Youtube</span>
 					</a>
 				</li>
-				<li id="rss">
+				<li class="rss">
 					<a href="#">
 						<svg class="icon"><use xlink:href="#rss"></use></svg>
+						<span class="screen-reader-text">RSS</span>
 					</a>
 				</li>
-				<li id="vimeo">
+				<li class="vimeo">
 					<a href="#">
 						<svg class="icon"><use xlink:href="#vimeo"></use></svg>
+						<span class="screen-reader-text">Vimeo</span>
 					</a>
 				</li>
-				<li id="soundcloud">
+				<li class="soundcloud">
 					<a href="#">
 						<svg class="icon"><use xlink:href="#soundcloud"></use></svg>
+						<span class="screen-reader-text">Soundcloud</span>
 					</a>
 				</li>
-				<li id="spotify">
+				<li class="spotify">
 					<a href="#">
 						<svg class="icon"><use xlink:href="#spotify"></use></svg>
+						<span class="screen-reader-text">Spotify</span>
 					</a>
 				</li>
 			</ul>

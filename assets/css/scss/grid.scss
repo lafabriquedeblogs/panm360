@@ -82,7 +82,7 @@
 		a {
 			text-decoration: none;
 		}
-		.aside {
+		.aside-content {
 			width: 100%;
 			max-width:calc( 50% - 18px);
 		}
@@ -94,7 +94,7 @@
 }
 @media (min-width: 980px){
 	.section-content {
-		.aside {
+		.aside-content {
 			width: 100%;
 			max-width: 31.3%;
 		}

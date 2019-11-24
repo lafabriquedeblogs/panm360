@@ -1,6 +1,6 @@
 <div class="article element">
 	<div class="picture">
-		<a href=""><img src="/dev/img/sample-article.png" width="500" height="500" /></a>
+		<a href=""><img src="/dev/img/sample-article.png" width="500" height="500"  alt="title"/></a>
 	</div>
 	<div class="details">
 		<span class="element-title album-title"><a href="">Title</a></span>
