@@ -55,11 +55,11 @@
 			border: 0;
 			background-color: $bleu;
 			text-indent: -999em;
-			background: $bleu url('../img/svg/icons/eye.svg') center center no-repeat;
+			background: $bleu url('/wp-content/themes/panm360/assets/img/svg/icons/eye.svg') center center no-repeat;
 			background-size: 30px 30px;
 			cursor: pointer;
 			&:hover {
-				background: $bleu url('../img/svg/icons/eye_gris.svg') center center no-repeat;
+				background: $bleu url('/wp-content/themes/panm360/assets/img/svg/icons/eye_gris.svg') center center no-repeat;
 				background-size: 30px 30px;
 			}
 		}

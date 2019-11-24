@@ -49,26 +49,6 @@
 		"oAP": "/archive.php",
 		"oF": 0
 		},
-	"/assets/css/css/elements.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/css/css/elements-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/css/css/slider_home.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/css/css/slider_home-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/assets/css/fonts/Open_Sans/LICENSE.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -244,6 +224,16 @@
 		"oA": 0,
 		"oAP": "/assets/css/fonts/Rubik/Rubik-Regular.ttf",
 		"oF": 0
+		},
+	"/assets/css/header.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/css/header-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/assets/css/main.css": {
 		"aP": 1,
