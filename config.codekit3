@@ -25,14 +25,6 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
-	"/accueil.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/accueil.php",
-		"oF": 0
-		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -113,151 +105,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/img/svg/icons/eject.svg": {
+	"/assets/img/panm360_sprite.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/svg/icons/eject.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/eye.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/eye.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/eye_gris.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/eye_gris.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/fingerprint.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/fingerprint.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/fleche-droite.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/fleche-droite.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/ic_play_arrow_24px.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/ic_play_arrow_24px.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/microphone.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/microphone.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/rss.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/rss.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/search.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/search.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/soundcloud.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/soundcloud.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/spotify.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/spotify.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/twitter.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/twitter.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/vimeo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/vimeo.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/icons/youtube.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/icons/youtube.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/img/svg/panm360_sprite.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/svg/panm360_sprite.svg",
+		"oAP": "/assets/img/panm360_sprite.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -520,6 +372,14 @@
 		"oAP": "/languages/readme.txt",
 		"oF": 0
 		},
+	"/page-accueil.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-accueil.php",
+		"oF": 0
+		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -608,402 +468,244 @@
 		"oAP": "/src/2019-11-22-1548.sql",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/LICENSE.txt": {
+	"/src/2019-11-24-1640.sql": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/LICENSE.txt",
+		"oAP": "/src/2019-11-24-1640.sql",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-Bold.ttf": {
+	"/src/fonts/Open_Sans/LICENSE.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-Bold.ttf",
+		"oAP": "/src/fonts/Open_Sans/LICENSE.txt",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-BoldItalic.ttf": {
+	"/src/fonts/Open_Sans/OpenSans-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-BoldItalic.ttf",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-Bold.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-ExtraBold.ttf": {
+	"/src/fonts/Open_Sans/OpenSans-BoldItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-BoldItalic.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf": {
+	"/src/fonts/Open_Sans/OpenSans-ExtraBold.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-ExtraBold.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-Italic.ttf": {
+	"/src/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-Italic.ttf",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-Light.ttf": {
+	"/src/fonts/Open_Sans/OpenSans-Italic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-Light.ttf",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-Italic.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-LightItalic.ttf": {
+	"/src/fonts/Open_Sans/OpenSans-Light.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-LightItalic.ttf",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-Light.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-Regular.ttf": {
+	"/src/fonts/Open_Sans/OpenSans-LightItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-Regular.ttf",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-LightItalic.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-SemiBold.ttf": {
+	"/src/fonts/Open_Sans/OpenSans-Regular.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-SemiBold.ttf",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-Regular.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf": {
+	"/src/fonts/Open_Sans/OpenSans-SemiBold.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-SemiBold.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/OFL.txt": {
+	"/src/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/OFL.txt",
+		"oAP": "/src/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-Black.ttf": {
+	"/src/fonts/Rubik/OFL.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-Black.ttf",
+		"oAP": "/src/fonts/Rubik/OFL.txt",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-BlackItalic.ttf": {
+	"/src/fonts/Rubik/Rubik-Black.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-BlackItalic.ttf",
+		"oAP": "/src/fonts/Rubik/Rubik-Black.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-Bold.ttf": {
+	"/src/fonts/Rubik/Rubik-BlackItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-Bold.ttf",
+		"oAP": "/src/fonts/Rubik/Rubik-BlackItalic.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-BoldItalic.ttf": {
+	"/src/fonts/Rubik/Rubik-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-BoldItalic.ttf",
+		"oAP": "/src/fonts/Rubik/Rubik-Bold.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-Italic.ttf": {
+	"/src/fonts/Rubik/Rubik-BoldItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-Italic.ttf",
+		"oAP": "/src/fonts/Rubik/Rubik-BoldItalic.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-Light.ttf": {
+	"/src/fonts/Rubik/Rubik-Italic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-Light.ttf",
+		"oAP": "/src/fonts/Rubik/Rubik-Italic.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-LightItalic.ttf": {
+	"/src/fonts/Rubik/Rubik-Light.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-LightItalic.ttf",
+		"oAP": "/src/fonts/Rubik/Rubik-Light.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-Medium.ttf": {
+	"/src/fonts/Rubik/Rubik-LightItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-Medium.ttf",
+		"oAP": "/src/fonts/Rubik/Rubik-LightItalic.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-MediumItalic.ttf": {
+	"/src/fonts/Rubik/Rubik-Medium.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-MediumItalic.ttf",
+		"oAP": "/src/fonts/Rubik/Rubik-Medium.ttf",
 		"oF": 0
 		},
-	"/src/css/fonts/Rubik/Rubik-Regular.ttf": {
+	"/src/fonts/Rubik/Rubik-MediumItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/src/css/fonts/Rubik/Rubik-Regular.ttf",
+		"oAP": "/src/fonts/Rubik/Rubik-MediumItalic.ttf",
 		"oF": 0
 		},
-	"/src/css/scss/dev.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/dev.css",
-		"oF": 1,
-		"oS": 0,
-		"uL": 1
+	"/src/fonts/Rubik/Rubik-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/fonts/Rubik/Rubik-Regular.ttf",
+		"oF": 0
 		},
-	"/src/css/scss/elements.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/elements.css",
+	"/src/img/image-featured-home-slider-dev.png": {
+		"ft": 32768,
+		"iS": 574323,
+		"oA": 0,
+		"oAP": "/src/img/image-featured-home-slider-dev.png",
 		"oF": 0,
-		"oS": 0,
-		"uL": 1
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
-	"/src/css/scss/footer.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/footer.css",
-		"oF": 1,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/general.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/general.css",
-		"oF": 1,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/grid.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/grid.css",
-		"oF": 1,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/header.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
+	"/src/img/publicite-banniere.png": {
+		"ft": 32768,
+		"iS": 440,
 		"oA": 0,
-		"oAP": "/assets/css/header.css",
-		"oF": 3,
-		"oS": 3,
-		"uL": 1
-		},
-	"/src/css/scss/header/menu_desktop.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/scss/css/menu_desktop.css",
+		"oAP": "/src/img/publicite-banniere.png",
 		"oF": 0,
-		"oS": 0,
-		"uL": 1
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
-	"/src/css/scss/header/menu_mobile.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/scss/css/menu_mobile.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/header/menu_top.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/scss/css/menu_top.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/header/searchform.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/scss/css/searchform.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/header/submenu_desktop.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/scss/css/submenu_desktop.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/main.scss": {
-		"aP": 1,
-		"bl": 1,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
+	"/src/img/sample-album-2.jpg": {
+		"ft": 16384,
+		"iS": 95120,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "/assets/css/main.css",
-		"oF": 3,
-		"oS": 3,
-		"uL": 1
-		},
-	"/src/css/scss/main_menu.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/main_menu.css",
-		"oF": 1,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/normalize.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/normalize.css",
-		"oF": 1,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/reset.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/reset.css",
-		"oF": 1,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/css/scss/slider_home.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/slider_home.css",
+		"oAP": "/src/img/sample-album-2.jpg",
 		"oF": 0,
-		"oS": 0,
-		"uL": 1
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
-	"/src/css/scss/variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/css/css/variables.css",
-		"oF": 1,
-		"oS": 0,
-		"uL": 1
+	"/src/img/sample-album.png": {
+		"ft": 32768,
+		"iS": 1479,
+		"oA": 0,
+		"oAP": "/src/img/sample-album.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/img/sample-article.png": {
+		"ft": 32768,
+		"iS": 721,
+		"oA": 0,
+		"oAP": "/src/img/sample-article.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/src/index.php": {
 		"cB": 0,
@@ -1034,6 +736,377 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
+		},
+	"/src/scss/dev.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/dev.css",
+		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/elements.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/elements.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/footer.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/footer.css",
+		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/general.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/general.css",
+		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/grid.css",
+		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/header.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/css/header.css",
+		"oF": 3,
+		"oS": 3,
+		"uL": 1
+		},
+	"/src/scss/header/menu_desktop.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/css/menu_desktop.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/header/menu_mobile.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/css/menu_mobile.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/header/menu_top.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/css/menu_top.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/header/searchform.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/css/searchform.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/header/submenu_desktop.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/css/submenu_desktop.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/main.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/assets/css/main.css",
+		"oF": 3,
+		"oS": 3,
+		"uL": 1
+		},
+	"/src/scss/main_menu.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/main_menu.css",
+		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/normalize.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/normalize.css",
+		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/reset.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/reset.css",
+		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/slider_home.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/slider_home.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/variables.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/variables.css",
+		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/svg/icons/eject.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/eject.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/eye.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/eye.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/eye_gris.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/eye_gris.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/fingerprint.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/fingerprint.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/fleche-droite.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/fleche-droite.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/fleche-lien.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/fleche-lien.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/ic_play_arrow_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/ic_play_arrow_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/microphone.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/microphone.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/rss.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/rss.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/search.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/search.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/soundcloud.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/soundcloud.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/spotify.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/spotify.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/twitter.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/twitter.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/vimeo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/vimeo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/youtube.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/youtube.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/style-min.css": {
 		"aP": 1,
@@ -1165,6 +1238,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/modules/element-slider.php",
+		"oF": 0
+		},
+	"/template-parts/publicites/publicite-banniere.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/publicites/publicite-banniere.php",
+		"oF": 0
+		},
+	"/template-parts/publicites/publicite-ilot.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/publicites/publicite-ilot.php",
 		"oF": 0
 		}
 	},

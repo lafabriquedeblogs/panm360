@@ -24,10 +24,12 @@ get_header();
 			</div><!-- wrap-new-featured-slider -->
 			
 
+			<?php get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
+			
 			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
-					<h4 class="section-titre">Critiques d'albums <a href="#">-></a></h4>
+					<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 					
 					<div class="section-content ">
 						
@@ -53,6 +55,10 @@ get_header();
 								}
 								?>
 							</ul>	
+							<a href="" class="plus-de">PLUS DE CONCERTS <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>
+							
+							<?php get_template_part( '/template-parts/publicites/publicite', 'ilot' ); ?>
+						
 						</div>
 						
 					</div>
@@ -64,7 +70,7 @@ get_header();
 
 			<section class="section">
 				<div id="interviews" class="section-inner">
-					<h4 class="section-titre">Interviews <a href="#">-></a></h4>
+					<h4 class="section-titre"><span>Interviews</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 					
 					<div class="section-content ">
 						
@@ -90,7 +96,7 @@ get_header();
 						
 			<section class="section">
 				<div id="panam-at-sat" class="section-inner">
-					<h4 class="section-titre">Panm@Sat <a href="#">-></a></h4>
+					<h4 class="section-titre"><span>Panm@Sat</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 					<div class="section-content">
 						<div class="section-content--has-3-columns">
 						<?php
@@ -108,7 +114,7 @@ get_header();
 
 			<section class="section">
 				<div id="critiques-concerts" class="section-inner">
-					<h4 class="section-titre">CRITIQUEs DE CONCERTs <a href="#">-></a></h4>
+					<h4 class="section-titre"><span>CRITIQUEs DE CONCERTs</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 					
 					<div class="section-content ">
 						
@@ -134,7 +140,7 @@ get_header();
 
 			<section class="section">
 				<div id="chroniques" class="section-inner">
-					<h4 class="section-titre">Chroniques <a href="#">-></a></h4>
+					<h4 class="section-titre"><span>Chroniques</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 					<div class="section-content">
 						<div class="section-content--has-4-columns">
 						<?php
@@ -151,7 +157,7 @@ get_header();
 
 			<section class="section">
 				<div id="apprendre" class="section-inner">
-					<h4 class="section-titre">Apprendre <a href="#">-></a></h4>
+					<h4 class="section-titre"><span>Apprendre</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 					<div class="section-content">
 						<div class="section-content--has-4-columns">
 						<?php
@@ -170,7 +176,19 @@ get_header();
 	</div><!-- #primary -->
 	
 	
-
+	<?php get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
 	
+	
+	<section class="section infolettre">
+		
+		<div class="panm360-infolettre">
+			<img src="<?php echo get_template_directory_uri(  );?>/assets/img/panm360.png" width="146" height="49"/>
+			<span>Infolettre PAN.M360</span>
+			<form id="infolettre">
+			
+			</form>
+		</div>
+		
+	</section>
 <?php
 get_footer();

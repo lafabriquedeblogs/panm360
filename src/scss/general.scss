@@ -10,6 +10,7 @@ html,body{
 
 h1, h2,h3,h4,h5.h6 {
 	font-family: $rubik;
+	font-size: 1em;
 	font-weight: 500;
 	margin: 0 0 1em;
 }
@@ -55,12 +56,25 @@ h1.category-title {
 
 .section {
 	margin-top: 120px;
+
 }
 
 .section-titre {
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 	1.125em;
+	display: flex;
+	flex-wrap: nowrap;
+	align-content: center;
+	span {
+		//display: block;
+		margin-right: .7em;
+	}
+	.icone {
+		fill: $bleu;
+		width: 19px;
+		height: 27px;
+	}
 }
 
 .wide-screen{
@@ -68,3 +82,47 @@ h1.category-title {
     margin-right: calc( -100vw / 2 + 100% / 2);	
 }
 
+.plus-de {
+	font-family: $rubik;
+	display: block;
+	font-size: 0.68em;
+	color: $bleu;
+	text-align: right;
+	
+	.icone {
+		//margin-left: 10px;
+		width: 19px;
+		height: 8px;
+		fill: $bleu;
+		transform: translateX(10px);
+		transition: all .25s ease-out;
+	}
+	
+	&:hover {
+		text-decoration: underline;
+		.icone {
+			transform: translateX(15px);
+		}
+	}
+}
+
+.publicite{
+	a {
+		display: block;
+		margin: 0 auto;
+	}
+	&.publicite-ilot {
+		border: 1px solid $gris_light;
+		margin: 2em 0;
+		a {
+			max-width: 300px;
+			padding: 2em 0;
+		}
+	}
+	&.publicite-banniere {
+		margin-top: 120px;
+		a {
+			max-width: 728px;
+		}
+	}
+}
