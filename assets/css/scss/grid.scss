@@ -12,13 +12,13 @@
 	}
 }
 @media (min-width: 535px){
-	.section-content--albums {
+	.section-content--main {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		flex-wrap: wrap;		
 	}
-	.section-content--interviews {
+	.section-content--has-3-columns {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -27,7 +27,7 @@
 			max-width: calc( 50% - 18px);
 		}
 	}
-	.section-content--panm-at-sat {
+	.section-content--has-4-columns {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -87,7 +87,7 @@
 			max-width:calc( 50% - 18px);
 		}
 	}	
-	.section-content--albums {
+	.section-content--main {
 		max-width: calc( 50% - 18px);
 	}
 
@@ -99,15 +99,15 @@
 			max-width: 31.3%;
 		}
 	}
-	.section-content--albums {
+	.section-content--main {
 		max-width: 65.7%;
 	}
-	.section-content--interviews {
+	.section-content--has-3-columns {
 		> * {
 			max-width: 31.5%;
 		}
 	}
-	.section-content--panm-at-sat {
+	.section-content--has-4-columns {
 		> * {
 			max-width: 23%;
 		}		

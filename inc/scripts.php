@@ -15,4 +15,13 @@ function panm360_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'panm360_scripts' );
-	
+
+
+function panm360_header_style(){
+	?>
+		<style>
+			<?php include get_template_directory().'/assets/css/header.css'; ?>
+		</style>
+	<?php
+}
+add_action( 'wp_head', 'panm360_header_style');

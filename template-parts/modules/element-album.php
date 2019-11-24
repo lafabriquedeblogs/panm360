@@ -1,4 +1,4 @@
-<div class="album element">
+<li class="album element">
 	<div class="picture">
 		<a href=""><img src="/dev/img/sample-album.png" width="500" height="500" alt="title"/></a>
 	</div>
@@ -8,4 +8,4 @@
 		<a class="genre album-genre" href="">Genre</a>
 		<a class="author album-author" href="#">par: Author</a>
 	</div>
-</div>
+</li>

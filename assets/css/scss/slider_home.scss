@@ -1,0 +1,29 @@
+#wrap-new-featured-slider {
+	@include wide-screen;
+	background-color: $gris_ultra_light;
+	.slick-arrow {
+		position: absolute;
+	}
+}
+
+#new-featured-slider {
+	max-width: $max-width;
+	margin: 0 auto;	
+}
+
+.new-featured-slider--slide--row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: $max-width;
+}
+
+@media screen and (min-width:980px) {
+	.new-featured-slider--slide--row {
+		flex-direction: row;
+		align-items: stretch;
+		> * {
+			flex: 0 0 50%;
+		}
+	}
+}

@@ -9,8 +9,20 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
-			<?php get_template_part( 'template-parts/accueil/accueil', 'slider_home' ); ?>
+			
+			
+			<div id="wrap-new-featured-slider">
+				<ul id="new-featured-slider">
+					<?php
+						$slider_count = 6;	
+							while( $slider_count > 0 ){
+								get_template_part( 'template-parts/modules/element', 'slider' );
+								$slider_count--;
+							}
+						?>
+				</ul><!-- new-featured-slider -->
+			</div><!-- wrap-new-featured-slider -->
+			
 
 			
 			<section class="section">
@@ -19,7 +31,7 @@ get_header();
 					
 					<div class="section-content ">
 						
-						<div class="section-content--albums">
+						<ul class="section-content--main">
 						<?php
 							$albums_count = 12;	
 							while( $albums_count > 0 ){
@@ -27,18 +39,20 @@ get_header();
 								$albums_count--;
 							}
 						?>
-						</div>
+						</ul>
 						<div class="aside-content">
 							<div class="title-calendrier">
 								<h2>CALENDRIER <span>DES CONCERTS</span></h2>
 							</div>
-							<?php
-							$albums_count = 8;	
-							while( $albums_count > 0 ){
-									get_template_part( '/template-parts/modules/element', 'aside-calendrier' );		
-								$albums_count--;
-							}
-						?>	
+							<ul>
+								<?php
+								$albums_count = 8;	
+								while( $albums_count > 0 ){
+										get_template_part( '/template-parts/modules/element', 'aside-calendrier' );		
+									$albums_count--;
+								}
+								?>
+							</ul>	
 						</div>
 						
 					</div>
@@ -49,16 +63,16 @@ get_header();
 
 
 			<section class="section">
-				<div id="interviews-albums" class="section-inner">
+				<div id="interviews" class="section-inner">
 					<h4 class="section-titre">Interviews <a href="#">-></a></h4>
 					
 					<div class="section-content ">
 						
-						<div class="section-content--albums">
+						<div class="section-content--main">
 						<?php get_template_part( '/template-parts/modules/element', 'main' ); ?>
 						</div>
 						
-						<div class="aside-content">
+						<ul class="aside-content">
 							<?php
 							$albums_count = 3;	
 							while( $albums_count > 0 ){
@@ -66,7 +80,7 @@ get_header();
 								$albums_count--;
 							}
 						?>	
-						</div>
+						</ul>
 						
 					</div>
 					
@@ -78,7 +92,7 @@ get_header();
 				<div id="panam-at-sat" class="section-inner">
 					<h4 class="section-titre">Panm@Sat <a href="#">-></a></h4>
 					<div class="section-content">
-						<div class="section-content--interviews">
+						<div class="section-content--has-3-columns">
 						<?php
 							$albums_count = 3;	
 							while( $albums_count > 0 ){
@@ -98,7 +112,7 @@ get_header();
 					
 					<div class="section-content ">
 						
-						<div class="section-content--albums">
+						<div class="section-content--main">
 						<?php get_template_part( '/template-parts/modules/element', 'main' ); ?>
 						</div>
 						
@@ -122,7 +136,7 @@ get_header();
 				<div id="chroniques" class="section-inner">
 					<h4 class="section-titre">Chroniques <a href="#">-></a></h4>
 					<div class="section-content">
-						<div class="section-content--panm-at-sat">
+						<div class="section-content--has-4-columns">
 						<?php
 							$albums_count = 4;	
 							while( $albums_count > 0 ){
@@ -139,7 +153,7 @@ get_header();
 				<div id="apprendre" class="section-inner">
 					<h4 class="section-titre">Apprendre <a href="#">-></a></h4>
 					<div class="section-content">
-						<div class="section-content--panm-at-sat">
+						<div class="section-content--has-4-columns">
 						<?php
 							$albums_count = 4;	
 							while( $albums_count > 0 ){

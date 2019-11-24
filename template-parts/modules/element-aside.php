@@ -1,4 +1,4 @@
-<div class="aside-item element">
+<li class="aside-item element">
 	<div class="picture">
 		<a href=""><img src="/dev/img/sample-album.png" width="500" height="500"  alt="title"/></a>
 	</div>
@@ -7,4 +7,4 @@
 		<span class="element-title album-title"><a href="">Title</a></span>
 		<a class="author article-author" href="#">par: Author</a>
 	</div>
-</div>
+</li>

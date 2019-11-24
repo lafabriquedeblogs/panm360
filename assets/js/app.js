@@ -18,6 +18,8 @@
 	let mouse_noving_on_header = false;
 	let archive_is_defined = d.querySelector(".archive");
 	
+	
+	
 	function toggle_menu(){
 		menu_mobile.classList.toggle("open");
 		content.classList.toggle("abracadabra-fixed");
@@ -93,6 +95,10 @@
 			vertical: true,
 			speed: 200
 		});
+		
+		if( $("#new-featured-slider").length > 0 ){
+			$("#new-featured-slider").slick({});
+		}
 		
 		$("#main-menu-desktop > li > a").each( function(i){
 			
