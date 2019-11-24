@@ -1,0 +1,7 @@
+.no-label {
+	label, .gfield_label {
+		position: absolute;
+		left: -999em;
+		opacity: 0;
+	}
+}

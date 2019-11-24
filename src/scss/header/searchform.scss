@@ -55,12 +55,15 @@
 			border: 0;
 			background-color: $bleu;
 			text-indent: -999em;
-			background: $bleu url('/wp-content/themes/panm360/assets/img/svg/icons/eye.svg') center center no-repeat;
+			background: $bleu url('/wp-content/themes/panm360/assets/img/eye.svg') center center no-repeat;
 			background-size: 30px 30px;
 			cursor: pointer;
+			border-radius: 0 !important;
 			&:hover {
-				background: $bleu url('/wp-content/themes/panm360/assets/img/svg/icons/eye_gris.svg') center center no-repeat;
+				background: $bleu url('/wp-content/themes/panm360/assets/img/eye_gris.svg') center center no-repeat;
 				background-size: 30px 30px;
+				border: 0;
+				box-shadow: 0 0 0 0;
 			}
 		}
 	}
