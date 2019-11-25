@@ -6,6 +6,7 @@ html,body{
 	color: $gris_dark;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	//overflow-x: hidden !important;
 }
 
 h1, h2,h3,h4,h5.h6 {
@@ -124,5 +125,49 @@ h1.category-title {
 		a {
 			max-width: 728px;
 		}
+	}
+}
+
+.infolettre {
+	background: $bleu;
+	padding: 50px 1em;
+	&.section {
+		@include wide-screen;
+	}
+	img {
+		margin: 0 0 1em 0;
+	}
+	.panm360-infolettre {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+	
+	}
+	.infolettre-titre {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 1.438em;
+		line-height: 1em;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	#gform_wrapper_1 {
+		display: block;
+	}
+	#gform_fields_1 {
+		margin: 0;
+		padding: 0;
+	}
+	#input_1_1 {
+		height: 49px;
+		border: 0;
+		padding: 0 1em;
+		margin: 1em 0;
+		width: 100%;
+	}
+	.gform_footer {
+		text-align: center;
 	}
 }

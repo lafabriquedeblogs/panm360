@@ -1,6 +1,7 @@
 #wrap-new-featured-slider {
 	@include wide-screen;
 	background-color: $gris_ultra_light;
+	overflow: hidden;
 	.slick-arrow {
 		position: absolute;
 		z-index: 20;

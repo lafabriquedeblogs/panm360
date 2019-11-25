@@ -682,6 +682,242 @@
 		"oAP": "/src/fonts/Rubik/Rubik-Regular.ttf",
 		"oF": 0
 		},
+	"/src/gravityformsmailchimp/change_log.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/change_log.txt",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/class-gf-mailchimp.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/class-gf-mailchimp.php",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/css/form_settings.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/css/form_settings-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/src/gravityformsmailchimp/css/form_settings.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/css/form_settings.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/src/gravityformsmailchimp/includes/class-gf-mailchimp-api.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/includes/class-gf-mailchimp-api.php",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-ar.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-ar.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-ca.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-ca.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-da_DK.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-da_DK.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-de_DE.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-de_DE.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-de_DE_formal.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-de_DE_formal.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-en_AU.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-en_AU.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-en_GB.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-en_GB.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-es_ES.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-es_ES.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-fi.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-fi.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-fr_CA.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-fr_CA.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-fr_FR.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-fr_FR.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-hu_HU.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-hu_HU.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-it_IT.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-it_IT.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-ja.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-ja.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-nb_NO.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-nb_NO.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-nl_BE.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-nl_BE.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-nl_NL.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-nl_NL.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-pt_BR.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-pt_BR.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-pt_PT.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-pt_PT.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-ru_RU.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-ru_RU.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-sv_SE.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-sv_SE.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-zh_CN.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-zh_CN.mo",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/languages/gravityformsmailchimp.pot": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp.pot",
+		"oF": 0
+		},
+	"/src/gravityformsmailchimp/mailchimp.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/gravityformsmailchimp/mailchimp.php",
+		"oF": 0
+		},
 	"/src/img/image-featured-home-slider-dev.png": {
 		"ft": 32768,
 		"iS": 574323,
