@@ -152,13 +152,11 @@ h1.category-title {
 		width: 100%;
 		text-align: center;
 	}
-	.gform_wrapper {
+	#gform_wrapper_1 {
+		display: block;
 		min-width: 1px;
 		max-width: 350px;
 		width: 100%;
-	}
-	#gform_wrapper_1 {
-		display: block;
 	}
 	#gform_fields_1 {
 		margin: 0;
@@ -181,6 +179,7 @@ h1.category-title {
 
 @media screen and (min-width:1280px){
 	.infolettre{
+		
 		.panm360-infolettre {
 			flex-direction: row;
 			justify-content: center;
@@ -195,7 +194,8 @@ h1.category-title {
 			margin: 0 1em;
 			flex: 0 0 auto;
 		}
-		.gform_wrapper {
+		#gform_wrapper_1 {
+			max-width: none;
 			width: auto;
 			flex: 0 0 auto;
 		}
@@ -204,6 +204,8 @@ h1.category-title {
 			flex-direction: row;
 			flex-wrap: nowrap;
 			align-items: center;
+			width: fit-content;
+			//min-width: 382px;
 		}
 		#input_1_1 {
 			width: 382px;

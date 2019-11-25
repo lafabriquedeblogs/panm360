@@ -528,12 +528,11 @@ h1.category-title {
     display: block;
     width: 100%;
     text-align: center; }
-  .infolettre .gform_wrapper {
+  .infolettre #gform_wrapper_1 {
+    display: block;
     min-width: 1px;
     max-width: 350px;
     width: 100%; }
-  .infolettre #gform_wrapper_1 {
-    display: block; }
   .infolettre #gform_fields_1 {
     margin: 0;
     padding: 0; }
@@ -566,7 +565,8 @@ h1.category-title {
     margin: 0 1em;
     -webkit-box-flex: 0;
             flex: 0 0 auto; }
-  .infolettre .gform_wrapper {
+  .infolettre #gform_wrapper_1 {
+    max-width: none;
     width: auto;
     -webkit-box-flex: 0;
             flex: 0 0 auto; }
@@ -578,7 +578,10 @@ h1.category-title {
             flex-direction: row;
     flex-wrap: nowrap;
     -webkit-box-align: center;
-            align-items: center; }
+            align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
   .infolettre #input_1_1 {
     width: 382px;
     margin-right: 1em; } }
