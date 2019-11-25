@@ -528,73 +528,23 @@ h1.category-title {
     display: block;
     width: 100%;
     text-align: center; }
-  .infolettre .gform_wrapper {
-    min-width: 1px;
-    max-width: 350px;
-    width: 100%; }
   .infolettre #gform_wrapper_1 {
     display: block; }
   .infolettre #gform_fields_1 {
     margin: 0;
     padding: 0; }
   .infolettre #input_1_1 {
-    box-sizing: border-box;
-    display: block;
     height: 49px;
-    width: 100%;
     border: 0;
     padding: 0 1em;
-    margin: 1em 0;
-    text-align: center; }
+    margin: 1em 0; }
   .infolettre .gform_footer {
     text-align: center; }
-
-@media screen and (min-width: 1280px) {
-  .infolettre .panm360-infolettre {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    -webkit-box-pack: center;
-            justify-content: center;
-    align-content: center; }
-  .infolettre img {
-    -webkit-box-flex: 0;
-            flex: 0 0;
-    margin: 0; }
-  .infolettre .infolettre-titre {
-    width: auto;
-    margin: 0 1em;
-    -webkit-box-flex: 0;
-            flex: 0 0 auto; }
-  .infolettre .gform_wrapper {
-    width: auto;
-    -webkit-box-flex: 0;
-            flex: 0 0 auto; }
-  .infolettre #gform_1 {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    flex-wrap: nowrap;
-    -webkit-box-align: center;
-            align-items: center; }
-  .infolettre #input_1_1 {
-    width: 382px;
-    margin-right: 1em; } }
 
 .no-label label, .no-label .gfield_label {
   position: absolute;
   left: -999em;
   opacity: 0; }
-
-.gform_confirmation_message {
-  margin: 1em 0 0;
-  color: #fff;
-  font-family: "Rubik", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center; }
 
 .bouton, button, input[type="submit"] {
   font-family: "Rubik", sans-serif;
@@ -637,20 +587,6 @@ h1.category-title {
   -webkit-box-align: center;
           align-items: center;
   max-width: 80.25em; }
-
-.slick-arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 3;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
-  .slick-arrow .icone {
-    width: 28px;
-    height: 28px; }
-  .slick-arrow.slick-prev-arrow {
-    left: 10px; }
-  .slick-arrow.slick-next-arrow {
-    right: 10px; }
 
 @media screen and (min-width: 980px) {
   .new-featured-slider--slide--row {
@@ -867,7 +803,7 @@ h1.category-title {
 
 #colophon {
   background-color: #333333;
-  margin: 0 -1.125em 0;
+  margin: 5em -1.125em 0;
   padding: 5.813em 0 4.063em; }
 
 #panm_360_infos {

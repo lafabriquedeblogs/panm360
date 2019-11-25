@@ -20,6 +20,24 @@
 	max-width: $max-width;
 }
 
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	z-index: 3;
+
+	transform: translateY(-50%);
+	.icone {
+		width: 28px;
+		height: 28px;
+	}
+	
+	&.slick-prev-arrow {
+		left: 10px;
+	}
+	&.slick-next-arrow {
+		right: 10px;
+	}
+}
 @media screen and (min-width:980px) {
 	.new-featured-slider--slide--row {
 		flex-direction: row;

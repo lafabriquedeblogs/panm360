@@ -11,8 +11,8 @@
 			</div>
 		</div>
 		
-		<div class="new-featured-slider--slide--picture" style="background-image:url('/dev/img/image-featured-home-slider-dev.png'); background-size: cover;background-repeat: no-repeat; background-position: center center;">
-			<img src="/dev/img/image-featured-home-slider-dev.png"  class="hidden" alt="title"/>
+		<div class="new-featured-slider--slide--picture" style="background-image:url('<?php echo get_template_directory_uri(); ?>/src/img/image-featured-home-slider-dev.png'); background-size: cover;background-repeat: no-repeat; background-position: center center;">
+			<img src="<?php echo get_template_directory_uri(); ?>/src/img/image-featured-home-slider-dev.png"  class="hidden" alt="title"/>
 		</div>
 	</div><!-- new-featured-slider--slide--row -->
 </li><!-- new-featured-slider--slide -->

@@ -35,7 +35,7 @@
 		},
 	"/assets/css/header.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -45,7 +45,7 @@
 		},
 	"/assets/css/main.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -139,7 +139,7 @@
 		"bF": 6,
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "/assets/js/min/app-min.js",
 		"oF": 0,
@@ -198,7 +198,7 @@
 		},
 	"/assets/js/lib/slick/slick-theme.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -223,8 +223,8 @@
 		"sU": 0
 		},
 	"/assets/js/lib/slick/slick-theme.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -237,7 +237,7 @@
 		},
 	"/assets/js/lib/slick/slick.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -284,8 +284,8 @@
 		"tS": 1
 		},
 	"/assets/js/lib/slick/slick.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -437,7 +437,7 @@
 		},
 	"/rtl.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -490,13 +490,31 @@
 		},
 	"/src/css/forms.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/src/css/forms-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/src/css/main.css": {
+		"aP": 1,
+		"bl": 1,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/src/css/main-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/src/dev.sql": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/dev.sql",
+		"oF": 0
 		},
 	"/src/fonts/Open_Sans/LICENSE.txt": {
 		"cB": 0,
@@ -692,7 +710,7 @@
 		},
 	"/src/gravityformsmailchimp/css/form_settings.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -702,7 +720,7 @@
 		},
 	"/src/gravityformsmailchimp/css/form_settings.min.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -995,9 +1013,17 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/src/local.sql": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/local.sql",
+		"oF": 0
+		},
 	"/src/scss/boutons.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -1009,21 +1035,21 @@
 		"uL": 1
 		},
 	"/src/scss/dev.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/src/css/dev.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/elements.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -1035,21 +1061,21 @@
 		"uL": 1
 		},
 	"/src/scss/footer.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/footer.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/forms.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -1061,47 +1087,47 @@
 		"uL": 1
 		},
 	"/src/scss/general.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/general.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/grid.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/grid.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/header.scss": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/header.css",
-		"oF": 3,
-		"oS": 3,
+		"oF": 2,
+		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/header/menu_desktop.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -1113,8 +1139,8 @@
 		"uL": 1
 		},
 	"/src/scss/header/menu_mobile.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -1126,8 +1152,8 @@
 		"uL": 1
 		},
 	"/src/scss/header/menu_top.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -1139,8 +1165,8 @@
 		"uL": 1
 		},
 	"/src/scss/header/searchform.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -1152,8 +1178,8 @@
 		"uL": 1
 		},
 	"/src/scss/header/submenu_desktop.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -1170,42 +1196,42 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/main.css",
-		"oF": 3,
-		"oS": 3,
+		"oF": 2,
+		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/main_menu.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/src/css/main_menu.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/normalize.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/normalize.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/slider_home.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -1217,15 +1243,15 @@
 		"uL": 1
 		},
 	"/src/scss/variables.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/variables.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
@@ -1329,6 +1355,26 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/src/svg/icons/slider-left-arrow.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/slider-left-arrow.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/icons/slider-right-arrow.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/icons/slider-right-arrow.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/src/svg/icons/soundcloud.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1381,7 +1427,7 @@
 		},
 	"/style-min.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -1391,7 +1437,7 @@
 		},
 	"/style.css": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
@@ -3390,7 +3436,7 @@
 		"createSourceMap": 0,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 0
+		"shouldRunBless": 1
 		},
 	"languageDefaultsGIF": {
 		"autoOutputAction": 0,
@@ -3541,8 +3587,8 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
 		"useLibsass": 1
 		},
 	"languageDefaultsSLIM": {

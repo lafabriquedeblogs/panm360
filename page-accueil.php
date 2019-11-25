@@ -15,11 +15,11 @@ get_header();
 				<ul id="new-featured-slider">
 					<?php
 						$slider_count = 6;	
-							while( $slider_count > 0 ){
-								get_template_part( 'template-parts/modules/element', 'slider' );
-								$slider_count--;
-							}
-						?>
+						while( $slider_count > 0 ){
+							get_template_part( 'template-parts/modules/element', 'slider' );
+							$slider_count--;
+						}
+					?>
 				</ul><!-- new-featured-slider -->
 			</div><!-- wrap-new-featured-slider -->
 			

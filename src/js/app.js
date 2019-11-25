@@ -97,7 +97,10 @@
 		});
 		
 		if( $("#new-featured-slider").length > 0 ){
-			$("#new-featured-slider").slick({});
+			$("#new-featured-slider").slick({
+				prevArrow: '<div class="slick-prev-arrow"><svg class="icone"><use xlink:href="#slider-left-arrow"></use></svg></div>',
+				nextArrow: '<div class="slick-next-arrow"><svg class="icone"><use xlink:href="#slider-right-arrow"></use></svg></div>',
+			});
 		}
 		
 		$("#main-menu-desktop > li > a").each( function(i){

@@ -1,6 +1,6 @@
 <div class="main-item element">
 	<div class="picture">
-		<a href=""><img src="/dev/img/sample-album.png" width="500" height="500"  alt="title"/></a>
+		<a href=""><img src="<?php echo get_template_directory_uri(); ?>/src/img/sample-album.png" width="500" height="500"  alt="title"/></a>
 	</div>
 	<div class="details">
 		<a class="genre article-genre" href="">Genre</a>
