@@ -35,7 +35,7 @@ function panm360_taxonomies() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'generale', array(  'post','artiste','records' ), $args_generale );
+	register_taxonomy( 'generale', array(  'post','artiste','records' , 'concerts' ), $args_generale );
 	
 	$labels_genre = array(
 		'name'                       => _x( 'Genres', 'Taxonomy General Name', 'panm360' ),
@@ -69,7 +69,7 @@ function panm360_taxonomies() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'genre', array(  'post','artiste','records' ), $args_genre );
+	register_taxonomy( 'genre', array(  'post','artiste','records' , 'concerts' ), $args_genre );
 
 
 	$annee_album_labels = array(
@@ -104,7 +104,7 @@ function panm360_taxonomies() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'annee', array(  'post','artiste','records' ), $args_annee_album );
+	register_taxonomy( 'annee', array(  'post','artiste','records' , 'concerts' ), $args_annee_album );
 
 	$pays_labels = array(
 		'name'                       => _x( 'Pays', 'Taxonomy General Name', 'panm360' ),
@@ -138,7 +138,7 @@ function panm360_taxonomies() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'pays', array( 'post','artiste','records' ), $args_pays );
+	register_taxonomy( 'pays', array( 'post','artiste','records' , 'concerts' ), $args_pays );
 	
 }
 add_action( 'init', 'panm360_taxonomies', 0 );

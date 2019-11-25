@@ -645,6 +645,7 @@ h1.category-title {
   position: absolute;
   top: 50%;
   z-index: 3;
+  cursor: pointer;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
   .slick-arrow .icone {

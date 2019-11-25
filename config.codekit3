@@ -25,6 +25,14 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/archive-concerts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/archive-concerts.php",
+		"oF": 0
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -470,6 +478,30 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/sidebar.php",
+		"oF": 0
+		},
+	"/single-albums.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-albums.php",
+		"oF": 0
+		},
+	"/single-artiste.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-artiste.php",
+		"oF": 0
+		},
+	"/single-concerts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-concerts.php",
 		"oF": 0
 		},
 	"/single.php": {
@@ -1539,6 +1571,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/modules/element-aside.php",
+		"oF": 0
+		},
+	"/template-parts/modules/element-infolettre.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/element-infolettre.php",
 		"oF": 0
 		},
 	"/template-parts/modules/element-main.php": {
