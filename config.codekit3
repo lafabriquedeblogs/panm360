@@ -25,14 +25,6 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
-	"/archive-concerts.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/archive-concerts.php",
-		"oF": 0
-		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -304,6 +296,30 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/category-albums.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/category-albums.php",
+		"oF": 0
+		},
+	"/category-concerts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/category-concerts.php",
+		"oF": 0
+		},
+	"/category-reportages.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/category-reportages.php",
+		"oF": 0
+		},
 	"/comments.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -512,42 +528,6 @@
 		"oAP": "/single.php",
 		"oF": 0
 		},
-	"/src/2019-11-24-2027.sql": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/2019-11-24-2027.sql",
-		"oF": 0
-		},
-	"/src/css/forms.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/css/forms-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/css/main.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/css/main-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/dev.sql": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/dev.sql",
-		"oF": 0
-		},
 	"/src/fonts/Open_Sans/LICENSE.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -724,242 +704,6 @@
 		"oAP": "/src/fonts/Rubik/Rubik-Regular.ttf",
 		"oF": 0
 		},
-	"/src/gravityformsmailchimp/change_log.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/change_log.txt",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/class-gf-mailchimp.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/class-gf-mailchimp.php",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/css/form_settings.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/css/form_settings-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/gravityformsmailchimp/css/form_settings.min.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/css/form_settings.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/gravityformsmailchimp/includes/class-gf-mailchimp-api.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/includes/class-gf-mailchimp-api.php",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-ar.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-ar.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-ca.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-ca.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-da_DK.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-da_DK.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-de_DE.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-de_DE.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-de_DE_formal.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-de_DE_formal.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-en_AU.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-en_AU.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-en_GB.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-en_GB.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-es_ES.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-es_ES.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-fi.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-fi.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-fr_CA.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-fr_CA.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-fr_FR.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-fr_FR.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-hu_HU.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-hu_HU.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-it_IT.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-it_IT.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-ja.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-ja.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-nb_NO.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-nb_NO.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-nl_BE.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-nl_BE.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-nl_NL.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-nl_NL.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-pt_BR.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-pt_BR.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-pt_PT.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-pt_PT.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-ru_RU.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-ru_RU.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-sv_SE.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-sv_SE.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp-zh_CN.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp-zh_CN.mo",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/languages/gravityformsmailchimp.pot": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/languages/gravityformsmailchimp.pot",
-		"oF": 0
-		},
-	"/src/gravityformsmailchimp/mailchimp.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/gravityformsmailchimp/mailchimp.php",
-		"oF": 0
-		},
 	"/src/img/image-featured-home-slider-dev.png": {
 		"ft": 32768,
 		"iS": 574323,
@@ -969,6 +713,17 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"/src/img/mai102-the-canadian-press1.jpg": {
+		"ft": 16384,
+		"iS": 84359,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/src/img/mai102-the-canadian-press1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"/src/img/publicite-banniere.png": {
@@ -1044,6 +799,14 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
+		},
+	"/src/Le top 250 de la décennie TEXTES FRANCOS ET ANGLOS  ÉDITÉS ET TRADUITS - Feuille 4.csv": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/Le top 250 de la décennie TEXTES FRANCOS ET ANGLOS  ÉDITÉS ET TRADUITS - Feuille 4.csv",
+		"oF": 0
 		},
 	"/src/local.sql": {
 		"cB": 0,
@@ -1476,6 +1239,14 @@
 		"oAP": "/style-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/taxonomy-generale-lire.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-generale-lire.php",
+		"oF": 0
 		},
 	"/template-parts/content-none.php": {
 		"cB": 0,

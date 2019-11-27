@@ -1,3 +1,8 @@
+	<?php get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
+	
+	<?php get_template_part( '/template-parts/modules/element', 'infolettre' ); ?>
+	
+
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
