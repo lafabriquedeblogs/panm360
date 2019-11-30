@@ -309,6 +309,13 @@ template {
   left: -999em;
   opacity: 0; }
 
+.wp-block-embed-spotify.alignleft.wp-block-embed {
+  max-width: none;
+  width: auto; }
+
+figure {
+  margin: 0; }
+
 .site {
   padding: 0 1.125em; }
 
@@ -410,8 +417,18 @@ html, body {
 h1, h2, h3, h4, h5.h6 {
   font-family: "Rubik", sans-serif;
   font-size: 1em;
-  font-weight: 500;
-  margin: 0 0 1em; }
+  font-weight: 700;
+  margin: 1em 0; }
+
+h1 {
+  font-size: 2.375em;
+  text-transform: uppercase;
+  line-height: 1; }
+
+h2 {
+  font-weight: 300;
+  font-size: 2.375em;
+  text-transform: uppercase; }
 
 img {
   display: block;
@@ -547,6 +564,12 @@ h1.category-title {
     text-align: center; }
   .infolettre .gform_footer {
     text-align: center; }
+
+@media screen and (min-width: 980px) {
+  h1.entry-title {
+    margin-top: 0; }
+  h2.sub-title {
+    margin-top: 0; } }
 
 @media screen and (min-width: 1280px) {
   .infolettre .panm360-infolettre {
@@ -830,6 +853,68 @@ h1.category-title {
   .title-calendrier span {
     display: block;
     font-weight: 700; }
+
+/* Single Album */
+.album-cover {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  flex-wrap: nowrap; }
+
+.lp-metas {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  font-size: 13px;
+  padding: 1em 0;
+  border-top: 2px #E6E6EA solid;
+  border-bottom: 2px #E6E6EA solid;
+  width: 100%; }
+  .lp-metas a {
+    font-weight: 700;
+    text-decoration: none; }
+    .lp-metas a:hover {
+      text-decoration: underline; }
+
+.lp-cover {
+  margin-bottom: 1em; }
+
+.single-records h2.sub-title {
+  margin-top: -0.6em; }
+
+@media screen and (min-width: 768px) {
+  .album-cover {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    max-width: 294px; }
+  .lp-metas {
+    margin-left: 36px; } }
+
+@media screen and (min-width: 980px) {
+  .post-album {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    max-width: 1080px;
+    margin: 0 auto 120px; }
+  .album-cover {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    width: 294px; }
+  .lp-metas {
+    margin-left: 0; }
+  .single-album-body {
+    width: calc( 100% - ( 294px + 36px )); } }
 
 @media screen and (min-width: 535px) {
   .album {

@@ -1,53 +1,37 @@
 <?php
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package panm360
- */
+
+/*
+	Template name: Albums
+*/
 
 get_header();
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
-
-			<header class="page-header">
-				<h1 class="category-title">Lire - <?php echo single_cat_title( '', false ); ?></h1>
-				<?php the_archive_description( '<div class="archive-description">', '</div>' );?>
-			</header><!-- .page-header -->
-
+			
+			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
-<!-- 					<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4> -->
+					<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 					
 					<div class="section-content ">
 						
 						<ul class="section-content--main">
-
-							<?php
-							/* Start the Loop */
-							/*
-									while ( have_posts() ) :
-											the_post();
-											get_template_part( 'template-parts/content', get_post_type() );
-											endwhile;
-							
-										the_posts_navigation();
-							
-									else :
-							
-										get_template_part( 'template-parts/content', 'none' );
-							
-									endif;
-							*/
-							?>
-
 						<?php
-							$albums_count = 84;	
-							while( $albums_count > 0 ){
+							$albums_count = -1;	
+							
+							$args = array(
+								'post_type' => 'records',
+								'posts_per_page' => $albums_count,
+								'post_status' => 'publish'
+							);
+							
+							$albums = new WP_Query($args);
+							
+							while($albums->have_posts() ){
+									$albums->the_post();
+									
 									include( locate_template( '/template-parts/modules/element-album.php', false, false ) );			
 								$albums_count--;
 							}
@@ -71,6 +55,18 @@ get_header();
 							
 							<?php get_template_part( '/template-parts/publicites/publicite', 'ilot' ); ?>
 							
+							<h3>Listes d'écoutes</h3>
+							<ul>
+							<?php
+								$liste_ecoutes_count = 10;	
+								while( $liste_ecoutes_count > 0 ){
+										get_template_part( '/template-parts/modules/element', 'aside' );		
+									$liste_ecoutes_count--;
+								}
+							?>	
+								
+							</ul>
+							
 						</div>
 						
 					</div>
@@ -78,10 +74,15 @@ get_header();
 				</div>
 			</section>
 
-
-
+	
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	
+	
+	<?php //get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
+	
+	<?php //get_template_part( '/template-parts/modules/element', 'infolettre' ); ?>
+	
 
 <?php
 get_footer();

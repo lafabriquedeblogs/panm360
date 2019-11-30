@@ -12,8 +12,19 @@ html,body{
 h1, h2,h3,h4,h5.h6 {
 	font-family: $rubik;
 	font-size: 1em;
-	font-weight: 500;
-	margin: 0 0 1em;
+	font-weight: 700;
+	margin:1em 0;
+}
+
+h1{
+	font-size: 2.375em;
+	text-transform: uppercase;
+	line-height: 1;
+}
+h2 {
+	font-weight: 300;
+	font-size: 2.375em;
+	text-transform: uppercase;
 }
 
 img {
@@ -177,6 +188,15 @@ h1.category-title {
 	}
 }
 
+
+@media screen and (min-width:980px){
+	h1.entry-title {
+		margin-top: 0;	
+	}
+	h2.sub-title{
+		margin-top: 0;
+	}
+}
 @media screen and (min-width:1280px){
 	.infolettre{
 		

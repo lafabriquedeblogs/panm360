@@ -1,31 +1,18 @@
 <?php
-
-/*
-	Template name: Accueil
-*/
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package panm360
+ */
 
 get_header();
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			
-			
-			<div id="wrap-new-featured-slider">
-				<ul id="new-featured-slider">
-					<?php
-						$slider_count = 6;	
-						while( $slider_count > 0 ){
-							include( locate_template( '/template-parts/modules/element-slider.php', false, false ) );
-							$slider_count--;
-						}
-					?>
-				</ul><!-- new-featured-slider -->
-			</div><!-- wrap-new-featured-slider -->
-			
 
-			<?php get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
-			
 			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
@@ -35,19 +22,8 @@ get_header();
 						
 						<ul class="section-content--main">
 						<?php
-							$albums_count = -1;	
-							
-							$args = array(
-								'post_type' => 'records',
-								'posts_per_page' => $albums_count,
-								'post_status' => 'publish'
-							);
-							
-							$albums = new WP_Query($args);
-							
-							while($albums->have_posts() ){
-									$albums->the_post();
-									
+							$albums_count = 12;	
+							while( $albums_count > 0 ){
 									include( locate_template( '/template-parts/modules/element-album.php', false, false ) );			
 								$albums_count--;
 							}
@@ -183,15 +159,12 @@ get_header();
 					</div>
 				</div>
 			</section>	
-	
+
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	
-	
-	<?php //get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
-	
-	<?php //get_template_part( '/template-parts/modules/element', 'infolettre' ); ?>
-	
 
+	
 <?php
 get_footer();

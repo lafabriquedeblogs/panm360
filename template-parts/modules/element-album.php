@@ -1,11 +1,27 @@
+<?php
+	
+	$album_id = get_the_id();
+	$titre = get_the_title();;
+	$lien = get_permalink( );
+	
+	$artiste = get_artiste( $album_id , true );
+	$genres = get_genre($album_id);
+	
+	$auteur = "";
+	
+	$pochette = get_the_post_thumbnail_url( $album_id, array(500,500) );
+	if( !$pochette ) $pochette =  get_template_directory_uri()."/src/img/sample-album.png";
+	
+?>
+
 <li class="album element">
 	<div class="picture">
-		<a href=""><img src="<?php echo get_template_directory_uri(); ?>/src/img/sample-album.png" width="500" height="500" alt="title"/></a>
+		<a href="<?php echo $lien;?>"><img src="<?php echo $pochette; ?>" width="500" height="500" alt="<?php echo $titre;?>"/></a>
 	</div>
 	<div class="details">
-		<span class="element-title album-title"><a href="">Titre de l'album</a></span>
-		<a class="artiste album-artiste" href="">Artiste</a>
-		<a class="genre album-genre" href="">Genre</a>
-		<a class="author album-author" href="#">par: Author</a>
+		<span class="element-title album-title"><a href="<?php echo $lien;?>"><?php echo $titre;?></a></span>
+		<span class="artiste album-artiste"><?php echo $artiste;?></span>
+		<span class="genre album-genre"><?php echo $genres;?></span>
+		<a class="author album-author" href="#">par: <?php echo $auteur;?></a>
 	</div>
 </li>

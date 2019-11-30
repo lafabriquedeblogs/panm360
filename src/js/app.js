@@ -17,7 +17,7 @@
 	let active_archive_menu;
 	let mouse_noving_on_header = false;
 	let archive_is_defined = d.querySelector(".archive");
-	
+	let spotify = d.querySelector(".wp-block-embed-spotify .wp-block-embed__wrapper iframe");
 	
 	
 	function toggle_menu(){
@@ -146,6 +146,7 @@
 		go_to_slide_menu( active_archive_menu_index );
 		move_triangle_subnav_offset_x( active_archive_menu );
 		
+		if( spotify != null) spotify.setAttribute("width","100%");
 	
 	});
 })( jQuery, document , window );

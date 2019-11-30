@@ -296,14 +296,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/category-albums.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/category-albums.php",
-		"oF": 0
-		},
 	"/category-concerts.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -326,6 +318,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/comments.php",
+		"oF": 0
+		},
+	"/dev.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dev.php",
 		"oF": 0
 		},
 	"/footer.php": {
@@ -424,6 +424,14 @@
 		"oAP": "/page-accueil.php",
 		"oF": 0
 		},
+	"/page-albums.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-albums.php",
+		"oF": 0
+		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -496,14 +504,6 @@
 		"oAP": "/sidebar.php",
 		"oF": 0
 		},
-	"/single-albums.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/single-albums.php",
-		"oF": 0
-		},
 	"/single-artiste.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -518,6 +518,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/single-concerts.php",
+		"oF": 0
+		},
+	"/single-records.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-records.php",
 		"oF": 0
 		},
 	"/single.php": {
@@ -702,6 +710,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/src/fonts/Rubik/Rubik-Regular.ttf",
+		"oF": 0
+		},
+	"/src/functions_test.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/functions_test.php",
 		"oF": 0
 		},
 	"/src/img/image-featured-home-slider-dev.png": {
@@ -1024,6 +1040,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/src/scss/single_record.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/single_record.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/src/scss/slider_home.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -1239,6 +1268,14 @@
 		"oAP": "/style-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/taxonomy-generale-lire copie.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-generale-lire copie.php",
+		"oF": 0
 		},
 	"/taxonomy-generale-lire.php": {
 		"cB": 0,

@@ -208,6 +208,12 @@
 	}
 }
 
+/* Single Album */
+@import "single_record";
+
+
+
+
 @media screen and(min-width:535px){
 	.album{
 		max-width: calc( 50% - 18px);
