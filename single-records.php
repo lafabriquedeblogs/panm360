@@ -52,8 +52,7 @@
 
 		<?php endwhile; ?>
 		
-		
-			<ul class="section-content">
+			<ul class="section-content has-6-coloumns">
 			<?php
 				$albums_count = 12;	
 				

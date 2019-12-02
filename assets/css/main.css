@@ -692,10 +692,11 @@ h1.category-title {
 
 .element-title {
   font-size: 1em;
+  line-height: 1.3;
   font-family: "Rubik", sans-serif;
   font-weight: 700;
   color: #000;
-  margin-bottom: -5px; }
+  margin-bottom: 5px; }
 
 .artiste {
   font-size: 0.813em; }
@@ -883,19 +884,24 @@ h1.category-title {
 .lp-cover {
   margin-bottom: 1em; }
 
+.single-records h1.entry-title {
+  margin: 0.5em 0 0 0; }
+
 .single-records h2.sub-title {
-  margin-top: -0.6em; }
+  margin: 0 0 0.5em 0; }
 
 @media screen and (min-width: 768px) {
   .album-cover {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
-    -webkit-box-align: start;
-            align-items: flex-start;
+    -webkit-box-align: end;
+            align-items: flex-end; }
+  .lp-cover {
     max-width: 294px; }
   .lp-metas {
-    margin-left: 36px; } }
+    margin-left: 36px;
+    width: 294px; } }
 
 @media screen and (min-width: 980px) {
   .post-album {
@@ -914,10 +920,14 @@ h1.category-title {
   .lp-metas {
     margin-left: 0; }
   .single-album-body {
-    width: calc( 100% - ( 294px + 36px )); } }
+    width: calc( 100% - ( 294px + 36px )); }
+  .single-records h1.entry-title {
+    margin: 0; } }
 
 @media screen and (min-width: 535px) {
   .album {
+    max-width: calc( 50% - 18px); }
+  .has-6-coloumns .album {
     max-width: calc( 50% - 18px); } }
 
 @media screen and (min-width: 690px) {

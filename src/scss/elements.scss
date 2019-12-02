@@ -1,9 +1,10 @@
 .element-title {
 	font-size: 1em;
+	line-height: 1.3;
 	font-family: $rubik;
 	font-weight: 700;
 	color: #000;
-	margin-bottom: -5px;
+	margin-bottom: 5px;
 }
 
 .artiste {
@@ -183,7 +184,6 @@
 	}
 }	
 
-
 .section-content--has-4-columns {
 	.element.article .details {
 		padding-left: 0;
@@ -217,6 +217,11 @@
 @media screen and(min-width:535px){
 	.album{
 		max-width: calc( 50% - 18px);
+	}
+	.has-6-coloumns {
+		.album {
+			max-width: calc( 50% - 18px);
+		}		
 	}
 
 }

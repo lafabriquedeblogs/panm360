@@ -23,18 +23,24 @@
 	margin-bottom: 1em;
 }
 .single-records {
-	h2.sub-title {
-		margin-top: -0.6em;	
+	h1.entry-title {
+		margin: 0.5em 0 0 0;	
+	}
+	h2.sub-title{
+		margin: 0 0 0.5em 0;
 	}
 }
 @media screen and (min-width: 768px){
 	.album-cover {
 		flex-direction: row;
-		align-items: flex-start;
+		align-items: flex-end;
+	}
+	.lp-cover {
 		max-width: 294px;
-	}	
+	}
 	.lp-metas{
 		margin-left: 36px;
+		width: 294px;
 	}
 	
 }
@@ -57,5 +63,9 @@
 	.single-album-body {
 		width: calc( 100% - ( 294px + 36px ));
 	}
-
+	.single-records {
+		h1.entry-title {
+			margin: 0;	
+		}
+	}
 }
