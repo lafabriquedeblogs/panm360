@@ -325,6 +325,18 @@ figure {
 .wp-block-columns .wp-block-column {
   margin-top: 28px; }
 
+.section-content--has-6-columns {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  flex-wrap: wrap; }
+  .section-content--has-6-columns > * {
+    max-width: calc( 50% - 18px); }
+
 @media (min-width: 535px) {
   .section-content--main {
     display: -webkit-box;
@@ -334,7 +346,8 @@ figure {
             flex-direction: row;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    width: 100%; }
   .section-content--has-3-columns {
     display: -webkit-box;
     display: flex;
@@ -356,7 +369,18 @@ figure {
             justify-content: space-between;
     flex-wrap: wrap; }
     .section-content--has-4-columns > * {
-      max-width: calc( 50% - 18px); } }
+      max-width: calc( 50% - 18px); }
+  .section-content--has-6-columns {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    flex-wrap: wrap; }
+    .section-content--has-6-columns > * {
+      max-width: calc( 32.5% - 18px); } }
 
 @media screen and (min-width: 600px) {
   #primary, #masthead {
@@ -385,7 +409,9 @@ figure {
             flex-direction: row;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+            align-items: flex-start; }
     .section-content a {
       text-decoration: none; }
     .section-content .aside-content {
@@ -458,6 +484,12 @@ li {
 p {
   padding: 0;
   margin: 0 0 2em 0; }
+
+.bleu {
+  color: #5BC6E8; }
+
+.bold {
+  font-weight: 700; }
 
 h1.category-title {
   text-transform: uppercase; }
@@ -564,6 +596,9 @@ h1.category-title {
     text-align: center; }
   .infolettre .gform_footer {
     text-align: center; }
+
+.entry-content p {
+  line-height: 1.8; }
 
 @media screen and (min-width: 980px) {
   h1.entry-title {
@@ -855,6 +890,10 @@ h1.category-title {
     display: block;
     font-weight: 700; }
 
+.meta-name {
+  display: inline-block;
+  width: 50px; }
+
 /* Single Album */
 .album-cover {
   display: -webkit-box;
@@ -910,7 +949,7 @@ h1.category-title {
     flex-wrap: nowrap;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    max-width: 1080px;
+    max-width: 1064px;
     margin: 0 auto 120px; }
   .album-cover {
     -webkit-box-orient: vertical;
@@ -927,8 +966,8 @@ h1.category-title {
 @media screen and (min-width: 535px) {
   .album {
     max-width: calc( 50% - 18px); }
-  .has-6-coloumns .album {
-    max-width: calc( 50% - 18px); } }
+  .section-content--has-6-columns .album {
+    max-width: calc( 32.5% - 18px); } }
 
 @media screen and (min-width: 690px) {
   .element.main-item {
@@ -940,11 +979,15 @@ h1.category-title {
     -webkit-box-align: center;
             align-items: center; }
     .element.main-item > * {
-      width: calc( 50% - 18px); } }
+      width: calc( 50% - 18px); }
+  .section-content--has-6-columns .album {
+    max-width: calc( 23% - 18px); } }
 
 @media screen and (min-width: 980px) {
   .album {
-    max-width: calc( 32.5% - 18px); } }
+    max-width: calc( 32.5% - 18px); }
+  .section-content--has-6-columns .album {
+    max-width: calc( 15.8% - 18px); } }
 
 @media screen and (min-width: 780px) and (max-width: 980px) {
   .element.main-item {
@@ -1075,3 +1118,4 @@ h1.category-title {
     padding-left: 0; }
   #footer-menu > li:last-child {
     padding-left: 0; } }
+/*# sourceMappingURL=main.css.map */

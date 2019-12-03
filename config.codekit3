@@ -432,6 +432,14 @@
 		"oAP": "/page-albums.php",
 		"oF": 0
 		},
+	"/page-top-200.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-top-200.php",
+		"oF": 0
+		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1007,7 +1015,7 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
 		"oAP": "/assets/css/main.css",
 		"oF": 2,
@@ -1283,6 +1291,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taxonomy-generale-lire.php",
+		"oF": 0
+		},
+	"/taxonomy-genre.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-genre.php",
 		"oF": 0
 		},
 	"/template-parts/content-none.php": {

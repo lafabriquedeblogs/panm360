@@ -61,6 +61,13 @@ p {
 	margin: 0 0 2em 0;
 }
 
+.bleu {
+	color: $bleu;
+}
+
+.bold {
+	font-weight: 700;
+}
 h1.category-title {
 	text-transform: uppercase;	
 }
@@ -90,8 +97,7 @@ h1.category-title {
 }
 
 .wide-screen{
-	margin-left: calc( -100vw / 2 + 100% / 2);
-    margin-right: calc( -100vw / 2 + 100% / 2);	
+	@include wide-screen;	
 }
 
 .plus-de {
@@ -188,7 +194,11 @@ h1.category-title {
 	}
 }
 
-
+.entry-content {
+	p {
+		line-height: 1.8;
+	}
+}
 @media screen and (min-width:980px){
 	h1.entry-title {
 		margin-top: 0;	
