@@ -826,7 +826,8 @@ h1.category-title {
       -webkit-box-flex: 1;
               flex: 1 1; }
     .element.aside-item-calendrier .element-title {
-      font-size: 0.875em; }
+      font-size: 0.875em;
+      margin-bottom: 0; }
     .element.aside-item-calendrier .icon {
       width: 5px;
       height: 9px; }
@@ -880,12 +881,12 @@ h1.category-title {
 
 .title-calendrier {
   background: #F4F4F8;
-  font-size: 1.125em;
-  line-height: 1.125em;
   padding: .5em 74px;
   margin-bottom: 1em; }
   .title-calendrier h2 {
-    margin: 0; }
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.125em; }
   .title-calendrier span {
     display: block;
     font-weight: 700; }

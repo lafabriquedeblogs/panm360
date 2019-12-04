@@ -115,8 +115,8 @@
 		}
 		.element-title {
 			font-size: 0.875em;
-			
-			}
+			margin-bottom: 0;
+		}
 		.element-location {
 			
 		}
@@ -195,12 +195,13 @@
 
 .title-calendrier {
 	background: $gris_ultra_light;
-	font-size: 1.125em;
-	line-height: 1.125em;
+
 	padding: .5em 74px;
 	margin-bottom: 1em;
 	h2 {
 		margin: 0;
+		font-size: 1.125em;
+		line-height: 1.125em;
 	}
 	span {
 		display: block;
