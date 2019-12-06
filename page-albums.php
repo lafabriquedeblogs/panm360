@@ -9,11 +9,14 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			
+			<article>
+			<header class="section">
+				<h1 clas="entry-title"><?php the_title(); ?></h1>
+			</header>
 			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
-					<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+<!-- 					<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4> -->
 					
 					<div class="section-content ">
 						
@@ -74,7 +77,7 @@ get_header();
 				</div>
 			</section>
 
-	
+			</article>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	

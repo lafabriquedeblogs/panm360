@@ -105,13 +105,15 @@
 		
 		$("#main-menu-desktop > li > a").each( function(i){
 			
+			//return;
+			
 			let _index = $(this).parent().index();
 			
 			if( _index == 0) return;
 			
-			$(this).on("click mouseover", function(e){
+			$(this).on("mouseover", function(e){
 				
-				e.preventDefault();
+				//e.preventDefault();
 				clearTimeout(_to_menu);
 				$("#sub-nav-desktop").addClass("active");
 				go_to_slide_menu( _index );

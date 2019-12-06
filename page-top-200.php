@@ -9,12 +9,13 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			
+			<header class="section">
+				<h1 clas="entry-title"><?php the_title(); ?></h1>
+			</header>
 			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
-					<h4 class="section-titre"><span>Top 200</span> <a href="#"></a></h4>
-					
+				
 					<div class="section-content ">
 						
 						<ul class="section-content--has-6-columns">
