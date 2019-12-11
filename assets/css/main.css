@@ -1110,7 +1110,7 @@ h1.category-title {
     -webkit-box-pack: justify;
             justify-content: space-between;
     max-width: 1064px;
-    margin: 0 auto 120px; }
+    margin: 80px auto 120px; }
   .album-cover {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1207,7 +1207,6 @@ h1.category-title {
 
 #colophon {
   background-color: #333333;
-  margin: 0 -1.125em 0;
   padding: 5.813em 0 4.063em; }
 
 #panm_360_infos {

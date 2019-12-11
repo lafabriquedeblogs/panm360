@@ -14,7 +14,7 @@ get_header();
 		<main id="main" class="site-main">
 			<article>
 			<header class="section">
-				<h1 clas="entry-title">LIRE - <span class="light"><?php echo single_cat_title( '', false ); ?></span></h1>
+				<h1 clas="entry-title"><span class="light"><?php echo single_cat_title( '', false ); ?></span></h1>
 			</header>
 			<section class="section">
 				<div class="section-inner">

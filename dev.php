@@ -86,8 +86,8 @@ function lecteur_audio($string){
 
 
 			<?php
-				
 /*
+				
 				$rags = array(
 					'post_type' => 'records',
 					'posts_per_page' => -1,
