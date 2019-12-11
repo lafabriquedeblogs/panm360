@@ -1,3 +1,11 @@
+<?php
+	// devenir membre page ID
+	$devenir_membre_page_id = 113;
+	if ( function_exists('icl_object_id') ) {
+	     //something
+	     $devenir_membre_page_id = apply_filters( 'wpml_object_id', $devenir_membre_page_id, 'page', TRUE, $lang );
+	}	
+?>
 <div id="menu-top-container">
 	<ul id="menu-top" class="menu">
 		<li id="panm-radio-bouton" class="menu-item">
@@ -27,7 +35,7 @@
 				</a>
 			</li>
 			<li id="panm-signin" class="menu-item">
-				<a href="#">
+				<a href="<?php echo get_permalink( $devenir_membre_page_id );?>">
 					<svg class="icon"><use xlink:href="#fingerprint"></use></svg>
 					<span><?php _e('Devenir membre','panm360'); ?></span>
 				</a>

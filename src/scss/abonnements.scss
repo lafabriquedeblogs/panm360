@@ -1,0 +1,81 @@
+.wp-block-columns.abonnements {
+		
+}
+
+.abo-bloc {
+	//border: 1px solid red;
+	padding: 3em 2.5em;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.ul-abonnement {
+		text-align: left;
+		font-size: 14px;
+		
+		li {
+			list-style-type: none;
+			list-style-position: inside;
+			padding-bottom: 0.5em;
+		}
+	}
+	
+	.item-titre {
+		margin-top: 1.5em;
+	}
+	.unavailable {
+		text-decoration: line-through;
+	}
+	.abo-prix {
+		font-size: 50px;
+		font-family: $rubik;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-content: flex-start;
+		justify-content: center;
+		
+		.cents {
+			font-size: 35px;
+			position: relative;
+			top: 5px;
+		}
+		.frequence {
+			font-size: 11px;
+			position: relative;
+			top: 14px;
+			padding-left: 7px;
+		}
+	}
+	.abo-asset {
+		font-size: 22px;
+	}
+	
+	&.abo-bloc-gratuit {
+		background: $gris_ultra_light;
+		.abo-prix, .cap {
+			color: $bleu;
+		}
+		button {
+			background: $bleu;
+			border-color: $bleu;
+		}
+	}
+	
+	&.abo-bloc-mensuel-1 {
+		background: $gris_ultra_dark;
+		color: #fff;
+		.abo-prix, .cap {
+			color: $rouge;
+		}
+		button {
+			background: $rouge;
+		}
+		.frequence {
+			color: $gris_light;
+		}
+	}
+	
+	
+}

@@ -4,7 +4,16 @@
 #triangle {
 	display: none;
 }
+#border-top-menu {
+	display: none;
+}
 @media screen and (min-width:980px){
+	#border-top-menu {
+		display: block;
+		max-height: 1px;
+		@include wide-screen;
+		border-top: 1px solid $gris_light;
+	}
 	#triangle {
 		display:block;
 		position: absolute;

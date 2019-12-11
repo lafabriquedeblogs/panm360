@@ -328,3 +328,4 @@ class panm360_Walker_sub_menu extends Walker_Nav_Menu {
 		echo $menu;		
 	?>
 </div>
+<div id="border-top-menu"></div>

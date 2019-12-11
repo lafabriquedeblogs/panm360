@@ -1,0 +1,49 @@
+.rouge {
+	color: $rouge;
+}
+
+.bg-dark {
+	background: $gris_ultra_dark;
+}
+
+// Fonts weights
+//300,400,500,700,900
+.light {
+	font-weight: 300;
+}
+.regular {
+	font-weight: 400;
+}
+.medium {
+	font-weight: 500;
+}
+
+.bold {
+	font-weight: 700;
+}
+.x-bold {
+	font-weight: 900;
+}
+
+
+.chapeau-header {
+	font-weight: 500;
+	font-size: 1.625em;
+	line-height: 1.4;
+}
+
+.exergue {
+	padding: 2em;
+	margin: 2em 0;
+	p {
+		line-height: 24px;
+	}
+}
+
+.no-margins {
+	margin: 0;
+}
+
+.no-padding {
+	padding: 0;
+}

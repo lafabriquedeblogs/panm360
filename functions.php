@@ -80,6 +80,8 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+		
+		add_theme_support( 'editor-style' );
 	}
 endif;
 add_action( 'after_setup_theme', 'panm360_setup' );
@@ -129,80 +131,111 @@ function panm360_wp_body_open(){
 }
 add_action( 'wp_body_open', 'panm360_wp_body_open' );
 
+function tenpixelsleft_custom_posts_per_page($query) {
+    
+    if (!is_admin() && $query->is_main_query() && $query->is_tax(array('genre','annee','label','pays')) ){
+	    $query->set('posts_per_page', '36');
+	    $query->set( 'post_type', 'records' );
+    }
+    
+    return $query;
+}
+add_action('pre_get_posts', 'tenpixelsleft_custom_posts_per_page');
 
-function get_artiste( $album_id , $get_lien = true ){
-	
-	$artiste = get_the_title( get_field('relier_artiste',$album_id) );
-	$artiste_lien = get_permalink( get_field('relier_artiste',$album_id) );
-	
-	$artiste_output = $artiste;
-	
-	if( $get_lien ){
-		$artiste_output = '<a href="'.$artiste_lien.'">'.$artiste.'</a>';
-	}
-	
-	return $artiste_output;
+add_filter( 'block_categories', 'panm360_block_category', 10, 2);
+function panm360_block_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'panm360-blocks',
+				'title' => __( 'PanM 360', 'panm360' ),
+			),
+		)
+	);
 }
 
-function get_genre($album_id){
-	$genres = array();
-	$genres_list = get_the_terms($album_id,'genre');
+add_filter( 'allowed_block_types', 'panm360_allowed_block_types', 10, 2 );
+function panm360_allowed_block_types( $allowed_blocks, $post ) {
+ 
+	$allowed_blocks = array(
+		'core/image',
+		'core/paragraph',
+		'core/heading',
+		'core/list',
+		'core/columns',
+		'core/text-columns',
+		'core/html',
+		'core/separator',
+		'core/spacer',
+		'core/shortcode',
+		'core/embed',
+		'core-embed/youtube',
+		'core-embed/soundcloud',
+		'core-embed/spotify',
+		'core-embed/vimeo',
+		'core/group',
+		'core/button',
+		'acf/icones-partage',
+		'acf/liste-pages',
+		'gravityforms/form'
+	);
+ 
 	
-	if ( $genres_list && !is_wp_error($genres_list) ) {
-		foreach( $genres_list as $genre ){
-			$genres[] = '<a href="'. get_term_link( $genre, 'genre' ) .'">'.$genre->name.'</a>';
-		}
-	}
-	$genres_txt = implode(" / ", $genres);
+	//	if( $post->post_type === 'page' ) {
+	//		$allowed_blocks[] = 'core/shortcode';
+	//	}
+ 
 	
-	return $genres_txt;
+	return $allowed_blocks;
+ 
 }
 
-function get_annee($album_id){
-	$annees = array();
-	$annee_list = get_the_terms($album_id,'annee');
-	
-	if ( $annee_list && !is_wp_error($annee_list) ) {
-		foreach( $annee_list as $an ){
-			$annees[] = '<a href="'. get_term_link( $an, 'annee' ) .'">'.$an->name.'</a>';
-		}
-	}
-	$annees_txt = implode(" / ", $annees);
-	
-	return $annees_txt;
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_sub_page') ) {
+
+        // Add parent.
+        $parent = acf_add_options_page(array(
+            'page_title'  => __('PanM 360 General Settings'),
+            'menu_title'  => __('PanM 360 Réglages Theme'),
+            'redirect'    => false,
+        ));
+
+        // Add sub page.
+        $child = acf_add_options_sub_page(array(
+            'page_title'  => __('Social Settings'),
+            'menu_title'  => __('Social'),
+            'parent_slug' => $parent['menu_slug'],
+        ));
+        // Add sub page.
+        $child_abos = acf_add_options_sub_page(array(
+            'page_title'  => __('Abonnements'),
+            'menu_title'  => __('Abonnements'),
+            'parent_slug' => $parent['menu_slug'],
+        ));
+    }
 }
 
-function get_pays($album_id){
-	$pays = array();
-	$pays_list = get_the_terms($album_id,'pays');
-	
-	if ( $pays_list && !is_wp_error($pays_list) ) {
-		foreach( $pays_list as $an ){
-			$pays[] = '<a href="'. get_term_link( $an, 'pays' ) .'">'.$an->name.'</a>';
-		}
-	}
-	$pays_txt = implode(" / ", $pays);
-	
-	return $pays_txt;
-}
 
-function get_label($album_id){
-	$label = array();
-	$label_list = get_the_terms($album_id,'label');
-	
-	if ( $label_list && !is_wp_error($label_list) ) {
-		foreach( $label_list as $an ){
-			$label[] = '<a href="'. get_term_link( $an, 'label' ) .'">'.$an->name.'</a>';
-		}
-	}
-	$label_txt = implode(" / ", $label);
-	
-	return $label_txt;
+add_filter( 'acf/fields/svg_icon/file_path/name=icone_reseau_social', 'tc_acf_svg_icon_file_path' );
+function tc_acf_svg_icon_file_path( $file_path ) {
+    return get_theme_file_path( 'assets/img/panm360_sprite.svg' );
 }
-
+	
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customs_posts_types.php';
 require get_template_directory() . '/inc/taxonomies.php';
 require get_template_directory() . '/inc/scripts.php';
+require get_template_directory() . '/inc/shortcodes-abonnements.php';
+/*
+ *
+ * BLOCKS
+ *
+*/
 
+require get_template_directory() . '/template-parts/blocks/icone_partages.php';
+require get_template_directory() . '/template-parts/blocks/liste_pages.php';

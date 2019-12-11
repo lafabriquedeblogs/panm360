@@ -32,6 +32,7 @@ function panm360_customs_posts_types() {
 		'items_list_navigation' => __( 'Items list navigation', 'panm360' ),
 		'filter_items_list'     => __( 'Filter items list', 'panm360' ),
 	);
+	
 	$args = array(
 		'label'                 => __( 'Artiste', 'panm360' ),
 		'description'           => __( 'Artiste', 'panm360' ),

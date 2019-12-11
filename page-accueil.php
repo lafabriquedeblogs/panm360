@@ -35,12 +35,13 @@ get_header();
 						
 						<ul class="section-content--main">
 						<?php
-							$albums_count = -1;	
+							$albums_count = 12;	
 							
 							$args = array(
 								'post_type' => 'records',
 								'posts_per_page' => $albums_count,
-								'post_status' => 'publish'
+								'post_status' => 'publish',
+								'orderby' => 'rand'
 							);
 							
 							$albums = new WP_Query($args);

@@ -1,20 +1,10 @@
-<?php
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package panm360
- */
-
-get_header();
-?>
+<?php get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<article>
 			<header class="section">
-				<h1 clas="entry-title">LIRE - <span class="light"><?php echo single_cat_title( '', false ); ?></span></h1>
+				<h1 clas="entry-title">LIRE  -  <span class="light">LABEL : <?php echo single_cat_title( '', false ); ?></span></h1>
 			</header>
 			<section class="section">
 				<div class="section-inner">
@@ -27,13 +17,7 @@ get_header();
 									while ( have_posts() ) :
 										the_post();
 										$posts_count = '';
-										/*
-										 * Include the Post-Type-specific template for the content.
-										 * If you want to override this in a child theme, then include a file
-										 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-										 */
 										include( locate_template( '/template-parts/modules/element-album.php', false, false ) );
-									
 									endwhile;
 																
 								?>

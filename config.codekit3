@@ -368,6 +368,14 @@
 		"oAP": "/inc/scripts.php",
 		"oF": 0
 		},
+	"/inc/shortcodes-abonnements.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/shortcodes-abonnements.php",
+		"oF": 0
+		},
 	"/inc/taxonomies.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -430,6 +438,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-albums.php",
+		"oF": 0
+		},
+	"/page-dev.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-dev.php",
 		"oF": 0
 		},
 	"/page-ecouter.php": {
@@ -567,6 +583,26 @@
 		"oA": 0,
 		"oAP": "/single.php",
 		"oF": 0
+		},
+	"/src/css/abonnements.css": {
+		"aP": 1,
+		"bl": 1,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/src/css/abonnements-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/src/css/classes.css": {
+		"aP": 1,
+		"bl": 1,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/src/css/classes-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/src/fonts/Open_Sans/LICENSE.txt": {
 		"cB": 0,
@@ -744,14 +780,6 @@
 		"oAP": "/src/fonts/Rubik/Rubik-Regular.ttf",
 		"oF": 0
 		},
-	"/src/functions_test.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/functions_test.php",
-		"oF": 0
-		},
 	"/src/img/image-featured-home-slider-dev.png": {
 		"ft": 32768,
 		"iS": 574323,
@@ -848,21 +876,18 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"/src/Le top 250 de la décennie TEXTES FRANCOS ET ANGLOS  ÉDITÉS ET TRADUITS - Feuille 4.csv": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/Le top 250 de la décennie TEXTES FRANCOS ET ANGLOS  ÉDITÉS ET TRADUITS - Feuille 4.csv",
-		"oF": 0
-		},
-	"/src/local.sql": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/local.sql",
-		"oF": 0
+	"/src/scss/abonnements.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/abonnements.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/src/scss/boutons.scss": {
 		"aP": 1,
@@ -873,6 +898,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/boutons.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/classes.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/classes.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1111,171 +1149,204 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/src/svg/icons/eject.svg": {
+	"/src/scss/wp-blocks.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/wp-blocks.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/svg/eject.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/eject.svg",
+		"oAP": "/src/svg/eject.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/eye.svg": {
+	"/src/svg/eye.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/eye.svg",
+		"oAP": "/src/svg/eye.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/eye_gris.svg": {
+	"/src/svg/eye_gris.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/eye_gris.svg",
+		"oAP": "/src/svg/eye_gris.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/fingerprint.svg": {
+	"/src/svg/facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/fingerprint.svg",
+		"oAP": "/src/svg/facebook.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/fleche-droite.svg": {
+	"/src/svg/fingerprint.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/fleche-droite.svg",
+		"oAP": "/src/svg/fingerprint.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/fleche-lien.svg": {
+	"/src/svg/fleche-droite.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/fleche-lien.svg",
+		"oAP": "/src/svg/fleche-droite.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/ic_play_arrow_24px.svg": {
+	"/src/svg/fleche-lien.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/ic_play_arrow_24px.svg",
+		"oAP": "/src/svg/fleche-lien.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/microphone.svg": {
+	"/src/svg/ic_play_arrow_24px.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/microphone.svg",
+		"oAP": "/src/svg/ic_play_arrow_24px.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/rss.svg": {
+	"/src/svg/Mail.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/rss.svg",
+		"oAP": "/src/svg/Mail.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/search.svg": {
+	"/src/svg/microphone.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/search.svg",
+		"oAP": "/src/svg/microphone.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/slider-left-arrow.svg": {
+	"/src/svg/rss.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/slider-left-arrow.svg",
+		"oAP": "/src/svg/rss.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/slider-right-arrow.svg": {
+	"/src/svg/search.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/slider-right-arrow.svg",
+		"oAP": "/src/svg/search.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/soundcloud.svg": {
+	"/src/svg/slider-left-arrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/soundcloud.svg",
+		"oAP": "/src/svg/slider-left-arrow.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/spotify.svg": {
+	"/src/svg/slider-right-arrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/spotify.svg",
+		"oAP": "/src/svg/slider-right-arrow.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/twitter.svg": {
+	"/src/svg/soundcloud.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/twitter.svg",
+		"oAP": "/src/svg/soundcloud.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/vimeo.svg": {
+	"/src/svg/spotify.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/vimeo.svg",
+		"oAP": "/src/svg/spotify.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/src/svg/icons/youtube.svg": {
+	"/src/svg/twitter.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/src/svg/icons/youtube.svg",
+		"oAP": "/src/svg/twitter.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/vimeo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/vimeo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/src/svg/youtube.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/src/svg/youtube.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -1301,12 +1372,12 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/taxonomy-generale-lire copie.php": {
+	"/taxonomy-annee.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/taxonomy-generale-lire copie.php",
+		"oAP": "/taxonomy-annee.php",
 		"oF": 0
 		},
 	"/taxonomy-generale-lire.php": {
@@ -1323,6 +1394,38 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taxonomy-genre.php",
+		"oF": 0
+		},
+	"/taxonomy-label.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-label.php",
+		"oF": 0
+		},
+	"/taxonomy-pays.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-pays.php",
+		"oF": 0
+		},
+	"/template-parts/blocks/icone_partages.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/blocks/icone_partages.php",
+		"oF": 0
+		},
+	"/template-parts/blocks/liste_pages.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/blocks/liste_pages.php",
 		"oF": 0
 		},
 	"/template-parts/content-none.php": {

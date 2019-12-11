@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
 html,body{
 	font-size: 1em;
 	font-family: $open;
@@ -13,7 +19,7 @@ h1, h2,h3,h4,h5.h6 {
 	font-family: $rubik;
 	font-size: 1em;
 	font-weight: 700;
-	margin:1em 0;
+	margin:0 0 1em 0;
 }
 
 h1{
@@ -26,7 +32,12 @@ h2 {
 	font-size: 2.375em;
 	text-transform: uppercase;
 }
-
+h3 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	line-height: 1;
+	margin:0 0 .7em 0;
+}
 img {
 	display: block;
 	max-width: 100%;
@@ -47,14 +58,24 @@ a {
 	position: absolute;
 	left: -999em;
 }
-
+.light{
+	font-weight: 300;
+}
 ul {
 	padding: 0px;
 	margin: 0 0 2em 0;
 	list-style-type: none;
 }
+
 li {
 	list-style-type: none;
+}
+.hentry {
+	li {
+		list-style-type: disc;
+		list-style-position: inside;
+		padding-bottom: 1em;
+	}
 }
 p {
 	padding: 0;
@@ -76,6 +97,12 @@ h1.category-title {
 .section {
 	margin-top: 120px;
 
+}
+.page {
+	.section {
+		margin-top: 80px;
+	
+	}	
 }
 
 .section-titre {
@@ -197,6 +224,44 @@ h1.category-title {
 .entry-content {
 	p {
 		line-height: 1.8;
+	}
+}
+.liste-pages {
+	padding: 1em 0;
+	border-top: 2px solid $gris_light;
+	border-bottom: 2px solid $gris_light;
+	margin: 0;
+	width: 100%;
+	li {
+		list-style-type: none;
+		padding: 0;
+	}
+	a {
+		text-decoration: none;
+		font-family: $rubik;
+		font-weight: 500;
+		color: $gris_ultra_dark;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.icones-de-partage {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 1em 0;
+	width: 100%;
+	.reseau-partage {
+		list-style-type: none;
+		padding: 0;
+	}
+	svg {
+		height: 22px;
+		width: 22px;
+		margin-right: 15px;
+		fill: $gris_ultra_dark;
 	}
 }
 @media screen and (min-width:980px){
