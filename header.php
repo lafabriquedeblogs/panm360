@@ -35,18 +35,22 @@
 		
 		<div id="branding-navigation">
 			<div class="site-branding">
-				<a href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="Panm360"/></a>
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'panm360' ); ?></button>
+				<a href="<?php echo get_site_url();?>">
+					<?php /*<img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="Panm360"/>*/ ?>
+					<svg class="icon"><use xlink:href="#panm360"></use></svg>
+				</a>
+				
 			</div><!-- .site-branding -->
 			
 			<nav id="site-navigation" class="main-navigation-desktop">
 				<?php get_template_part( 'template-parts/menus/menu','main-mobile' ); ?>
 				<?php get_template_part( 'template-parts/menus/menu','main-desktop' ); ?>
 			</nav><!-- #site-navigation -->
-
+			
+			<?php /* <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'panm360' ); ?></button> */ ?>
 		</div><!-- branding-navigation -->
 		
-		<?php get_template_part( 'template-parts/menus/menu','submenu-desktop' ); ?>
+		<?php //get_template_part( 'template-parts/menus/menu','submenu-desktop' ); ?>
 
 	</header><!-- #masthead -->
 	

@@ -551,7 +551,7 @@ h1.category-title {
   text-transform: uppercase; }
 
 .section {
-  margin-top: 120px; }
+  margin-top: 80px; }
 
 .page .section {
   margin-top: 80px; }
@@ -1145,9 +1145,7 @@ h1.category-title {
 
 @media screen and (min-width: 980px) {
   .album {
-    max-width: calc( 32.5% - 18px); }
-  .section-content--has-6-columns .album {
-    max-width: calc( 15.8% - 18px); } }
+    max-width: calc( 32.5% - 18px); } }
 
 @media screen and (min-width: 780px) and (max-width: 980px) {
   .element.main-item {
@@ -1165,7 +1163,9 @@ h1.category-title {
     -webkit-box-direction: normal;
             flex-direction: row; }
     .element.main-item > * {
-      width: calc( 50% - 18px); } }
+      width: calc( 50% - 18px); }
+  .section-content--has-6-columns .album {
+    max-width: calc( 15.8% - 18px); } }
 
 .rouge {
   color: #FE4A49; }

@@ -10,6 +10,7 @@
 		<nav id="nav-footer-menu">
 			<ul id="footer-menu">
 			<?php
+/*
 				echo wp_nav_menu( array(
 					'menu' => 2,
 					'container' => '',
@@ -39,18 +40,21 @@
 					'echo' => false,
 					'items_wrap' => '%3$s',
 				) );
+*/
 				echo wp_nav_menu( array(
 					'menu' => 291,
 					'container' => '',
 					'echo' => false,
 					'items_wrap' => '%3$s',
 				) );			
+/*
 				echo wp_nav_menu( array(
 					'menu' => 292,
 					'container' => '',
 					'echo' => false,
 					'items_wrap' => '%3$s',
-				) );				
+				) );	
+*/			
 			?>
 			</ul>			
 		</nav>

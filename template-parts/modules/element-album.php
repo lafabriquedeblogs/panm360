@@ -8,8 +8,9 @@
 	$artiste = get_artiste( $album_id , false );
 	$genres = get_genre($album_id);
 	
+	$auteur_id = get_the_author_meta('ID');
 	$auteur = get_the_author_meta('display_name');
-	$auteur_link =  get_the_author_meta('user_url');
+	$auteur_link =  get_author_posts_url($auteur_id) ;
 	
 	$pochette = get_the_post_thumbnail_url( $album_id, array(500,500) );
 	if( !$pochette ) $pochette =  get_template_directory_uri()."/src/img/sample-album.png";
