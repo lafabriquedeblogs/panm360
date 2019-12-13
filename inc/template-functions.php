@@ -105,3 +105,37 @@ function get_label($album_id){
 	
 	return $label_txt;
 }
+
+function get_years_list(){
+							
+	/* Add your taxonomy. */
+	$taxonomies = array( 
+	    'annee',
+	);
+	
+	$args = array(
+	    'orderby'           => 'name', 
+	    'order'             => 'DESC',
+	    'hide_empty'        => true, 
+	    'exclude'           => array(), 
+	    'exclude_tree'      => array(), 
+	    'include'           => array(),
+	    'number'            => '', 
+	    'fields'            => 'all', 
+	    'slug'              => '', 
+	    'parent'            => '',
+	    'hierarchical'      => true, 
+	    'child_of'          => 0, 
+	    'get'               => '', 
+	    'name__like'        => '',
+	    'description__like' => '',
+	    'pad_counts'        => false, 
+	    'offset'            => '', 
+	    'search'            => '', 
+	    'cache_domain'      => 'core'
+	); 
+	
+	$years = get_terms( $taxonomies, $args );
+	
+	return $years;
+}

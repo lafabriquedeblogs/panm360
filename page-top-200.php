@@ -8,7 +8,7 @@ get_header();
 ?>
 <div id="top-360-hero">
 	<h1><strong class="small">Top</strong> 360</h1>
-	<p>De la décennie <strong class="blanc">2009-2019</strong></p>
+	<p>De la décennie <strong class="blanc">2010-2019</strong></p>
 </div>
 
 	<div id="primary" class="content-area">
@@ -22,30 +22,73 @@ get_header();
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
 				
-					<div class="section-content ">
-						
-						<ul class="section-content--has-6-columns">
+					<div class="section-content-c">
 						<?php
-							$albums_count = -1;	
 							
-							$args = array(
-								'post_type' => 'records',
-								'posts_per_page' => $albums_count,
-								'post_status' => 'publish',
-								'orderby' => 'name',
-								'order' => 'ASC'
-							);
+							$years = get_years_list();							
 							
-							$albums = new WP_Query($args);
-							
-							while($albums->have_posts() ){
-									$albums->the_post();
+							foreach( $years as $year ){
+								$posts_array = get_posts(
+								    array(
+								    	
+								    	'numberposts' => -1,
+								        'post_type' => 'records',
+								        'orderby' => 'relier_artiste',
+								        'tax_query' => array(
+								            array(
+								            'taxonomy' => 'annee',
+								            'field' => 'slug',
+								            'terms' => $year->name,
+								            )
+								        )
+								    )
+								);
+								
+								$artistes_a = array();
+								$i = 1;
+								foreach( $posts_array as $post ){
+								
+									setup_postdata( $post );
+									$album_id = get_the_id();
+									$artiste = get_artiste( $album_id , false );
 									
-									include( locate_template( '/template-parts/modules/element-album.php', false, false ) );			
-								$albums_count--;
+									if( !array_key_exists($artiste,$artistes_a) ){
+										$artistes_a[$artiste] = $post;
+									} else {
+										$artistes_a[$artiste."-".$i] = $post;
+									}
+									$i++;
+											
+								}
+								sort($artistes_a);
+/*
+								echo '<pre>';
+								var_dump($artistes_a);
+								echo '</pre>';
+*/
+								wp_reset_postdata();
+								?>
+									<h2 class="bold"><?php echo $year->name;?></h2>
+									<ul class="section-content--has-6-columns">
+										<?php
+										
+										
+											
+
+										foreach( $artistes_a as $artist => $post ){
+											setup_postdata( $post );
+											include( locate_template( '/template-parts/modules/element-album.php', false, false ) ); 
+											
+										}
+										wp_reset_postdata();
+
+										?>
+									</ul>
+									<?php
+								
+								
 							}
-						?>
-						</ul>					
+					?>					
 					</div>
 					
 				</div>
