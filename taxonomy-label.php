@@ -28,7 +28,7 @@
 									'next_text' => __( 'Suivante', 'panm360' ),
 								) );
 									
-								?></li>>
+								?></li>
 							</ul>
 							
 						
