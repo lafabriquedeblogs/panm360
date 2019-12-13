@@ -1,0 +1,42 @@
+#top-360-hero {
+	background: $gris_ultra_light url('../img/panm360-top.jpg') center center no-repeat;
+	background-size: cover;
+	width: 100vw;
+	min-height: calc( 100vh - 200px );
+	margin-left:  -1.125em;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: flex-start;
+	justify-content: center ;
+	
+	h1 {
+		//text-align: center;
+		display: flex;
+		//align-content: center;
+		align-items: center;
+		justify-content: space-between;
+		color:#fff;
+		font-weight: 300;
+		background: $gris_ultra_dark;
+		padding: 10px 20px;
+		margin: 0;
+		strong {
+			margin-right: 15px;
+		}
+	}
+	p {
+		font-family: $rubik;
+		background: $bleu;
+		padding: 10px 20px;
+		color:$gris_ultra_dark;
+		margin: 0;
+	}
+	
+}
+
+@media screen and (min-width: 980px){
+	#top-360-hero {
+		//margin-left:  -1.125em;
+	}
+}

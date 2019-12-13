@@ -82,13 +82,6 @@ p {
 	margin: 0 0 2em 0;
 }
 
-.bleu {
-	color: $bleu;
-}
-
-.bold {
-	font-weight: 700;
-}
 h1.category-title {
 	text-transform: uppercase;	
 }
@@ -262,6 +255,38 @@ h1.category-title {
 		width: 22px;
 		margin-right: 15px;
 		fill: $gris_ultra_dark;
+	}
+}
+
+#pages-liste-navigation {
+	//border-bottom: 1px $gris_light solid;
+	//border-top: 1px $gris_light solid;
+	padding: 0.5em 0;
+	font-family: $rubik;
+	font-weight: 700;
+	font-size: 1.250em;
+	.nav-links {
+		display: flex;
+		
+	}
+	a, span {
+		color: $gris_ultra_dark;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	.page-numbers {
+		//border: 1px solid red;
+		padding: 3px 10px;
+		border-radius: 5px;
+		background-color: #fff;
+	}
+	.next, .prev {
+		display: none;
+	}
+	.current {
+		background-color: $bleu;
+		color: #fff;
 	}
 }
 @media screen and (min-width:980px){

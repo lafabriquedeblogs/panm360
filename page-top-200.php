@@ -6,12 +6,18 @@
 
 get_header();
 ?>
+<div id="top-360-hero">
+	<h1><strong class="small">Top</strong> 360</h1>
+	<p>De la décennie <strong class="blanc">2009-2019</strong></p>
+</div>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+<!--
 			<header class="section">
 				<h1 clas="entry-title"><?php the_title(); ?></h1>
 			</header>
+-->
 			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">

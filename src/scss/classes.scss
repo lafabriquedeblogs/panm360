@@ -1,7 +1,12 @@
 .rouge {
 	color: $rouge;
 }
-
+.blanc {
+	color: #fff;
+}
+.bleu {
+	color: $bleu;
+}
 .bg-dark {
 	background: $gris_ultra_dark;
 }
@@ -18,14 +23,16 @@
 	font-weight: 500;
 }
 
-.bold {
+.bold, strong {
 	font-weight: 700;
 }
 .x-bold {
 	font-weight: 900;
 }
 
-
+.small {
+	font-size: 0.5em;
+}
 .chapeau-header {
 	font-weight: 500;
 	font-size: 1.625em;

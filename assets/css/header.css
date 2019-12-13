@@ -36,7 +36,7 @@
 
 #branding-navigation svg.icon {
   height: 60px;
-  width: 300px; }
+  width: 250px; }
 
 #searchform {
   margin-top: -100px;
@@ -248,15 +248,13 @@
   display: none; }
 
 #border-top-menu {
-  display: none; }
+  max-height: 1px;
+  border-top: 1px solid #E6E6EA;
+  margin-top: 1em; }
 
 @media screen and (min-width: 980px) {
   #border-top-menu {
-    display: block;
-    max-height: 1px;
-    margin-left: calc( -100vw / 2 + 100% / 2);
-    margin-right: calc( -100vw / 2 + 100% / 2);
-    border-top: 1px solid #E6E6EA; }
+    display: block; }
   #triangle {
     display: block;
     position: absolute;

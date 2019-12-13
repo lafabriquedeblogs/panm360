@@ -118,6 +118,31 @@ function lecteur_audio($string){
 				}
 */
 			?>
+			
+			
+			<?php
+/*
+				//update_user_meta( int $user_id, string $meta_key, mixed $meta_value, mixed $prev_value = '' )
+				$args = array(
+					'role' => 'author'
+				);
+				$wp_user_query = new WP_User_Query($args);
+				$authors = $wp_user_query->get_results();
+				
+				foreach( $authors as $author ){
+					$current_display_name = $author->display_name;
+					$current_display_name_a = explode(' ', $current_display_name);
+					$new_display_name = implode(' ', array_reverse($current_display_name_a));
+					echo '<pre>';
+						var_dump($author);
+					echo '</pre>';
+					//update_user_meta( $author->ID,'display_name', $new_display_name, $current_display_name );
+					 //wp_update_user( array( 'ID' => $author->ID, 'display_name' => $new_display_name ) );
+				}
+*/
+				
+				
+			?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	

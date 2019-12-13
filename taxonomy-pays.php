@@ -21,7 +21,14 @@
 									endwhile;
 																
 								?>
-								<li id="pages-liste-navigation" ><?php the_posts_navigation(); ?></li>
+								<li id="pages-liste-navigation" ><?php
+									the_posts_pagination( array(
+									'mid_size'  => 4,
+									'prev_text' => __( 'Précédente', 'panm360' ),
+									'next_text' => __( 'Suivante', 'panm360' ),
+								) );
+									
+								?></li>
 							</ul>
 							
 						

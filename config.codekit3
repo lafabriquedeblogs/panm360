@@ -92,6 +92,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/panm360-top.jpg": {
+		"ft": 16384,
+		"iS": 2008948,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/panm360-top.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/img/panm360.png": {
 		"ft": 32768,
 		"iS": 3234,
@@ -1146,6 +1157,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/src/scss/top-360-hero.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/top-360-hero.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/src/scss/variables.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -1590,7 +1614,7 @@
 	"abortBuildOnError": 1,
 	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 1,
-	"animateCSSInjections": 0,
+	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
 	"babel7PresetType": 1,

@@ -1,11 +1,12 @@
 .site {
-	padding: 0 1.125em;
+	//padding: 0 1.125em;
 }
 #primary, #masthead{
-	max-width: $max-width;
-	//padding: 0 2.250em;
+	max-width:$max-width;
 }
-
+#content, #masthead, #primary {
+	padding: 0 1.125em;
+}
 .section-content--has-6-columns {
 	display: flex;
 	flex-direction: row;

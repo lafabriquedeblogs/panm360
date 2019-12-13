@@ -5,14 +5,15 @@
 	display: none;
 }
 #border-top-menu {
-	display: none;
+	//display: none;
+		max-height: 1px;
+		border-top: 1px solid $gris_light;
+		margin-top: 1em;
 }
 @media screen and (min-width:980px){
 	#border-top-menu {
 		display: block;
-		max-height: 1px;
-		@include wide-screen;
-		border-top: 1px solid $gris_light;
+
 	}
 	#triangle {
 		display:block;
