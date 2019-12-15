@@ -215,6 +215,13 @@ function my_acf_op_init() {
             'menu_title'  => __('Abonnements'),
             'parent_slug' => $parent['menu_slug'],
         ));
+
+        // Add sub page.
+        $child_ads = acf_add_options_sub_page(array(
+            'page_title'  => __('Publicités'),
+            'menu_title'  => __('Publicités'),
+            'parent_slug' => $parent['menu_slug'],
+        ));
     }
 }
 
@@ -238,3 +245,4 @@ require get_template_directory() . '/inc/shortcodes-abonnements.php';
 
 require get_template_directory() . '/template-parts/blocks/icone_partages.php';
 require get_template_directory() . '/template-parts/blocks/liste_pages.php';
+require get_template_directory() . '/template-parts/blocks/banieres_publcite.php';

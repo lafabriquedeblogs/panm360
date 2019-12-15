@@ -48,6 +48,15 @@ a {
 	color: $gris_dark;
 }
 
+.has-text-align-center {
+	text-align: center;	
+}
+.has-text-align-left{
+	text-align: left;
+}
+.has-text-align-right {
+	text-align: right;
+}
 .abracadabra-fixed {
 	position:fixed !important;
 	height: 1px;

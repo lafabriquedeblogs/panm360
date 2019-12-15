@@ -18,6 +18,12 @@ get_header();
 				<h1 clas="entry-title"><?php the_title(); ?></h1>
 			</header>
 -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<div class="entry-content">
+					<?php the_content();?>
+				</div><!-- .entry-content -->
+			</article><!-- #post-<?php the_ID(); ?> -->
+
 			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
