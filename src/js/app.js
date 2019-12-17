@@ -168,6 +168,11 @@
 		});
 		observer.observe();		
 		
+		$(".gfield_checkbox").on("click","label", function(e){
+			$(this).parent().toggleClass("selected");
+		});
+		
+		
 		if( spotify != null) spotify.setAttribute("width","100%");
 		
 	});

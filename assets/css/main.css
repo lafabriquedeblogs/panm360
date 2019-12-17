@@ -902,6 +902,30 @@ h1.category-title {
   width: 100%;
   border-bottom: 2px solid #5BC6E8; }
 
+.gform_wrapper .gfield_checkbox input {
+  position: absolute;
+  left: -999em;
+  opacity: 0; }
+
+.gform_wrapper .gfield_checkbox label {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center; }
+  .gform_wrapper .gfield_checkbox label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    margin-right: 8px;
+    border-radius: 15px;
+    border: 1px solid #5BC6E8; }
+
+.gform_wrapper .gfield_checkbox .selected label::before {
+  background-color: #5BC6E8;
+  border: 6px double #fff; }
+
 @media screen and (min-width: 980px) {
   #gform_fields_4 {
     display: -webkit-box;
@@ -915,6 +939,20 @@ h1.category-title {
     #gform_fields_4 > li {
       flex-basis: calc( 100% / 2 - 1.125em); }
     #gform_fields_4 #field_4_3, #gform_fields_4 #field_4_4 {
+      flex-basis: 100%; }
+  #gform_fields_6 {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+    #gform_fields_6 > li {
+      flex-basis: calc( 100% / 2 - 1.125em);
+      margin-bottom: 1em; }
+    #gform_fields_6 #field_6_1, #gform_fields_6 #field_6_4 {
       flex-basis: 100%; } }
 
 .bouton, button, input[type="submit"] {
