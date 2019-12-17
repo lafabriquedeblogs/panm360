@@ -4,9 +4,9 @@
 function panm360_taxonomies() {
 	
 	$labels_generale = array(
-		'name'                       => _x( 'Generales', 'Taxonomy General Name', 'panm360' ),
-		'singular_name'              => _x( 'Generale', 'Taxonomy Singular Name', 'panm360' ),
-		'menu_name'                  => __( 'Generale', 'panm360' ),
+		'name'                       => _x( 'Générales', 'Taxonomy General Name', 'panm360' ),
+		'singular_name'              => _x( 'Générale', 'Taxonomy Singular Name', 'panm360' ),
+		'menu_name'                  => __( 'Générale', 'panm360' ),
 		'all_items'                  => __( 'All Items', 'panm360' ),
 		'parent_item'                => __( 'Parent Item', 'panm360' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'panm360' ),

@@ -278,6 +278,29 @@ h1.category-title {
 		color: #fff;
 	}
 }
+
+.filtre-liste-tax{
+	font-size: 0.80em;
+	text-align: center;
+	font-weight: 400;
+	font-family: $rubik;
+	text-transform: capitalize;
+	font-style: italic;
+	
+	span {
+		display: inline-block;
+		padding: 0 4px;
+		text-decoration: underline;
+		cursor: pointer;
+		&:hover {
+			color: #000;
+		}
+	}	
+}
+.filtre-list-genres {
+
+
+}
 @media screen and (min-width:980px){
 	h1.entry-title {
 		margin-top: 0;	

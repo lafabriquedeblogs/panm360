@@ -154,3 +154,40 @@ function get_years_list(){
 	
 	return $years;
 }
+function get_filter_data( $taxonomies ){
+	$terms = get_terms( array(
+		'taxonomy' => $taxonomies,
+		'hide_empty' => false,
+	) );
+	
+	$liste = array();
+	
+	foreach( $terms as $term ){
+		$nom = strtolower( $term->name );
+		$slug = str_replace(" ", "-", $nom);
+		$id = $term->term_id;
+		$liste[] = '<span data-genre="'.$slug.'">'.$nom.'</span>';
+	}
+	
+	return implode(" • ", $liste);	
+}
+
+function get_liste_filtre_artiste(){
+	$args = array(
+		'post_type' => 'artiste',
+		'posts_per_page' => -1,
+		'orderby' => 'title',
+		'order' => 'DESC'
+	);
+	
+	$artistes_query = new WP_Query($args);
+	$artistes = $artistes_query->posts;
+	
+	foreach( $artistes as $artiste ){
+		$nom = strtolower( $artiste->post_title );
+		$slug = str_replace(" ", "-", $nom);
+		$id = $artiste->ID;
+		$liste[] = '<span data-genre="'.$slug.'">'.$nom.'</span>';
+	}
+	return implode(" • ", $liste);
+}

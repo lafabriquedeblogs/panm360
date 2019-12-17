@@ -19,7 +19,13 @@ get_header();
 					<?php the_content();?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-<?php the_ID(); ?> -->
-
+			
+			<div id="filtre-liste-albums">
+				<h2>Filtres</h2>
+				<p class="filtre-liste-tax filtre-list-genres"><?php echo get_filter_data('genre'); ?></p>
+				<p class="filtre-liste-tax filtre-list-annee"><?php echo get_filter_data('annee'); ?></p>
+				<p class="filtre-liste-tax filtre-list-artiste"><?php echo get_liste_filtre_artiste(); ?></p>
+			</div>
 			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
