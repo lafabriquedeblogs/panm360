@@ -8,9 +8,20 @@
 	<footer id="colophon" class="site-footer">
 		
 		<nav id="nav-footer-menu">
-			<ul id="footer-menu">
+			<ul id="footer-menu" class="footer-top-360">
+				<?php
+				echo wp_nav_menu( array(
+					'menu' => 291,
+					'container' => '',
+					'echo' => false,
+					'items_wrap' => '%3$s',
+				) );			
+					
+				?>
+
 			<?php
-/*
+			/*
+				//Footer Site
 				echo wp_nav_menu( array(
 					'menu' => 2,
 					'container' => '',
@@ -40,21 +51,21 @@
 					'echo' => false,
 					'items_wrap' => '%3$s',
 				) );
-*/
+
 				echo wp_nav_menu( array(
 					'menu' => 291,
 					'container' => '',
 					'echo' => false,
 					'items_wrap' => '%3$s',
 				) );			
-/*
+
 				echo wp_nav_menu( array(
 					'menu' => 292,
 					'container' => '',
 					'echo' => false,
 					'items_wrap' => '%3$s',
 				) );	
-*/			
+			*/			
 			?>
 			</ul>			
 		</nav>

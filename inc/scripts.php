@@ -18,6 +18,7 @@ function panm360_scripts() {
 	wp_enqueue_style( 'panm360-style', get_template_directory_uri().'/assets/css/main.css' );
 	
 	wp_enqueue_script( 'script-slick', get_template_directory_uri() . '/assets/js/lib/slick/slick.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'script-lozad', get_template_directory_uri() . '/assets/js/lib/lozad.min.js', array('jquery'), false, true );
 	wp_enqueue_script( 'script-app', get_template_directory_uri() . '/assets/js/app.js', array(), false, true );
 	
 	wp_dequeue_style('wp-block-library');

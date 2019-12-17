@@ -158,8 +158,18 @@
 		reportWindowSize();
 		//go_to_slide_menu( active_archive_menu_index );
 		//move_triangle_subnav_offset_x( active_archive_menu );
+
+		const observer = lozad('.lozad', {
+			rootMargin: '10px 0px', // syntax similar to that of CSS Margin
+			threshold: 0, // ratio of element convergence
+			loaded: function(el) {
+				el.classList.add('img-loaded');
+			}
+		});
+		observer.observe();		
 		
 		if( spotify != null) spotify.setAttribute("width","100%");
-	
+		
 	});
+	
 })( jQuery, document , window );

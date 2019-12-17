@@ -50,7 +50,7 @@ function get_artiste( $album_id , $get_lien = true ){
 	return $artiste_output;
 }
 
-function get_genre($album_id){
+function get_genre($album_id, $data = false ){
 	$genres = array();
 	$genres_list = get_the_terms($album_id,'genre');
 	
@@ -61,10 +61,17 @@ function get_genre($album_id){
 	}
 	$genres_txt = implode(" / ", $genres);
 	
+	if( $data ){
+		$genres_txt = '';
+		foreach( $genres_list as $genre ){
+			$genre_tolower =  strtolower($genre->name);
+			$genres_txt .= " ".str_replace( " ","-" , $genre_tolower );
+		}
+	}
 	return $genres_txt;
 }
 
-function get_annee($album_id){
+function get_annee($album_id, $data = false){
 	$annees = array();
 	$annee_list = get_the_terms($album_id,'annee');
 	
@@ -74,7 +81,15 @@ function get_annee($album_id){
 		}
 	}
 	$annees_txt = implode(" / ", $annees);
-	
+
+	if( $data ){
+		$annees_txt = '';
+		foreach( $annee_list as $an ){
+			$an_tolower =  strtolower($an->name);
+			$annees_txt .= " ".str_replace( " ","-" , $an_tolower );
+		}
+	}
+		
 	return $annees_txt;
 }
 

@@ -1,7 +1,7 @@
 #colophon {
 	background-color: $gris_ultra_dark;
 	//margin: 0 -1.125em 0;
-	padding: 5.813em 0 4.063em;
+	padding: 5.813em 1.125em 4.063em;
 	width: 100vw;
 }
 #panm_360_infos {
@@ -64,7 +64,11 @@
 	}
 
 }
-
+/*
+#nav-footer-menu {
+	padding: 0 1em;
+}
+*/
 #menu-infos {
 	display: flex;
 	flex-direction: column;

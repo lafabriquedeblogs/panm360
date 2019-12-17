@@ -167,6 +167,17 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/assets/js/lib/lozad.min.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/lib/min/lozad.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/assets/js/lib/slick/ajax-loader.gif": {
 		"ft": 4194304,
 		"iS": 4178,
@@ -605,23 +616,13 @@
 		"oAP": "/single.php",
 		"oF": 0
 		},
-	"/src/css/abonnements.css": {
+	"/src/css/main.css": {
 		"aP": 1,
 		"bl": 1,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/src/css/abonnements-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/css/classes.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/css/classes-min.css",
+		"oAP": "/src/css/main-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -881,8 +882,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/src/js/min/app-min.js",
-		"oF": 0,
+		"oAP": "/assets/js/app.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 1
 		},
@@ -893,6 +894,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/src/js/min/block-columns-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/src/js/min/app-min.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/min/min/app-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -1100,8 +1112,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/src/css/main.css",
-		"oF": 0,
+		"oAP": "/assets/css/main.css",
+		"oF": 2,
 		"oS": 0,
 		"uL": 1
 		},
@@ -1444,6 +1456,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taxonomy-pays.php",
+		"oF": 0
+		},
+	"/template-parts/blocks/banieres_publcite.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/blocks/banieres_publcite.php",
+		"oF": 0
+		},
+	"/template-parts/blocks/hero_page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/blocks/hero_page.php",
 		"oF": 0
 		},
 	"/template-parts/blocks/icone_partages.php": {

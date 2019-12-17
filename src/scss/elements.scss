@@ -1,3 +1,15 @@
+img.lozad {
+	min-width: 185px;
+	min-height: 185px;
+	opacity: 0;
+	transition: opacity 300ms ease-out;
+	
+	&.img-loaded{
+		opacity: 1;
+	}
+}
+
+
 .element-title {
 	font-size: 1em;
 	line-height: 1.3;

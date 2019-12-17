@@ -13,11 +13,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-<!--
-			<header class="section">
-				<h1 clas="entry-title"><?php the_title(); ?></h1>
-			</header>
--->
+
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="entry-content">
 					<?php the_content();?>
@@ -29,6 +25,7 @@ get_header();
 				<div id="critiques-albums" class="section-inner">
 				
 					<div class="section-content-c">
+						<ul class="section-content--has-6-columns">
 						<?php
 							
 							$years = get_years_list();							
@@ -67,15 +64,11 @@ get_header();
 											
 								}
 								sort($artistes_a);
-/*
-								echo '<pre>';
-								var_dump($artistes_a);
-								echo '</pre>';
-*/
+
 								wp_reset_postdata();
 								?>
-									<h2 class="bold"><?php echo $year->name;?></h2>
-									<ul class="section-content--has-6-columns">
+									<!-- <h2 class="bold"><?php echo $year->name;?></h2> -->
+									
 										<?php
 										
 										
@@ -89,12 +82,13 @@ get_header();
 										wp_reset_postdata();
 
 										?>
-									</ul>
+									
 									<?php
 								
 								
 							}
-					?>					
+					?>	
+					</ul>				
 					</div>
 					
 				</div>
