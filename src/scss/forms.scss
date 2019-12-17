@@ -15,3 +15,43 @@
 	font-weight: 700;
 	text-align: center;
 }
+
+.gform_wrapper {
+	li {
+		list-style-type: none;
+	}
+	.gfield_label {
+		font-size: .9em;
+		font-weight: 500;
+		font-family: $rubik;
+		display: block;
+		margin-bottom: 5px;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	textarea {
+		padding: 20px;
+		display: block;
+		//border: 1px solid $gris_light;
+		border: none;
+		background-color: $gris_ultra_light;
+		width: 100%;
+		border-bottom: 2px solid $bleu;
+	}
+}
+
+@media screen and (min-width: 980px){
+	#gform_fields_4{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		& > li {
+			flex-basis: calc( 100% / 2 - 1.125em);
+		}
+		#field_4_3, #field_4_4 {
+			flex-basis: 100%;
+		}
+	}
+}

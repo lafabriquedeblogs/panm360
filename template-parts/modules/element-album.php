@@ -31,6 +31,6 @@
 		<span class="artiste album-artiste"><?php echo $artiste;?></span>
 		<span class="artiste album-annee"><?php echo $annee;?></span>
 		<span class="genre album-genre"><?php echo $genres;?></span>
-		<a class="author album-author" href="<?php echo $auteur_link;?>"><?php _e('par','panm360'); ?>: <?php echo $auteur;?></a>
+		<a class="author album-author" href="<?php echo $auteur_link;?>"><?php _e('par','panm360'); ?> <?php echo $auteur;?></a>
 	</div>
 </li>

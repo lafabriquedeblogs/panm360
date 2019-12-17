@@ -631,6 +631,9 @@ h1.category-title {
     flex-wrap: nowrap;
     -webkit-box-align: center;
             align-items: center; }
+    .infolettre .panm360-infolettre .icon {
+      height: 50px;
+      width: 220px; }
   .infolettre .infolettre-titre {
     color: #fff;
     text-transform: uppercase;
@@ -738,7 +741,7 @@ h1.category-title {
     align-content: center; }
   .infolettre img {
     -webkit-box-flex: 0;
-            flex: 0 0;
+            flex: 0 0 auto;
     margin: 0; }
   .infolettre .infolettre-titre {
     width: auto;
@@ -877,6 +880,42 @@ h1.category-title {
   text-transform: uppercase;
   font-weight: 700;
   text-align: center; }
+
+.gform_wrapper li {
+  list-style-type: none; }
+
+.gform_wrapper .gfield_label {
+  font-size: .9em;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  display: block;
+  margin-bottom: 5px; }
+
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="email"],
+.gform_wrapper input[type="number"],
+.gform_wrapper textarea {
+  padding: 20px;
+  display: block;
+  border: none;
+  background-color: #F4F4F8;
+  width: 100%;
+  border-bottom: 2px solid #5BC6E8; }
+
+@media screen and (min-width: 980px) {
+  #gform_fields_4 {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+    #gform_fields_4 > li {
+      flex-basis: calc( 100% / 2 - 1.125em); }
+    #gform_fields_4 #field_4_3, #gform_fields_4 #field_4_4 {
+      flex-basis: 100%; } }
 
 .bouton, button, input[type="submit"] {
   font-family: "Rubik", sans-serif;
@@ -1122,8 +1161,7 @@ img.lozad {
     font-weight: 700; }
 
 .meta-name {
-  display: inline-block;
-  width: 50px; }
+  display: inline-block; }
 
 /* Single Album */
 .album-cover {
@@ -1155,10 +1193,14 @@ img.lozad {
   margin-bottom: 1em; }
 
 .single-records h1.entry-title {
-  margin: 0.5em 0 0 0; }
+  margin: 0 0 1em 0; }
 
-.single-records h2.sub-title {
-  margin: 0 0 0.5em 0; }
+.single-records span.sub-title {
+  display: block;
+  margin: 0;
+  font-weight: 300;
+  font-size: 2em;
+  text-transform: uppercase; }
 
 @media screen and (min-width: 768px) {
   .album-cover {
@@ -1192,7 +1234,7 @@ img.lozad {
   .single-album-body {
     width: calc( 100% - ( 294px + 36px )); }
   .single-records h1.entry-title {
-    margin: 0; } }
+    margin: 0 0 1em 0; } }
 
 @media screen and (min-width: 535px) {
   .album {
@@ -1387,6 +1429,10 @@ img.lozad {
       width: 25px; }
     #menu-socials li.spotify a svg {
       width: 25px; }
+
+#logo-footer .icon {
+  height: 51px;
+  width: 230px; }
 
 @media screen and (min-width: 980px) {
   #panm_360_infos {

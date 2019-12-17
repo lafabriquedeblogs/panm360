@@ -161,6 +161,7 @@ function panm360_allowed_block_types( $allowed_blocks, $post ) {
 		'core/image',
 		'core/paragraph',
 		'core/heading',
+		'core/gallery',
 		'core/list',
 		'core/columns',
 		'core/text-columns',

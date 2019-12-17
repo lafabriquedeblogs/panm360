@@ -24,7 +24,7 @@
 				<div class="lp-metas">
 					<span class="single-album-pays"><span  class="bleu bold meta-name"><?php _e('pays','panm360'); ?> : </span><?php echo $pays;?></span>
 					<span class="single-album-label"><span class="bleu bold meta-name"><?php _e('label','panm360'); ?> : </span><?php echo $label;?></span>
-					<span class="single-album-genre"><span class="bleu bold meta-name"><?php _e('styles','panm360'); ?> : </span><?php echo $genres;?></span>
+					<span class="single-album-genre"><span class="bleu bold meta-name"><?php _e('Genres et styles','panm360'); ?> : </span><?php echo $genres;?></span>
 					<span class="single-album-annee"><span class="bleu bold meta-name"><?php _e('année','panm360'); ?> : </span><?php echo $annee;?></span>
 				</div>
 				
@@ -42,8 +42,8 @@
 			
 			<div class="single-album-body">
 				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' );?>
-					<h2 class="sub-title"><?php echo $artiste;?></h2>
+					<span class="sub-title"><?php echo $artiste;?></span>
+					<?php the_title( '<h1 class="entry-title">', '</h1>' );?>	
 				</header><!-- .entry-header -->
 				
 				

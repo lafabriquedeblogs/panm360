@@ -188,6 +188,11 @@ h1.category-title {
 		flex-direction: column;
 		flex-wrap: nowrap;
 		align-items: center;
+		
+		.icon {
+			height: 50px;
+			width: 220px;
+		}
 	}
 	.infolettre-titre {
 		color: #fff;
@@ -315,7 +320,7 @@ h1.category-title {
 			align-content: center;
 		}
 		img {
-			flex: 0 0;
+			flex: 0 0 auto;
 			margin: 0;
 		}
 		.infolettre-titre {

@@ -72,7 +72,10 @@
 		
 		<div id="panm_360_infos">
 			
-			<a id="logo-footer" href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="panm360"/></a>
+			<a id="logo-footer" href="<?php echo get_site_url();?>">
+			<!-- <img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="panm360"/> -->
+				<svg class="icon"><use xlink:href="#panm360-bleu"></use></svg>
+			</a>
 			
 			<ul id="menu-infos">
 				<?php
