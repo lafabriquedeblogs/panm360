@@ -272,11 +272,13 @@ function my_acf_op_init() {
         ));
 
         // Add sub page.
+/*
         $child = acf_add_options_sub_page(array(
             'page_title'  => __('Social Settings'),
             'menu_title'  => __('Social'),
             'parent_slug' => $parent['menu_slug'],
         ));
+*/
         // Add sub page.
         $child_abos = acf_add_options_sub_page(array(
             'page_title'  => __('Abonnements'),

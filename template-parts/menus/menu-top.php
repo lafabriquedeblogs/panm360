@@ -45,6 +45,25 @@
 				</a>
 			</li>
 		<?php endif; */?>
+		
+		<li id="menu-panm" >
+			<a class="cross">
+				<svg class="icon"><use xlink:href="#closemenupanm"></use></svg>
+			</a>
+			<a class="burger active">
+				<svg class="icon"><use xlink:href="#buenu"></use></svg>
+			</a>
+			<ul id="top-sub-menu">
+		<?php
+				echo wp_nav_menu( array(
+					'menu' => 291,
+					'container' => '',
+					'echo' => false,
+					'items_wrap' => '%3$s',
+				) );			
+			?>	
+			</ul>
+		</li>	
 		<li id="panm-signin" class="menu-item">
 			<a href="<?php echo get_permalink( $devenir_membre_page_id );?>">
 				<svg class="icon"><use xlink:href="#fingerprint"></use></svg>

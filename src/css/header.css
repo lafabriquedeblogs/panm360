@@ -141,9 +141,7 @@
     -webkit-box-pack: end;
             justify-content: flex-end;
     width: 100%;
-    padding: 25px 0;
-    -webkit-box-align: center;
-            align-items: center; }
+    padding: 25px 0; }
   #menu-top-container a {
     text-decoration: none;
     display: block;
@@ -184,63 +182,8 @@
   margin: 0 10px;
   padding: 0; }
 
-#menu-top-container #menu-top #menu-panm {
-  position: relative;
-  width: 18px;
-  height: 14px;
-  padding: 0;
-  margin-right: 5px; }
-  #menu-top-container #menu-top #menu-panm .burger {
-    width: 18px;
-    height: 14px;
-    cursor: pointer;
-    display: block;
-    position: absolute;
-    left: -999em;
-    margin: 0; }
-    #menu-top-container #menu-top #menu-panm .burger svg.icon {
-      fill: #717171;
-      width: 18px;
-      height: 14px; }
-    #menu-top-container #menu-top #menu-panm .burger.active {
-      position: static; }
-  #menu-top-container #menu-top #menu-panm .cross {
-    cursor: pointer;
-    width: 18px;
-    height: 14px;
-    display: block;
-    position: absolute;
-    left: -999em;
-    margin: 0; }
-    #menu-top-container #menu-top #menu-panm .cross svg.icon {
-      fill: #717171;
-      width: 18px;
-      height: 14px; }
-    #menu-top-container #menu-top #menu-panm .cross.active {
-      position: static; }
-  #menu-top-container #menu-top #menu-panm #menu-item-125 > a {
-    display: none; }
-  #menu-top-container #menu-top #menu-panm #top-sub-menu {
-    margin: 0;
-    padding: 0; }
-    #menu-top-container #menu-top #menu-panm #top-sub-menu .sub-menu {
-      display: none;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-              flex-direction: column;
-      -webkit-box-align: start;
-              align-items: flex-start;
-      position: absolute;
-      z-index: 2000;
-      left: -16px;
-      top: 25px;
-      width: 150px;
-      background: #fff;
-      border: 1px solid #E6E6EA;
-      padding: 10px 5px; }
-      #menu-top-container #menu-top #menu-panm #top-sub-menu .sub-menu li a {
-        display: block;
-        padding: 2px 0; }
+#menu-top-container #menu-top li {
+  background: red; }
 
 #main-menu-mobile {
   position: absolute;

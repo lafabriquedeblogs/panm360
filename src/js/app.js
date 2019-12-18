@@ -109,6 +109,18 @@
 			});
 			
 		});
+		
+		$("#menu-panm").on("click",".burger", function(){
+			$(this).removeClass("active");
+			$("#menu-panm .cross").addClass("active");
+			$("#menu-panm .sub-menu").show();
+		});
+		$("#menu-panm").on("click",".cross", function(){
+			$(this).removeClass("active");
+			$("#menu-panm .burger").addClass("active");
+			$("#menu-panm .sub-menu").hide();
+		});	
+		
 		reportWindowSize();
 
 		const observer = lozad('.lozad', {
