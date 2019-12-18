@@ -29,6 +29,10 @@
 				</div>
 				
 				<?php $rows_icons = get_field("reseau_social",'options'); ?>
+				
+				<!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<div class="addthis_inline_share_toolbox"></div>
+				<?php /* ?>
 				<ul class="icones-de-partage">
 					<?php foreach( $rows_icons as $icon ){ ?>
 						<li class="reseau-partage">
@@ -38,6 +42,7 @@
 						</li>
 					<?php }	?>
 				</ul>
+				<?php */ ?>
 			</div>
 			
 			<div class="single-album-body">
@@ -64,8 +69,6 @@
 		<?php endwhile; ?>
 		<section class="section">
 			<div class="section-inner">
-				<h4 class="section-titre"><span><?php _e('Critiques d\'albums','panm360'); ?></span> <?php //<a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a> ?></h4>
-
 					<ul class="section-content--has-6-columns">
 					<?php
 						$albums_count = 12;	

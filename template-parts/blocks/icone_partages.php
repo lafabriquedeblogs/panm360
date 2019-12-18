@@ -41,20 +41,35 @@ function icones_partage_render_callback( $block, $content = '', $is_preview = fa
 	
 	$rows_icons = get_field("reseau_social",'options');
 	
+	//%permalink%
+	
+	
+	
 	if( is_admin() )
 		include_once( get_template_directory() . "/assets/img/panm360_sprite.svg");
 	
 	?>
+		
+       <!-- Go to www.addthis.com/dashboard to customize your tools -->
+       <div class="addthis_inline_share_toolbox"></div>
+       
+    <?php /* ?>        
 		<ul id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 			
-				<?php foreach( $rows_icons as $icon ){ ?>
+				<?php foreach( $rows_icons as $icon ){
+					
+					echo '<pre>';
+						var_dump($icon);
+					echo '</pre>';
+				?>
+				
 						<li class="reseau-partage">
-							<a href="#" id="<?php echo $icon['icone_reseau_social']['ID'];?>">
+							<a href="" id="<?php echo $icon['icone_reseau_social']['ID'];?>">
 								<svg class="icon"><use xlink:href="#<?php echo $icon['icone_reseau_social']['ID'];?>"></use></svg>
 							</a>
 						</li>
 				<?php }	?>
 			
 		</ul>
-			
+	<?php */ ?>		
 <?php } ?>

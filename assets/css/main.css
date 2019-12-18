@@ -685,6 +685,13 @@ h1.category-title {
     margin-right: 15px;
     fill: #333333; }
 
+.addthis_inline_share_toolbox {
+  margin-top: 1em; }
+  .addthis_inline_share_toolbox .at-share-tbx-element .at-share-btn:focus,
+  .addthis_inline_share_toolbox .at-share-tbx-element .at-share-btn:hover {
+    -webkit-transform: none;
+            transform: none; }
+
 #pages-liste-navigation {
   padding: 0.5em 0;
   font-family: "Rubik", sans-serif;
@@ -1250,7 +1257,9 @@ img.lozad {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
-    width: 294px; }
+    width: 294px;
+    -webkit-box-align: start;
+            align-items: flex-start; }
   .lp-metas {
     margin-left: 0; }
   .single-album-body {

@@ -130,6 +130,56 @@ function panm360_wp_body_open(){
 }
 add_action( 'wp_body_open', 'panm360_wp_body_open' );
 
+function meta_og(){
+	global $post;
+	
+	$post_id = $post->ID;
+	$og_url = get_permalink( $post_id );
+	$og_title = get_the_title($post_id);
+	$og_description = get_the_excerpt( $post_id );
+	$og_image = get_the_post_thumbnail_url( $post_id, array(500,500) );
+	?>
+	<meta property="og:url"                content="<?php echo $og_url;?>" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="<?php echo $post_id;?>" />
+	<meta property="og:description"        content="<?php echo $og_description;?>" />
+	<meta property="og:image"              content="<?php echo $og_image;?>" />	
+<?php
+}
+
+add_action('wp_head','meta_og');
+
+
+/**
+ * Disable the emoji's
+ */
+function disable_emojis() {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+}
+add_action( 'init', 'disable_emojis' );
+
+/**
+ * Filter function used to remove the tinymce emoji plugin.
+ * 
+ * @param    array  $plugins  
+ * @return   array             Difference betwen the two arrays
+ */
+function disable_emojis_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
+}
+
+
 function tenpixelsleft_custom_posts_per_page($query) {
     
     if (!is_admin() && $query->is_main_query() && $query->is_tax(array('genre','annee','label','pays')) ){

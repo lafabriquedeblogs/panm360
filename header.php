@@ -34,10 +34,15 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df97d325d480cb8"></script>
+
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+          
+
 <div id="searchform" class="searchform">
 	<?php get_search_form(); ?>
 	<a id="close-searchform">&times;</a>
