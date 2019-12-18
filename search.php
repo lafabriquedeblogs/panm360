@@ -14,41 +14,63 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
+		<article>
+			<header class="section">
+				<h1 class="page-title light">
 					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'panm360' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Recherche : %s', 'panm360' ), '<span class="bold">' . get_search_query() . '</span>' );
 					?>
 				</h1>
 			</header><!-- .page-header -->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+			<section id="search-liste" class="section">
+				<div id="critiques-albums" class="section-inner">
+				
+					<div class="section-content-c">	
+						<ul class="section-content--has-6-columns">
+								<?php
+								/* Start the Loop */
+								while ( have_posts() ) :
+									the_post();
+						
+									/**
+									 * Run the loop for the search to output the results.
+									 * If you want to overload this in a child theme then include a file
+									 * called content-search.php and that will be used instead.
+									 */
+									//get_template_part( 'template-parts/content', 'search' );
+									include( locate_template( '/template-parts/modules/element-album.php', false, false ) ); 
+						
+								endwhile;
+								
+								the_posts_pagination( array(
+									'mid_size'  => 4,
+									'prev_text' => __( 'Précédente', 'panm360' ),
+									'next_text' => __( 'Suivante', 'panm360' ),
+								) );
+							
+						
+							else :
+						
+								get_template_part( 'template-parts/content', 'none' );
+						
+							endif;
+							?>
+						</ul>
 
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+					</div>
+					
+				</div>
+			
+			</section>
+		</article>
+		
 		</main><!-- #main -->
+		
 	</section><!-- #primary -->
-
+	
 <?php
 get_footer();
