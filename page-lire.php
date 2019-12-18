@@ -27,13 +27,15 @@ get_header();
 					<div class="section-content-c">
 						<ul class="section-content--has-6-columns">
 							<?php
-									$albums_count = 12;	
+									$albums_count = 50;	
 									
 									$args = array(
 										'post_type' => 'records',
 										'posts_per_page' => $albums_count,
-										'post_status' => 'publish'
+										'post_status' => 'publish',
+										'orderby' => 'rand'
 									);
+									
 									
 									$albums = new WP_Query($args);
 									

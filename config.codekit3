@@ -475,12 +475,12 @@
 		"oAP": "/page-accueil.php",
 		"oF": 0
 		},
-	"/page-albums.php": {
+	"/page-apprendre.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/page-albums.php",
+		"oAP": "/page-apprendre.php",
 		"oF": 0
 		},
 	"/page-dev.php": {
@@ -505,6 +505,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-lire.php",
+		"oF": 0
+		},
+	"/page-participer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-participer.php",
 		"oF": 0
 		},
 	"/page-regarder.php": {
