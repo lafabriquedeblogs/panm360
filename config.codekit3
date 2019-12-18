@@ -156,6 +156,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/socials_admin_block.jpg": {
+		"ft": 16384,
+		"iS": 1543,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/socials_admin_block.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/js/app.js": {
 		"bF": 6,
 		"ft": 64,
