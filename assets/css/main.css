@@ -800,25 +800,28 @@ h1.category-title {
 
 #text-introduction-panm360 {
   background: #fff;
-  padding: 5em 3em 2em;
+  padding: 5em 10em 2em 3em;
   color: #333;
   width: 100%;
-  max-width: 739px;
+  max-width: 70%;
   font-size: 19px;
   line-height: 28px;
   text-align: left;
   box-shadow: 10px 25px 40px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  z-index: 20;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -40%);
-          transform: translate(-50%, -40%);
-  -webkit-transition: all 800ms ease-in-out;
-  transition: all 800ms ease-in-out; }
-  #text-introduction-panm360.moved {
-    -webkit-transform: translate(-50%, -100%);
-            transform: translate(-50%, -100%); }
+  /*
+	position: absolute;
+	z-index: 20;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-40%);
+	transition: all 800ms ease-in-out;
+	*/
+  /*
+		&.moved {
+		transform: translate(-50%,-100%);
+		
+		}
+	*/ }
 
 #logo-panm-top-360 {
   max-width: 170px;
@@ -831,9 +834,8 @@ h1.category-title {
   background: #F4F4F8 url("../img/panm360-top.jpg") center center no-repeat;
   background-size: cover;
   width: 100vw;
-  height: calc( 100vh - 200px);
-  max-height: 586px;
   margin-left: -1.125em;
+  padding: 4em;
   /*
 	h1 {
 		//text-align: center;
@@ -857,7 +859,7 @@ h1.category-title {
 		color:$gris_ultra_dark;
 		margin: 0;
 	}
-*/ }
+	*/ }
 
 /*
 .top-360-div {
