@@ -34,8 +34,7 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
-	<!-- Go to www.addthis.com/dashboard to customize your tools -->
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df97d325d480cb8"></script>
+	
 
 </head>
 
@@ -68,7 +67,7 @@
 				<?php get_template_part( 'template-parts/menus/menu','main-desktop' ); ?>
 			</nav><!-- #site-navigation -->
 			
-			<?php /* <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'panm360' ); ?></button> */ ?>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'panm360' ); ?></button>
 		</div><!-- branding-navigation -->
 		
 		<?php //get_template_part( 'template-parts/menus/menu','submenu-desktop' ); ?>

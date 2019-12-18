@@ -130,24 +130,14 @@ function panm360_wp_body_open(){
 }
 add_action( 'wp_body_open', 'panm360_wp_body_open' );
 
-function meta_og(){
-	global $post;
-	
-	$post_id = $post->ID;
-	$og_url = get_permalink( $post_id );
-	$og_title = get_the_title($post_id);
-	$og_description = get_the_excerpt( $post_id );
-	$og_image = get_the_post_thumbnail_url( $post_id, array(500,500) );
+function add_addthis(){
 	?>
-	<meta property="og:url"                content="<?php echo $og_url;?>" />
-	<meta property="og:type"               content="article" />
-	<meta property="og:title"              content="<?php echo $post_id;?>" />
-	<meta property="og:description"        content="<?php echo $og_description;?>" />
-	<meta property="og:image"              content="<?php echo $og_image;?>" />	
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df97d325d480cb8"></script>
 <?php
 }
 
-add_action('wp_head','meta_og');
+add_action('wp_head','add_addthis');
 
 
 /**

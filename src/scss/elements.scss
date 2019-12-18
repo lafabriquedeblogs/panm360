@@ -6,6 +6,8 @@ img.lozad {
 	
 	&.img-loaded{
 		opacity: 1;
+		min-width: 1px;
+		min-height: 1px;
 	}
 }
 

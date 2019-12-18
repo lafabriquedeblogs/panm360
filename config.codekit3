@@ -887,6 +887,17 @@
 		"oAP": "/src/index.php",
 		"oF": 0
 		},
+	"/src/js/app-old.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/min/app-old-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/src/js/app.js": {
 		"bF": 6,
 		"ft": 64,
@@ -1435,14 +1446,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taxonomy-annee.php",
-		"oF": 0
-		},
-	"/taxonomy-generale-lire.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taxonomy-generale-lire.php",
 		"oF": 0
 		},
 	"/taxonomy-genre.php": {

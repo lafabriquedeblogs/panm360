@@ -257,6 +257,8 @@ h1.category-title {
 #pages-liste-navigation {
 	//border-bottom: 1px $gris_light solid;
 	//border-top: 1px $gris_light solid;
+	flex: 0 0 100%;
+	max-width: none;
 	padding: 0.5em 0;
 	font-family: $rubik;
 	font-weight: 700;
@@ -286,9 +288,46 @@ h1.category-title {
 	}
 }
 
+.filtres-content-tabs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	margin: 2em 0 0 0;
+	h3 {
+		margin: 0;
+	}
+	& > li {
+		margin: 1em 0 0 0;
+	}
+}
+.filtres-content {
+	li {
+		list-style-type: none;
+	}
+}
+.filtrer-par {
+	& > a {
+		font-family: $rubik;
+		font-size: .9em;
+		font-weight: 500;
+		display: inline-block;
+		border: 1px solid $gris_medium;
+		border-radius: 5px;
+		padding: 5px 10px;
+		cursor: pointer;
+		&:hover {
+			background: $gris_ultra_dark;
+			color: #fff;
+		}
+	}
+	p {
+		display: none;
+	}
+}
 .filtre-liste-tax{
 	font-size: 0.80em;
-	text-align: center;
+	//text-align: center;
 	font-weight: 400;
 	font-family: $rubik;
 	text-transform: capitalize;
@@ -307,6 +346,28 @@ h1.category-title {
 .filtre-list-genres {
 
 
+}
+.top-360-div {
+	@include wide-screen;
+	padding: 6em 1em 6em;
+	background: $jaune url("../img/panm360-top.jpg") center center;
+	background-size: cover;
+	font-family: $rubik;
+	
+	.wp-block-group__inner-container {
+		@include wide-screen;
+		background: #fff;
+		color: $gris_ultra_dark;
+		max-width: none;
+		width: 100vw;
+		padding: 3em 1em 1em;
+		p {
+			text-align: center;
+			font-size: 1em;
+			line-height: 1.5;
+			
+		}
+	}
 }
 @media screen and (min-width:980px){
 	h1.entry-title {

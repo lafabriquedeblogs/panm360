@@ -336,10 +336,6 @@ figure {
   .section-content--has-6-columns > * {
     max-width: calc( 50% - 18px); }
 
-#pages-liste-navigation {
-  -webkit-box-flex: 0;
-          flex: 0 0 100%; }
-
 .wp-block-group__inner-container {
   width: 100%;
   max-width: 1280px;
@@ -693,6 +689,9 @@ h1.category-title {
             transform: none; }
 
 #pages-liste-navigation {
+  -webkit-box-flex: 0;
+          flex: 0 0 100%;
+  max-width: none;
   padding: 0.5em 0;
   font-family: "Rubik", sans-serif;
   font-weight: 700;
@@ -714,9 +713,42 @@ h1.category-title {
     background-color: #5BC6E8;
     color: #fff; }
 
+.filtres-content-tabs {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  align-content: center;
+  margin: 2em 0 0 0; }
+  .filtres-content-tabs h3 {
+    margin: 0; }
+  .filtres-content-tabs > li {
+    margin: 1em 0 0 0; }
+
+.filtres-content li {
+  list-style-type: none; }
+
+.filtrer-par > a {
+  font-family: "Rubik", sans-serif;
+  font-size: .9em;
+  font-weight: 500;
+  display: inline-block;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer; }
+  .filtrer-par > a:hover {
+    background: #333333;
+    color: #fff; }
+
+.filtrer-par p {
+  display: none; }
+
 .filtre-liste-tax {
   font-size: 0.80em;
-  text-align: center;
   font-weight: 400;
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
@@ -728,6 +760,26 @@ h1.category-title {
     cursor: pointer; }
     .filtre-liste-tax span:hover {
       color: #000; }
+
+.top-360-div {
+  margin-left: calc( -100vw / 2 + 100% / 2);
+  margin-right: calc( -100vw / 2 + 100% / 2);
+  padding: 6em 1em 6em;
+  background: #FED766 url("../img/panm360-top.jpg") center center;
+  background-size: cover;
+  font-family: "Rubik", sans-serif; }
+  .top-360-div .wp-block-group__inner-container {
+    margin-left: calc( -100vw / 2 + 100% / 2);
+    margin-right: calc( -100vw / 2 + 100% / 2);
+    background: #fff;
+    color: #333333;
+    max-width: none;
+    width: 100vw;
+    padding: 3em 1em 1em; }
+    .top-360-div .wp-block-group__inner-container p {
+      text-align: center;
+      font-size: 1em;
+      line-height: 1.5; }
 
 @media screen and (min-width: 980px) {
   h1.entry-title {
@@ -1020,7 +1072,9 @@ img.lozad {
   -webkit-transition: opacity 300ms ease-out;
   transition: opacity 300ms ease-out; }
   img.lozad.img-loaded {
-    opacity: 1; }
+    opacity: 1;
+    min-width: 1px;
+    min-height: 1px; }
 
 .element-title {
   font-size: 1em;
