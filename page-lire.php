@@ -19,7 +19,7 @@ get_header();
 				</div><!-- .entry-content -->
 			
 				<?php include( locate_template( '/template-parts/modules/six-columns-albums.php', false, false ) );	?>
-							
+				<a href="/" class="bouton"><?php _e('Voir plus d\'albums','panm360'); ?></a>			
 			</article>
 		</main><!-- #main -->
 	</div><!-- #primary -->	

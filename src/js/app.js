@@ -75,13 +75,33 @@
 			});
 		}
 */
+
+
+		
+		$(window).on("scroll", function(e) {
+		    
+		  if ($(this).scrollTop() > 147) {
+		    $("#text-introduction-panm360").addClass("moved");
+		  } else {
+		     $("#text-introduction-panm360").removeClass("moved");
+		  }
+		  
+		});
 		
 		$(".filtres-content-tabs").on("click"," li a", function(e){
-			
-			$(".filtres-content li p").hide();
 			let _f = $(this).data("content");
-			console.log(_f);
-			$(_f).children("p").show();
+			let _target = $(_f).children("p");
+			
+			console.log(_target);
+			
+			if( $(_target).is(":visible") ){
+				_target.hide();
+				return;
+			}
+				
+			$(".filtres-content li p").hide();
+			
+			_target.show();
 		});
 		
 		reportWindowSize();

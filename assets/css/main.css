@@ -752,7 +752,8 @@ h1.category-title {
   font-weight: 400;
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
-  font-style: italic; }
+  font-style: italic;
+  padding-top: 1em; }
   .filtre-liste-tax span {
     display: inline-block;
     padding: 0 4px;
@@ -761,25 +762,18 @@ h1.category-title {
     .filtre-liste-tax span:hover {
       color: #000; }
 
-.top-360-div {
-  margin-left: calc( -100vw / 2 + 100% / 2);
-  margin-right: calc( -100vw / 2 + 100% / 2);
-  padding: 6em 1em 6em;
-  background: #FED766 url("../img/panm360-top.jpg") center center;
-  background-size: cover;
-  font-family: "Rubik", sans-serif; }
-  .top-360-div .wp-block-group__inner-container {
-    margin-left: calc( -100vw / 2 + 100% / 2);
-    margin-right: calc( -100vw / 2 + 100% / 2);
-    background: #fff;
-    color: #333333;
-    max-width: none;
-    width: 100vw;
-    padding: 3em 1em 1em; }
-    .top-360-div .wp-block-group__inner-container p {
-      text-align: center;
-      font-size: 1em;
-      line-height: 1.5; }
+@media screen and (min-width: 600px) {
+  .filtres-content-tabs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
+    align-content: center; }
+    .filtres-content-tabs h3 {
+      margin: 0 1em 0 0; }
+    .filtres-content-tabs > li {
+      margin: 0 1em 0 0; } }
 
 @media screen and (min-width: 980px) {
   h1.entry-title {
@@ -804,43 +798,91 @@ h1.category-title {
     -webkit-box-flex: 0;
             flex: 0 0 auto; } }
 
+#text-introduction-panm360 {
+  background: #fff;
+  padding: 5em 3em 2em;
+  color: #333;
+  width: 100%;
+  max-width: 739px;
+  font-size: 19px;
+  line-height: 28px;
+  text-align: left;
+  box-shadow: 10px 25px 40px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 20;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out; }
+  #text-introduction-panm360.moved {
+    -webkit-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%); }
+
+#logo-panm-top-360 {
+  max-width: 170px;
+  margin-bottom: 2em; }
+  #logo-panm-top-360 .icon {
+    width: 100%;
+    height: 40px; }
+
 #top-360-hero {
   background: #F4F4F8 url("../img/panm360-top.jpg") center center no-repeat;
   background-size: cover;
   width: 100vw;
-  min-height: calc( 100vh - 200px);
+  height: calc( 100vh - 200px);
+  max-height: 586px;
   margin-left: -1.125em;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  align-content: center;
-  -webkit-box-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-          justify-content: center; }
-  #top-360-hero h1 {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-    color: #fff;
-    font-weight: 300;
-    background: #333333;
-    padding: 10px 20px;
-    margin: 0; }
-    #top-360-hero h1 strong {
-      margin-right: 15px; }
-  #top-360-hero p {
-    font-family: "Rubik", sans-serif;
-    background: #5BC6E8;
-    padding: 10px 20px;
-    color: #333333;
-    margin: 0; }
+  /*
+	h1 {
+		//text-align: center;
+		display: flex;
+		//align-content: center;
+		align-items: center;
+		justify-content: space-between;
+		color:#fff;
+		font-weight: 300;
+		background: $gris_ultra_dark;
+		padding: 10px 20px;
+		margin: 0;
+		strong {
+			margin-right: 15px;
+		}
+	}
+	p {
+		font-family: $rubik;
+		background: $bleu;
+		padding: 10px 20px;
+		color:$gris_ultra_dark;
+		margin: 0;
+	}
+*/ }
 
+/*
+.top-360-div {
+	@include wide-screen;
+	padding: 6em 1em 6em;
+	background: $jaune url("../img/panm360-top.jpg") center center;
+	background-size: cover;
+	font-family: $rubik;
+	
+	.wp-block-group__inner-container {
+		@include wide-screen;
+		background: #fff;
+		color: $gris_ultra_dark;
+		max-width: none;
+		width: 100vw;
+		padding: 3em 1em 1em;
+		p {
+			text-align: center;
+			font-size: 1em;
+			line-height: 1.5;
+			
+		}
+	}
+}
+*/
 .abo-bloc {
   padding: 3em 2.5em;
   text-align: center;
@@ -1010,7 +1052,8 @@ h1.category-title {
   padding: 16px 36px;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
   .bouton:hover, button:hover, input[type="submit"]:hover {
     box-shadow: 0px 0px 0px 2px #add9e7;
     border-color: #5BC6E8;

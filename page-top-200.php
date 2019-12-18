@@ -7,24 +7,56 @@
 get_header();
 ?>
 <div id="top-360-hero">
+<!--
 	<h1><strong class="small">Top</strong> 360</h1>
 	<p>De la décennie <strong class="blanc">2010-2019</strong></p>
+-->
+	
+	<div id="text-introduction-panm360">
+		<div id="logo-panm-top-360">
+			<svg class="icon"><use xlink:href="#panm360"></use></svg>
+		</div>
+		<?php the_content();?>
+	</div>
 </div>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 			<article id="post-<?php the_ID(); ?>">
-				<div class="entry-content">
-					<?php the_content();?>
-				</div><!-- .entry-content -->
-			
+			<?php /* ?>
+			<div class="entry-content">
+				<?php the_content();?>
+			</div><!-- .entry-content -->
+			<?php  */ ?>
 			
 			<div id="filtre-liste-albums">
-				<h2>Filtres</h2>
-				<p class="filtre-liste-tax filtre-list-genres"><?php echo get_filter_data('genre'); ?></p>
-				<p class="filtre-liste-tax filtre-list-annee"><?php echo get_filter_data('annee'); ?></p>
-				<p class="filtre-liste-tax filtre-list-artiste"><?php echo get_liste_filtre_artiste(); ?></p>
+				
+				<ul  class="filtres-content-tabs">
+					<li>
+						<h3 class="medium"><?php _e('Filtres','panm360'); ?></h3>
+					</li>
+					<li class="filtrer-par">
+						<a data-content="#filtre-genre"><?php _e('Genre et style','panm360'); ?></a>
+						</li>
+					<li class="filtrer-par">
+						<a data-content="#filtre-annee"><?php _e('Année','panm360'); ?></a>
+						</li>
+					<li class="filtrer-par">
+						<a data-content="#filtre-artiste"><?php _e('Artiste','panm360'); ?></a>
+					</li>
+				</ul>
+				<ul class="filtres-content">
+					<li id="filtre-genre" class="filtrer-par">
+						<p class="filtre-liste-tax filtre-list-genres"><?php echo get_filter_data('genre'); ?></p>
+					</li><!-- filtrer-par -->
+					<li id="filtre-annee" class="filtrer-par">
+						<p class="filtre-liste-tax filtre-list-annee"><?php echo get_filter_data('annee'); ?></p>
+					</li>
+					<li id="filtre-artiste" class="filtrer-par">
+						<p class="filtre-liste-tax filtre-list-artiste"><?php echo get_liste_filtre_artiste(); ?></p>
+					</li>
+				</ul>
 			</div>
 			
 			<section class="section">
@@ -40,7 +72,7 @@ get_header();
 								$posts_array = get_posts(
 								    array(
 								    	
-								    	'numberposts' => -1,
+								    	'posts_per_page' => -1,
 								        'post_type' => 'records',
 								        'orderby' => 'relier_artiste',
 								        'tax_query' => array(
@@ -75,26 +107,15 @@ get_header();
 								?>
 									<!-- <h2 class="bold"><?php echo $year->name;?></h2> -->
 									
-										<?php
-										
-										
-											
-
-										foreach( $artistes_a as $artist => $post ){
-											setup_postdata( $post );
-											include( locate_template( '/template-parts/modules/element-album.php', false, false ) ); 
-											
-										}
-										wp_reset_postdata();
-
-										?>
-									
-									<?php
-								
-								
+								<?php
+									foreach( $artistes_a as $artist => $post ){
+										setup_postdata( $post );
+										include( locate_template( '/template-parts/modules/element-album.php', false, false ) ); 
+									}
+								wp_reset_postdata();								
 							}
-					?>	
-					</ul>				
+						?>	
+						</ul>				
 					</div>
 					
 				</div>

@@ -11,6 +11,7 @@
 	padding: 16px 36px;
 	transition: all .3s ease-out;
 	cursor: pointer;
+	text-decoration: none;
 	&:hover {
 		box-shadow: 0px 0px 0px 2px #add9e7;
 		border-color: $bleu;

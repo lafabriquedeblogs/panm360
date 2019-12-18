@@ -1,15 +1,50 @@
+#text-introduction-panm360 {
+	background: #fff;
+	padding: 5em 3em 2em;
+	color: #333;
+	width: 100%;
+	max-width: 739px;
+	font-size: 19px;
+	line-height: 28px;
+	text-align: left;
+	box-shadow: 10px 25px 40px rgba(0,0,0,.2);
+	position: absolute;
+	z-index: 20;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-40%);
+	transition: all 800ms ease-in-out;
+	
+	&.moved {
+		transform: translate(-50%,-100%);
+		
+	}
+}
+#logo-panm-top-360 {
+	max-width: 170px;
+	margin-bottom: 2em;
+	.icon {
+		width: 100%;
+		height: 40px;
+	}
+}
 #top-360-hero {
 	background: $gris_ultra_light url('../img/panm360-top.jpg') center center no-repeat;
 	background-size: cover;
 	width: 100vw;
-	min-height: calc( 100vh - 200px );
+	height: calc( 100vh - 200px );
+	max-height: 586px;
 	margin-left:  -1.125em;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	align-items: flex-start;
-	justify-content: center ;
 	
+	
+	
+	//display: flex;
+	//flex-direction: column;
+	//align-content: center;
+	//align-items: flex-start;
+	//justify-content: center ;
+	
+/*
 	h1 {
 		//text-align: center;
 		display: flex;
@@ -32,8 +67,36 @@
 		color:$gris_ultra_dark;
 		margin: 0;
 	}
+*/
 	
 }
+
+
+/*
+.top-360-div {
+	@include wide-screen;
+	padding: 6em 1em 6em;
+	background: $jaune url("../img/panm360-top.jpg") center center;
+	background-size: cover;
+	font-family: $rubik;
+	
+	.wp-block-group__inner-container {
+		@include wide-screen;
+		background: #fff;
+		color: $gris_ultra_dark;
+		max-width: none;
+		width: 100vw;
+		padding: 3em 1em 1em;
+		p {
+			text-align: center;
+			font-size: 1em;
+			line-height: 1.5;
+			
+		}
+	}
+}
+*/
+
 
 @media screen and (min-width: 980px){
 	#top-360-hero {

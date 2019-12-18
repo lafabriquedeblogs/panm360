@@ -332,7 +332,7 @@ h1.category-title {
 	font-family: $rubik;
 	text-transform: capitalize;
 	font-style: italic;
-	
+	padding-top: 1em;
 	span {
 		display: inline-block;
 		padding: 0 4px;
@@ -347,25 +347,16 @@ h1.category-title {
 
 
 }
-.top-360-div {
-	@include wide-screen;
-	padding: 6em 1em 6em;
-	background: $jaune url("../img/panm360-top.jpg") center center;
-	background-size: cover;
-	font-family: $rubik;
-	
-	.wp-block-group__inner-container {
-		@include wide-screen;
-		background: #fff;
-		color: $gris_ultra_dark;
-		max-width: none;
-		width: 100vw;
-		padding: 3em 1em 1em;
-		p {
-			text-align: center;
-			font-size: 1em;
-			line-height: 1.5;
-			
+@media screen and (min-width:600px){
+	.filtres-content-tabs {
+		flex-direction: row;
+		align-items: center;
+		align-content: center;
+		h3 {
+			margin: 0 1em 0 0;
+		}
+		& > li {
+			margin: 0 1em 0 0;
 		}
 	}
 }
