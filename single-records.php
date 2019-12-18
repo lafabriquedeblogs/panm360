@@ -22,10 +22,10 @@
 					<?php panm360_post_thumbnail(); ?>
 				</div>
 				<div class="lp-metas">
-					<span class="single-album-pays"><span  class="bleu bold meta-name"><?php _e('pays','panm360'); ?> : </span><?php echo $pays;?></span>
-					<span class="single-album-label"><span class="bleu bold meta-name"><?php _e('label','panm360'); ?> : </span><?php echo $label;?></span>
+					<span class="single-album-pays"><span  class="bleu bold meta-name"><?php _e('Pays','panm360'); ?> : </span><?php echo $pays;?></span>
+					<span class="single-album-label"><span class="bleu bold meta-name"><?php _e('Label','panm360'); ?> : </span><?php echo $label;?></span>
 					<span class="single-album-genre"><span class="bleu bold meta-name"><?php _e('Genres et styles','panm360'); ?> : </span><?php echo $genres;?></span>
-					<span class="single-album-annee"><span class="bleu bold meta-name"><?php _e('année','panm360'); ?> : </span><?php echo $annee;?></span>
+					<span class="single-album-annee"><span class="bleu bold meta-name"><?php _e('Année','panm360'); ?> : </span><?php echo $annee;?></span>
 				</div>
 				
 				<?php $rows_icons = get_field("reseau_social",'options'); ?>

@@ -13,7 +13,9 @@ get_header();
 			<header class="section">
 				<h1 clas="entry-title"><?php the_title(); ?></h1>
 			</header>
-			
+			<div class="entry-content">
+				<?php the_content();?>
+			</div><!-- .entry-content -->			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
 <!-- 					<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4> -->

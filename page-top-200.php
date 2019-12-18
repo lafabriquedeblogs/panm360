@@ -14,11 +14,11 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<article id="post-<?php the_ID(); ?>">
 				<div class="entry-content">
 					<?php the_content();?>
 				</div><!-- .entry-content -->
-			</article><!-- #post-<?php the_ID(); ?> -->
+			
 			
 			<div id="filtre-liste-albums">
 				<h2>Filtres</h2>
@@ -100,7 +100,7 @@ get_header();
 				</div>
 			</section>
 
-	
+			</article><!-- #post-<?php the_ID(); ?> -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	

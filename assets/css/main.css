@@ -331,6 +331,8 @@ figure {
   -webkit-box-pack: justify;
           justify-content: space-between;
   flex-wrap: wrap; }
+  .section-content--has-6-columns li {
+    list-style-type: none; }
   .section-content--has-6-columns > * {
     max-width: calc( 50% - 18px); }
 
@@ -1204,7 +1206,8 @@ img.lozad {
   width: 100%; }
   .lp-metas a {
     font-weight: 700;
-    text-decoration: none; }
+    text-decoration: none;
+    padding-left: 4px; }
     .lp-metas a:hover {
       text-decoration: underline; }
 

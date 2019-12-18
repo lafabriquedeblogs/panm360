@@ -496,20 +496,20 @@
 		"oAP": "/page-lire.php",
 		"oF": 0
 		},
+	"/page-regarder.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-regarder.php",
+		"oF": 0
+		},
 	"/page-top-200.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-top-200.php",
-		"oF": 0
-		},
-	"/page-visionner.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-visionner.php",
 		"oF": 0
 		},
 	"/page.php": {
