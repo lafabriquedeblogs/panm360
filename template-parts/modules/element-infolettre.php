@@ -1,7 +1,7 @@
 	<?php
 		
 		//$infolettre_page_id = 5573;
-		$infolettre_page_id = apply_filters( 'wpml_object_id', 4508, 'page' );
+		$infolettre_page_id = apply_filters( 'wpml_object_id', 5573, 'page' );
 		$infolettre_page_permalink = get_permalink( $infolettre_page_id );
 
 	?>
