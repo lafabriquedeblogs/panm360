@@ -162,7 +162,7 @@ function get_filter_data( $taxonomies ){
 	
 	foreach( $terms as $term ){
 		$nom = strtolower( $term->name );
-		$slug = str_replace(" ", "-", $nom);
+		$slug = sanitize_title( $nom );
 		$id = $term->term_id;
 		$liste[] = '<span data-genre="'.$slug.'">'.$nom.'</span>';
 	}
