@@ -64,8 +64,7 @@ function get_genre($album_id, $data = false ){
 	if( $data ){
 		$genres_txt = '';
 		foreach( $genres_list as $genre ){
-			$genre_tolower =  strtolower($genre->name);
-			$genres_txt .= " ".str_replace( " ","-" , $genre_tolower );
+			$genres_txt .= " ".sanitize_title( $genre->name );
 		}
 	}
 	return $genres_txt;
@@ -85,8 +84,7 @@ function get_annee($album_id, $data = false){
 	if( $data ){
 		$annees_txt = '';
 		foreach( $annee_list as $an ){
-			$an_tolower =  strtolower($an->name);
-			$annees_txt .= " ".str_replace( " ","-" , $an_tolower );
+			$annees_txt .= " ".sanitize_title( $an->name );
 		}
 	}
 		
@@ -185,7 +183,7 @@ function get_liste_filtre_artiste(){
 	
 	foreach( $artistes as $artiste ){
 		$nom = strtolower( $artiste->post_title );
-		$slug = str_replace(" ", "-", $nom);
+		$slug = sanitize_title( $nom );
 		$id = $artiste->ID;
 		$liste[] = '<span data-genre="'.$slug.'">'.$nom.'</span>';
 	}
