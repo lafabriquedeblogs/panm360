@@ -35,29 +35,17 @@ get_header();
 								/* Start the Loop */
 								while ( have_posts() ) :
 									the_post();
-						
-									/**
-									 * Run the loop for the search to output the results.
-									 * If you want to overload this in a child theme then include a file
-									 * called content-search.php and that will be used instead.
-									 */
-									//get_template_part( 'template-parts/content', 'search' );
 									include( locate_template( '/template-parts/modules/element-album.php', false, false ) ); 
 						
 								endwhile;
 								
+								echo '<li id="pages-liste-navigation">';
 								the_posts_pagination( array(
 									'mid_size'  => 4,
 									'prev_text' => __( 'Précédente', 'panm360' ),
 									'next_text' => __( 'Suivante', 'panm360' ),
 								) );
-							
-						
-							else :
-						
-								get_template_part( 'template-parts/content', 'none' );
-						
-							endif;
+								echo '</li>';
 							?>
 						</ul>
 
@@ -66,6 +54,22 @@ get_header();
 				</div>
 			
 			</section>
+			
+			<?php else :?>
+			<header class="section">
+				<h1 class="page-title light">
+					<?php
+					/* translators: %s: search query. */
+					printf( esc_html__( 'Recherche : %s', 'panm360' ), '<span class="bold">' . get_search_query() . '</span>' );
+					?>
+				</h1>
+			</header><!-- .page-header -->			
+			<?php
+					get_template_part( 'template-parts/content', 'none' );
+				endif;
+			?>
+			
+			
 		</article>
 		
 		</main><!-- #main -->
