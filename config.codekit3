@@ -475,14 +475,6 @@
 		"oAP": "/page-accueil.php",
 		"oF": 0
 		},
-	"/page-apprendre.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-apprendre.php",
-		"oF": 0
-		},
 	"/page-dev.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -491,36 +483,12 @@
 		"oAP": "/page-dev.php",
 		"oF": 0
 		},
-	"/page-ecouter.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-ecouter.php",
-		"oF": 0
-		},
 	"/page-lire.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-lire.php",
-		"oF": 0
-		},
-	"/page-participer.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-participer.php",
-		"oF": 0
-		},
-	"/page-regarder.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-regarder.php",
 		"oF": 0
 		},
 	"/page-top-200.php": {
@@ -1630,6 +1598,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/modules/element-slider.php",
+		"oF": 0
+		},
+	"/template-parts/modules/six-columns-albums.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/six-columns-albums.php",
 		"oF": 0
 		},
 	"/template-parts/publicites/publicite-banniere.php": {
