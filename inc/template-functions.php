@@ -174,7 +174,7 @@ function get_liste_filtre_artiste(){
 
 	$args = array(
 		'post_type' => 'artiste',
-		'posts_per_page' => 3,
+		'posts_per_page' => -1,
 		'orderby' => 'title',
 		'order' => 'DESC',
 		'suppress_filters' => false,
