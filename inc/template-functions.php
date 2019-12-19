@@ -187,7 +187,7 @@ function get_liste_filtre_artiste(){
 		$nom = strtolower( $artiste->post_title );
 		$slug = sanitize_title( $nom );
 		$relier_album = get_field('relier_album',$artiste->ID);
-		$lien_album = get_permalink($relier_album->ID);
+		$lien_album = get_permalink($relier_album);
 		//$id = $artiste->ID;
 		$liste[] = '<a href="'.$lien_album.'">'.$nom.'</a>';
 	}
