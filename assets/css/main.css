@@ -395,7 +395,9 @@ figure {
             justify-content: space-between;
     flex-wrap: wrap; }
     .wp-block-gallery.columns-2 .blocks-gallery-grid > * {
-      max-width: calc( 50% - 18px); } }
+      max-width: calc( 50% - 18px); }
+  .wp-block-gallery li {
+    list-style-type: none; } }
 
 @media screen and (min-width: 600px) {
   #primary, #masthead {

@@ -74,16 +74,19 @@
 	.wp-block-gallery{
 		&.columns-2 {
 			.blocks-gallery-grid {
+				
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
 				flex-wrap: wrap;
 				> * {
 					max-width: calc( 50% - 18px);
+					
 				}				
 			}
-
-			
+		}
+		li {
+			list-style-type: none;
 		}
 	} 
 }
