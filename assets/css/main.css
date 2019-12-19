@@ -915,11 +915,10 @@ h2.annee-top {
 
 .gform_confirmation_message {
   margin: 1em 0 0;
-  color: #fff;
+  color: #333;
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
-  text-align: center; }
+  font-weight: 700; }
 
 .gform_wrapper li {
   list-style-type: none; }
