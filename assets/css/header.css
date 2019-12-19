@@ -222,7 +222,7 @@
       height: 14px; }
     #menu-top-container #menu-top #menu-panm .cross.active {
       position: static; }
-  #menu-top-container #menu-top #menu-panm #menu-item-125 > a {
+  #menu-top-container #menu-top #menu-panm #menu-item-125 > a, #menu-top-container #menu-top #menu-panm #menu-item-5814 > a {
     display: none; }
   #menu-top-container #menu-top #menu-panm #top-sub-menu {
     margin: 0;
