@@ -102,8 +102,8 @@ get_header();
 
 								wp_reset_postdata();
 								?>
-									<h2 class="bold annee-top"><?php echo $year->name;?></h2>
-									<ul class="section-content--has-6-columns">
+									<h2 class="bold annee-top" data-filter="<?php echo $year->name;?>"><?php echo $year->name;?></h2>
+									<ul class="section-content--has-6-columns" data-filter="<?php echo $year->name;?>">
 								<?php
 									foreach( $artistes_a as $artist => $post ){
 										setup_postdata( $post );

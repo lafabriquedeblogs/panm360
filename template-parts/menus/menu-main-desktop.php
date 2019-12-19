@@ -291,9 +291,11 @@ class panm360_Walker extends Walker_Nav_Menu {
 		'items_wrap' => '%3$s',
 		'walker' => new panm360_Walker()
 	) );
-
+	
+	
+	$menu_lire = apply_filters( 'wpml_object_id', 2, 'nav_menu', TRUE  );
 	$menu .= wp_nav_menu( array(
-		'menu' => 2,
+		'menu' => $menu_lire,
 		'menu_id' => 'lire-menu-desktop',
 		'menu_class' => 'main-menu-level-1',
 		'container' => '',
