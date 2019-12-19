@@ -322,6 +322,10 @@ figure {
 #content, #primary {
   padding: 0 1.125em; }
 
+#content.collapse {
+  height: 1px;
+  overflow: hidden; }
+
 .section-content--has-6-columns {
   display: -webkit-box;
   display: flex;

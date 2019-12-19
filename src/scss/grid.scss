@@ -8,6 +8,10 @@
 	padding: 0 1.125em;
 }
 
+#content.collapse {
+	height: 1px;
+	overflow: hidden;	
+}
 
 .section-content--has-6-columns {
 	display: flex;
@@ -29,7 +33,7 @@
 }
 
 .wp-block-gallery{
-	&.columns-2
+	&.columns-2{
 		.blocks-gallery-grid {
 			li {
 				list-style-type: none;

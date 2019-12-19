@@ -43,6 +43,7 @@
 	menu_toggle.addEventListener('click', event => {
 		event.preventDefault();
 		toggle_menu();
+		content.classList.toggle('collapse');
 	});
 	
 	loupe_search.addEventListener('click', event => {
@@ -74,6 +75,7 @@
 
 
 		
+/*
 		$(window).on("scroll", function(e) {
 			if ($(this).scrollTop() > 147) {
 				$("#text-introduction-panm360").addClass("moved");
@@ -81,6 +83,7 @@
 		    	$("#text-introduction-panm360").removeClass("moved");
 			}	  
 		});
+*/
 		
 		$(".filtres-content-tabs").on("click"," li a", function(e){
 			let _f = $(this).data("content");
@@ -96,6 +99,7 @@
 			_target.show();
 		});
 		
+/*
 		$(".filtre-liste-tax").on("click","span",function(){
 			let _data = $(this).data("genre");
 			$(".album.element").hide();
@@ -105,6 +109,7 @@
 			});
 			
 		});
+*/
 		
 		$("#menu-panm").on("click",".burger", function(){
 			$(this).removeClass("active");
