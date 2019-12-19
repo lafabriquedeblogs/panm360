@@ -82,12 +82,13 @@
 				> * {
 					max-width: calc( 50% - 18px);
 					
+				}
+				li {
+					list-style-type: none;
 				}				
 			}
 		}
-		li {
-			list-style-type: none;
-		}
+
 	} 
 }
 @media screen and (min-width: 600px){
