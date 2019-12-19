@@ -877,7 +877,9 @@ h2.annee-top {
     flex-wrap: nowrap;
     align-content: flex-start;
     -webkit-box-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    line-height: 1;
+    margin-bottom: 10px; }
     .abo-bloc .abo-prix .cents {
       font-size: 35px;
       position: relative;

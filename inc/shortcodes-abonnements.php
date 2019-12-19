@@ -39,7 +39,7 @@ function abos_panm_st( $atts ) {
 					<li class="item-abo">- <strong>1</strong> <?php _e('interview-performance PAN.M@SAT','panm360-abonnement'); ?></li>
 				</ul>
 				<div>
-					<button class=""><?php _e('Je m\'inscris','panm360-abonnement'); ?></button>
+					<!-- <button class=""><?php _e('Je m\'inscris','panm360-abonnement'); ?></button> -->
 				</div>
 			</div><!-- abo-bloc abo-bloc-gratuit -->		
 		<?php
@@ -72,7 +72,7 @@ function abos_panm_st( $atts ) {
 					<li class="item-abo">- <strong><?php _e('Toutes','panm360-abonnement'); ?></strong> <?php _e('nos interviews-performances PAN.M@SAT','panm360-abonnement'); ?></li>
 				</ul>
 				<div>
-					<button class=""><?php _e('Je m\'abonne','panm360-abonnement'); ?></button>
+					<!-- <button class=""><?php _e('Je m\'abonne','panm360-abonnement'); ?></button> -->
 				</div>
 			</div><!-- abo-bloc abo-bloc-gratuit -->		
 		<?php
