@@ -28,7 +28,11 @@
 	margin: 0 auto;
 }
 
-
+.blocks-gallery-grid {
+	li {
+		list-style-type: none;
+	}
+}
 @media (min-width: 535px){
 	.section-content--main {
 		display: flex;
