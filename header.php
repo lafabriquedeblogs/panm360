@@ -38,7 +38,8 @@
 		<div id="branding-navigation">
 				
 			<div class="site-branding">
-				<a href="<?php echo get_site_url();?>">
+				<?php $my_home_url = apply_filters( 'wpml_home_url', get_option( 'home' ) ); ?>
+				<a href="<?php echo $my_home_url;?>">
 					<?php /*<img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="Panm360"/>*/ ?>
 					<svg class="icon"><use xlink:href="#panm360"></use></svg>
 				</a>

@@ -25,6 +25,14 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/_page-dev.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_page-dev.php",
+		"oF": 0
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -371,6 +379,14 @@
 		"oAP": "/comments.php",
 		"oF": 0
 		},
+	"/dev new.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dev new.php",
+		"oF": 0
+		},
 	"/dev.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -481,14 +497,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-accueil.php",
-		"oF": 0
-		},
-	"/page-dev.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-dev.php",
 		"oF": 0
 		},
 	"/page-lire.php": {

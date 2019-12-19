@@ -13,6 +13,10 @@
 			$annee = get_annee($album_id);
 			$pays = get_pays($album_id);
 			$label = get_label($album_id);
+			
+			$auteur_id = get_the_author_meta('ID');
+			$auteur = get_the_author_meta('display_name');
+			$auteur_link =  get_author_posts_url($auteur_id) ;
 		?>
 		
 		<article id="post-<?php the_ID(); ?>" <?php post_class("post-album"); ?>>
@@ -49,6 +53,7 @@
 				<header class="entry-header">
 					<span class="sub-title"><?php echo $artiste;?></span>
 					<?php the_title( '<h1 class="entry-title">', '</h1>' );?>	
+					<a class="author album-author" href="<?php echo $auteur_link;?>"><?php _e('par','panm360'); ?> <?php echo $auteur;?></a>
 				</header><!-- .entry-header -->
 				
 				
@@ -57,6 +62,7 @@
 					<?php the_content(); ?>
 				</div><!-- .entry-content -->				
 				<footer class="entry-footer">
+					
 					<?php panm360_entry_footer(); ?>
 				</footer><!-- .entry-footer -->
 

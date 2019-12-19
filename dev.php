@@ -9,6 +9,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			
 <?php
 /*
 	
@@ -51,8 +52,8 @@ function lecteur_audio($string){
 */
 ?>			
 			<?php
-/*
 				
+/*
 				$rags = array(
 					'post_type' => 'artiste',
 					'posts_per_page' => -1,
