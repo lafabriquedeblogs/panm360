@@ -353,7 +353,13 @@ h1.category-title {
 
 }
 
-
+.spacer-shadow {
+	height:3vh;
+	background: #fff;
+	box-shadow: 0 10px 20px -10px rgba(0,0,0,0.10);
+	width: 50%;
+	margin: 0 auto;
+}
 
 @media screen and (min-width:600px){
 	.filtres-content-tabs {

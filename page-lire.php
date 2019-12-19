@@ -17,7 +17,7 @@ get_header();
 				<div class="entry-content">
 					<?php the_content();?>
 				</div><!-- .entry-content -->
-			
+				<div class="spacer-shadow"></div>
 				<?php include( locate_template( '/template-parts/modules/six-columns-albums.php', false, false ) );	?>
 				<a href="/" class="bouton"><?php _e('Voir plus d\'albums','panm360'); ?></a>			
 			</article>
