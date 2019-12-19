@@ -11,7 +11,7 @@ get_header();
 		<main id="main" class="site-main">
 			<article>
 				<header class="entry-header section">
-					<h1 clas="entry-title"><?php the_title(); ?></h1>
+					<h1 class="entry-title has-text-align-center"><?php the_title(); ?></h1>
 				</header>
 			
 				<div class="entry-content">

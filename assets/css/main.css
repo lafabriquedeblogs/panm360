@@ -1403,6 +1403,9 @@ img.lozad {
 .small {
   font-size: 0.5em; }
 
+.tall {
+  font-size: 1.1em; }
+
 .rubik {
   font-family: "Rubik", sans-serif; }
 
@@ -1416,6 +1419,12 @@ img.lozad {
   margin: 2em 0; }
   .exergue p {
     line-height: 24px; }
+
+.box-shadow {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); }
+
+.big-padding {
+  padding: 0 4em; }
 
 .no-margins {
   margin: 0; }
