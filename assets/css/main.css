@@ -758,12 +758,12 @@ h1.category-title {
   text-transform: capitalize;
   font-style: italic;
   padding-top: 1em; }
-  .filtre-liste-tax span {
+  .filtre-liste-tax span, .filtre-liste-tax a {
     display: inline-block;
     padding: 0 4px;
     text-decoration: underline;
     cursor: pointer; }
-    .filtre-liste-tax span:hover {
+    .filtre-liste-tax span:hover, .filtre-liste-tax a:hover {
       color: #000; }
 
 @media screen and (min-width: 600px) {

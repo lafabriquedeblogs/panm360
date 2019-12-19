@@ -162,9 +162,9 @@ function get_filter_data( $taxonomies ){
 	
 	foreach( $terms as $term ){
 		$nom = strtolower( $term->name );
-		$slug = sanitize_title( $nom );
+		$slug = get_term_link( $term->term_id, $taxonomies );
 		$id = $term->term_id;
-		$liste[] = '<span data-genre="'.$slug.'">'.$nom.'</span>';
+		$liste[] = '<a href="'.$slug.'">'.$nom.'</a>';
 	}
 	
 	return implode(" • ", $liste);	

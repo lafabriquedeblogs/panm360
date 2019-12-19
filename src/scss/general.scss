@@ -333,7 +333,7 @@ h1.category-title {
 	text-transform: capitalize;
 	font-style: italic;
 	padding-top: 1em;
-	span {
+	span, a {
 		display: inline-block;
 		padding: 0 4px;
 		text-decoration: underline;
