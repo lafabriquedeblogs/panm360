@@ -66,8 +66,9 @@
 			</a>
 			<ul id="top-sub-menu">
 		<?php
+				$menu_lire = apply_filters( 'wpml_object_id', 291, 'nav_menu', TRUE  );
 				echo wp_nav_menu( array(
-					'menu' => 291,
+					'menu' => $menu_lire,
 					'container' => '',
 					'echo' => false,
 					'items_wrap' => '%3$s',
