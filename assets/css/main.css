@@ -341,7 +341,7 @@ figure {
   max-width: 1280px;
   margin: 0 auto; }
 
-.blocks-gallery-grid li {
+.wp-block-gallery.columns-2 .blocks-gallery-grid li {
   list-style-type: none; }
 
 @media (min-width: 535px) {
@@ -398,9 +398,7 @@ figure {
             justify-content: space-between;
     flex-wrap: wrap; }
     .wp-block-gallery.columns-2 .blocks-gallery-grid > * {
-      max-width: calc( 50% - 18px); }
-    .wp-block-gallery.columns-2 .blocks-gallery-grid li {
-      list-style-type: none; } }
+      max-width: calc( 50% - 18px); } }
 
 @media screen and (min-width: 600px) {
   #primary, #masthead {

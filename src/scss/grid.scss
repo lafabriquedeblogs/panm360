@@ -28,11 +28,16 @@
 	margin: 0 auto;
 }
 
-.blocks-gallery-grid {
-	li {
-		list-style-type: none;
+.wp-block-gallery{
+	&.columns-2
+		.blocks-gallery-grid {
+			li {
+				list-style-type: none;
+			}
+		}
 	}
 }
+
 @media (min-width: 535px){
 	.section-content--main {
 		display: flex;
@@ -87,9 +92,7 @@
 					max-width: calc( 50% - 18px);
 					
 				}
-				li {
-					list-style-type: none;
-				}				
+				
 			}
 		}
 
