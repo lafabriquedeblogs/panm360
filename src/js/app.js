@@ -2,9 +2,9 @@
 	
 	"use-strict";
 	
-	let menu_toggle = d.querySelector(".menu-toggle");
-	let menu_mobile = d.getElementById("site-navigation");
-	let menu_mobile_open = d.querySelector("#site-navigation.open");
+	let menu_toggle = d.querySelector(".bouton-menu-toggle-mobile");
+	let menu_mobile = d.getElementById("main-menu-mobile");
+	let menu_mobile_open = d.querySelector("#main-menu-mobile.open");
 	let content = d.getElementById("content");
 	let colophon = d.getElementById("colophon");
 	let loupe_search = d.querySelector("#panm-search a");
@@ -20,8 +20,6 @@
 	
 	function toggle_menu(){
 		menu_mobile.classList.toggle("open");
-		content.classList.toggle("abracadabra-fixed");
-		colophon.classList.toggle("abracadabra-fixed");
 		menu_mobile_open = d.querySelector("#site-navigation.open");
 	}
 	
@@ -34,8 +32,6 @@
 		
 		if( x > 1024 ){
 			menu_mobile.classList.remove("open");
-			content.classList.remove("abracadabra-fixed");
-			colophon.classList.remove("abracadabra-fixed");
 		}
 		
 	}	

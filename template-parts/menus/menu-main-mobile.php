@@ -1,6 +1,14 @@
 
 <div id="main-menu-mobile">
 	<?php
+		
+		$menu = wp_nav_menu( array(
+		'menu' => 3910,
+		'menu_id' => 'menu-mobile',
+		'menu_class' => 'main-menu-mobile',
+		'echo' => false
+	) );
+/*
 
 	$menu = wp_nav_menu( array(
 		'menu' => 290,
@@ -44,6 +52,7 @@
 		'depth' => 0,
 		'echo' => false
 	) );
+*/
 	
 	echo $menu;		
 	?>

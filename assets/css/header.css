@@ -1,14 +1,8 @@
+@charset "UTF-8";
 #site-navigation {
-  position: fixed;
-  top: 85px;
-  left: -100%;
   width: 100%;
-  height: calc( 100% + 85px);
   z-index: 5;
   background-color: #fff;
-  overflow-y: scroll;
-  -webkit-transition: left 300ms ease-out;
-  transition: left 300ms ease-out;
   font-family: "Rubik", sans-serif;
   font-size: 1em; }
   #site-navigation ul, #site-navigation li {
@@ -18,15 +12,10 @@
   #site-navigation a {
     color: #4d4d4d;
     text-decoration: none; }
-  #site-navigation.open {
-    left: 0;
-    -webkit-transition: left 300ms ease-out;
-    transition: left 300ms ease-out; }
 
 .site-branding {
   background-color: white;
-  display: -webkit-box;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
           justify-content: space-between; }
   .site-branding img {
@@ -37,6 +26,14 @@
 #branding-navigation svg.icon {
   height: 60px;
   width: 250px; }
+
+#logo-mobile svg.icon {
+  height: 44px;
+  width: 200px; }
+
+.bouton-menu-toggle-mobile svg {
+  width: 24px;
+  height: 18px; }
 
 #searchform {
   margin-top: -100px;
@@ -110,7 +107,11 @@
         border: 0;
         padding: 0 20px;
         color: #fff;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        -webkit-appearence: none;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none; }
     #searchform form .search-submit {
       -webkit-box-flex: 0;
               flex: 0 0 100px;
@@ -138,8 +139,8 @@
   #menu-top-container ul {
     display: -webkit-box;
     display: flex;
-    -webkit-box-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
     width: 100%;
     padding: 25px 0;
     -webkit-box-align: center;
@@ -183,6 +184,9 @@
   fill: #717171;
   margin: 0 10px;
   padding: 0; }
+
+#menu-top-container #menu-toggle-mobile {
+  margin-left: 5px; }
 
 #menu-top-container #menu-top #menu-panm {
   position: relative;
@@ -242,23 +246,43 @@
         display: block;
         padding: 2px 0; }
 
+@media screen and (min-width: 1024px) {
+  #menu-top-container ul {
+    -webkit-box-pack: end;
+            justify-content: flex-end; }
+  #menu-top-container #menu-top #menu-toggle-mobile,
+  #menu-top-container #menu-top #logo-mobile {
+    display: none; } }
+
+@media screen and (max-width: 1024px) {
+  #menu-top-container #menu-top #menu-panm,
+  #panm-signin,
+  #panm-accoun {
+    display: none; } }
+
 #main-menu-mobile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5;
-  font-size: 1.5em; }
+  display: none;
+  background: #fff;
+  font-size: 1em; }
   #main-menu-mobile li {
-    padding: 0 18px; }
-  #main-menu-mobile ul.main-menu-level-1 {
-    margin-top: 1em; }
-    #main-menu-mobile ul.main-menu-level-1 > li > a {
-      font-weight: 700; }
-  #main-menu-mobile .sub-menu {
-    font-size: 0.85em; }
-    #main-menu-mobile .sub-menu a {
-      line-height: 1em; }
+    padding: 5px 18px 5px 47px;
+    border-bottom: 1px solid #E6E6EA; }
+    #main-menu-mobile li a {
+      display: block; }
+      #main-menu-mobile li a::before {
+        content: "› "; }
+  #main-menu-mobile.open {
+    display: block;
+    position: absolute;
+    top: 119px;
+    width: 100vw;
+    z-index: 5;
+    margin-left: calc( -100vw / 2 + 100% / 2);
+    margin-right: calc( -100vw / 2 + 100% / 2); }
+
+@media screen and (min-width: 375px) {
+  #main-menu-mobile {
+    font-size: 1.2em; } }
 
 @media screen and (min-width: 1024px) {
   #main-menu-mobile {
@@ -298,6 +322,10 @@
           background-color: #5BC6E8;
           border-color: #5BC6E8;
           color: #fff; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1120px) {
+  #masthead {
+    font-size: 0.9em; } }
 
 #sub-nav-desktop {
   display: none; }
@@ -371,6 +399,8 @@
   #panm360-ghost, .menu-toggle {
     display: none; }
   .site-branding {
+    display: -webkit-box;
+    display: flex;
     position: static;
     padding: 0;
     width: auto;

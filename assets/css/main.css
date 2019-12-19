@@ -319,7 +319,7 @@ figure {
 #primary, #masthead {
   max-width: 83em; }
 
-#content, #masthead, #primary {
+#content, #primary {
   padding: 0 1.125em; }
 
 .section-content--has-6-columns {
@@ -425,6 +425,10 @@ figure {
     max-width: 31.5%; }
   .section-content--has-4-columns > * {
     max-width: 23%; } }
+
+@media screen and (min-width: 1024px) {
+  #masthead {
+    padding: 0 1.125em; } }
 
 .wp-block-columns .wp-block-column {
   margin-top: 28px; }

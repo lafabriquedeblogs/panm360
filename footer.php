@@ -1,4 +1,4 @@
-	<?php get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
+	<?php //get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
 	
 	<?php get_template_part( '/template-parts/modules/element', 'infolettre' ); ?>
 	
@@ -7,15 +7,19 @@
 
 	<footer id="colophon" class="site-footer">
 		
+<!--
 		<nav id="nav-footer-menu">
 			<ul id="footer-menu" class="footer-top-360">
+-->
 				<?php
+				/*
 				echo wp_nav_menu( array(
 					'menu' => 291,
 					'container' => '',
 					'echo' => false,
 					'items_wrap' => '%3$s',
-				) );			
+				) );	
+				*/		
 					
 				?>
 
@@ -67,8 +71,10 @@
 				) );	
 			*/			
 			?>
+<!--
 			</ul>			
 		</nav>
+-->
 		
 		<div id="panm_360_infos">
 			

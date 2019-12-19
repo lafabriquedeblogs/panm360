@@ -4,9 +4,11 @@
 #primary, #masthead{
 	max-width:$max-width;
 }
-#content, #masthead, #primary {
+#content, #primary {
 	padding: 0 1.125em;
 }
+
+
 .section-content--has-6-columns {
 	display: flex;
 	flex-direction: row;
@@ -127,6 +129,12 @@
 		> * {
 			max-width: 23%;
 		}		
+	}	
+}
+
+@media screen and(min-width:1024px){
+	#masthead {
+		padding: 0 1.125em;
 	}	
 }
 @media screen and(min-width:1280px){

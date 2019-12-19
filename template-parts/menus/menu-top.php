@@ -46,6 +46,17 @@
 			</li>
 		<?php endif; */?>
 		
+		<li id="menu-toggle-mobile">
+			<a class="bouton-menu-toggle-mobile">
+				<svg class="icon"><use xlink:href="#buenu"></use></svg>
+			</a>			
+		</li>
+		<li id="logo-mobile" >
+				<a href="<?php echo get_site_url();?>">
+					<?php /*<img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="Panm360"/>*/ ?>
+					<svg class="icon"><use xlink:href="#panm360"></use></svg>
+				</a>
+		</li>
 		<li id="menu-panm" >
 			<a class="cross">
 				<svg class="icon"><use xlink:href="#closemenupanm"></use></svg>

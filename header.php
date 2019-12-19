@@ -15,11 +15,9 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="google-site-verification" content="=VTCijZR84yTYbBCjuRst-zSYuF6B-qWIRe9ItH1ceSE" />
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
 	
-
+	
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -38,6 +36,7 @@
 		<?php get_template_part( 'template-parts/menus/menu','top' ); ?>
 		
 		<div id="branding-navigation">
+				
 			<div class="site-branding">
 				<a href="<?php echo get_site_url();?>">
 					<?php /*<img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="Panm360"/>*/ ?>
@@ -51,7 +50,8 @@
 				<?php get_template_part( 'template-parts/menus/menu','main-desktop' ); ?>
 			</nav><!-- #site-navigation -->
 			
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'panm360' ); ?></button>
+			
+			
 		</div><!-- branding-navigation -->
 		
 		<?php //get_template_part( 'template-parts/menus/menu','submenu-desktop' ); ?>
