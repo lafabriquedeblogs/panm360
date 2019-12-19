@@ -1,38 +1,18 @@
 #text-introduction-panm360 {
 	
 	background: #fff;
-	padding: 5em 10em 2em 3em;
+	padding: 5em 10em 3em;
+	margin: 0 auto;
 	color: #333;
-	width: 100%;
-	max-width: 70%;
-	font-size: 19px;
-	line-height: 28px;
-	text-align: left;
-	box-shadow: 10px 25px 40px rgba(0,0,0,.2);
-	
-	/*
-	position: absolute;
-	z-index: 20;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-40%);
-	transition: all 800ms ease-in-out;
-	*/
-	
-	/*
-		&.moved {
-		transform: translate(-50%,-100%);
-		
-		}
-	*/
-}
-#logo-panm-top-360 {
-	max-width: 170px;
-	margin-bottom: 2em;
-	.icon {
-		width: 100%;
-		height: 40px;
+	font-size: 22px;
+	line-height: 30px;
+	.wp-block-group__inner-container{
+		p {
+			text-align: center;
+		}	
 	}
+	
+
 }
 #top-360-hero {
 	background: $gris_ultra_light url('../img/panm360-top.jpg') center center no-repeat;
@@ -40,67 +20,13 @@
 	width: 100vw;
 	margin-left:  -1.125em;
 	padding: 4em;
-	
-	//height: calc( 100vh - 200px );
-	//max-height: 586px;
-	//display: flex;
-	//flex-direction: column;
-	//align-content: center;
-	//align-items: flex-start;
-	//justify-content: center ;
-	
-	/*
-	h1 {
-		//text-align: center;
-		display: flex;
-		//align-content: center;
-		align-items: center;
-		justify-content: space-between;
-		color:#fff;
-		font-weight: 300;
-		background: $gris_ultra_dark;
-		padding: 10px 20px;
-		margin: 0;
-		strong {
-			margin-right: 15px;
-		}
-	}
-	p {
-		font-family: $rubik;
-		background: $bleu;
-		padding: 10px 20px;
-		color:$gris_ultra_dark;
-		margin: 0;
-	}
-	*/
-	
+	height: 50vh ;
 }
 
-
-/*
-.top-360-div {
-	@include wide-screen;
-	padding: 6em 1em 6em;
-	background: $jaune url("../img/panm360-top.jpg") center center;
-	background-size: cover;
-	font-family: $rubik;
-	
-	.wp-block-group__inner-container {
-		@include wide-screen;
-		background: #fff;
-		color: $gris_ultra_dark;
-		max-width: none;
-		width: 100vw;
-		padding: 3em 1em 1em;
-		p {
-			text-align: center;
-			font-size: 1em;
-			line-height: 1.5;
-			
-		}
-	}
+h2.annee-top {
+	font-size: 1.9em;
+	margin-bottom: 0.5em;
 }
-*/
 
 
 @media screen and (min-width: 980px){

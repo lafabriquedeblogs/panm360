@@ -6,18 +6,15 @@
 
 get_header();
 ?>
+<div id="text-introduction-panm360">
+	<?php the_content();?>
+</div>
+	
 <div id="top-360-hero">
 <!--
 	<h1><strong class="small">Top</strong> 360</h1>
 	<p>De la décennie <strong class="blanc">2010-2019</strong></p>
 -->
-	
-	<div id="text-introduction-panm360">
-		<div id="logo-panm-top-360">
-			<svg class="icon"><use xlink:href="#panm360"></use></svg>
-		</div>
-		<?php the_content();?>
-	</div>
 </div>
 
 	<div id="primary" class="content-area">
@@ -63,7 +60,7 @@ get_header();
 				<div id="critiques-albums" class="section-inner">
 				
 					<div class="section-content-c">
-						<ul class="section-content--has-6-columns">
+						
 						<?php
 							
 							$years = get_years_list();							
@@ -105,17 +102,20 @@ get_header();
 
 								wp_reset_postdata();
 								?>
-									<!-- <h2 class="bold"><?php echo $year->name;?></h2> -->
-									
+									<h2 class="bold annee-top"><?php echo $year->name;?></h2>
+									<ul class="section-content--has-6-columns">
 								<?php
 									foreach( $artistes_a as $artist => $post ){
 										setup_postdata( $post );
 										include( locate_template( '/template-parts/modules/element-album.php', false, false ) ); 
 									}
+								?>
+									</ul>
+								<?php
 								wp_reset_postdata();								
 							}
 						?>	
-						</ul>				
+										
 					</div>
 					
 				</div>
