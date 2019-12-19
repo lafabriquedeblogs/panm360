@@ -274,7 +274,7 @@
   #main-menu-mobile.open {
     display: block;
     position: absolute;
-    top: 119px;
+    top: 105px;
     width: 100vw;
     z-index: 5;
     margin-left: calc( -100vw / 2 + 100% / 2);
