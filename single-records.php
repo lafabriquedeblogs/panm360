@@ -53,7 +53,7 @@
 				<header class="entry-header">
 					<span class="sub-title"><?php echo $artiste;?></span>
 					<?php the_title( '<h1 class="entry-title">', '</h1>' );?>	
-					<span class="author">· par <a class="author-name" href="<?php echo $auteur_link;?>"><?php echo $auteur;?></a></span>
+					<span class="author">· <?php _e('par','panm360'); ?> <a class="author-name" href="<?php echo $auteur_link;?>"><?php echo $auteur;?></a></span>
 				</header><!-- .entry-header -->
 				
 				
