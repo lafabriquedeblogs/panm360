@@ -1,9 +1,5 @@
 <?php
 
-/*
-	Template name: Lire
-*/
-
 get_header();
 ?>
 
