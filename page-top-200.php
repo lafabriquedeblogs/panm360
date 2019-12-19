@@ -6,9 +6,7 @@
 
 get_header();
 ?>
-<div id="text-introduction-panm360">
-	<?php the_content();?>
-</div>
+
 	
 <div id="top-360-hero">
 <!--
@@ -16,7 +14,9 @@ get_header();
 	<p>De la décennie <strong class="blanc">2010-2019</strong></p>
 -->
 </div>
-
+<div id="text-introduction-panm360">
+	<?php the_content();?>
+</div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
