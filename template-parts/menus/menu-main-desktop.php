@@ -280,9 +280,9 @@ class panm360_Walker extends Walker_Nav_Menu {
 
 <ul id="main-menu-desktop">
 	<?php
-
+	$menu_lire = apply_filters( 'wpml_object_id', 290, 'nav_menu', TRUE  );
 	$menu = wp_nav_menu( array(
-		'menu' => 290,
+		'menu' => $menu_lire,
 		'menu_id' => 'nos-choix-menu-desktop',
 		'menu_class' => 'main-menu-level-1',
 		'container' => '',
@@ -304,8 +304,10 @@ class panm360_Walker extends Walker_Nav_Menu {
 		'items_wrap' => '%3$s',
 		'walker' => new panm360_Walker()
 	) );
+	
+	$menu_lire = apply_filters( 'wpml_object_id', 286, 'nav_menu', TRUE  );
 	$menu .= wp_nav_menu( array(
-		'menu' => 286,
+		'menu' => $menu_lire,
 		'menu_id' => 'ecouter-menu-desktop',
 		'menu_class' => 'main-menu-level-1',
 		'container' => '',
@@ -314,8 +316,10 @@ class panm360_Walker extends Walker_Nav_Menu {
 		'items_wrap' => '%3$s',
 		'walker' => new panm360_Walker()
 	) );
+	
+	$menu_lire = apply_filters( 'wpml_object_id', 284, 'nav_menu', TRUE  );
 	$menu .= wp_nav_menu( array(
-		'menu' => 284,
+		'menu' => $menu_lire,
 		'menu_id' => 'visionner-menu-desktop',
 		'menu_class' => 'main-menu-level-1',
 		'container' => '',
@@ -324,8 +328,10 @@ class panm360_Walker extends Walker_Nav_Menu {
 		'items_wrap' => '%3$s',
 		'walker' => new panm360_Walker()
 	) );
+	
+	$menu_lire = apply_filters( 'wpml_object_id', 287, 'nav_menu', TRUE  );
 	$menu .= wp_nav_menu( array(
-		'menu' => 287,
+		'menu' => $menu_lire,
 		'menu_id' => 'apprendre-menu-desktop',
 		'menu_class' => 'main-menu-level-1',
 		'container' => '',
@@ -334,8 +340,10 @@ class panm360_Walker extends Walker_Nav_Menu {
 		'items_wrap' => '%3$s',
 		'walker' => new panm360_Walker()
 	) );
+	
+	$menu_lire = apply_filters( 'wpml_object_id', 285, 'nav_menu', TRUE  );
 	$menu .= wp_nav_menu( array(
-		'menu' => 285,
+		'menu' => $menu_lire,
 		'menu_id' => 'participer-menu-desktop',
 		'menu_class' => 'main-menu-level-1',
 		'container' => '',
