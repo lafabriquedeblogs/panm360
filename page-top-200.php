@@ -31,7 +31,7 @@ get_header();
 				
 				<ul  class="filtres-content-tabs">
 					<li>
-						<p class="medium"><?php _e('Filtres','panm360'); ?></p>
+						<p class="medium filter-string"><?php _e('Filtres','panm360'); ?> : </p>
 					</li>
 					<li class="filtrer-par">
 						<a data-content="#filtre-genre"><?php _e('Genre et style','panm360'); ?></a>

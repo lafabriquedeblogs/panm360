@@ -731,6 +731,11 @@ h1.category-title {
     margin: 0; }
   .filtres-content-tabs > li {
     margin: 1em 0 0 0; }
+  .filtres-content-tabs p {
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    font-size: .9em;
+    font-weight: 500; }
 
 .filtres-content li {
   list-style-type: none; }

@@ -300,6 +300,12 @@ h1.category-title {
 	& > li {
 		margin: 1em 0 0 0;
 	}
+	p {
+		margin: 0;
+		font-family: $rubik;
+		font-size: .9em;
+		font-weight: 500;
+	}
 }
 .filtres-content {
 	li {
