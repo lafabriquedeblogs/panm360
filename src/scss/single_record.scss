@@ -35,6 +35,23 @@
 		text-transform: uppercase;
 	}
 }
+
+.single-album-body {
+	.author {
+		
+		display: block;
+		margin-bottom: 10px;
+		font-size: 0.850em;
+		font-family: $rubik;
+		a {
+			font-weight: 700;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
 @media screen and (min-width: 768px){
 	.album-cover {
 		flex-direction: row;

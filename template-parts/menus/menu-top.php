@@ -88,6 +88,11 @@
 				<span class="hidden"><?php _e('Chercher','panm360'); ?></span>
 			</a>
 			</li>
-		<li id="panm-lang-switch" class="menu-item"><a href="#">EN</a></li>
+		<li id="panm-lang-switch" class="menu-item">
+		<?php
+			$others_l = ( ICL_LANGUAGE_CODE == 'en' ) ? 'fr' : 'en';
+			$yop = icl_get_languages('skip_missing=N&orderby=KEY&order=DIR&link_empty_to=str');
+		?>
+		<a href="<?php echo $yop[$others_l]['url'];?>"><?php echo strtoupper( $others_l );?></a></li>
 	</ul>
 </div>

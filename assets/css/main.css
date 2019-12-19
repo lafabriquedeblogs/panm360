@@ -1269,6 +1269,17 @@ img.lozad {
   font-size: 2em;
   text-transform: uppercase; }
 
+.single-album-body .author {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.850em;
+  font-family: "Rubik", sans-serif; }
+  .single-album-body .author a {
+    font-weight: 700;
+    text-decoration: none; }
+    .single-album-body .author a:hover {
+      text-decoration: underline; }
+
 @media screen and (min-width: 768px) {
   .album-cover {
     -webkit-box-orient: horizontal;
