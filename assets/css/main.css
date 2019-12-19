@@ -385,7 +385,7 @@ figure {
     flex-wrap: wrap; }
     .section-content--has-6-columns > * {
       max-width: calc( 32.5% - 18px); }
-  .wp-block-gallery.columns-2 {
+  .wp-block-gallery.columns-2 .blocks-gallery-grid {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -394,7 +394,7 @@ figure {
     -webkit-box-pack: justify;
             justify-content: space-between;
     flex-wrap: wrap; }
-    .wp-block-gallery.columns-2 > * {
+    .wp-block-gallery.columns-2 .blocks-gallery-grid > * {
       max-width: calc( 50% - 18px); } }
 
 @media screen and (min-width: 600px) {
