@@ -171,11 +171,13 @@ function get_filter_data( $taxonomies ){
 }
 
 function get_liste_filtre_artiste(){
+
 	$args = array(
 		'post_type' => 'artiste',
-		'posts_per_page' => -1,
+		'posts_per_page' => 3,
 		'orderby' => 'title',
-		'order' => 'DESC'
+		'order' => 'DESC',
+		'suppress_filters' => false,
 	);
 	
 	$artistes_query = new WP_Query($args);
@@ -184,8 +186,13 @@ function get_liste_filtre_artiste(){
 	foreach( $artistes as $artiste ){
 		$nom = strtolower( $artiste->post_title );
 		$slug = sanitize_title( $nom );
-		$id = $artiste->ID;
-		$liste[] = '<span data-genre="'.$slug.'">'.$nom.'</span>';
+		$relier_album = get_field('relier_album',$artiste->ID);
+		 echo'<pre>';
+			var_dump($relier_album);
+		echo '</pre>';
+		$lien_album = get_permalink($relier_album->ID);
+		//$id = $artiste->ID;
+		$liste[] = '<a href="'.$lien_album.'">'.$nom.'</a>';
 	}
 	return implode(" • ", $liste);
 }
