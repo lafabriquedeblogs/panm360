@@ -339,6 +339,10 @@ figure {
     list-style-type: none; }
   .section-content--has-6-columns > * {
     max-width: calc( 50% - 18px); }
+  .section-content--has-6-columns::after {
+    content: "";
+    -webkit-box-flex: 1;
+            flex: auto; }
 
 .wp-block-group__inner-container {
   width: 100%;
