@@ -302,12 +302,7 @@ function tc_acf_svg_icon_file_path( $file_path ) {
     return get_theme_file_path( 'assets/img/panm360_sprite.svg' );
 }
 
-/*
-require_once get_template_directory() . '/inc/updater.php';
-if ( is_admin() ) {
-    new BFIGitHubPluginUpdater( __FILE__, 'lafabriquedeblogs', "panm360" );
-}
-*/
+
 	
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';

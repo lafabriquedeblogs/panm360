@@ -1,4 +1,13 @@
 <?php
+
+/* //functions.php
+require_once get_template_directory() . '/inc/updater.php';
+if ( is_admin() ) {
+    new BFIGitHubPluginUpdater( __FILE__, 'lafabriquedeblogs', "panm360" );
+}
+*/
+
+
 	class BFIGitHubPluginUpdater {
 	 
 	    private $slug; // plugin slug
