@@ -1556,13 +1556,17 @@ img.lozad {
       display: block; }
       #menu-socials li a svg {
         width: 30px;
-        height: 30px; }
+        height: 30px;
+        fill: #b3b3b3; }
     #menu-socials li.rss a svg {
       width: 20px; }
     #menu-socials li.vimeo a svg {
       width: 25px; }
     #menu-socials li.spotify a svg {
       width: 25px; }
+    #menu-socials li.linkedin a svg {
+      width: 25px;
+      height: 25px; }
 
 #logo-footer .icon {
   height: 51px;

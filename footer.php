@@ -93,42 +93,65 @@
 			</ul>
 			
 			<ul id="menu-socials">
+				<li class="facebook">
+					<a href="https://www.facebook.com/panm360/" target="_blank">
+						<svg class="icon"><use xlink:href="#facebook"></use></svg>
+						<span class="screen-reader-text">facebook</span>
+					</a>
+				</li>
+				<li class="instagram">
+					<a href="https://www.instagram.com/panm360/" target="_blank">
+						<svg class="icon"><use xlink:href="#instagram"></use></svg>
+						<span class="screen-reader-text">Instagram</span>
+					</a>
+				</li>
 				<li class="twitter">
-					<a href="https://twitter.com">
+					<a href="https://twitter.com/PANM360" target="_blank">
 						<svg class="icon"><use xlink:href="#twitter"></use></svg>
 						<span class="screen-reader-text">Twitter</span>
 					</a>
 				</li>
 				<li class="youtube">
-					<a href="https://youtube.com">
+					<a href="https://www.youtube.com/channel/UCHEFHd3UhIrV6EJ3ltzVKOA?view_as=subscriber" target="_blank">
 						<svg class="icon"><use xlink:href="#youtube"></use></svg>
 						<span class="screen-reader-text">Youtube</span>
 					</a>
 				</li>
+				<li class="linkedin">
+					<a href="https://www.linkedin.com/company/panm360/" target="_blank">
+						<svg class="icon"><use xlink:href="#linkedin"></use></svg>
+						<span class="screen-reader-text">Linkedin</span>
+					</a>
+				</li>
+				<?php /* ?>
 				<li class="rss">
 					<a href="#">
 						<svg class="icon"><use xlink:href="#rss"></use></svg>
 						<span class="screen-reader-text">RSS</span>
 					</a>
 				</li>
+				
 				<li class="vimeo">
 					<a href="#">
 						<svg class="icon"><use xlink:href="#vimeo"></use></svg>
 						<span class="screen-reader-text">Vimeo</span>
 					</a>
 				</li>
+				
 				<li class="soundcloud">
 					<a href="#">
 						<svg class="icon"><use xlink:href="#soundcloud"></use></svg>
 						<span class="screen-reader-text">Soundcloud</span>
 					</a>
 				</li>
+				
 				<li class="spotify">
 					<a href="#">
 						<svg class="icon"><use xlink:href="#spotify"></use></svg>
 						<span class="screen-reader-text">Spotify</span>
 					</a>
 				</li>
+				<?php */ ?>
 			</ul>
 			
 		</div>

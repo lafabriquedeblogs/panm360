@@ -99,6 +99,7 @@
 			svg {
 				width: 30px;
 				height: 30px;
+				fill: #b3b3b3;
 			}
 		}
 		
@@ -111,6 +112,10 @@
 		}
 		&.spotify a svg {
 			width: 25px;
+		}
+		&.linkedin a svg {
+			width: 25px;
+			height: 25px;
 		}
 	}
 }
