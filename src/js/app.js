@@ -1,20 +1,18 @@
+import main_menu_subMenu from './sub_menu.js';
+
 ( function( $, d , w ) {
 	
 	"use-strict";
-	
-	let menu_toggle = d.querySelector(".bouton-menu-toggle-mobile");
 	let menu_mobile = d.getElementById("main-menu-mobile");
 	let menu_mobile_open = d.querySelector("#main-menu-mobile.open");
 	let content = d.getElementById("content");
 	let colophon = d.getElementById("colophon");
+		
+	let menu_toggle = d.querySelector(".bouton-menu-toggle-mobile");
 	let loupe_search = d.querySelector("#panm-search a");
 	let search_div = d.getElementById("searchform");
 	let close_searchform = d.getElementById("close-searchform");
-	let e, g, x, y;
-	let _to_menu;
-	let active_archive_menu;
-	let mouse_noving_on_header = false;
-	let archive_is_defined = d.querySelector(".archive");
+	
 	let spotify = d.querySelector(".wp-block-embed-spotify .wp-block-embed__wrapper iframe");
 	
 	
@@ -24,18 +22,16 @@
 	}
 	
 	function reportWindowSize() {
-		
-		e = d.documentElement;
-		g = d.getElementsByTagName('body')[0];
-		x = w.innerWidth || e.clientWidth || g.clientWidth;
-		y = w.innerHeight || e.clientHeight || g.clientHeight;
+		var x = w.innerWidth || e.clientWidth || g.clientWidth;
 		
 		if( x > 1024 ){
 			menu_mobile.classList.remove("open");
 		}
-		
+		//
 	}	
-	
+
+
+		
 	/*
 		----------------------------------------------------------------------------------------------------
 	*/
@@ -70,16 +66,7 @@
 				nextArrow: '<div class="slick-next-arrow"><svg class="icone"><use xlink:href="#slider-right-arrow"></use></svg></div>',
 			});
 		}
-		
-/*
-		$(window).on("scroll", function(e) {
-			if ($(this).scrollTop() > 147) {
-				$("#text-introduction-panm360").addClass("moved");
-			} else {
-		    	$("#text-introduction-panm360").removeClass("moved");
-			}	  
-		});
-*/
+
 		
 		$(".filtres-content-tabs").on("click"," li a", function(e){
 			let _f = $(this).data("content");
@@ -95,17 +82,17 @@
 			_target.show();
 		});
 		
-/*
-		$(".filtre-liste-tax").on("click","span",function(){
-			let _data = $(this).data("genre");
-			$(".album.element").hide();
-			
-			$("[data-filter~='"+ _data +"']").each( function(index) {
-				$(this).show();
-			});
-			
-		});
-*/
+		/*
+				$(".filtre-liste-tax").on("click","span",function(){
+					let _data = $(this).data("genre");
+					$(".album.element").hide();
+					
+					$("[data-filter~='"+ _data +"']").each( function(index) {
+						$(this).show();
+					});
+					
+				});
+		*/
 		
 		$("#menu-panm").on("click",".burger", function(){
 			$(this).removeClass("active");
@@ -136,6 +123,7 @@
 		
 		if( spotify != null) spotify.setAttribute("width","100%");
 		
+		main_menu_subMenu();
 	});
 	
 })( jQuery, document , window );

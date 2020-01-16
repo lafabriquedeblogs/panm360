@@ -267,5 +267,24 @@ function panm360_customs_posts_types() {
 	register_post_type( 'panm360_ads', $args );
 }
 add_action( 'init', 'panm360_customs_posts_types', 0 );
+
+
+function set_default_object_terms( $post_id, $post ) {
 	
+        if ( 'publish' === $post->post_status && $post->post_type === 'agenda' ) {
+            $defaults = array(
+                'generale' => array( 'lire' ),
+                //'generale' => array( 'albums' ),
+                //'category' => array( 'albums' ),
+             );
+            $taxonomies = get_object_taxonomies( $post->post_type );
+            foreach ( (array) $taxonomies as $taxonomy ) {
+                $terms = wp_get_post_terms( $post_id, $taxonomy );
+                if ( empty( $terms ) && array_key_exists( $taxonomy, $defaults ) ) {
+                    wp_set_object_terms( $post_id, $defaults[$taxonomy], $taxonomy );
+                }
+            }
+        }
+    }
+add_action( 'save_post', 'set_default_object_terms', 0, 2 );	
 ?>
