@@ -246,6 +246,7 @@ function panm360_allowed_block_types( $allowed_blocks, $post ) {
 		'core/button',
 		'acf/icones-partage',
 		'acf/liste-pages',
+		'acf/abonnement',
 		'gravityforms/form'
 	);
  

@@ -464,7 +464,7 @@ figure {
   -webkit-box-direction: normal;
           flex-direction: column; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 980px) {
   .wp-block-columns {
     width: 100%;
     display: -webkit-box;
@@ -877,8 +877,8 @@ h2.annee-top {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  -webkit-box-pack: justify;
-          justify-content: space-between; }
+  -webkit-box-pack: start;
+          justify-content: flex-start; }
   .abo-bloc .ul-abonnement {
     text-align: left;
     font-size: 14px; }
@@ -887,7 +887,8 @@ h2.annee-top {
       list-style-position: inside;
       padding-bottom: 0.5em; }
   .abo-bloc .item-titre {
-    margin-top: 1.5em; }
+    margin-top: 1.5em;
+    text-transform: uppercase; }
   .abo-bloc .unavailable {
     text-decoration: line-through; }
   .abo-bloc .abo-prix {
@@ -915,21 +916,24 @@ h2.annee-top {
       padding-left: 7px; }
   .abo-bloc .abo-asset {
     font-size: 22px; }
-  .abo-bloc.abo-bloc-gratuit {
+    .abo-bloc .abo-asset p {
+      line-height: 28px;
+      margin-bottom: 1em; }
+  .abo-bloc.abo-bloc-gratuit, .abo-bloc.abo-bloc-free {
     background: #F4F4F8; }
-    .abo-bloc.abo-bloc-gratuit .abo-prix, .abo-bloc.abo-bloc-gratuit .cap {
+    .abo-bloc.abo-bloc-gratuit .abo-prix, .abo-bloc.abo-bloc-gratuit .cap, .abo-bloc.abo-bloc-free .abo-prix, .abo-bloc.abo-bloc-free .cap {
       color: #5BC6E8; }
-    .abo-bloc.abo-bloc-gratuit button {
+    .abo-bloc.abo-bloc-gratuit button, .abo-bloc.abo-bloc-free button {
       background: #5BC6E8;
       border-color: #5BC6E8; }
-  .abo-bloc.abo-bloc-mensuel-1 {
+  .abo-bloc.abo-bloc-premium {
     background: #333333;
     color: #fff; }
-    .abo-bloc.abo-bloc-mensuel-1 .abo-prix, .abo-bloc.abo-bloc-mensuel-1 .cap {
+    .abo-bloc.abo-bloc-premium .abo-prix, .abo-bloc.abo-bloc-premium .cap {
       color: #FE4A49; }
-    .abo-bloc.abo-bloc-mensuel-1 button {
+    .abo-bloc.abo-bloc-premium button {
       background: #FE4A49; }
-    .abo-bloc.abo-bloc-mensuel-1 .frequence {
+    .abo-bloc.abo-bloc-premium .frequence {
       color: #E6E6EA; }
 
 .no-label label, .no-label .gfield_label {
