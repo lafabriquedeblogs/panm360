@@ -66,7 +66,6 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 			'default-image' => '',
 		) ) );
 
-		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		/**
@@ -82,6 +81,7 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 		) );
 		add_post_type_support( 'records', 'author' );
 		add_theme_support( 'editor-style' );
+		add_editor_style( 'assets/css/wp-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'panm360_setup' );
@@ -302,6 +302,7 @@ add_filter( 'acf/fields/svg_icon/file_path/name=icone_reseau_social', 'tc_acf_sv
 function tc_acf_svg_icon_file_path( $file_path ) {
     return get_theme_file_path( 'assets/img/panm360_sprite.svg' );
 }
+
 
 
 	

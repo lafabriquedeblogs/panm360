@@ -8,8 +8,13 @@ add_action( 'wp_enqueue_scripts', 'panm360_scripts' );
 add_action( 'wp_head', 'panm360_header_style');
 add_action( 'enqueue_block_assets', 'remove_editor_blocks_assets' );
 add_action( 'admin_head', 'panm360_admin_css');
+add_action( 'enqueue_block_editor_assets', 'my_gutenberg_scripts' );
 
-//add_action( 'enqueue_block_editor_assets', 'photographus_add_gutenberg_assets' );
+function my_gutenberg_scripts() {
+    wp_enqueue_script( 'my-editor-enhancement', get_template_directory_uri().'/assets/js/editor.js',array( 'wp-blocks', 'wp-dom' ), filemtime(get_template_directory_uri().'/assets/js/editor.js') ,true );
+    //wp_enqueue_style( 'panm360-css', get_theme_file_uri( '/assets/css/editor_main.css' ), false );
+}
+
 
 function panm360_scripts() {
 	//wp_dequeue_style( 'wp-block-library' );
@@ -24,18 +29,6 @@ function panm360_scripts() {
 	wp_dequeue_style('wp-block-library');
     wp_dequeue_style('wp-block-style');
 }
-
-// Add backend styles for Gutenberg.
-/**
- * Load Gutenberg stylesheet.
- */
-function photographus_add_gutenberg_assets() {
-	// Load the theme styles within Gutenberg.
-	wp_enqueue_style( 'panm360-css', get_theme_file_uri( '/assets/css/main.css' ), false );
-}
-
-
-
 
 function panm360_header_style(){
 	?>

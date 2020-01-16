@@ -838,6 +838,9 @@ h1.category-title {
     -webkit-box-flex: 0;
             flex: 0 0 auto; } }
 
+.is-style-agenda-first-part {
+  color: red; }
+
 #top-360-hero {
   background: #F4F4F8 url("../img/panm360-top.jpg") center center no-repeat;
   background-size: cover;
@@ -1445,7 +1448,7 @@ img.lozad {
 .rubik {
   font-family: "Rubik", sans-serif; }
 
-.chapeau-header {
+.chapeau-header, .is-style-chapeau-header {
   font-weight: 500;
   font-size: 1.625em;
   line-height: 1.4; }
