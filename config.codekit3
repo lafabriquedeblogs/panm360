@@ -1549,6 +1549,14 @@
 		"oAP": "/taxonomy-annee.php",
 		"oF": 0
 		},
+	"/taxonomy-general-albums.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-general-albums.php",
+		"oF": 0
+		},
 	"/taxonomy-genre.php": {
 		"cB": 0,
 		"ft": 8192,
