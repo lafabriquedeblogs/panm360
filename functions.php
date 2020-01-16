@@ -81,7 +81,6 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 		) );
 		add_post_type_support( 'records', 'author' );
 		add_theme_support( 'editor-style' );
-		add_editor_style( 'assets/css/wp-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'panm360_setup' );

@@ -69,16 +69,6 @@
 		"oAP": "/assets/css/main.css.map",
 		"oF": 0
 		},
-	"/assets/css/wp-editor.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/css/wp-editor-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/assets/img/eye.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -682,6 +672,16 @@
 		"oA": 0,
 		"oAP": "/single.php",
 		"oF": 0
+		},
+	"/src/css/agenda.css": {
+		"aP": 1,
+		"bl": 1,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/src/css/agenda-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/src/css/header.css": {
 		"aP": 1,
