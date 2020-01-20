@@ -50,15 +50,19 @@ function get_artiste( $album_id , $get_lien = true ){
 	return $artiste_output;
 }
 
-function get_genre($album_id, $data = false ){
+function get_genre( $album_id, $data = false, $raw = false ){
+	
 	$genres = array();
 	$genres_list = get_the_terms($album_id,'genre');
+	
+	if( $raw ) return $genres_list;
 	
 	if ( $genres_list && !is_wp_error($genres_list) ) {
 		foreach( $genres_list as $genre ){
 			$genres[] = '<a href="'. get_term_link( $genre, 'genre' ) .'">'.$genre->name.'</a>';
 		}
 	}
+	
 	$genres_txt = implode(" / ", $genres);
 	
 	if( $data ){
@@ -68,6 +72,19 @@ function get_genre($album_id, $data = false ){
 		}
 	}
 	return $genres_txt;
+}
+
+function get_genre_parents( $post_id ){
+	
+	$_terms = get_genre( $post_id, false, true );
+     
+     foreach ($_terms as $_term) {
+        if ( $_term->parent == 0 ) //check for parent terms only
+           // echo " " . $_term->slug;
+            $genres[] = '<a href="'. get_term_link( $_term, 'genre' ) .'">'.$_term->name.'</a>';
+     }	
+     $genres_txt = implode(" / ", $genres);
+     return $genres_txt;
 }
 
 function get_annee($album_id, $data = false){
@@ -118,6 +135,30 @@ function get_label($album_id){
 	
 	return $label_txt;
 }
+
+
+function get_ville($album_id){
+	
+	$ville = array();
+	
+	$ville_list = get_the_terms($album_id,'ville');
+	
+	$ville_txt = $ville_list[0]->name;
+	
+	return $ville_txt;
+}
+
+function get_salle($album_id){
+	
+	$salle = array();
+	
+	$salle_list = get_the_terms($album_id,'salle');
+	
+	$salle_txt = $salle_list[0]->name;
+	
+	return $salle_txt;
+}
+
 
 function get_years_list(){
 							

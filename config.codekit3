@@ -449,6 +449,14 @@
 		"oAP": "/inc/abonnements/abonnements.php",
 		"oF": 0
 		},
+	"/inc/agenda/agenda.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/agenda/agenda.php",
+		"oF": 0
+		},
 	"/inc/customs_posts_types.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1715,6 +1723,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/modules/element-infolettre.php",
+		"oF": 0
+		},
+	"/template-parts/modules/element-item-calendrier.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/element-item-calendrier.php",
 		"oF": 0
 		},
 	"/template-parts/modules/element-main.php": {

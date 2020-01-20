@@ -311,6 +311,8 @@ require get_template_directory() . '/inc/customs_posts_types.php';
 require get_template_directory() . '/inc/taxonomies.php';
 require get_template_directory() . '/inc/scripts.php';
 require get_template_directory() . '/inc/shortcodes-abonnements.php';
+require get_template_directory() . '/inc/agenda/agenda.php';
+
 /*
  *
  * BLOCKS
