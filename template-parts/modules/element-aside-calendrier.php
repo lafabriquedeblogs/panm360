@@ -36,6 +36,9 @@
 				$agenda_commente = get_field('agenda_commente',$item->ID);
 				$permalien = get_permalink( $item->ID );
 				
+				$vignette = get_the_post_thumbnail_url( $item->ID, array(50,50) );
+				if( !$vignette ) $vignette =  get_template_directory_uri()."/assets/img/panm-icones/100x100/m-blanc-sur-bleu.jpg";
+				
 				include( locate_template( '/template-parts/modules/element-item-calendrier.php', false, false ) );
 				
 				

@@ -30,7 +30,7 @@ get_header();
 						
 						<ul class="section-content--main">
 						<?php
-							$albums_count = 12;	
+							$albums_count = 16;	
 							
 							$args = array(
 								'post_type' => 'records',
