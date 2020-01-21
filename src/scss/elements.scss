@@ -112,7 +112,9 @@ img.lozad {
 		font-family: $rubik;
 		border-bottom: 1px solid $gris_light;
 		padding-bottom: 10px;
-		margin-bottom: 10px;
+		padding-top: 10px;
+		//margin-bottom: 10px;
+		margin-bottom: 0;
 		.date {
 			align-self: flex-start;
 			font-size: 12px;
@@ -144,6 +146,10 @@ img.lozad {
 		.icon{
 			width: 15px;
 			height: 15px;
+			margin-right: 1em;
+		}
+		&:nth-child(even){
+			background-color: #f9f9f9;
 		}
 	}
 	

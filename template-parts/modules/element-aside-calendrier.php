@@ -1,55 +1,29 @@
 <div class="title-calendrier">
-	<h2>Agenda <span>DES CONCERTS</span></h2>
+	<h2><?php _e('Agenda <span>DES CONCERTS</span>','panm360'); ?></h2>
 </div>
 <ul>
 	<?php
-		
-	$count = 9;
+
 	$post_start = 1;
-	
-	$Agenda_start = '2020/01/01';
-	
-	$start = date('Y/m/d');
-	$end = '2020/06/30';
 	
 	$calendrier = get_liste_concerts( $start, $end , $count );	
 	
 	
 	foreach( $calendrier as $_date => $items ){
-		
-
-			foreach( $items as $item ){
+		foreach( $items as $item ){
+	
+			if( $post_start > $count ) break;
+			$post_start++;
 				
-				if( $post_start > $count ) break;
-				$post_start++;
-				
-				$artiste = get_the_title( $item->ID );
-				$genres = get_genre_parents( $item->ID );
-				
-				$ville =  get_ville( $item->ID );
-				$salle = get_salle( $item->ID );
-				$timestamp = strtotime($_date);
-				$date = date_i18n('d M\.', $timestamp);
-				$year = date_i18n('Y', $timestamp);
-				$heure = get_time_concert( $item->ID, date_i18n('Ymd', $timestamp) );
-				
-				$agenda_commente = get_field('agenda_commente',$item->ID);
-				$permalien = get_permalink( $item->ID );
-				
-				$vignette = get_the_post_thumbnail_url( $item->ID, array(50,50) );
-				if( !$vignette ) $vignette =  get_template_directory_uri()."/assets/img/panm-icones/100x100/m-blanc-sur-bleu.jpg";
-				
-				include( locate_template( '/template-parts/modules/element-item-calendrier.php', false, false ) );
-				
+			include( locate_template( '/template-parts/modules/element-item-calendrier.php', false, false ) );
 				
 			}
-		
-					
 	}
 	?>
-</ul>	
-<a href="" class="plus-de">Voir l'agenda complet <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>
+</ul>
 
 <?php
-
+	$agenda_full_id = apply_filters( 'wpml_object_id', 6864, 'page', TRUE  );
+	$agenda_full_permalien = get_permalink( $agenda_full_id );
 ?>
+<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>

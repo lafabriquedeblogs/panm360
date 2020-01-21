@@ -54,7 +54,7 @@
 			
 		</div><!-- branding-navigation -->
 		
-		<?php get_template_part( 'template-parts/menus/menu','submenu-desktop' ); ?>
+		<?php //get_template_part( 'template-parts/menus/menu','submenu-desktop' ); ?>
 
 	</header><!-- #masthead -->
 	

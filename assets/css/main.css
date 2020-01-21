@@ -1196,7 +1196,8 @@ img.lozad {
     font-family: "Rubik", sans-serif;
     border-bottom: 1px solid #E6E6EA;
     padding-bottom: 10px;
-    margin-bottom: 10px; }
+    padding-top: 10px;
+    margin-bottom: 0; }
     .element.aside-item-calendrier .date {
       align-self: flex-start;
       font-size: 12px;
@@ -1224,7 +1225,10 @@ img.lozad {
       height: 50px; }
     .element.aside-item-calendrier .icon {
       width: 15px;
-      height: 15px; }
+      height: 15px;
+      margin-right: 1em; }
+    .element.aside-item-calendrier:nth-child(even) {
+      background-color: #f9f9f9; }
   .element.main-item .genre {
     font-size: 0.938em;
     font-weight: 400; }

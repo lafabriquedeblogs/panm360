@@ -781,6 +781,14 @@
 		"oAP": "/page-accueil.php",
 		"oF": 0
 		},
+	"/page-agenda.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-agenda.php",
+		"oF": 0
+		},
 	"/page-lire.php": {
 		"cB": 0,
 		"ft": 8192,
