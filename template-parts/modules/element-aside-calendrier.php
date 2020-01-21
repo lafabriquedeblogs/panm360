@@ -4,10 +4,11 @@
 <ul>
 	<?php
 		
-	$count = 8;
+	$count = 9;
 	$post_start = 1;
 	
 	$Agenda_start = '2020/01/01';
+	
 	$start = date('Y/m/d');
 	$end = '2020/06/30';
 	
@@ -31,6 +32,9 @@
 				$date = date_i18n('d M\.', $timestamp);
 				$year = date_i18n('Y', $timestamp);
 				$heure = get_time_concert( $item->ID, date_i18n('Ymd', $timestamp) );
+				
+				$agenda_commente = get_field('agenda_commente',$item->ID);
+				$permalien = get_permalink( $item->ID );
 				
 				include( locate_template( '/template-parts/modules/element-item-calendrier.php', false, false ) );
 				

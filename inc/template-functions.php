@@ -55,6 +55,8 @@ function get_genre( $album_id, $data = false, $raw = false ){
 	$genres = array();
 	$genres_list = get_the_terms($album_id,'genre');
 	
+	if( !$genres_list ) return '';
+	
 	if( $raw ) return $genres_list;
 	
 	if ( $genres_list && !is_wp_error($genres_list) ) {
@@ -77,11 +79,12 @@ function get_genre( $album_id, $data = false, $raw = false ){
 function get_genre_parents( $post_id ){
 	
 	$_terms = get_genre( $post_id, false, true );
-     
+    
+    if( empty($_terms) ) return '';
      foreach ($_terms as $_term) {
         if ( $_term->parent == 0 ) //check for parent terms only
            // echo " " . $_term->slug;
-            $genres[] = '<a href="'. get_term_link( $_term, 'genre' ) .'">'.$_term->name.'</a>';
+            $genres[] = '<a href="">'.$_term->name.'</a>';
      }	
      $genres_txt = implode(" / ", $genres);
      return $genres_txt;

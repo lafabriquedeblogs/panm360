@@ -1211,13 +1211,14 @@ img.lozad {
               flex-direction: column;
       font-size: 0.813em;
       -webkit-box-flex: 1;
-              flex: 1 1; }
+              flex: 1 1;
+      padding-right: 1.5em; }
     .element.aside-item-calendrier .element-title {
       font-size: 0.875em;
       margin-bottom: 0; }
     .element.aside-item-calendrier .icon {
-      width: 5px;
-      height: 9px; }
+      width: 15px;
+      height: 15px; }
   .element.main-item .genre {
     font-size: 0.938em;
     font-weight: 400; }
@@ -1419,7 +1420,8 @@ img.lozad {
   color: #fff; }
 
 .bleu {
-  color: #5BC6E8; }
+  color: #5BC6E8;
+  fill: #5BC6E8; }
 
 .bg-dark {
   background: #333333; }
