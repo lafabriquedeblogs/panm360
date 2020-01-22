@@ -81,13 +81,44 @@ function get_genre_parents( $post_id ){
 	$_terms = get_genre( $post_id, false, true );
     
     if( empty($_terms) ) return '';
+    
      foreach ($_terms as $_term) {
         if ( $_term->parent == 0 ) //check for parent terms only
            // echo " " . $_term->slug;
             $genres[] = '<a href="">'.$_term->name.'</a>';
      }	
+     
      $genres_txt = implode(" / ", $genres);
      return $genres_txt;
+}
+
+function get_main_genres( $get_links = false ){
+	
+	$myterms = get_terms( 'genre', array( 'parent' => 0 ) );
+    
+    if( empty($myterms) ) return '';
+    
+    $genres = array();
+    
+    if( $get_links ){
+    	
+    	foreach ($myterms as $_term) {
+	    	$link = get_term_link( $_term->term_id, 'genre' );
+   	        $genres[] = '<a href="'.$link.'">'.$_term->name.'</a>';
+    	}	
+    	 
+    	$genres_txt = implode(" / ", $genres);
+    	
+    	return $genres_txt;
+    }
+
+    foreach ($myterms as $_term) {
+	    $genre = array();
+	    $genre['name'] = ucfirst($_term->name);
+        $genre['id'] = $_term->term_id;
+        $genres[] = $genre;
+   	}
+    return $genres;
 }
 
 function get_annee($album_id, $data = false){
@@ -109,6 +140,52 @@ function get_annee($album_id, $data = false){
 	}
 		
 	return $annees_txt;
+}
+
+function get_months_list(){
+	$months = array(
+		'01' => __( 'janvier', 'panm360' ),
+		'02' => __( 'février', 'panm360' ),
+		'03' => __( 'mars', 'panm360' ),
+		'04' => __( 'avril', 'panm360' ),
+		'05' => __( 'mai', 'panm360' ),
+		'06' => __( 'juin', 'panm360' ),
+		'07' => __( 'juillet', 'panm360' ),
+		'08' => __( 'août', 'panm360' ),
+		'09' => __( 'septembre', 'panm360' ),
+		'10' => __( 'octobre', 'panm360' ),
+		'11' => __( 'novembre', 'panm360' ),
+		'12' => __( 'décembre', 'panm360' ),
+	);
+	
+	return $months;
+};
+
+function get_month_name( $m ){
+
+	$months = get_months_list();
+
+	return $months[$m];
+}
+function get_days_list(){
+	$days = array(
+		'1' => __( 'lundi', 'panm360' ),
+		'2' => __( 'mardi', 'panm360' ),
+		'3' => __( 'mercredi', 'panm360' ),
+		'4' => __( 'jeudi', 'panm360' ),
+		'5' => __( 'vendredi', 'panm360' ),
+		'6' => __( 'samedi', 'panm360' ),
+		'7' => __( 'dimanche', 'panm360' ),
+	);
+	
+	return $days;
+};
+
+function get_day_name( $d ){
+
+	$days = get_days_list();
+
+	return $days[$d];
 }
 
 function get_pays($album_id){

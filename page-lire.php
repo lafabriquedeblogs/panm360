@@ -50,9 +50,20 @@ get_header();
 						?>
 						</ul>
 						<div class="aside-content">
-							
-							<?php get_template_part( '/template-parts/modules/element', 'aside-calendrier' ); ?>
-							
+							<div class="title-calendrier">
+								<h2><?php _e('Agenda <span>DES CONCERTS</span>','panm360'); ?></h2>
+							</div>							
+							<?php
+								$count = 8;
+								$Agenda_start = '2020/01/01';
+								$start = date('Y/m/d');
+								$end = '2020/06/30';
+								include( locate_template( '/template-parts/modules/element-aside-calendrier.php', false, false ) );
+
+								$agenda_full_id = apply_filters( 'wpml_object_id', 6944, 'page', TRUE  );
+								$agenda_full_permalien = get_permalink( $agenda_full_id );
+							?>
+							<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>							
 							<?php get_template_part( '/template-parts/publicites/publicite', 'ilot' ); ?>
 							
 						</div>

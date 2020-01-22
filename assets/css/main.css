@@ -841,6 +841,20 @@ h1.category-title {
 .is-style-agenda-first-part {
   color: red; }
 
+.full-month-agenda .calendrier-ul-container {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between; }
+  .full-month-agenda .calendrier-ul-container .element.aside-item-calendrier {
+    -webkit-box-flex: 0;
+            flex: 0 0 31.3%;
+    max-width: 31.3%; }
+
 #top-360-hero {
   background: #F4F4F8 url("../img/panm360-top.jpg") center center no-repeat;
   background-size: cover;
@@ -1227,8 +1241,6 @@ img.lozad {
       width: 15px;
       height: 15px;
       margin-right: 1em; }
-    .element.aside-item-calendrier:nth-child(even) {
-      background-color: #f9f9f9; }
   .element.main-item .genre {
     font-size: 0.938em;
     font-weight: 400; }

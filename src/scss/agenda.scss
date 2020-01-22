@@ -1,3 +1,20 @@
 .is-style-agenda-first-part {
 	color: red;
 }
+
+.full-month-agenda {
+	.calendrier-ul-container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+		.element.aside-item-calendrier {
+			flex: 0 0 31.3%;
+			max-width: 31.3%;
+		}		
+	}
+
+}
+.current-month {
+	
+}
