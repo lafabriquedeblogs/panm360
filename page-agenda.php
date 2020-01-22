@@ -11,6 +11,7 @@ $year = date('Y');
 $month =  date('m');
 $day = date('d');
 
+
 $lastDayThisMonth = date("Y/m/t");
 
 $years = array('2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030');
@@ -38,9 +39,9 @@ $count = 1000;
 				<div class="entry-content">
 					<?php the_content();?>
 				</div><!-- .entry-content -->
-				
+				<?php /* ?>
 				<section class="section">
-					<form>
+					<form id="agenda-filtres">
 						<select>
 							<option value=""><?php _e('Année','panm360'); ?></option>
 							<?php
@@ -69,13 +70,14 @@ $count = 1000;
 						<button type="submit"><?php _e('Chercher','panm360'); ?></button>
 					</form>
 				</section>
+				<?php */ ?>
 				<section class="section">
 					<div id="agenda" class="section-inner">
 						
 						<div class="full-month-agenda current-month">
 							<h4><?php echo date_i18n('F Y'); ?></h4>
 							<?php
-								$start = $today;
+								$start = $year.'/'.$month.'/01';
 								$end = $lastDayThisMonth;
 								include( locate_template( '/template-parts/modules/element-aside-calendrier.php', false, false ) );
 							?>					

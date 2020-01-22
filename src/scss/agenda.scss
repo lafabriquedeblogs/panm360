@@ -4,17 +4,83 @@
 
 .full-month-agenda {
 	.calendrier-ul-container {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		justify-content: space-between;
-		.element.aside-item-calendrier {
-			flex: 0 0 31.3%;
-			max-width: 31.3%;
-		}		
+		display: block;		
 	}
 
 }
 .current-month {
 	
+}
+
+@media screen and (min-width:550px){
+	.full-month-agenda {
+		.calendrier-ul-container {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+			
+			.element.aside-item-calendrier {
+				//flex: 0 0 23%;
+				width: calc( 50% - 18px);
+			}		
+		}
+	}
+}	
+@media screen and (min-width:980px){
+	.full-month-agenda {
+		.calendrier-ul-container {
+			.element.aside-item-calendrier {
+				width: calc( 33.333% - 18px);
+			}		
+		}
+	}
+}
+@media screen and (min-width:1280px){
+	.full-month-agenda {
+		.calendrier-ul-container {
+			.element.aside-item-calendrier {
+				width: calc( 25% - 18px);
+			}		
+		}
+	}
+}
+	
+	
+@supports(display: grid){
+	.full-month-agenda {
+		.calendrier-ul-container {	
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 0 36px;
+		
+			.element.aside-item-calendrier {
+				max-width: initial;
+				width: initial;
+
+			}
+		}
+	}
+	
+	@media screen and (min-width:550px){
+		.full-month-agenda {
+			.calendrier-ul-container {
+				grid-template-columns: 1fr 1fr;
+			}		
+		}
+	}	
+	@media screen and (min-width:980px){
+		.full-month-agenda {
+			.calendrier-ul-container {
+				grid-template-columns: 1fr 1fr 1fr;
+			}		
+		}
+	}
+	@media screen and (min-width:1280px){
+		.full-month-agenda {
+			.calendrier-ul-container {
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+			}		
+		}
+	}
 }
