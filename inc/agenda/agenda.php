@@ -46,7 +46,7 @@
 		return $where;
 	}
 	
-	function get_liste_concerts( $start, $end, $count ){
+	function get_liste_concerts( $start, $end, $count , $genre = false ){
 		
 		$dates = createDateRange( $start , $end );
 		
@@ -54,9 +54,7 @@
 		$i = 0;
 		
 		add_filter( 'posts_where','my_posts_where' );
-		
-		//$start = '20200101';
-		//$end = '20200630';
+
 		
 		while( $i <= count($dates)-1 ){
 		
@@ -77,6 +75,14 @@
 			    
 			);
 			
+			if( $genre ){
+				$args['tax_query'][] = array(
+					'taxonomy' => 'genre',
+					'field'    => 'term_id',
+					'terms'    => $genre,
+				);
+			}
+			
 			
 			// Make the query
 			$events_query = new WP_query( $args );
@@ -89,14 +95,7 @@
 		$result = array_filter($concerts);
 		
 		$_result = array_flatten($result);
-		
-/*
-		echo '<pre>';
-		   var_dump($result);
-		echo '</pre>';
-*/
-		
-		
+
 		return $result;//$events_query->posts;
 	}
 	
@@ -114,3 +113,5 @@
 		
 		//return $time;
 	};
+	
+	

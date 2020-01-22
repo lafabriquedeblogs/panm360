@@ -1,4 +1,6 @@
 import main_menu_subMenu from './sub_menu.js';
+import ajax_search_agenda from './agenda.js';
+
 
 ( function( $, d , w ) {
 	
@@ -124,6 +126,7 @@ import main_menu_subMenu from './sub_menu.js';
 		if( spotify != null) spotify.setAttribute("width","100%");
 		
 		main_menu_subMenu();
+		ajax_search_agenda();
 	});
 	
 })( jQuery, document , window );

@@ -1258,8 +1258,9 @@ img.lozad {
               flex: 1 1;
       padding-right: 1.5em; }
     .element.aside-item-calendrier .element-title {
-      font-size: 0.875em;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      font-size: 1.125em;
+      font-weight: 500; }
     .element.aside-item-calendrier .vignette {
       display: block;
       margin-top: 5px;

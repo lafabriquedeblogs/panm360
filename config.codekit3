@@ -677,6 +677,14 @@
 		"oAP": "/inc/agenda/agenda.php",
 		"oF": 0
 		},
+	"/inc/agenda/ajax_agenda.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/agenda/ajax_agenda.php",
+		"oF": 0
+		},
 	"/inc/customs_posts_types.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1189,6 +1197,17 @@
 		"oAP": "/src/index.php",
 		"oF": 0
 		},
+	"/src/js/agenda.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/src/js/min/agenda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/src/js/app-old.js": {
 		"bF": 6,
 		"ft": 64,
@@ -1218,6 +1237,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/src/js/min/block-columns-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/src/js/min/agenda-min.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/min/min/agenda-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1

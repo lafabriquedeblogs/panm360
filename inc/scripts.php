@@ -26,6 +26,12 @@ function panm360_scripts() {
 	wp_enqueue_script( 'script-lozad', get_template_directory_uri() . '/assets/js/lib/lozad.min.js', array('jquery'), false, false );
 	wp_enqueue_script( 'script-app', get_template_directory_uri() . '/assets/js/app-min.js', array(), false, true );
 	
+	wp_localize_script( 'script-app', 'agendAjax', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		
+		)
+	);
+	
 	wp_dequeue_style('wp-block-library');
     wp_dequeue_style('wp-block-style');
 }

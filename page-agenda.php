@@ -21,7 +21,7 @@ $genres = get_main_genres( false );
 
 $next_month = date('m', strtotime('+1 month'));
 $next_month_number_of_days = cal_days_in_month(CAL_GREGORIAN, $next_month, $year);
-$lastDaynextMonth = date($year."/".$next_month."/t");
+$lastDaynextMonth = date("Y/m/t", strtotime($year."/".$next_month."/01"));
 
 $next_month_string = date_i18n('F Y',  strtotime('+1 month') );
 
@@ -39,10 +39,10 @@ $count = 1000;
 				<div class="entry-content">
 					<?php the_content();?>
 				</div><!-- .entry-content -->
-				<?php /* ?>
+				
 				<section class="section">
 					<form id="agenda-filtres">
-						<select>
+						<select id="agenda-year">
 							<option value=""><?php _e('Année','panm360'); ?></option>
 							<?php
 								
@@ -53,7 +53,7 @@ $count = 1000;
 								<option value="<?php echo $cyear;?>" <?php echo $selected;?>><?php echo $cyear;?></option>
 							<?php endforeach; ?>
 						</select>
-						<select>
+						<select id="agenda-month">
 							<option value=""><?php _e('Mois','panm360'); ?></option>
 							<?php foreach( $months as $m => $string):
 								$selected = ($m == $month) ? 'selected' : ''; 
@@ -61,16 +61,18 @@ $count = 1000;
 								<option value="<?php echo $m;?>" <?php echo $selected;?>><?php echo $string;?></option>
 							<?php endforeach; ?>
 						</select>
-						<select>
-							<option value=""><?php _e('Genre','panm360'); ?> - <?php _e('Tous','panm360'); ?></option>
+						<select id="agenda-genre">
+							<option value="0"><?php _e('Genre','panm360'); ?> - <?php _e('Tous','panm360'); ?></option>
 							<?php foreach( $genres as $genre): ?>
 								<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
 							<?php endforeach; ?>							
 						</select>
+						<?php $nonce = wp_create_nonce("my_user_like_nonce"); ?>
+						<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>" />
 						<button type="submit"><?php _e('Chercher','panm360'); ?></button>
 					</form>
 				</section>
-				<?php */ ?>
+				
 				<section class="section">
 					<div id="agenda" class="section-inner">
 						
