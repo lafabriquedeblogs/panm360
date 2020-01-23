@@ -67,9 +67,13 @@
 							'status' => array( 'active', 'complimentary', 'pending','free_trial' ),
 						);  
 						$active_memberships = wc_memberships_get_user_memberships( $user_id, $args );
-						echo '<pre>';
-							var_dump($active_memberships[0]->plan_id);
-						echo '</pre>';
+						
+						if( $user_id == 4 ){
+							echo '<pre>';
+								var_dump($active_memberships[0]->plan_id);
+							echo '</pre>';							
+						}
+
 					?>
 					
 					
