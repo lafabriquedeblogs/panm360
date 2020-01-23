@@ -757,12 +757,20 @@
 		"oAP": "/inc/updater/updater.php",
 		"oF": 0
 		},
-	"/inc/woocommerce.php": {
+	"/inc/woocommerce/custom_excerpt.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/inc/woocommerce.php",
+		"oAP": "/inc/woocommerce/custom_excerpt.php",
+		"oF": 0
+		},
+	"/inc/woocommerce/woocommerce.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/woocommerce/woocommerce.php",
 		"oF": 0
 		},
 	"/index.php": {
