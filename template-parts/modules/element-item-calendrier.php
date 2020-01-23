@@ -1,7 +1,7 @@
 <?php
 	
 	$titre = get_the_title( $item->ID );
-	$genres = get_genre_parents( $item->ID );
+	$genres = get_genre_parents( $item->ID , false );
 	
 	$ville =  get_ville( $item->ID );
 	$salle = get_salle( $item->ID );

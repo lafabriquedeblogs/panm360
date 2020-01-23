@@ -268,7 +268,7 @@ function my_acf_op_init() {
         // Add parent.
         $parent = acf_add_options_page(array(
             'page_title'  => __('PanM 360 General Settings'),
-            'menu_title'  => __('PanM 360 Réglages Theme'),
+            'menu_title'  => __('PanM 360'),
             'redirect'    => false,
         ));
 

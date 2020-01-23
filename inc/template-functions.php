@@ -76,16 +76,22 @@ function get_genre( $album_id, $data = false, $raw = false ){
 	return $genres_txt;
 }
 
-function get_genre_parents( $post_id ){
+function get_genre_parents( $post_id , $link = false){
 	
 	$_terms = get_genre( $post_id, false, true );
     
     if( empty($_terms) ) return '';
     
-     foreach ($_terms as $_term) {
+    foreach ($_terms as $_term) {
         if ( $_term->parent == 0 ) //check for parent terms only
-           // echo " " . $_term->slug;
-            $genres[] = '<a href="">'.$_term->name.'</a>';
+            	$genres[] = $_term->name ;
+            if( !$link ){
+	            
+            } else {
+	            $genres[] = '<a href="">'.$_term->name.'</a>';
+            }
+            
+            
      }	
      
      $genres_txt = implode(" / ", $genres);
