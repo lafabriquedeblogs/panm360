@@ -1232,8 +1232,8 @@ img.lozad {
     display: -webkit-box;
     display: flex;
     flex-wrap: nowrap;
-    -webkit-box-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+            align-items: flex-start;
     align-content: center;
     font-family: "Rubik", sans-serif;
     border-bottom: 1px solid #E6E6EA;
@@ -1244,10 +1244,8 @@ img.lozad {
       align-self: flex-start;
       font-size: 12px;
       text-transform: uppercase;
-      color: #4d4d4d;
-      width: 74px; }
+      color: #4d4d4d; }
     .element.aside-item-calendrier .detail {
-      align-self: center;
       display: -webkit-box;
       display: flex;
       -webkit-box-orient: vertical;
@@ -1261,11 +1259,19 @@ img.lozad {
       margin-bottom: 0;
       font-size: 1.125em;
       font-weight: 500; }
+    .element.aside-item-calendrier .element-infos-supp {
+      font-size: 0.95em;
+      font-style: italic;
+      line-height: 1.1;
+      display: block;
+      padding: 3px 0;
+      color: #808080; }
     .element.aside-item-calendrier .vignette {
       display: block;
-      margin-top: 5px;
       width: 50px;
-      height: 50px; }
+      height: 50px;
+      margin-right: 24px;
+      display: block; }
     .element.aside-item-calendrier .icon {
       width: 15px;
       height: 15px;

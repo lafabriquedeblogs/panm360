@@ -885,6 +885,14 @@
 		"oAP": "/sidebar.php",
 		"oF": 0
 		},
+	"/single-agenda.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-agenda.php",
+		"oF": 0
+		},
 	"/single-artiste.php": {
 		"cB": 0,
 		"ft": 8192,

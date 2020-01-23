@@ -1,5 +1,6 @@
 <?php
-	$artiste = get_the_title( $item->ID );
+	
+	$titre = get_the_title( $item->ID );
 	$genres = get_genre_parents( $item->ID );
 	
 	$ville =  get_ville( $item->ID );
@@ -9,6 +10,9 @@
 	$year = date_i18n('Y', $timestamp);
 	$heure = get_time_concert( $item->ID, date_i18n('Ymd', $timestamp) );
 	
+	$prix = get_field('prix',$item->ID );
+	$informations_supplementaires = get_field( 'informations_supplementaires' , $item->ID );
+
 	$agenda_commente = get_field('agenda_commente',$item->ID);
 	$permalien = get_permalink( $item->ID );
 	
@@ -18,14 +22,18 @@
 ?>
 <li class="aside-item-calendrier element">
 		
-		<span class="date">
-		<?php echo $date;?>
+		
 		<img class="vignette" src="<?php echo $vignette;?>" width="80px" height="80px" />
-		</span>
+		
 		<div class="detail">
-			<span class="element-title"><?php echo $artiste?></span>
-			<span class="element-location"><?php echo $ville?> - <?php echo $salle;?> - <?php echo $heure;?></span>
+			<span class="date"><?php echo $date;?></span>
 			<span class="genre album-genre element-genre"><?php echo $genres?></span>
+			<span class="element-title"><?php echo $titre?></span>
+			<?php if( $informations_supplementaires ): ?>
+			<span class="element-infos-supp"><?php echo implode(', ', $informations_supplementaires );?></span>
+			<?php endif; ?>
+			<span class="element-location"><?php echo $salle;?> - <?php echo $ville?> - <?php echo $heure;?></span>
+			<span class="element-location"><?php echo $prix['montant'];?></span>
 		</div>
 		
 		<?php if( $agenda_commente ): ?>

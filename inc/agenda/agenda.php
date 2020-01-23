@@ -64,7 +64,7 @@
 			    'orderby' => 'meta_value',
 			    'order' => 'ASC',
 			    'suppress_filters' => false,
-			    'post_status' => 'any',
+			    'post_status' => 'publish',
 			    'meta_query' => array(
 			        array(
 			            'key' => 'dates_$_date_concert',
