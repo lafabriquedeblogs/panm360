@@ -78,24 +78,43 @@ function get_genre( $album_id, $data = false, $raw = false ){
 
 function get_genre_parents( $post_id , $link = false){
 	
-	$_terms = get_genre( $post_id, false, true );
-    
+	//$_terms = get_genre( $post_id, false, true );
+    $_terms = get_the_terms( $post_id,'genre');
+
     if( empty($_terms) ) return '';
     
     foreach ($_terms as $_term) {
-        if ( $_term->parent == 0 ) //check for parent terms only
-            	$genres[] = $_term->name ;
+       
+       if( $_term->parent == 0 ){
+       	
             if( !$link ){
-	            
+	            $genres[] = $_term->name ;
             } else {
-	            $genres[] = '<a href="">'.$_term->name.'</a>';
+	            $link_term = get_term_link( $_term->term_id, 'genre' );
+	            $genres[] = '<a href="'.$link_term.'">'.$_term->name.'</a>';
             }
-            
-            
-     }	
-     
-     $genres_txt = implode(" / ", $genres);
-     return $genres_txt;
+            	        
+        } else {
+	        
+	        $parent = get_term( $_term->parent, 'genre');
+            if( !$link ){
+	            $genres[] = $parent->name ;
+            } else {
+	            $link_term = get_term_link( $parent->term_id, 'genre' );
+	            $genres[] = '<a href="'.$link_term.'">'.$parent->name.'</a>';
+            }
+/*
+	        echo '<pre>';
+	        var_dump($parent->name);
+	        echo '</pre>';
+*/
+        }
+	}
+	
+	$genres = array_unique($genres);
+	
+    $genres_txt = implode(" / ", $genres);
+    return $genres_txt;
 }
 
 function get_main_genres( $get_links = false ){
@@ -124,6 +143,7 @@ function get_main_genres( $get_links = false ){
         $genre['id'] = $_term->term_id;
         $genres[] = $genre;
    	}
+   	
     return $genres;
 }
 
