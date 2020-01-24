@@ -80,7 +80,7 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 			'flex-height' => true,
 		) );
 		add_post_type_support( 'records', 'author' );
-		add_theme_support( 'editor-style' );
+		//add_theme_support( 'editor-style' );
 	}
 endif;
 add_action( 'after_setup_theme', 'panm360_setup' );

@@ -339,10 +339,11 @@ function get_liste_filtre_artiste(){
 add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
  
 function filter_the_content_in_the_main_loop( $content ) {
-
+		
+		
 		$user_id = get_current_user_id();
 
-		if( $user_id == 0 && !is_page() ){
+		if( $user_id == 0 && !is_page() && is_main_query() && in_the_loop() ){
 			
 			global $post;
 			
