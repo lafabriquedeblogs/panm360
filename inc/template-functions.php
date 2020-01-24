@@ -349,7 +349,7 @@ function filter_the_content_in_the_main_loop( $content ) {
 			
 			$content_strip = strip_tags($post->post_content);
 			$content_total_length = str_word_count($content_strip);
-			$words = $content_total_length / 2 ;
+			$words = $content_total_length / 5 ;
 			$more = '…';
 			 
 			$excerpt = wp_trim_words( $content, $words, $more );
