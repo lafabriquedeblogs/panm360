@@ -693,6 +693,14 @@
 		"oAP": "/inc/customs_posts_types.php",
 		"oF": 0
 		},
+	"/inc/filter_content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/filter_content.php",
+		"oF": 0
+		},
 	"/inc/publicite/publictes.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -755,14 +763,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/inc/updater/updater.php",
-		"oF": 0
-		},
-	"/inc/woocommerce/custom_excerpt.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/inc/woocommerce/custom_excerpt.php",
 		"oF": 0
 		},
 	"/inc/woocommerce/woocommerce.php": {

@@ -313,9 +313,11 @@ require get_template_directory() . '/inc/shortcodes-abonnements.php';
 require get_template_directory() . '/inc/agenda/agenda.php';
 require get_template_directory() . '/inc/agenda/ajax_agenda.php';
 require get_template_directory() . '/inc/woocommerce/woocommerce.php';
+require get_template_directory() . '/inc/filter_content.php';
+
 /*
  *
- * BLOCKS
+ * CUSTOM BLOCKS
  *
 */
 
