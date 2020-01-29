@@ -5,7 +5,12 @@ add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
 function filter_the_content_in_the_main_loop( $content ) {
 		
 	$user_id = get_current_user_id();
-
+	
+	// Page abonnement 
+	if( is_page() ){
+		return $content;
+	}
+	
 	if( $user_id == 0 && !is_page() && is_main_query() && in_the_loop() ){
 		
 		global $post;
@@ -42,6 +47,7 @@ function filter_the_content_in_the_main_loop( $content ) {
 		$viewed_review = get_user_meta( $user_id , 'viewed_review', true );
 		$viewed_chronique = get_user_meta( $user_id , 'viewed_chronique', true );
 		
+		
 	}
-
+	return;
 }

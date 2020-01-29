@@ -9,7 +9,13 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			
+			<?php
+				
+				$block_types = WP_Block_Type_Registry::get_instance()->get_all_registered();
+				echo '<pre>';
+					var_dump($block_types);
+				echo '</pre>';
+			?>
 <?php
 /*
 	

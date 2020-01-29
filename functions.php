@@ -245,7 +245,8 @@ function panm360_allowed_block_types( $allowed_blocks, $post ) {
 		'acf/icones-partage',
 		'acf/liste-pages',
 		'acf/abonnement',
-		'gravityforms/form'
+		'gravityforms/form',
+		'woocommerce/featured-product'
 	);
  
 	
@@ -259,6 +260,7 @@ function panm360_allowed_block_types( $allowed_blocks, $post ) {
 }
 
 add_action('acf/init', 'my_acf_op_init');
+
 function my_acf_op_init() {
 
     // Check function exists.
