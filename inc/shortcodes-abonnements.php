@@ -61,6 +61,10 @@ function abos_panm_st( $atts ) {
 							?>
 						</ul>
 						<div>
+							
+							<?php $abo_id = ( $prefix_class == 'gratuit') ? "6972" : "6973";?>
+							
+							<a href="?add-to-cart=<?php echo $abo_id;?>" data-quantity="1" class="bouton product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="6973" data-product_sku="" aria-label="Ajouter “Abonnement Premium” à votre panier" rel="nofollow">Je m'abonne</a>
 							<!-- <button class=""><?php _e('Je m\'abonne','panm360-abonnement'); ?></button> -->
 						</div>
 					</div><!-- abo-bloc abo-bloc-gratuit -->		

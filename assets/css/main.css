@@ -981,6 +981,9 @@ h2.annee-top {
     .abo-bloc.abo-bloc-premium .frequence {
       color: #E6E6EA; }
 
+.woocommerce-notices-wrapper {
+  display: none; }
+
 .no-label label, .no-label .gfield_label {
   position: absolute;
   left: -999em;

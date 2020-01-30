@@ -1608,6 +1608,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/src/scss/woocommerce.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/woocommerce.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/src/scss/wp-blocks.scss": {
 		"aP": 1,
 		"bl": 1,
