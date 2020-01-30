@@ -221,7 +221,7 @@ function panm360_block_category( $categories, $post ) {
 	);
 }
 
-add_filter( 'allowed_block_types', 'panm360_allowed_block_types', 10, 2 );
+//add_filter( 'allowed_block_types', 'panm360_allowed_block_types', 10, 2 );
 function panm360_allowed_block_types( $allowed_blocks, $post ) {
  
 	$allowed_blocks = array(
@@ -247,7 +247,8 @@ function panm360_allowed_block_types( $allowed_blocks, $post ) {
 		'acf/liste-pages',
 		'acf/abonnement',
 		'gravityforms/form',
-		'woocommerce/featured-product'
+		'woocommerce/featured-product',
+		'woocommerce/(*.)'
 	);
  
 	

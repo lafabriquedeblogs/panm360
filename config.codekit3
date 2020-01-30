@@ -2054,6 +2054,14 @@
 		"oA": 0,
 		"oAP": "/template-parts/publicites/publicite-ilot.php",
 		"oF": 0
+		},
+	"/woocommerce/checkout/form-checkout.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/checkout/form-checkout.php",
+		"oF": 0
 		}
 	},
 "hooks": [

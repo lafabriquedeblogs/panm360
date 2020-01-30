@@ -19,3 +19,41 @@ function custom_override_checkout_fields( $fields ) {
 	 unset($fields['billing']['billing_company']);
      return $fields;
 }
+
+/**
+ * @snippet       Redirect to Checkout Upon Add to Cart - WooCommerce
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    Woo 3.8
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+  
+add_filter( 'woocommerce_add_to_cart_redirect', 'bbloomer_redirect_checkout_add_cart' );
+ 
+function bbloomer_redirect_checkout_add_cart() {
+   return wc_get_checkout_url();
+}
+
+/**
+ * @snippet       WooCommerce Max 1 Product @ Cart
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    WC 3.7
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+  
+add_filter( 'woocommerce_add_to_cart_validation', 'bbloomer_only_one_in_cart', 99, 2 );
+   
+function bbloomer_only_one_in_cart( $passed, $added_product_id ) {
+   wc_empty_cart();
+   return $passed;
+}
+
+// hide coupon field on the cart page
+function disable_coupon_field_on_cart( $enabled ) {
+	if ( is_cart() ) {
+		$enabled = false;
+	}
+	return $enabled;
+}
+add_filter( 'woocommerce_coupons_enabled', 'disable_coupon_field_on_cart' );

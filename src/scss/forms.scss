@@ -16,6 +16,19 @@
 	//text-align: center;
 }
 
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	textarea {
+		padding: 20px;
+		display: block;
+		//border: 1px solid $gris_light;
+		border: none;
+		background-color: $gris_ultra_light;
+		width: 100%;
+		border-bottom: 2px solid $bleu;
+	}
+	
 .gform_wrapper {
 	li {
 		list-style-type: none;

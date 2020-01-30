@@ -993,6 +993,17 @@ h2.annee-top {
   text-transform: uppercase;
   font-weight: 700; }
 
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  padding: 20px;
+  display: block;
+  border: none;
+  background-color: #F4F4F8;
+  width: 100%;
+  border-bottom: 2px solid #5BC6E8; }
+
 .gform_wrapper li {
   list-style-type: none; }
 
