@@ -147,6 +147,7 @@ function add_addthis(){
 	
 	  gtag('config', 'UA-147470280-1');
 	</script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <?php
 }
 
