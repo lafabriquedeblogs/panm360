@@ -31,8 +31,8 @@ $next_month_month = $dt->format("m");
 $next_month_number_of_days = cal_days_in_month(CAL_GREGORIAN, $next_month_month, $year);
 $lastDaynextMonth = date("Y/m/t", strtotime($year."/".$next_month_month."/01"));
 
-$next_month_string = date_i18n('F Y',  strtotime($next_month) );
-
+$next_month_name_string = date_i18n('F',  strtotime($next_month) );
+$next_year_name_string = date_i18n('Y',  strtotime($next_month) );
 $count = 1000;
 
 ?>
@@ -48,8 +48,12 @@ $count = 1000;
 					<?php the_content();?>
 				</div><!-- .entry-content -->
 				
-				<section class="section">
+				<section class="section wide-screen" id="agenda-filtres-section">
 					<form id="agenda-filtres">
+						<div>
+							<svg class="icon blanc"><use xlink:href="#M_panm"></use></svg>
+							<p class="blanc no-margins upper"><?php _e('Faire une recherche par','panm360'); ?>:</p>
+						</div>
 						<select id="agenda-year">
 							<option value=""><?php _e('Année','panm360'); ?></option>
 							<?php
@@ -61,6 +65,7 @@ $count = 1000;
 								<option value="<?php echo $cyear;?>" <?php echo $selected;?>><?php echo $cyear;?></option>
 							<?php endforeach; ?>
 						</select>
+						
 						<select id="agenda-month">
 							<option value=""><?php _e('Mois','panm360'); ?></option>
 							<?php foreach( $months as $m => $string):
@@ -69,23 +74,27 @@ $count = 1000;
 								<option value="<?php echo $m;?>" <?php echo $selected;?>><?php echo $string;?></option>
 							<?php endforeach; ?>
 						</select>
+						
 						<select id="agenda-genre">
 							<option value="0"><?php _e('Genre','panm360'); ?> - <?php _e('Tous','panm360'); ?></option>
 							<?php foreach( $genres as $genre): ?>
 								<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
 							<?php endforeach; ?>							
 						</select>
+						
 						<?php $nonce = wp_create_nonce("my_user_like_nonce"); ?>
 						<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>" />
 						<button type="submit"><?php _e('Chercher','panm360'); ?></button>
+					
 					</form>
+					
 				</section>
 				
 				<section class="section">
 					<div id="agenda" class="section-inner">
 						
 						<div class="full-month-agenda current-month">
-							<h4><?php echo date_i18n('F Y'); ?></h4>
+							<h4><span class="regular"><?php echo date_i18n('F'); ?></span> <?php echo date_i18n('Y'); ?></h4>
 							<?php
 								$start = $year.'/'.$month.'/01';
 								$end = $lastDayThisMonth;
@@ -94,7 +103,7 @@ $count = 1000;
 						</div>
 						
 						<div class="full-month-agenda next-month">
-							<h4><?php echo $next_month_string; ?></h4>
+							<h4><span class="regular"><?php echo $next_month_name_string; ?></span> <?php echo $next_year_name_string; ?></h4>
 							<?php
 								$start = $year.'/'.$next_month_month.'/01';
 								$end = $lastDaynextMonth;

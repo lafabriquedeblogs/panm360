@@ -1,8 +1,10 @@
 .rouge {
 	color: $rouge;
+	fill: $rouge;
 }
 .blanc {
 	color: #fff;
+	fill: #fff;
 }
 .bleu {
 	color: $bleu;
@@ -34,7 +36,9 @@
 .small {
 	font-size: 0.5em;
 }
-
+.upper {
+	text-transform: uppercase;
+}
 .tall {
 	font-size: 1.1em;
 }

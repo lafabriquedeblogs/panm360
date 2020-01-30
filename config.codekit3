@@ -100,6 +100,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/M-panm.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/M-panm.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/panm-icones/100x100/m-blanc-sur-bleu.jpg": {
 		"ft": 16384,
 		"iS": 18967,
@@ -423,6 +433,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/img/panm360_sprite.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/select.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/select.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,

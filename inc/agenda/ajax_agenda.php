@@ -23,7 +23,8 @@ function fn_display_agenda(){
 	$start = $year.'/'.$month.'/01';
 	$end = $lastDayThisMonth;
 	
-	$month_string = date_i18n('F Y',  strtotime($start) );
+	$month_string = date_i18n('F',  strtotime($start) );
+	$year_string = date_i18n('Y',  strtotime($start) );
 	
 	$events = get_liste_concerts( $start, $end, $count, $genre );
 
@@ -43,10 +44,10 @@ function fn_display_agenda(){
 
 	endif;
 	
-	
+	$genre_nom = get_term( $genre, 'genre' );
 	
 	$events_list = '<div class="full-month-agenda">';
-	$events_list .= '<h4>'.$month_string.'</h4>';
+	$events_list .= '<h4><span class="regular">'.$month_string.'</span> '.$year_string.' - '.$genre_nom->name.'</h4>';
 	$events_list .= '<ul class="calendrier-ul-container">';
 	$events_list .= $inside;
 	$events_list .= '</ul>';

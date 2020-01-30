@@ -841,10 +841,79 @@ h1.category-title {
 .is-style-agenda-first-part {
   color: red; }
 
+#agenda h4 {
+  text-transform: capitalize;
+  font-size: 2em; }
+
 .full-month-agenda .calendrier-ul-container {
   display: block; }
 
+#agenda-filtres-section {
+  background-color: #FE4A49;
+  padding-top: 1em;
+  padding-bottom: 1em; }
+
+#agenda-filtres {
+  max-width: 1292px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+  #agenda-filtres div {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-bottom: 10px; }
+    #agenda-filtres div .icon {
+      width: 43.828px;
+      height: 37.062px; }
+    #agenda-filtres div p {
+      padding: 0 1em;
+      font-family: "Rubik", sans-serif;
+      font-size: .850em;
+      font-weight: 500; }
+  #agenda-filtres select {
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 30px 16px 10px;
+    font-size: 11px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    -moz-appearence: none;
+    -webkit-appearence: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 5px;
+    background: #333333 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8.685' height='17.029' viewBox='0 0 8.685 17.029'><g><path d='M11.752,5.677l3,3,1.334-1.334L11.752,3,7.41,7.342,8.753,8.676Zm0,11.674-3-3L7.419,15.686l4.333,4.342,4.342-4.342-1.343-1.334Z' transform='translate(-7.41 -3)' fill='white'/></g></svg>") no-repeat;
+    background-position: right 10px top 50%;
+    margin: 5px;
+    width: calc( 100% - 20px); }
+  #agenda-filtres .bouton {
+    width: calc( 100% - 20px); }
+
 @media screen and (min-width: 550px) {
+  #agenda-filtres {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 1em; }
+    #agenda-filtres div {
+      width: 100%; }
+    #agenda-filtres select {
+      width: auto;
+      margin: 0 10px 0 0; }
+    #agenda-filtres .bouton {
+      width: auto; }
   .full-month-agenda .calendrier-ul-container {
     display: -webkit-box;
     display: flex;
@@ -858,6 +927,15 @@ h1.category-title {
       width: calc( 50% - 18px); } }
 
 @media screen and (min-width: 980px) {
+  #agenda-filtres {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 1em; }
+    #agenda-filtres div {
+      width: auto;
+      margin-bottom: 0; }
   .full-month-agenda .calendrier-ul-container .element.aside-item-calendrier {
     width: calc( 33.333% - 18px); } }
 
@@ -1091,7 +1169,7 @@ textarea {
 .bouton, button, input[type="submit"] {
   font-family: "Rubik", sans-serif;
   color: #fff;
-  background: #4d4d4d;
+  background: #333333;
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 700;
@@ -1494,10 +1572,12 @@ img.lozad {
     max-width: calc( 15.8% - 18px); } }
 
 .rouge {
-  color: #FE4A49; }
+  color: #FE4A49;
+  fill: #FE4A49; }
 
 .blanc {
-  color: #fff; }
+  color: #fff;
+  fill: #fff; }
 
 .bleu {
   color: #5BC6E8;
@@ -1523,6 +1603,9 @@ img.lozad {
 
 .small {
   font-size: 0.5em; }
+
+.upper {
+  text-transform: uppercase; }
 
 .tall {
   font-size: 1.1em; }

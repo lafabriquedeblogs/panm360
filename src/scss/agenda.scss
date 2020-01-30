@@ -2,6 +2,12 @@
 	color: red;
 }
 
+#agenda {
+	h4 {
+		text-transform: capitalize;
+		font-size: 2em;
+	}
+}
 .full-month-agenda {
 	.calendrier-ul-container {
 		display: block;		
@@ -13,11 +19,76 @@
 	}
 
 }
-.current-month {
+
+#agenda-filtres-section {
+	background-color: $rouge;
+	padding-top:	1em;
+	padding-bottom: 1em;
 	
 }
-
+#agenda-filtres {
+	max-width: 1292px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	
+	div {
+		display: flex;
+		flex-wrap: nowrap;
+		align-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+		.icon {
+			width: 43.828px;	
+			height: 37.062px;
+		}
+		p {
+			padding: 0 1em;
+			font-family: $rubik;
+			font-size: .850em;
+			font-weight: 500;
+			
+		}
+	}
+	select {
+		border:none;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 16px 30px 16px 10px;
+		font-size: 11px;
+		font-family: $rubik;
+		font-weight: 700;
+		-moz-appearence: none;
+		-webkit-appearence: none;
+		appearance: none;
+		border-radius: 5px;
+		background: $gris_ultra_dark url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8.685' height='17.029' viewBox='0 0 8.685 17.029'><g><path d='M11.752,5.677l3,3,1.334-1.334L11.752,3,7.41,7.342,8.753,8.676Zm0,11.674-3-3L7.419,15.686l4.333,4.342,4.342-4.342-1.343-1.334Z' transform='translate(-7.41 -3)' fill='white'/></g></svg>") no-repeat;
+		background-position: right 10px top 50%;
+		margin: 5px;
+		width: calc( 100% - 20px );
+	}
+	.bouton {
+		width: calc( 100% - 20px );
+	}
+}
 @media screen and (min-width:550px){
+	#agenda-filtres {
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 0 1em;
+		div {
+			width: 100%;
+		}
+		select {
+			width: auto;
+			margin: 0 10px 0 0;
+		}
+		.bouton {
+			width: auto;
+		}
+	}
+	
 	.full-month-agenda {
 		.calendrier-ul-container {
 			display: flex;
@@ -33,6 +104,16 @@
 	}
 }	
 @media screen and (min-width:980px){
+	#agenda-filtres {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		padding: 0 1em;
+		div {
+			width: auto;
+			margin-bottom: 0;
+		}
+	}
+	
 	.full-month-agenda {
 		.calendrier-ul-container {
 			.element.aside-item-calendrier {
