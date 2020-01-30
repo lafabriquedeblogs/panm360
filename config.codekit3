@@ -971,6 +971,16 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/src/css/woocommerce.css": {
+		"aP": 1,
+		"bl": 1,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/src/css/woocommerce-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/src/fonts/Open_Sans/LICENSE.txt": {
 		"cB": 0,
 		"ft": 8192,

@@ -19,11 +19,19 @@ $years = array('2020','2021','2022','2023','2024','2025','2026','2027','2028','2
 $months = get_months_list();
 $genres = get_main_genres( false );
 
-$next_month = date('m', strtotime('+1 month'));
-$next_month_number_of_days = cal_days_in_month(CAL_GREGORIAN, $next_month, $year);
-$lastDaynextMonth = date("Y/m/t", strtotime($year."/".$next_month."/01"));
+$dt = new DateTime($today);
+$dt->format('Y/m/d');
+$dday = $dt->format('j');
+$dt->modify('first day of +1 month');
+$dt->modify('+' . (min($dday, $dt->format('t')) - 1) . ' days');
+$next_month = $dt->format('Y/m/d');
+$next_month_month = $dt->format("m");
 
-$next_month_string = date_i18n('F Y',  strtotime('+1 month') );
+
+$next_month_number_of_days = cal_days_in_month(CAL_GREGORIAN, $next_month_month, $year);
+$lastDaynextMonth = date("Y/m/t", strtotime($year."/".$next_month_month."/01"));
+
+$next_month_string = date_i18n('F Y',  strtotime($next_month) );
 
 $count = 1000;
 
@@ -88,7 +96,7 @@ $count = 1000;
 						<div class="full-month-agenda next-month">
 							<h4><?php echo $next_month_string; ?></h4>
 							<?php
-								$start = $year.'/'.$next_month.'/01';
+								$start = $year.'/'.$next_month_month.'/01';
 								$end = $lastDaynextMonth;
 
 								include( locate_template( '/template-parts/modules/element-aside-calendrier.php', false, false ) );
