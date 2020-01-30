@@ -18,7 +18,7 @@
 	$permalien = get_permalink( $item->ID );
 	
 	$vignette = get_the_post_thumbnail_url( $item->ID, array(50,50) );
-	if( !$vignette ) $vignette =  get_template_directory_uri()."/assets/img/panm-icones/100x100/m-blanc-sur-bleu.jpg";
+	if( !$vignette ) $vignette =  get_template_directory_uri()."/assets/img/panm-icones/100x100/m-gris-sur-gris.jpg";
 	
 ?>
 <li class="aside-item-calendrier element">
@@ -34,7 +34,7 @@
 			<span class="element-infos-supp"><?php echo implode(', ', $informations_supplementaires );?></span>
 			<?php endif; ?>
 			<span class="element-location"><?php echo $salle;?> - <?php echo $ville?> - <?php echo $heure;?></span>
-			<span class="element-location"><?php echo $prix['montant'];?></span>
+			<span class="element-prix"><?php echo $prix['montant'];?></span>
 		</div>
 		
 		<?php if( $agenda_commente ): ?>

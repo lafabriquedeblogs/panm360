@@ -137,6 +137,7 @@ img.lozad {
 			margin-bottom: 0;
 			font-size: 1.125em;
 			font-weight: 500;
+		
 		}
 		.element-infos-supp {
 			font-size: 0.95em;
@@ -153,15 +154,24 @@ img.lozad {
 			height:50px;
 			margin-right: 24px;
 			display: block;
-			//border-radius: 100px;
+			border-radius: 100px;
 		}
-		.element-location {
-			
+		.element-genre {
+
+			color: $rouge;
 		}
 		.icon{
 			width: 15px;
 			height: 15px;
 			margin-right: 1em;
+
+		}
+		.element-prix {
+			font-size: 0.750em;
+			text-transform: uppercase;
+			color: #666666;
+			font-weight: 700;
+			color: $bleu;
 		}
 		//&:nth-child(even){
 		//	background-color: #f9f9f9;

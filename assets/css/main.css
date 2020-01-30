@@ -1285,11 +1285,20 @@ img.lozad {
       width: 50px;
       height: 50px;
       margin-right: 24px;
-      display: block; }
+      display: block;
+      border-radius: 100px; }
+    .element.aside-item-calendrier .element-genre {
+      color: #FE4A49; }
     .element.aside-item-calendrier .icon {
       width: 15px;
       height: 15px;
       margin-right: 1em; }
+    .element.aside-item-calendrier .element-prix {
+      font-size: 0.750em;
+      text-transform: uppercase;
+      color: #666666;
+      font-weight: 700;
+      color: #5BC6E8; }
   .element.main-item .genre {
     font-size: 0.938em;
     font-weight: 400; }
