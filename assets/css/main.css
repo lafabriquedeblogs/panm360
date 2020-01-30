@@ -844,6 +844,8 @@ h1.category-title {
 #agenda h4 {
   text-transform: capitalize;
   font-size: 2em; }
+  #agenda h4 .genre-nom {
+    color: #FE4A49; }
 
 .full-month-agenda .calendrier-ul-container {
   display: block; }
@@ -901,6 +903,19 @@ h1.category-title {
     width: calc( 100% - 20px); }
 
 @media screen and (min-width: 550px) {
+  .full-month-agenda .calendrier-ul-container {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+    .full-month-agenda .calendrier-ul-container .element.aside-item-calendrier {
+      width: calc( 50% - 18px); } }
+
+@media screen and (min-width: 570px) {
   #agenda-filtres {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -913,18 +928,7 @@ h1.category-title {
       width: auto;
       margin: 0 10px 0 0; }
     #agenda-filtres .bouton {
-      width: auto; }
-  .full-month-agenda .calendrier-ul-container {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-            justify-content: space-between; }
-    .full-month-agenda .calendrier-ul-container .element.aside-item-calendrier {
-      width: calc( 50% - 18px); } }
+      width: auto; } }
 
 @media screen and (min-width: 980px) {
   #agenda-filtres {

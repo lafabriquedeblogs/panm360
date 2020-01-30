@@ -47,7 +47,7 @@ function fn_display_agenda(){
 	$genre_nom = get_term( $genre, 'genre' );
 	
 	$events_list = '<div class="full-month-agenda">';
-	$events_list .= '<h4><span class="regular">'.$month_string.'</span> '.$year_string.' - '.$genre_nom->name.'</h4>';
+	$events_list .= '<h4><span class="regular">'.$month_string.'</span> '.$year_string.' - <span class="genre-nom">'.$genre_nom->name.'</span></h4>';
 	$events_list .= '<ul class="calendrier-ul-container">';
 	$events_list .= $inside;
 	$events_list .= '</ul>';
