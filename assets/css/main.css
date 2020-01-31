@@ -601,8 +601,8 @@ h1.category-title {
     height: 27px; }
 
 .wide-screen {
-  margin-left: calc( -100vw / 2 + 100% / 2);
-  margin-right: calc( -100vw / 2 + 100% / 2); }
+  margin-left: calc( -100vw / 2 + 100% / 2) !important;
+  margin-right: calc( -100vw / 2 + 100% / 2) !important; }
 
 .plus-de {
   font-family: "Rubik", sans-serif;
@@ -644,8 +644,8 @@ h1.category-title {
   background: #5BC6E8;
   padding: 50px 1em; }
   .infolettre.section {
-    margin-left: calc( -100vw / 2 + 100% / 2);
-    margin-right: calc( -100vw / 2 + 100% / 2); }
+    margin-left: calc( -100vw / 2 + 100% / 2) !important;
+    margin-right: calc( -100vw / 2 + 100% / 2) !important; }
   .infolettre .panm360-infolettre {
     display: -webkit-box;
     display: flex;
@@ -982,8 +982,8 @@ h1.category-title {
   font-family: "Rubik", sans-serif;
   line-height: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  margin-left: calc( -100vw / 2 + 100% / 2);
-  margin-right: calc( -100vw / 2 + 100% / 2); }
+  margin-left: calc( -100vw / 2 + 100% / 2) !important;
+  margin-right: calc( -100vw / 2 + 100% / 2) !important; }
   #text-introduction-panm360 .wp-block-group__inner-container p {
     text-align: center; }
 
@@ -1081,6 +1081,8 @@ h2.annee-top {
 input[type="text"],
 input[type="email"],
 input[type="number"],
+input[type="password"],
+select,
 textarea {
   padding: 20px;
   display: block;
@@ -1088,6 +1090,10 @@ textarea {
   background-color: #F4F4F8;
   width: 100%;
   border-bottom: 2px solid #5BC6E8; }
+
+select {
+  border: none;
+  padding: 20px; }
 
 .gform_wrapper li {
   list-style-type: none; }
@@ -1191,8 +1197,8 @@ textarea {
     border-color: #fff; }
 
 #wrap-new-featured-slider {
-  margin-left: calc( -100vw / 2 + 100% / 2);
-  margin-right: calc( -100vw / 2 + 100% / 2);
+  margin-left: calc( -100vw / 2 + 100% / 2) !important;
+  margin-right: calc( -100vw / 2 + 100% / 2) !important;
   background-color: #F4F4F8;
   overflow: hidden; }
   #wrap-new-featured-slider .slick-arrow {
@@ -1292,6 +1298,8 @@ img.lozad {
     .element .details p {
       line-height: 1.4em;
       font-size: 0.938em; }
+    .element .details .liste-genres {
+      text-transform: uppercase; }
   .element.article .details {
     background-color: #F4F4F8;
     padding-left: 3.063em;
@@ -1319,6 +1327,10 @@ img.lozad {
       padding-left: 1.250em; }
     .element.aside-item .genre {
       font-weight: 400; }
+    .element.aside-item .liste-genre {
+      font-size: 0.6em;
+      text-transform: uppercase;
+      padding-bottom: 5px; }
     .element.aside-item .author {
       color: #808080;
       margin-top: 5px; }

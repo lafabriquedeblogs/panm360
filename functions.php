@@ -248,7 +248,7 @@ function panm360_allowed_block_types( $allowed_blocks, $post ) {
 		'acf/abonnement',
 		'gravityforms/form',
 		'woocommerce/featured-product',
-		'woocommerce/(*.)'
+		'acf/section_un',
 	);
  
 	
@@ -328,3 +328,4 @@ require get_template_directory() . '/inc/filter_content.php';
 require get_template_directory() . '/template-parts/blocks/icone_partages.php';
 require get_template_directory() . '/template-parts/blocks/liste_pages.php';
 require get_template_directory() . '/template-parts/blocks/banieres_publcite.php';
+require get_template_directory() . '/template-parts/blocks/section_un.php';

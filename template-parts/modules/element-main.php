@@ -1,12 +1,16 @@
 <div class="main-item element">
 	<div class="picture">
-		<a href=""><img src="<?php echo get_template_directory_uri(); ?>/src/img/sample-album.png" width="500" height="500"  alt="title"/></a>
+		<a href="<?php echo $permalien;?>"><img src="<?php echo $image; ?>" width="500" height="500"  alt="title"/></a>
 	</div>
 	<div class="details">
-		<a class="genre article-genre" href="">Genre</a>
-		<h4 class="element-title album-title"><a href="">Title</a></h4>
-		<span class="sub-title">Sous titre</span>
-		<p>Proin sed turpis et elit cursus semper. Etiam gravida neque sit amet felis sollicitudin, eget hendrerit massa venenatis. Curabitur magna magna, eleifend id volutpat et, placerat vel odio. Nam tristique dignissim augue sit amet pretium.</p>
-		<a class="author article-author" href="#">par: Author</a>
+		<div class="liste-genres"><?php echo $genre;?></div>
+		<h4 class="element-title album-title"><a href="<?php echo $permalien;?>"><?php echo $Title;?></a></h4>
+		
+		<?php if( $Sous_titre ): ?>
+			<span class="sub-title"><?php echo $Sous_titre;?></span>
+		<?php endif; ?>
+		
+		<p><?php echo $excerpt;?></p>
+		<a class="author article-author" href="<?php echo $auteur_link;?>"><?php _e('par','panm360'); ?>: <?php echo $Author;?></a>
 	</div>
 </div>

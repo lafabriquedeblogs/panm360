@@ -59,6 +59,9 @@ img.lozad {
 			line-height: 1.4em;
 			font-size: 0.938em;
 		}
+		.liste-genres {
+			text-transform: uppercase;
+		}
 	}
 	
 	&.article {
@@ -92,9 +95,15 @@ img.lozad {
 		div.details {
 			padding-left: 1.250em;
 		}
-		.genre {
+		.genre  {
 			font-weight: 400;
 		}
+		.liste-genre {
+			font-size: 0.6em;
+			text-transform: uppercase;
+			padding-bottom: 5px;
+		}
+		
 		.author {
 			color: $gris_medium;
 			margin-top: 5px;

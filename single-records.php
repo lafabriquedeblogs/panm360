@@ -78,12 +78,12 @@
 					<ul class="section-content--has-6-columns">
 					<?php
 						$albums_count = 12;	
-						
+					
 						$args = array(
 							'post_type' => 'records',
 							'posts_per_page' => $albums_count,
 							'post_status' => 'publish',
-							'orderby' => 'rand'
+							'orderby' => 'rand',
 						);
 						
 						$albums = new WP_Query($args);

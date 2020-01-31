@@ -57,3 +57,23 @@ function disable_coupon_field_on_cart( $enabled ) {
 	return $enabled;
 }
 add_filter( 'woocommerce_coupons_enabled', 'disable_coupon_field_on_cart' );
+
+/**
+ * Remove Select2 for WooCommerce
+ */
+function wc_disable_select2() {
+    if ( class_exists('woocommerce') ) {
+        wp_dequeue_style('select2');
+        wp_deregister_style('select2');
+ 
+        // WooCommerce 3.2.1.x and below
+        wp_dequeue_script('select2');
+        wp_deregister_script('select2');
+ 
+        // WooCommerce 3.2.1+
+        wp_dequeue_script('selectWoo');
+        wp_deregister_script('selectWoo');
+    } 
+}
+ 
+add_action('wp_enqueue_scripts', 'wc_disable_select2', 100);

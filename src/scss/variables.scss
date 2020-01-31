@@ -17,6 +17,6 @@ $open: 'Open Sans', sans-serif;
 //$max-width: 80.250em;
 $max-width: 83em;
 @mixin wide-screen{
-	margin-left: calc( -100vw / 2 + 100% / 2);
-	margin-right: calc( -100vw / 2 + 100% / 2);
+	margin-left: calc( -100vw / 2 + 100% / 2) !important;
+	margin-right: calc( -100vw / 2 + 100% / 2) !important;
 }

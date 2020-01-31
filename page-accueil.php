@@ -9,23 +9,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			
-			
-			<div id="wrap-new-featured-slider">
-				<ul id="new-featured-slider">
-					<?php
-						$slider_count = 6;	
-						while( $slider_count > 0 ){
-							include( locate_template( '/template-parts/modules/element-slider.php', false, false ) );
-							$slider_count--;
-						}
-					?>
-				</ul><!-- new-featured-slider -->
-			</div><!-- wrap-new-featured-slider -->
-			
-
-			<?php get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
-			
+		
 			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
@@ -41,7 +25,8 @@ get_header();
 								'post_type' => 'records',
 								'posts_per_page' => $albums_count,
 								'post_status' => 'publish',
-								'orderby' => 'rand'
+								'orderby' => 'date',
+								'order' => 'DESC'
 							);
 							
 							$albums = new WP_Query($args);
@@ -78,120 +63,59 @@ get_header();
 				</div>
 			</section>
 
-
-
-			<section class="section">
-				<div id="interviews" class="section-inner">
-					<h4 class="section-titre"><span>Interviews</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+			
+			<div id="top-360-hero" class="wide-screen"></div>			
+			<div id="text-introduction-panm360">
+				<?php
 					
-					<div class="section-content ">
+					$top360_id = apply_filters( 'wpml_object_id', 2683, 'page', TRUE  );
+					$top360_content = get_post( $top360_id );
+					$top360_content = $top360_content->post_content;
+					
+					echo $top360_content;
+				?>
+			</div>
+			
+			<section class="section">
+				<div id="critiques-albums" class="section-inner">
+				
+					<div class="section-content-c">
 						
-						<div class="section-content--main">
-						<?php get_template_part( '/template-parts/modules/element', 'main' ); ?>
-						</div>
-						
-						<ul class="aside-content">
+						<?php
+							
+							$top_args = array(
+								'posts_per_page' => 18,
+								'post_type' => 'records',
+								'orderby' => 'rand'
+							);
+							
+							$top_query = new WP_Query($top_args);
+							
+							$posts_array = $top_query->posts;
+							?>
+								<ul class="section-content--has-6-columns">
 							<?php
-							$albums_count = 3;	
-							while( $albums_count > 0 ){
-									get_template_part( '/template-parts/modules/element', 'aside' );		
-								$albums_count--;
-							}
-						?>	
-						</ul>
-						
-					</div>
-					
-				</div>
-			</section>
-			
-						
-			<section class="section">
-				<div id="panam-at-sat" class="section-inner">
-					<h4 class="section-titre"><span>Panm@Sat</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
-					<div class="section-content">
-						<div class="section-content--has-3-columns">
-						<?php
-							$albums_count = 3;	
-							while( $albums_count > 0 ){
-									get_template_part( '/template-parts/modules/element', 'article' );		
-								$albums_count--;
-							}
-						?>							
-						</div>
-					</div>
-				</div>
-			</section>
-			
+								foreach( $posts_array as $post ){
+								
+									setup_postdata( $post );
+																	
+									include( locate_template( '/template-parts/modules/element-album.php', false, false ) ); 
+											
+								}
 
-			<section class="section">
-				<div id="critiques-concerts" class="section-inner">
-					<h4 class="section-titre"><span>CRITIQUEs DE CONCERTs</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
-					
-					<div class="section-content ">
-						
-						<div class="section-content--main">
-						<?php get_template_part( '/template-parts/modules/element', 'main' ); ?>
-						</div>
-						
-						<div class="aside-content">
+								?>
+								</ul>
 							<?php
-							$albums_count = 3;	
-							while( $albums_count > 0 ){
-									get_template_part( '/template-parts/modules/element', 'aside' );		
-								$albums_count--;
-							}
-						?>	
-						</div>
-						
+								wp_reset_postdata();								
+							
+						?>			
 					</div>
 					
 				</div>
 			</section>
-			
-
-			<section class="section">
-				<div id="chroniques" class="section-inner">
-					<h4 class="section-titre"><span>Chroniques</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
-					<div class="section-content">
-						<div class="section-content--has-4-columns">
-						<?php
-							$albums_count = 4;	
-							while( $albums_count > 0 ){
-									get_template_part( '/template-parts/modules/element', 'article' );		
-								$albums_count--;
-							}
-						?>							
-						</div>						
-					</div>
-				</div>
-			</section>
-
-			<section class="section">
-				<div id="apprendre" class="section-inner">
-					<h4 class="section-titre"><span>Apprendre</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
-					<div class="section-content">
-						<div class="section-content--has-4-columns">
-						<?php
-							$albums_count = 4;	
-							while( $albums_count > 0 ){
-									get_template_part( '/template-parts/modules/element', 'article' );		
-								$albums_count--;
-							}
-						?>							
-						</div>						
-					</div>
-				</div>
-			</section>	
 	
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
-	
-	<?php //get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
-	
-	<?php //get_template_part( '/template-parts/modules/element', 'infolettre' ); ?>
-	
 
 <?php
 get_footer();

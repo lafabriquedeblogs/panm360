@@ -861,6 +861,14 @@
 		"oAP": "/languages/readme.txt",
 		"oF": 0
 		},
+	"/page-accueil-old.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-accueil-old.php",
+		"oF": 0
+		},
 	"/page-accueil.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1988,6 +1996,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/blocks/liste_pages.php",
+		"oF": 0
+		},
+	"/template-parts/blocks/section_un.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/blocks/section_un.php",
 		"oF": 0
 		},
 	"/template-parts/content-none.php": {

@@ -26,16 +26,6 @@ function panm360_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'panm360_body_classes' );
 
-/**
- * Add a pingback url auto-discovery header for single posts, pages, or attachments.
- */
-function panm360_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
-	}
-}
-add_action( 'wp_head', 'panm360_pingback_header' );
-
 function get_artiste( $album_id , $get_lien = true ){
 	
 	$artiste = get_the_title( get_field('relier_artiste',$album_id) );
@@ -145,6 +135,8 @@ function get_main_genres( $get_links = false ){
 function get_annee($album_id, $data = false){
 	$annees = array();
 	$annee_list = get_the_terms($album_id,'annee');
+	
+	if( empty($annee_list)) return '';
 	
 	if ( $annee_list && !is_wp_error($annee_list) ) {
 		foreach( $annee_list as $an ){
@@ -334,4 +326,26 @@ function get_liste_filtre_artiste(){
 		$liste[] = '<a href="'.$lien_album.'">'.$nom.'</a>';
 	}
 	return implode(" • ", $liste);
+}
+
+function get_articles_par_terms( $term , $posts_per_page = -1 ){
+	$args = array(
+		'posts_per_page' => $posts_per_page,
+		'post_type' => array('records','post','gig_review'),
+		'post_status' => 'publish',
+		'tax_query' => array(
+		    array(
+		        'taxonomy' => 'category',
+		        'field'    => 'id',
+		        'terms'    => $term,
+		    ),
+		),
+		'orderby' => 'date',
+		'order' => 'DESC'	
+	);
+	
+	$my_query = new WP_Query($args);
+	
+	return $my_query->posts;
+	
 }

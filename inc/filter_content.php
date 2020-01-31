@@ -23,6 +23,16 @@ function filter_the_content_in_the_main_loop( $content ) {
 		$excerpt = wp_trim_words( $content, $words, $more );
 		echo $excerpt;
 		
+		?>
+		
+		<div>
+			
+			<h2>Abonnez vous pour accéder au contenu</h2>
+			
+		</div>
+		
+		<?php
+		
 	} else {
 		
 		$args = array( 
