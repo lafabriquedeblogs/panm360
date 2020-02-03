@@ -1387,6 +1387,12 @@ img.lozad {
       width: 15px;
       height: 15px;
       margin-right: 1em; }
+    .element.aside-item-calendrier #n-blanc-rond-rouge {
+      width: 50px;
+      height: 50px; }
+    .element.aside-item-calendrier .icon.icon-agenda {
+      width: 50px;
+      height: 50px; }
     .element.aside-item-calendrier .element-prix {
       font-size: 0.750em;
       text-transform: uppercase;

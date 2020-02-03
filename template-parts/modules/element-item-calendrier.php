@@ -18,11 +18,13 @@
 	$permalien = get_permalink( $item->ID );
 	
 	$vignette = get_the_post_thumbnail_url( $item->ID, array(50,50) );
-	if( !$vignette ) $vignette =  get_template_directory_uri()."/assets/img/panm-icones/100x100/m-gris-sur-gris.jpg";
+	
+	if( !$vignette ) $vignette =  get_template_directory_uri()."/assets/img/panm-icones/icon-agenda.png";
+	
+	//#m-blanc-rond-rouge
 	
 ?>
 <li class="aside-item-calendrier element">
-		
 		
 		<img class="vignette" src="<?php echo $vignette;?>" width="80px" height="80px" />
 		
