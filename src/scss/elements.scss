@@ -124,6 +124,13 @@ img.lozad {
 		padding-top: 10px;
 		//margin-bottom: 10px;
 		margin-bottom: 0;
+		opacity: 1;
+		transition: opacity 600ms ease-out;
+		
+		&.hide-me {
+			opacity: 0;
+			transition: opacity 600ms ease-out;
+		}
 
 		.date {
 			align-self: flex-start;

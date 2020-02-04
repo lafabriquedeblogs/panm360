@@ -3,6 +3,8 @@ export default function ajax_search_agenda(){
 		
 		e.preventDefault();
 		
+		jQuery(".lds-facebook").css("display","inline-block");
+		
 		let year = jQuery("#agenda-year").val();
 		let month = jQuery("#agenda-month").val(); 
 		let genre = jQuery("#agenda-genre").val();
@@ -21,13 +23,19 @@ export default function ajax_search_agenda(){
 			},
 			success: function(response) {
 				if( response.type == "success") {
-		           jQuery("#agenda").html(response.events);
-		           
-		        }
-		        else {
-		           alert("Your like could not be added");
-		        }
-		     }
-		  });		
+					jQuery("#agenda").html(response.events);
+				} else {
+					alert("Your like could not be added");
+				}
+
+				jQuery(".lds-facebook").css("display","none");
+
+				jQuery(".aside-item-calendrier.element.hide-me").each(function(i, value) {
+					setTimeout(function() {
+						jQuery(value).removeClass("hide-me");
+					}, 50 * i);
+				});
+			}
+		});		
 	});
 }

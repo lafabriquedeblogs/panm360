@@ -33,7 +33,8 @@ function fn_display_agenda(){
 		foreach( $events as $_date => $items ){
 			foreach( $items as $item ){
 				ob_start();
-					include( locate_template( '/template-parts/modules/element-item-calendrier.php', false, false ) );		
+				$timeout = true;
+				include( locate_template( '/template-parts/modules/element-item-calendrier.php', false, false ) );		
 				$inside .= ob_get_clean();
 			}
 		}

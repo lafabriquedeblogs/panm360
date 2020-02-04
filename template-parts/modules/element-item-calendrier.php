@@ -17,14 +17,15 @@
 	$agenda_commente = get_field('agenda_commente',$item->ID);
 	$permalien = get_permalink( $item->ID );
 	
-	$vignette = get_the_post_thumbnail_url( $item->ID, array(50,50) );
+	$vignette_featured = get_the_post_thumbnail_url( $item->ID, array(50,50) );
 	
-	if( !$vignette ) $vignette =  get_template_directory_uri()."/assets/img/panm-icones/icon-agenda.png";
+	$vignette =  $vignette_featured ? get_template_directory_uri()."/assets/img/panm-icones/icon-agenda.png" : get_template_directory_uri()."/assets/img/panm-icones/50x50/m-gris-sur-gris.jpg";
+	
+	$class = $timeout ? "hide-me" : "";
 	
 	//#m-blanc-rond-rouge
-	
 ?>
-<li class="aside-item-calendrier element">
+<li class="aside-item-calendrier element <?php echo $class;?>">
 		
 		<img class="vignette" src="<?php echo $vignette;?>" width="80px" height="80px" />
 		

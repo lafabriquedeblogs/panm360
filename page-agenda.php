@@ -50,7 +50,7 @@ $count = 1000;
 				
 				<section class="section wide-screen" id="agenda-filtres-section">
 					<form id="agenda-filtres">
-						<div>
+						<div class="icon-text">
 							<svg class="icon blanc"><use xlink:href="#M_panm"></use></svg>
 							<p class="blanc no-margins upper"><?php _e('Faire une recherche par','panm360'); ?>:</p>
 						</div>
@@ -85,7 +85,9 @@ $count = 1000;
 						<?php $nonce = wp_create_nonce("my_user_like_nonce"); ?>
 						<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>" />
 						<button type="submit"><?php _e('Chercher','panm360'); ?></button>
-					
+						
+						<div class="lds-facebook"><div></div><div></div><div></div></div>
+						
 					</form>
 					
 				</section>
