@@ -329,3 +329,4 @@ require get_template_directory() . '/template-parts/blocks/icone_partages.php';
 require get_template_directory() . '/template-parts/blocks/liste_pages.php';
 require get_template_directory() . '/template-parts/blocks/banieres_publcite.php';
 require get_template_directory() . '/template-parts/blocks/section_un.php';
+require get_template_directory() . '/template-parts/blocks/section_3_colonnes.php';

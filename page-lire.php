@@ -50,7 +50,6 @@ get_header();
 									</div>							
 									<?php
 										$count = 8;
-										$Agenda_start = '2020/01/01';
 										$start = date('Y/m/d');
 										$end = '2020/06/30';
 										include( locate_template( '/template-parts/modules/element-aside-calendrier.php', false, false ) );
