@@ -1,4 +1,4 @@
-
+<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>	
 <ul class="calendrier-ul-container">
 	<?php
 

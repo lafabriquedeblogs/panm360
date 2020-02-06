@@ -607,22 +607,22 @@ h1.category-title {
 .plus-de {
   font-family: "Rubik", sans-serif;
   display: block;
-  font-size: 0.68em;
-  color: #5BC6E8;
-  text-align: right; }
+  font-size: 0.6em;
+  color: #333333;
+  text-align: right;
+  padding-right: 5px;
+  text-transform: uppercase; }
   .plus-de .icone {
     width: 19px;
     height: 8px;
-    fill: #5BC6E8;
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    fill: #333333;
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
     -webkit-transition: all .25s ease-out;
     transition: all .25s ease-out; }
-  .plus-de:hover {
-    text-decoration: underline; }
-    .plus-de:hover .icone {
-      -webkit-transform: translateX(15px);
-              transform: translateX(15px); }
+  .plus-de:hover .icone {
+    -webkit-transform: translateX(13px);
+            transform: translateX(13px); }
 
 .publicite a {
   display: block;
@@ -1189,6 +1189,36 @@ select {
   background-color: #5BC6E8;
   border: 6px double #fff; }
 
+.select-light {
+  position: relative;
+  margin: .5em 0 0 0;
+  max-width: 200px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 5px; }
+  .select-light:after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 17px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background-image: url("../../assets/img/select.svg");
+    background-size: 6px 15px;
+    pointer-events: none; }
+  .select-light select {
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    color: #fff;
+    font-family: "Rubik", sans-serif;
+    font-size: 0.813em;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    padding: 0; }
+
 @media screen and (min-width: 980px) {
   #gform_fields_4 {
     display: -webkit-box;
@@ -1437,8 +1467,6 @@ img.lozad {
       margin-right: 24px;
       display: block;
       border-radius: 100px; }
-    .element.aside-item-calendrier .element-genre {
-      color: #FE4A49; }
     .element.aside-item-calendrier .icon {
       width: 15px;
       height: 15px;
@@ -1452,9 +1480,7 @@ img.lozad {
     .element.aside-item-calendrier .element-prix {
       font-size: 0.750em;
       text-transform: uppercase;
-      color: #666666;
-      font-weight: 700;
-      color: #5BC6E8; }
+      font-weight: 700; }
   .element.main-item .genre {
     font-size: 0.938em;
     font-weight: 400; }
@@ -1504,16 +1530,16 @@ img.lozad {
   padding-bottom: 0; }
 
 .title-calendrier {
-  background: #F4F4F8;
-  padding: .5em 74px;
+  background: #5BC6E8;
+  padding: 1.750em 74px;
   margin-bottom: 1em; }
   .title-calendrier h2 {
     margin: 0;
-    font-size: 1.125em;
-    line-height: 1.125em; }
+    font-size: 1.938em;
+    line-height: 1.125em;
+    color: #fff; }
   .title-calendrier span {
-    display: block;
-    font-weight: 700; }
+    color: #000; }
 
 .meta-name {
   display: inline-block; }

@@ -41,8 +41,20 @@ get_header();
 						</ul>
 						<div class="aside-content">
 								<div class="title-calendrier">
-									<h2><?php _e('Agenda <span>DES CONCERTS</span>','panm360'); ?></h2>
-								</div>								
+									<h2>Agenda <span class="bold">360</span></h2>
+									<form id="choix-style-musical">
+										<div class="select-light">
+											<select>
+												<?php $genres = get_main_genres( false ); ?>
+												<?php foreach( $genres as $genre): ?>
+													<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
+												<?php endforeach; ?>
+											</select>
+										</div>
+									</form>
+								</div>
+								
+																
 								<?php
 									$count = 8;
 									$Agenda_start = '2020/01/01';
@@ -52,7 +64,7 @@ get_header();
 									$agenda_full_id = apply_filters( 'wpml_object_id', 6944, 'page', TRUE  );
 									$agenda_full_permalien = get_permalink( $agenda_full_id );
 								?>
-								<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>							
+														
 
 							<?php get_template_part( '/template-parts/publicites/publicite', 'ilot' ); ?>
 							

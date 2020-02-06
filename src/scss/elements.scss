@@ -173,8 +173,6 @@ img.lozad {
 			border-radius: 100px;
 		}
 		.element-genre {
-
-			color: $rouge;
 		}
 		.icon{
 			width: 15px;
@@ -194,9 +192,7 @@ img.lozad {
 		.element-prix {
 			font-size: 0.750em;
 			text-transform: uppercase;
-			color: #666666;
 			font-weight: 700;
-			color: $bleu;
 		}
 		//&:nth-child(even){
 		//	background-color: #f9f9f9;
@@ -271,18 +267,20 @@ img.lozad {
 }
 
 .title-calendrier {
-	background: $gris_ultra_light;
+	background: $bleu;
 
-	padding: .5em 74px;
+	padding: 1.750em 74px;
 	margin-bottom: 1em;
 	h2 {
 		margin: 0;
-		font-size: 1.125em;
+		font-size: 1.938em;
 		line-height: 1.125em;
+		color: #fff;
 	}
 	span {
-		display: block;
-		font-weight: 700;
+		color: #000;
+		//display: block;
+		//font-weight: 700;
 	}
 }
 

@@ -34,13 +34,13 @@
 		<?php if( $agenda_commente ): ?></a><?php endif; ?>
 		
 		<div class="detail">
-				<span class="date"><?php echo $date;?></span>
+				<span class="date"><?php echo $date;?> • <?php echo $heure;?></span>
 				<span class="genre album-genre element-genre"><?php echo $genres?></span>
 				<span class="element-title"><?php echo $titre?></span>
 				<?php if( $informations_supplementaires ): ?>
 				<span class="element-infos-supp"><?php echo implode(', ', $informations_supplementaires );?></span>
 				<?php endif; ?>
-				<span class="element-location"><?php echo $salle;?> - <?php echo $ville?> - <?php echo $heure;?></span>
+				<span class="element-location"><?php echo $salle;?> - <?php echo $ville?></span>
 				<span class="element-prix"><?php echo $prix['montant'];?></span>
 		</div>
 

@@ -52,7 +52,7 @@ $count = 1000;
 					<form id="agenda-filtres">
 						<div class="icon-text">
 							<svg class="icon blanc"><use xlink:href="#M_panm"></use></svg>
-							<p class="blanc no-margins upper"><?php _e('Faire une recherche par','panm360'); ?>:</p>
+							<p class="blanc no-margins upper"><?php _e('Recherche','panm360'); ?>:</p>
 						</div>
 						<select id="agenda-year">
 							<option value=""><?php _e('Année','panm360'); ?></option>
@@ -98,7 +98,7 @@ $count = 1000;
 						<div class="full-month-agenda current-month">
 							<h4><span class="regular"><?php echo date_i18n('F'); ?></span> <?php echo date_i18n('Y'); ?></h4>
 							<?php
-								$start = $year.'/'.$month.'/01';
+								$start = $today;//$year.'/'.$month.'/01';
 								$end = $lastDayThisMonth;
 								include( locate_template( '/template-parts/modules/element-aside-calendrier.php', false, false ) );
 							?>					

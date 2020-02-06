@@ -100,6 +100,7 @@ function section_un_render_callback( $block, $content = '', $is_preview = false 
 						$genre = get_genre( $article->ID, false,  false );
 						$Title = get_the_title( $article->ID );
 						
+						
 						$auteur_id = $article->post_author;
 						$Author = get_the_author_meta('display_name',$auteur_id );
 						$auteur_link =  get_author_posts_url($auteur_id) ;
@@ -117,7 +118,11 @@ function section_un_render_callback( $block, $content = '', $is_preview = false 
 				</ul>
 			</div><!-- section-content -->
 			
-<?php } else { ?>					
+<?php } else { 
+	
+	
+			$titre = get_field('titre');
+?>					
 
 			<h4 class="section-titre"><span><?php echo $choix_du_contenu;?></span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 			
