@@ -14,7 +14,7 @@ $day = date('d');
 
 $lastDayThisMonth = date("Y/m/t");
 
-$years = array('2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030');
+$years = array('2020','2021',/*'2022','2023','2024','2025','2026','2027','2028','2029','2030'*/);
 
 $months = get_months_list();
 $genres = get_main_genres( false );

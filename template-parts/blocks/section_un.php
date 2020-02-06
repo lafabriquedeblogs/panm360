@@ -47,7 +47,6 @@ function section_un_render_callback( $block, $content = '', $is_preview = false 
 	$excerpt = 'Proin sed turpis et elit cursus semper. Etiam gravida neque sit amet felis sollicitudin, eget hendrerit massa venenatis. Curabitur magna magna, eleifend id volutpat et, placerat vel odio. Nam tristique dignissim augue sit amet pretium.';
 	$Author = 'Author';
 
-
 ?>
 	<section class="section <?php echo esc_attr($className); ?>" id="<?php echo esc_attr($id); ?>>">
 		<div id="interviews" class="section-inner">
