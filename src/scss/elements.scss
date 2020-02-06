@@ -119,8 +119,7 @@ img.lozad {
 		align-items: flex-start;
 		align-content: center;
 		font-family: $rubik;
-		border-bottom: 1px solid $gris_light;
-		padding-bottom: 10px;
+		
 		padding-top: 10px;
 		//margin-bottom: 10px;
 		margin-bottom: 0;
@@ -147,6 +146,8 @@ img.lozad {
 			font-size: 0.813em;
 			flex: 1 1;
 			padding-right: 1.5em;
+			border-bottom: 1px solid $gris_light;
+			padding-bottom: 10px;
 		}
 		.element-title {
 			//font-size: 0.875em;

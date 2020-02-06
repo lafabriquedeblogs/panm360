@@ -249,6 +249,8 @@ function panm360_allowed_block_types( $allowed_blocks, $post ) {
 		'gravityforms/form',
 		'woocommerce/featured-product',
 		'acf/section_un',
+		'acf/agenda_360',
+		'acf/section_trois_colonnes'
 	);
  
 	
@@ -330,3 +332,4 @@ require get_template_directory() . '/template-parts/blocks/liste_pages.php';
 require get_template_directory() . '/template-parts/blocks/banieres_publcite.php';
 require get_template_directory() . '/template-parts/blocks/section_un.php';
 require get_template_directory() . '/template-parts/blocks/section_3_colonnes.php';
+require get_template_directory() . '/template-parts/blocks/calendrier_aside.php';

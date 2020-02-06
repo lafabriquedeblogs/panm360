@@ -1423,8 +1423,6 @@ img.lozad {
             align-items: flex-start;
     align-content: center;
     font-family: "Rubik", sans-serif;
-    border-bottom: 1px solid #E6E6EA;
-    padding-bottom: 10px;
     padding-top: 10px;
     margin-bottom: 0;
     opacity: 1;
@@ -1448,7 +1446,9 @@ img.lozad {
       font-size: 0.813em;
       -webkit-box-flex: 1;
               flex: 1 1;
-      padding-right: 1.5em; }
+      padding-right: 1.5em;
+      border-bottom: 1px solid #E6E6EA;
+      padding-bottom: 10px; }
     .element.aside-item-calendrier .element-title {
       margin-bottom: 0;
       font-size: 1.125em;

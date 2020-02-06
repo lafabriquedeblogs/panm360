@@ -146,6 +146,15 @@
 				}
 			});		
 		});
+		
+		jQuery("#choix-style-musical").on("change",function(e){
+			e.preventDefault();
+			let year = jQuery("#agenda-year").val();
+			let month = jQuery("#agenda-month").val(); 
+			let genre = jQuery("#agenda-genre").val();
+			let nonce = jQuery("#agenda-nonce").val(); 
+			
+		});
 	}
 
 	( function( $, d , w ) {

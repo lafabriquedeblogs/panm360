@@ -9,8 +9,11 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-		
 			
+			<div class="entry-content">
+				<?php the_content();?>
+			</div><!-- .entry-content -->
+							
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
 					<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
@@ -34,7 +37,7 @@ get_header();
 							while($albums->have_posts() ){
 									$albums->the_post();
 									
-									include( locate_template( '/template-parts/modules/element-album.php', false, false ) );			
+									include( locate_template( '/template-parts/modules/element-album.php', false, false ) );
 								$albums_count--;
 							}
 						?>
@@ -44,29 +47,35 @@ get_header();
 									<h2>Agenda <span class="bold">360</span></h2>
 									<form id="choix-style-musical">
 										<div class="select-light">
-											<select>
+											<select id="agenda-genre">
 												<?php $genres = get_main_genres( false ); ?>
 												<?php foreach( $genres as $genre): ?>
 													<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
 												<?php endforeach; ?>
 											</select>
+											<?php
+												
+												$year = date('Y');
+												$month =  date('m');
+												$nonce = wp_create_nonce("my_user_like_nonce");
+											?>
+											<input type="hidden" id="agenda-year" value="<?php echo $year;?>"/>
+											<input type="hidden" id="agenda-month" value="<?php echo $month;?>"/>
+											<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>"/>
 										</div>
 									</form>
 								</div>
 								
 																
 								<?php
-									$count = 8;
-									$Agenda_start = '2020/01/01';
+									$count = 10;
 									$start = date('Y/m/d');
 									$end = '2020/06/30';
 									include( locate_template( '/template-parts/modules/element-aside-calendrier.php', false, false ) );
-									$agenda_full_id = apply_filters( 'wpml_object_id', 6944, 'page', TRUE  );
-									$agenda_full_permalien = get_permalink( $agenda_full_id );
+									
 								?>
-														
 
-							<?php get_template_part( '/template-parts/publicites/publicite', 'ilot' ); ?>
+							<?php //get_template_part( '/template-parts/publicites/publicite', 'ilot' ); ?>
 							
 						</div>
 						

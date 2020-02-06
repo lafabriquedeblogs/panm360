@@ -49,6 +49,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/acf-json/fr/group_5e3c8eb44ba59.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5e3c8eb44ba59-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2009,6 +2017,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/blocks/banieres_publcite.php",
+		"oF": 0
+		},
+	"/template-parts/blocks/calendrier_aside.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/blocks/calendrier_aside.php",
 		"oF": 0
 		},
 	"/template-parts/blocks/hero_page.php": {
