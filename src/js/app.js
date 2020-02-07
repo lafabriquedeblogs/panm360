@@ -1,4 +1,4 @@
-import main_menu_subMenu from './sub_menu.js';
+//import main_menu_subMenu from './sub_menu.js';
 import ajax_search_agenda from './agenda.js';
 
 
@@ -61,6 +61,12 @@ import ajax_search_agenda from './agenda.js';
 	*/
 	
 	$(document).ready(function(){
+		
+		$(window).load(function(){
+			$(".at-share-btn-elements").prepend('<a class="a-icon-instagram-link" role="button" href="https://www.instagram.com/panm360/" target="_blank"><svg class="icon-instagram-link"><use xlink:href="#instagram"></use></svg></a>');
+		});
+		
+		
 		
 		if( $("#new-featured-slider").length > 0 ){
 			$("#new-featured-slider").slick({
@@ -125,7 +131,7 @@ import ajax_search_agenda from './agenda.js';
 		
 		if( spotify != null) spotify.setAttribute("width","100%");
 		
-		main_menu_subMenu();
+		//main_menu_subMenu();
 		ajax_search_agenda();
 	});
 	

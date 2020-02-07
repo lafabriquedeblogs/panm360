@@ -1275,6 +1275,22 @@ select {
     border-color: #5BC6E8;
     border-color: #fff; }
 
+.at-share-btn-elements {
+  display: -webkit-box !important;
+  display: flex !important;
+  -webkit-box-align: center;
+          align-items: center; }
+
+.a-icon-instagram-link {
+  display: inline-block;
+  height: 25px;
+  padding-right: 4px;
+  margin: 0 5px 5px 0; }
+
+.icon-instagram-link {
+  width: 25px;
+  height: 25px; }
+
 #wrap-new-featured-slider {
   margin-left: calc( -100vw / 2 + 100% / 2) !important;
   margin-right: calc( -100vw / 2 + 100% / 2) !important;
