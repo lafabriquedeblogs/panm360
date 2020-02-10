@@ -13,7 +13,7 @@ get_header();
 			<?php the_content(); ?>
 			
 			<?php
-				
+				/*
 				if( have_rows('slide') ){
 					?>
 			<div id="wrap-new-featured-slider">
@@ -63,7 +63,7 @@ get_header();
 			</div><!-- wrap-new-featured-slider -->						
 					<?php
 				}
-				
+			*/	
 			?>
 			
 			<section class="section">

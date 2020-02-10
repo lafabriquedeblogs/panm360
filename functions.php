@@ -333,3 +333,4 @@ require get_template_directory() . '/template-parts/blocks/banieres_publcite.php
 require get_template_directory() . '/template-parts/blocks/section_un.php';
 require get_template_directory() . '/template-parts/blocks/section_3_colonnes.php';
 require get_template_directory() . '/template-parts/blocks/block_agenda_360.php';
+require get_template_directory() . '/template-parts/blocks/block_slider_1.php';

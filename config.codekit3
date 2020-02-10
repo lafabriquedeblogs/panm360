@@ -2035,6 +2035,14 @@
 		"oAP": "/template-parts/blocks/block_agenda_360.php",
 		"oF": 0
 		},
+	"/template-parts/blocks/block_slider_1.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/blocks/block_slider_1.php",
+		"oF": 0
+		},
 	"/template-parts/blocks/hero_page.php": {
 		"cB": 0,
 		"ft": 8192,
