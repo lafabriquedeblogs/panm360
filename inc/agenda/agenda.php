@@ -48,6 +48,7 @@
 	
 	function get_liste_concerts( $start, $end, $count , $genre = false ){
 		
+	
 		$dates = createDateRange( $start , $end );
 		
 		$concerts = array();

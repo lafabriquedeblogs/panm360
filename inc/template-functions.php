@@ -236,6 +236,8 @@ function get_ville($album_id){
 	
 	$ville_list = get_the_terms($album_id,'ville');
 	
+	if( empty($ville_list)) return '';
+	
 	$ville_txt = $ville_list[0]->name;
 	
 	return $ville_txt;
@@ -246,6 +248,8 @@ function get_salle($album_id){
 	$salle = array();
 	
 	$salle_list = get_the_terms($album_id,'salle');
+	
+	if( empty($salle_list)) return '';
 	
 	$salle_txt = $salle_list[0]->name;
 	

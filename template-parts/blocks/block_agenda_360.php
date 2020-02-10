@@ -12,6 +12,7 @@ function register_panm360_agenda_360() {
         'render_callback'   => 'agenda_360_render_callback',
         'category'          => 'panm360-blocks',
         'icon'              => 'admin-comments',
+        'mode'				=> 'edit',
         'keywords'          => array( 'agenda', 'menu' ),
     ));
 }
@@ -31,6 +32,18 @@ function agenda_360_render_callback( $block, $content = '', $is_preview = false 
 	if( !empty($block['align']) ) {
 	    $className .= ' align' . $block['align'];
 	}
+	
+	$genre = false;
+	$count = get_field('nombre_de_spectacle');
+	$genre_musical = get_field('genre_musical');
+
+	if( $genre_musical || !empty($genre_musical ) ){
+		$genre = $genre_musical;
+	}
+
+	
+	$start = date('Y/m/d');
+	$end = '2020/06/30';
 
 	$agenda_full_id = apply_filters( 'wpml_object_id', 6944, 'page', TRUE  );
 	$agenda_full_permalien = get_permalink( $agenda_full_id );
@@ -38,14 +51,15 @@ function agenda_360_render_callback( $block, $content = '', $is_preview = false 
 	$year = date('Y');
 	$month =  date('m');
 	$nonce = wp_create_nonce("my_user_like_nonce");
-	
-	$count = 10;
-	$start = date('Y/m/d');
-	$end = '2020/06/30';
-	
+								
 	$post_start = 1;
+
+	$timeout = false;
+	$today_timestamp = strtotime($start);
 	
-	$calendrier = get_liste_concerts( $start, $end , $count );					
+	
+	$calendrier = get_liste_concerts( $start, $end , $count, $genre );
+	
 ?>
 
 <div class="<?php echo esc_attr($className); ?>" id="<?php echo esc_attr($id); ?>">
@@ -56,43 +70,53 @@ function agenda_360_render_callback( $block, $content = '', $is_preview = false 
 			<div class="select-light">
 				<select id="agenda-genre">
 					<?php $genres = get_main_genres( false ); ?>
-					<?php foreach( $genres as $genre): ?>
-						<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
+					<?php foreach( $genres as $ge):
+					
+						$selected = ( $ge['id'] == $genre ) ? 'selected' : '';
+						
+					?>
+						
+						<option value="<?php echo $ge['id'];?>" <?php echo $selected;?>><?php echo $ge['name'];?></option>
 					<?php endforeach; ?>
 				</select>
+				<input type="hidden" id="agenda-start" value="<?php echo $start;?>"/>
 				<input type="hidden" id="agenda-year" value="<?php echo $year;?>"/>
 				<input type="hidden" id="agenda-month" value="<?php echo $month;?>"/>
 				<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>"/>
+				<input type="hidden" id="agenda-count" value="<?php echo $count;?>"/>
 			</div>
+			<div class="lds-facebook"><div></div><div></div><div></div></div>
 		</form>
 	</div>
 	
 	<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>	
-	<ul class="calendrier-ul-container">
-		<?php
-	
-		if( count($calendrier) > 0 ):
+	<div id="agenda_mini">
+		<ul class="calendrier-ul-container">
+			<?php
 		
-		foreach( $calendrier as $_date => $items ){
-			foreach( $items as $item ){
-	
-				if( $post_start > $count ) break;
-				$post_start++;
-					
-				include( locate_template( '/template-parts/modules/element-item-calendrier.php', false, false ) );
-					
-				}
-		}
+			if( count($calendrier) > 0 ):
+			
+			foreach( $calendrier as $_date => $items ){
+				foreach( $items as $item ){
 		
-		else:
-		?>
-			<li class="no-result">
-				<h3><?php _e('Aucun résultat','panm360'); ?></h3>
-			</li>
-		<?php
-		endif;
-		?>
-	</ul>
+					if( $post_start > $count ) break;
+					$post_start++;
+						
+					include( locate_template( '/template-parts/modules/element-item-calendrier.php', false, false ) );
+						
+					}
+			}
+			
+			else:
+			?>
+				<li class="no-result">
+					<h3><?php _e('Aucun résultat','panm360'); ?></h3>
+				</li>
+			<?php
+			endif;
+			?>
+		</ul>
+	</div><!-- #agenda_mini -->
 </div>
 			
 <?php } ?>

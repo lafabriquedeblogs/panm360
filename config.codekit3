@@ -2019,12 +2019,12 @@
 		"oAP": "/template-parts/blocks/banieres_publcite.php",
 		"oF": 0
 		},
-	"/template-parts/blocks/calendrier_aside.php": {
+	"/template-parts/blocks/block_agenda_360.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/template-parts/blocks/calendrier_aside.php",
+		"oAP": "/template-parts/blocks/block_agenda_360.php",
 		"oF": 0
 		},
 	"/template-parts/blocks/hero_page.php": {

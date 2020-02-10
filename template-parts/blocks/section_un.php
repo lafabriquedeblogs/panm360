@@ -12,6 +12,7 @@ function register_panm360_section_un() {
         'render_callback'   => 'section_un_render_callback',
         'category'          => 'panm360-blocks',
         'icon'              => 'admin-comments',
+        'mode'				=> 'edit',
         'keywords'          => array( 'section', 'menu' ),
     ));
 }

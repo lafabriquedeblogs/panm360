@@ -10,8 +10,9 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			
+			<?php the_content(); ?>
 		<?php
+		/*
 			 $args = array(
 				 "post_type" => "records",
 				 "posts_per_page" => -1,
@@ -30,6 +31,8 @@ get_header();
 				  $id_import_top_200 = get_field('id_import_top_200');
 				  echo '<p>'.$id_import_top_200." - ".get_the_title().' - '.$auteur_id.'</p>';
 			  }
+		*/
+		
 			
 			
 		?>	

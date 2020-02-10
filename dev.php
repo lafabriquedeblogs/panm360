@@ -1,7 +1,7 @@
 <?php
 
 /*
-	Template name: Dev
+	Template name: Dev old
 */
 
 get_header();

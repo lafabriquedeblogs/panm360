@@ -316,6 +316,17 @@ template {
 figure {
   margin: 0; }
 
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  opacity: .5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background: url("../img/grid.png") center top repeat-y; }
+
 #primary, #masthead {
   max-width: 83em; }
 
@@ -602,7 +613,9 @@ h1.category-title {
 
 .wide-screen {
   margin-left: calc( -100vw / 2 + 100% / 2) !important;
-  margin-right: calc( -100vw / 2 + 100% / 2) !important; }
+  margin-right: calc( -100vw / 2 + 100% / 2) !important;
+  -webkit-box-flex: 0;
+          flex: 0 0 100%; }
 
 .plus-de {
   font-family: "Rubik", sans-serif;
@@ -645,7 +658,9 @@ h1.category-title {
   padding: 50px 1em; }
   .infolettre.section {
     margin-left: calc( -100vw / 2 + 100% / 2) !important;
-    margin-right: calc( -100vw / 2 + 100% / 2) !important; }
+    margin-right: calc( -100vw / 2 + 100% / 2) !important;
+    -webkit-box-flex: 0;
+            flex: 0 0 100%; }
   .infolettre .panm360-infolettre {
     display: -webkit-box;
     display: flex;
@@ -668,7 +683,7 @@ h1.category-title {
     width: 100%;
     text-align: center; }
 
-.entry-content p {
+p {
   line-height: 1.8; }
 
 .liste-pages {
@@ -894,13 +909,22 @@ h1.category-title {
   text-transform: capitalize;
   font-size: 2em; }
   #agenda h4 .genre-nom {
-    color: #FE4A49; }
+    text-transform: none;
+    color: #FE4A49;
+    font-weight: 500;
+    font-size: 0.750em; }
+
+#agenda .plus-de {
+  display: none; }
+
+#agenda .element.aside-item-calendrier {
+  margin-bottom: 50px; }
 
 .full-month-agenda .calendrier-ul-container {
   display: block; }
 
 #agenda-filtres-section {
-  background-color: #FE4A49;
+  background-color: #333333;
   padding-top: 1em;
   padding-bottom: 1em; }
 
@@ -934,7 +958,7 @@ h1.category-title {
     border: none;
     color: #fff;
     text-transform: uppercase;
-    padding: 16px 30px 16px 10px;
+    padding: 10px 30px 10px 10px;
     font-size: 11px;
     font-family: "Rubik", sans-serif;
     font-weight: 700;
@@ -944,12 +968,21 @@ h1.category-title {
        -moz-appearance: none;
             appearance: none;
     border-radius: 5px;
-    background: #333333 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8.685' height='17.029' viewBox='0 0 8.685 17.029'><g><path d='M11.752,5.677l3,3,1.334-1.334L11.752,3,7.41,7.342,8.753,8.676Zm0,11.674-3-3L7.419,15.686l4.333,4.342,4.342-4.342-1.343-1.334Z' transform='translate(-7.41 -3)' fill='white'/></g></svg>") no-repeat;
+    background: #5BC6E8 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8.685' height='17.029' viewBox='0 0 8.685 17.029'><g><path d='M11.752,5.677l3,3,1.334-1.334L11.752,3,7.41,7.342,8.753,8.676Zm0,11.674-3-3L7.419,15.686l4.333,4.342,4.342-4.342-1.343-1.334Z' transform='translate(-7.41 -3)' fill='white'/></g></svg>") no-repeat;
     background-position: right 10px top 50%;
     margin: 5px;
     width: calc( 100% - 20px); }
   #agenda-filtres .bouton {
     width: calc( 100% - 20px); }
+  #agenda-filtres button {
+    padding: 10px 20px;
+    background: #5BC6E8; }
+
+.full-row {
+  -webkit-box-flex: 0;
+          flex: 0 0 100%; }
+  .full-row .publicite.publicite-banniere {
+    margin: 20px auto 50px; }
 
 @media screen and (min-width: 550px) {
   .full-month-agenda .calendrier-ul-container {
@@ -989,6 +1022,8 @@ h1.category-title {
     #agenda-filtres div {
       width: auto;
       margin-bottom: 0; }
+    #agenda-filtres .icon-text {
+      margin-bottom: 0; }
   .full-month-agenda .calendrier-ul-container .element.aside-item-calendrier {
     width: calc( 33.333% - 18px); } }
 
@@ -1006,13 +1041,19 @@ h1.category-title {
       width: initial; }
   @media screen and (min-width: 550px) {
     .full-month-agenda .calendrier-ul-container {
-      grid-template-columns: 1fr 1fr; } }
+      grid-template-columns: 1fr 1fr; }
+    .full-row {
+      grid-column: 1/3; } }
   @media screen and (min-width: 980px) {
     .full-month-agenda .calendrier-ul-container {
-      grid-template-columns: 1fr 1fr 1fr; } }
+      grid-template-columns: 1fr 1fr 1fr; }
+    .full-row {
+      grid-column: 1/4; } }
   @media screen and (min-width: 1280px) {
     .full-month-agenda .calendrier-ul-container {
-      grid-template-columns: 1fr 1fr 1fr 1fr; } } }
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .full-row {
+      grid-column: 1/5; } } }
 
 #top-360-hero {
   background: #F4F4F8 url("../img/panm360-top.jpg") center center no-repeat;
@@ -1032,7 +1073,9 @@ h1.category-title {
   line-height: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   margin-left: calc( -100vw / 2 + 100% / 2) !important;
-  margin-right: calc( -100vw / 2 + 100% / 2) !important; }
+  margin-right: calc( -100vw / 2 + 100% / 2) !important;
+  -webkit-box-flex: 0;
+          flex: 0 0 100%; }
   #text-introduction-panm360 .wp-block-group__inner-container p {
     text-align: center; }
 
@@ -1294,6 +1337,8 @@ select {
 #wrap-new-featured-slider {
   margin-left: calc( -100vw / 2 + 100% / 2) !important;
   margin-right: calc( -100vw / 2 + 100% / 2) !important;
+  -webkit-box-flex: 0;
+          flex: 0 0 100%;
   background-color: #F4F4F8;
   overflow: hidden; }
   #wrap-new-featured-slider .slick-arrow {
@@ -1440,7 +1485,7 @@ img.lozad {
     align-content: center;
     font-family: "Rubik", sans-serif;
     padding-top: 10px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     opacity: 1;
     -webkit-transition: opacity 600ms ease-out;
     transition: opacity 600ms ease-out; }
@@ -1448,11 +1493,14 @@ img.lozad {
       opacity: 0;
       -webkit-transition: opacity 600ms ease-out;
       transition: opacity 600ms ease-out; }
+    .element.aside-item-calendrier.out-dated .detail {
+      border-bottom: 1px solid #FE4A49; }
     .element.aside-item-calendrier .date {
       align-self: flex-start;
       font-size: 12px;
       text-transform: uppercase;
-      color: #4d4d4d; }
+      color: #4d4d4d;
+      margin-bottom: 7px; }
     .element.aside-item-calendrier .detail {
       display: -webkit-box;
       display: flex;
@@ -1463,8 +1511,9 @@ img.lozad {
       -webkit-box-flex: 1;
               flex: 1 1;
       padding-right: 1.5em;
-      border-bottom: 1px solid #E6E6EA;
-      padding-bottom: 10px; }
+      border-bottom: 1px solid #5BC6E8;
+      padding-bottom: 20px;
+      height: 100%; }
     .element.aside-item-calendrier .element-title {
       margin-bottom: 0;
       font-size: 1.125em;

@@ -19,4 +19,5 @@ $max-width: 83em;
 @mixin wide-screen{
 	margin-left: calc( -100vw / 2 + 100% / 2) !important;
 	margin-right: calc( -100vw / 2 + 100% / 2) !important;
+	flex: 0 0 100%;
 }
