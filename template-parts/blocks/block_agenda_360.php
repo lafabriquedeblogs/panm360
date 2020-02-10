@@ -69,6 +69,7 @@ function agenda_360_render_callback( $block, $content = '', $is_preview = false 
 		<form id="choix-style-musical">
 			<div class="select-light">
 				<select id="agenda-genre">
+					<option value="0"><?php _e('Style musical','panm360'); ?></option>
 					<?php $genres = get_main_genres( false ); ?>
 					<?php foreach( $genres as $ge):
 					
@@ -85,7 +86,7 @@ function agenda_360_render_callback( $block, $content = '', $is_preview = false 
 				<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>"/>
 				<input type="hidden" id="agenda-count" value="<?php echo $count;?>"/>
 			</div>
-			<div class="lds-facebook"><div></div><div></div><div></div></div>
+			<div class="loader-filtre-genre"><div></div><div></div><div></div></div>
 		</form>
 	</div>
 	

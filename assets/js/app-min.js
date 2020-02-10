@@ -22,7 +22,7 @@
 		
 		function ajex_content(){
 			
-			jQuery(".lds-facebook").css("display","inline-block");
+			jQuery(".loader-filtre-genre").css("opacity","1");
 			
 			jQuery.ajax({
 				type : "post",
@@ -43,14 +43,14 @@
 						
 						if( agenda_full ){
 							jQuery("#agenda").html(response.events);
-							jQuery(".lds-facebook").css("display","none");
+							jQuery(".loader-filtre-genre").css("opacity","0");
 							return false;	
 						}
 						
 						jQuery("#agenda_mini").html(response.events);
 					}
 					
-					jQuery(".lds-facebook").css("display","none");
+					jQuery(".loader-filtre-genre").css("opacity","0");
 
 				},
 				complete: function(response){
@@ -65,7 +65,7 @@
 			agenda_full = true;
 			agenda_mini = false;
 			
-			//jQuery(".lds-facebook").css("display","inline-block");
+			//jQuery(".loader-filtre-genre").css("display","inline-block");
 			
 			year = jQuery("#agenda-year").val();
 			month = jQuery("#agenda-month").val(); 

@@ -365,35 +365,37 @@ h1.category-title {
 
 
 /* LOADER */
-.lds-facebook {
+.loader-filtre-genre {
   //display: inline-block;
-  display: none;
+  //display: none;
   position: relative;
   width: 40px !important;
   height: 45px !important;
   margin-left: 1em;
+  opacity: 0;
+  transition: opacity 500ms ease-out;
 }
-.lds-facebook div {
+.loader-filtre-genre div {
   display: inline-block;
   position: absolute;
   left: 4px;
   width: 8px !important;
   background: #fff;
-  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  animation: loader-filtre-genre 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
-.lds-facebook div:nth-child(1) {
+.loader-filtre-genre div:nth-child(1) {
   left: 4px;
   animation-delay: -0.24s;
 }
-.lds-facebook div:nth-child(2) {
+.loader-filtre-genre div:nth-child(2) {
   left: 16px;
   animation-delay: -0.12s;
 }
-.lds-facebook div:nth-child(3) {
+.loader-filtre-genre div:nth-child(3) {
   left: 28px;
   animation-delay: 0;
 }
-@keyframes lds-facebook {
+@keyframes loader-filtre-genre {
   0% {
     top: 10px;
     height: 32px;

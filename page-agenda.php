@@ -92,7 +92,7 @@ $is_pub = false;
 						
 						<button type="submit"><?php _e('Chercher','panm360'); ?></button>
 						
-						<div class="lds-facebook"><div></div><div></div><div></div></div>
+						<div class="loader-filtre-genre"><div></div><div></div><div></div></div>
 						
 					</form>
 					

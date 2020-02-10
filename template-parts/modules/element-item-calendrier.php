@@ -9,7 +9,7 @@
 	
 	$timestamp = strtotime($_date);
 	
-	$date = date_i18n('d M\.', $timestamp);
+	$date = date_i18n('D d M Y', $timestamp);
 	$year = date_i18n('Y', $timestamp);
 	$heure = get_time_concert( $item->ID, date_i18n('Ymd', $timestamp) );
 	

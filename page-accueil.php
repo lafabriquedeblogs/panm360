@@ -121,6 +121,7 @@ get_header();
 										<form id="choix-style-musical">
 											<div class="select-light">
 												<select id="agenda-genre">
+													<option value="0"><?php _e('Style musical','panm360'); ?></option>
 													<?php $genres = get_main_genres( false ); ?>
 													<?php foreach( $genres as $genre): ?>
 														<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
@@ -132,7 +133,9 @@ get_header();
 												<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>"/>
 												<input type="hidden" id="agenda-count" value="<?php echo $count;?>"/>
 											</div>
+											<div class="loader-filtre-genre"><div></div><div></div><div></div></div>
 										</form>
+										
 									</div>
 									
 									<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>	
