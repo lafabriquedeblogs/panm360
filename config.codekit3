@@ -57,6 +57,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/acf-json/fr/group_5e4177aeca61f.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5e4177aeca61f-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,

@@ -10,10 +10,55 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			
-			<div class="entry-content">
-				<?php the_content();?>
-			</div><!-- .entry-content -->
-							
+			<?php the_content(); ?>
+			
+			<?php
+				
+				if( have_rows('slide') ){
+					?>
+			<div id="wrap-new-featured-slider">
+				<ul id="new-featured-slider">					
+					<?php
+					while( have_rows('slide') ){
+						the_row();
+						$titre = get_sub_field('titre');
+						$soustitre = get_sub_field( 'sous_titre' );
+						$image_data = get_sub_field( 'image' );
+						$content = get_sub_field( 'texte' );
+						$cta = get_sub_field( 'bouton' );
+						$cta_texte = $cta['titre'];
+						$cta_lien = $cta['lien'];
+						?>
+						
+						<li class="new-featured-slider--slide element">
+							<div class="new-featured-slider--slide--row">
+								
+								<div class="new-featured-slider--slide--content">
+									<div class="slide-content">
+<!-- 										<span class="genre"><a href="#">INTERVIEW</a> / <a href="">JAZZ - BOSSA NOVA</a></span> -->
+										<h2 class="element-title"><?php echo $titre;?></h2>
+										<h3 class="sub-title"><?php echo $soustitre;?></h3>
+										<p class="excerpt"><?php echo $content;?></p>
+<!-- 									<p class="author">par: <a href="">Alain Brunet</a></p> -->
+									</div>
+								</div>
+								
+								<div class="new-featured-slider--slide--picture" style="background-image:url('<?php echo get_template_directory_uri(); ?>/src/img/image-featured-home-slider-dev.png'); background-size: cover;background-repeat: no-repeat; background-position: center center;">
+									<img src="<?php echo get_template_directory_uri(); ?>/src/img/image-featured-home-slider-dev.png"  class="hidden" alt="title"/>
+								</div>
+							</div><!-- new-featured-slider--slide--row -->
+						</li><!-- new-featured-slider--slide -->
+						
+						<?php
+					}
+					?>
+				</ul><!-- new-featured-slider -->
+			</div><!-- wrap-new-featured-slider -->						
+					<?php
+				}
+				
+			?>
+			
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
 					<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>

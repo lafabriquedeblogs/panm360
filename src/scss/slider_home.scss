@@ -38,12 +38,27 @@
 		right: 10px;
 	}
 }
+
+.new-featured-slider--slide--content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
 @media screen and (min-width:980px) {
+	
 	.new-featured-slider--slide--row {
 		flex-direction: row;
 		align-items: stretch;
 		> * {
 			flex: 0 0 50%;
+			min-height: 350px;
 		}
 	}
+	.new-featured-slider--slide--content {
+		.excerpt {
+			padding: 0 1em;
+		}
+	}	
 }
