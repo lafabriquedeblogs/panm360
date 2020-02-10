@@ -10,7 +10,12 @@
 
 #new-featured-slider {
 	max-width: $max-width;
-	margin: 0 auto;	
+	margin: 0 auto;
+	opacity: 0;
+	transition: opacity 300ms ease-out;
+	&.slick-initialized {
+		opacity: 1;
+	}
 }
 
 .new-featured-slider--slide--row {

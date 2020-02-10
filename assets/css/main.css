@@ -1347,7 +1347,12 @@ select {
 
 #new-featured-slider {
   max-width: 83em;
-  margin: 0 auto; }
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out; }
+  #new-featured-slider.slick-initialized {
+    opacity: 1; }
 
 .new-featured-slider--slide--row {
   display: -webkit-box;

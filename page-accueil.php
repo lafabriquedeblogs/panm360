@@ -28,6 +28,15 @@ get_header();
 						$cta = get_sub_field( 'bouton' );
 						$cta_texte = $cta['titre'];
 						$cta_lien = $cta['lien'];
+						
+						
+						$image = get_template_directory_uri()."/src/img/image-featured-home-slider-dev.png";
+						
+						if( $image_data ){
+							$image = $image_data['sizes']['shop_single'];
+						}
+						
+						
 						?>
 						
 						<li class="new-featured-slider--slide element">
@@ -35,16 +44,14 @@ get_header();
 								
 								<div class="new-featured-slider--slide--content">
 									<div class="slide-content">
-<!-- 										<span class="genre"><a href="#">INTERVIEW</a> / <a href="">JAZZ - BOSSA NOVA</a></span> -->
 										<h2 class="element-title"><?php echo $titre;?></h2>
 										<h3 class="sub-title"><?php echo $soustitre;?></h3>
 										<p class="excerpt"><?php echo $content;?></p>
-<!-- 									<p class="author">par: <a href="">Alain Brunet</a></p> -->
 									</div>
 								</div>
 								
-								<div class="new-featured-slider--slide--picture" style="background-image:url('<?php echo get_template_directory_uri(); ?>/src/img/image-featured-home-slider-dev.png'); background-size: cover;background-repeat: no-repeat; background-position: center center;">
-									<img src="<?php echo get_template_directory_uri(); ?>/src/img/image-featured-home-slider-dev.png"  class="hidden" alt="title"/>
+								<div class="new-featured-slider--slide--picture" style="background-image:url('<?php echo $image; ?>'); background-size: cover;background-repeat: no-repeat; background-position: center center;">
+									<img src="<?php echo $image;?>"  class="hidden" alt="title"/>
 								</div>
 							</div><!-- new-featured-slider--slide--row -->
 						</li><!-- new-featured-slider--slide -->
