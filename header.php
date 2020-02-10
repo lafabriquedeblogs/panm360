@@ -57,7 +57,7 @@
 	</header><!-- #masthead -->
 	
 	<!-- filet sous le menu principal -->
-	<div id="border-top-menu"></div>	
+<!-- 	<div id="border-top-menu"></div> -->	
 	
 	<div id="panm360-ghost"></div>
 

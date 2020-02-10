@@ -50,7 +50,13 @@
 	font-size: 1.625em;
 	line-height: 1.4;
 }
-
+.is-style-plus-infos {
+	a {
+		@extend .bouton;
+		background-color: $bleu;
+		border: none;
+	}
+}
 .exergue {
 	padding: 2em;
 	margin: 2em 0;

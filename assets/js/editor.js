@@ -9,6 +9,10 @@ wp.domReady( () => {
 		{
 			name: 'chapeau-header',
 			label: 'Chapeau Header'
+		},
+		{
+			name: 'plus-infos',
+			label: 'Plus d\'infos'
 		}
 
 		]

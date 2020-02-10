@@ -970,7 +970,7 @@ p {
     background-position: right 10px top 50%;
     margin: 5px;
     width: calc( 100% - 20px); }
-  #agenda-filtres .bouton {
+  #agenda-filtres .bouton, #agenda-filtres .is-style-plus-infos a, .is-style-plus-infos #agenda-filtres a {
     width: calc( 100% - 20px); }
   #agenda-filtres button {
     padding: 10px 20px;
@@ -1007,7 +1007,7 @@ p {
     #agenda-filtres select {
       width: auto;
       margin: 0 10px 0 0; }
-    #agenda-filtres .bouton {
+    #agenda-filtres .bouton, #agenda-filtres .is-style-plus-infos a, .is-style-plus-infos #agenda-filtres a {
       width: auto; } }
 
 @media screen and (min-width: 980px) {
@@ -1296,7 +1296,7 @@ select {
     #gform_fields_6 #field_6_4 {
       flex-basis: 100%; } }
 
-.bouton, button, input[type="submit"] {
+.bouton, .is-style-plus-infos a, button, input[type="submit"] {
   font-family: "Rubik", sans-serif;
   color: #fff;
   background: #333333;
@@ -1311,7 +1311,7 @@ select {
   transition: all .3s ease-out;
   cursor: pointer;
   text-decoration: none; }
-  .bouton:hover, button:hover, input[type="submit"]:hover {
+  .bouton:hover, .is-style-plus-infos a:hover, button:hover, input[type="submit"]:hover {
     box-shadow: 0px 0px 0px 2px #add9e7;
     border-color: #5BC6E8;
     border-color: #fff; }
@@ -1789,6 +1789,11 @@ img.lozad {
     width: 405px;
     -webkit-box-align: start;
             align-items: flex-start; }
+    .post-agenda .album-cover .post-thumbnail {
+      width: 100%; }
+      .post-agenda .album-cover .post-thumbnail img {
+        width: 405px;
+        max-width: none; }
   .lp-metas {
     margin-left: 0; }
   .post-agenda .single-album-body {
@@ -1884,6 +1889,10 @@ img.lozad {
   font-weight: 500;
   font-size: 1.625em;
   line-height: 1.4; }
+
+.is-style-plus-infos a {
+  background-color: #5BC6E8;
+  border: none; }
 
 .exergue {
   padding: 2em;
