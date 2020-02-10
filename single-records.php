@@ -7,16 +7,16 @@
 			
 			while ( have_posts() ) : the_post(); 
 			
-			$album_id = get_the_id();
-			$artiste = get_artiste( $album_id , false );
-			$genres = get_genre($album_id);
-			$annee = get_annee($album_id);
-			$pays = get_pays($album_id);
-			$label = get_label($album_id);
-			
-			$auteur_id = get_the_author_meta('ID');
-			$auteur = get_the_author_meta('display_name');
-			$auteur_link =  get_author_posts_url($auteur_id) ;
+				$album_id = get_the_id();
+				$artiste = get_artiste( $album_id , false );
+				$genres = get_genre($album_id);
+				$annee = get_annee($album_id);
+				$pays = get_pays($album_id);
+				$label = get_label($album_id);
+				
+				$auteur_id = get_the_author_meta('ID');
+				$auteur = get_the_author_meta('display_name');
+				$auteur_link =  get_author_posts_url($auteur_id) ;
 		?>
 		
 		<article id="post-<?php the_ID(); ?>" <?php post_class("post-album"); ?>>

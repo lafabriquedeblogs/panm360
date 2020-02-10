@@ -1,6 +1,6 @@
 <?php
 
-add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
+//add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
  
 function filter_the_content_in_the_main_loop( $content ) {
 		

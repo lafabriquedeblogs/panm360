@@ -1714,6 +1714,86 @@ img.lozad {
   .single-records h1.entry-title {
     margin: 0 0 1em 0; } }
 
+/* Single Agenda */
+.single-agenda-date-genre {
+  border-bottom: 2px solid #F4F4F8;
+  border-top: 2px solid #F4F4F8;
+  text-transform: uppercase;
+  padding: 10px 0; }
+  .single-agenda-date-genre span {
+    display: block;
+    font-family: "Rubik", sans-serif; }
+  .single-agenda-date-genre .single-agenda-date {
+    font-size: 1.250em;
+    font-weight: 700; }
+  .single-agenda-date-genre .single-agenda-genre {
+    font-size: 0.938em;
+    font-weight: 400;
+    color: #FE4A49; }
+
+.single-agenda-salle-prix {
+  border-bottom: 2px solid #F4F4F8;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin-bottom: 24px; }
+  .single-agenda-salle-prix span {
+    display: block;
+    font-family: "Rubik", sans-serif; }
+  .single-agenda-salle-prix .single-agenda-salle {
+    font-size: 20px;
+    font-weight: 500; }
+  .single-agenda-salle-prix .single-agenda-prix {
+    color: #5BC6E8;
+    font-weight: 700; }
+
+.single-agenda--agenda-mini {
+  display: none;
+  width: 100%;
+  margin-top: 2em; }
+  .single-agenda--agenda-mini .title-calendrier {
+    padding-left: 19%; }
+
+.post-agenda h1.entry-title {
+  margin-bottom: 15px; }
+
+.single-agenda-infos-sup {
+  display: block;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-size: 1.1em; }
+
+@media screen and (min-width: 768px) {
+  .post-agenda .album-cover {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center; }
+  .post-agenda .lp-cover {
+    max-width: 405px; } }
+
+@media screen and (min-width: 980px) {
+  .single-agenda--agenda-mini {
+    display: block; }
+  .post-agenda {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    margin: 80px auto 120px; }
+  .post-agenda .album-cover {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    width: 405px;
+    -webkit-box-align: start;
+            align-items: flex-start; }
+  .lp-metas {
+    margin-left: 0; }
+  .post-agenda .single-album-body {
+    width: calc( 100% - ( 405px + 36px )); } }
+
 @media screen and (min-width: 535px) {
   .album {
     max-width: calc( 50% - 18px); }
