@@ -8,8 +8,16 @@
 			while ( have_posts() ) : the_post(); 
 			
 				$post_id = get_the_id();
-				$_genres = get_genre($post_id);
+				$_genres_raw = get_genre($post_id, false,true);
 				$label = get_label($post_id);
+
+				$_genres = array();
+				
+				foreach( $_genres_raw as $_genre ){
+					$_genres[] = $_genre->name;
+				}
+				
+				
 				
 				$auteur_id = get_the_author_meta('ID');
 				$auteur = get_the_author_meta('display_name');
@@ -105,7 +113,7 @@
 					<span class="single-agenda-infos-sup"><?php echo implode(', ', $single_informations_supplementaires );?></span>	
 					<div class="single-agenda-date-genre">
 						<span class="single-agenda-date"><?php echo $date;?> - <?php echo $heure;?></span>
-						<span class="single-agenda-genre"><?php echo $_genres;?></span>
+						<span class="single-agenda-genre"><?php echo implode( ' / ', $_genres );?></span>
 					</div>
 					
 					<div class="single-agenda-salle-prix">
