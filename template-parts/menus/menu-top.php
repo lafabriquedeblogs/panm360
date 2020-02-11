@@ -92,6 +92,9 @@
 		<?php
 			$others_l = ( ICL_LANGUAGE_CODE == 'en' ) ? 'fr' : 'en';
 			$yop = icl_get_languages('skip_missing=N&orderby=KEY&order=DIR&link_empty_to=str');
+			echo '<pre>';
+				var_dump($yop);
+			echo '</pre>';
 		?>
 		<a href="<?php echo $yop[$others_l]['url'];?>"><?php echo strtoupper( $others_l );?></a></li>
 	</ul>

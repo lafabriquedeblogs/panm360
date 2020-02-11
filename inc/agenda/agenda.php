@@ -48,56 +48,73 @@
 	
 	function get_liste_concerts( $start, $end, $count , $genre = false ){
 		
-	
-		$dates = createDateRange( $start , $end );
-		
-		$concerts = array();
-		$i = 0;
-		
-		add_filter( 'posts_where','my_posts_where' );
 
+  	
+    	$result = get_transient( 'liste_journaliere_des_concerts' );
 		
-		while( $i <= count($dates)-1 ){
-		
-			$args = array(
-			    'post_type' => 'agenda',
-			    'posts_per_page' => -1,
-			    'orderby' => 'meta_value',
-			    'order' => 'ASC',
-			    'suppress_filters' => false,
-			    'post_status' => 'publish',
-			    'meta_query' => array(
-			        array(
-			            'key' => 'dates_$_date_concert',
-			            'value' => $dates[$i],
-			            'compare' => '=',
-			        ),		        
-			    ),
-			    
-			);
+    	if ( false === $result ) {
+
+			$dates = createDateRange( $start , $end );
+					
+			$concerts = array();
+			$i = 0;
 			
-			if( $genre ){
-				$args['tax_query'][] = array(
-					'taxonomy' => 'genre',
-					'field'    => 'term_id',
-					'terms'    => $genre,
+			add_filter( 'posts_where','my_posts_where' );
+			
+			
+			while( $i <= count($dates)-1 ){
+			
+				$args = array(
+				    'post_type' => 'agenda',
+				    'posts_per_page' => -1,
+				    'orderby' => 'meta_value',
+				    'order' => 'ASC',
+				    'suppress_filters' => false,
+				    'post_status' => 'publish',
+				    'meta_query' => array(
+				        array(
+				            'key' => 'dates_$_date_concert',
+				            'value' => $dates[$i],
+				            'compare' => '=',
+				        ),		        
+				    ),
+				    
 				);
+				
+				if( $genre ){
+					$args['tax_query'][] = array(
+						'taxonomy' => 'genre',
+						'field'    => 'term_id',
+						'terms'    => $genre,
+					);
+				}
+				
+				
+				// Make the query
+				$events_query = new WP_query( $args );
+				$concerts[$dates[$i]] = $events_query->posts;
+				$i++;
+				
 			}
+			remove_filter( 'posts_where','my_posts_where' );
 			
+			$result = array_filter($concerts);
 			
-			// Make the query
-			$events_query = new WP_query( $args );
-			$concerts[$dates[$i]] = $events_query->posts;
-			$i++;
-			
-		}
-		remove_filter( 'posts_where','my_posts_where' );
-		
-		$result = array_filter($concerts);
-		
-		$_result = array_flatten($result);
+			$_result = array_flatten($result);
 
+    	    set_transient( 'liste_journaliere_des_concerts', $result, DAY_IN_SECONDS );
+    	}
+    	
+    	
 		return $result;//$events_query->posts;
+	}
+
+	add_action( 'publish_post', 'panm360_purge_agenda_transient' );
+	
+	function panm360_purge_agenda_transient( $ID, $post ) {
+	    if ( 'agenda' == $post->post_type ) {
+	        delete_transient( 'liste_journaliere_des_concerts' );
+	    }
 	}
 	
 	function get_time_concert( $post_id, $date ){
@@ -115,4 +132,12 @@
 		//return $time;
 	};
 	
+	function lien_agenda_complet(){
+		
+		$agenda_full_id = apply_filters( 'wpml_object_id', 6944, 'page', TRUE  );
+		$agenda_full_permalien = get_permalink( $agenda_full_id );
+		$lien_agenda_complet = '<a href="'.$agenda_full_permalien.'" class="plus-de">'. __('Agenda 360 complet','panm360').'<svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>';	
+
+		echo $lien_agenda_complet;
+	}
 	

@@ -1741,7 +1741,8 @@ img.lozad {
     font-family: "Rubik", sans-serif; }
   .single-agenda-salle-prix .single-agenda-salle {
     font-size: 20px;
-    font-weight: 500; }
+    font-weight: 500;
+    text-transform: none; }
   .single-agenda-salle-prix .single-agenda-prix {
     color: #5BC6E8;
     font-weight: 700; }

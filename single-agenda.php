@@ -26,7 +26,8 @@
 				$ville =  get_ville( $post_id );
 				$salle = get_salle( $post_id );
 				
-				$timestamp = strtotime($_date);
+				$today = date('d M Y');
+				$timestamp = strtotime($today);
 				
 				$date = date_i18n('D d M Y', $timestamp);
 				$year = date_i18n('Y', $timestamp);
@@ -47,13 +48,13 @@
 				<!-- Go to www.addthis.com/dashboard to customize your tools -->
 				<div class="addthis_inline_share_toolbox"></div>
 				
+				
+				
 				<?php
+					
 					$am_start = date('Y/m/d');
 					$am_end = '2020/06/30';
-				
-					$agenda_full_id = apply_filters( 'wpml_object_id', 6944, 'page', TRUE  );
-					$agenda_full_permalien = get_permalink( $agenda_full_id );
-					
+									
 					$am_year = date('Y');
 					$am_month =  date('m');
 					//$nonce = wp_create_nonce("my_user_like_nonce");
@@ -61,7 +62,7 @@
 					$post_start = 1;
 				
 					$timeout = false;
-					$today_timestamp = strtotime($start);
+					$today_timestamp = strtotime($today);
 					
 					$count = 8;
 					
@@ -72,10 +73,11 @@
 				<div class="single-agenda--agenda-mini">
 					
 					<div class="title-calendrier">
-						<h2>Agenda <span class="bold">360</span></h2>
+						<h2><?php _e('Agenda','panm360'); ?> <span class="bold">360</span></h2>
 					</div>
 					
-					<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>	
+					<?php lien_agenda_complet(); ?>
+					
 					<div id="agenda_mini">
 						<ul class="calendrier-ul-container">
 							<?php

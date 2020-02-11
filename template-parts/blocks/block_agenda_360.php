@@ -41,12 +41,8 @@ function agenda_360_render_callback( $block, $content = '', $is_preview = false 
 		$genre = $genre_musical;
 	}
 
-	
 	$start = date('Y/m/d');
 	$end = '2020/06/30';
-
-	$agenda_full_id = apply_filters( 'wpml_object_id', 6944, 'page', TRUE  );
-	$agenda_full_permalien = get_permalink( $agenda_full_id );
 	
 	$year = date('Y');
 	$month =  date('m');
@@ -65,7 +61,7 @@ function agenda_360_render_callback( $block, $content = '', $is_preview = false 
 <div class="<?php echo esc_attr($className); ?>" id="<?php echo esc_attr($id); ?>">
 	
 	<div class="title-calendrier">
-		<h2>Agenda <span class="bold">360</span></h2>
+		<h2><?php _e('Agenda','panm360'); ?> <span class="bold">360</span></h2>
 		<form id="choix-style-musical">
 			<div class="select-light">
 				<select id="agenda-genre">
@@ -90,7 +86,8 @@ function agenda_360_render_callback( $block, $content = '', $is_preview = false 
 		</form>
 	</div>
 	
-	<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>	
+	<?php lien_agenda_complet() ?>	
+	
 	<div id="agenda_mini">
 		<ul class="calendrier-ul-container">
 			<?php

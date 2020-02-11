@@ -103,19 +103,14 @@ $is_pub = false;
 						
 						<div class="full-month-agenda current-month">
 							<h4><span class="regular"><?php echo date_i18n('F'); ?></span> <?php echo date_i18n('Y'); ?></h4>
-							<?php
-								$start = $today;//$year.'/'.$month.'/01';
-								$end = $lastDayThisMonth;
-
-								$agenda_full_id = apply_filters( 'wpml_object_id', 6944, 'page', TRUE  );
-								$agenda_full_permalien = get_permalink( $agenda_full_id );	
-							?>
-
-							<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>
-							
+													
 							<ul class="calendrier-ul-container">
 								<?php
 								$post_start = 1;
+								
+								$start = $today;//$year.'/'.$month.'/01';
+								$end = $lastDayThisMonth;
+								
 								$calendrier = get_liste_concerts( $start, $end , $count );	
 								$count = 1000;
 								

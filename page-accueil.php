@@ -45,9 +45,6 @@ get_header();
 								$count = 8;
 								$start = date('Y/m/d');
 								$end = '2020/06/30';
-
-								$agenda_full_id = apply_filters( 'wpml_object_id', 6944, 'page', TRUE  );
-								$agenda_full_permalien = get_permalink( $agenda_full_id );
 								
 								$year = date('Y');
 								$month =  date('m');
@@ -63,7 +60,7 @@ get_header();
 								
 									
 									<div class="title-calendrier">
-										<h2>Agenda <span class="bold">360</span></h2>
+										<h2><?php lien_agenda_complet(); ?> <span class="bold">360</span></h2>
 										<form id="choix-style-musical">
 											<div class="select-light">
 												<select id="agenda-genre">
@@ -84,8 +81,8 @@ get_header();
 										
 									</div>
 									
-									<a href="<?php echo $agenda_full_permalien;?>" class="plus-de"><?php _e('Voir l\'agenda complet','panm360'); ?> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>	
-									
+									<?php lien_agenda_complet(); ?>									
+
 									<div id="agenda_mini">
 										<ul class="calendrier-ul-container">
 											<?php
