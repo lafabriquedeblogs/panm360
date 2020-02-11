@@ -3,53 +3,7 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-			
-			while ( have_posts() ) : the_post(); 
-			
-				$post_id = get_the_id();
-				$_genres_raw = get_genre($post_id, false,true);
-				$label = get_label($post_id);
 
-				$_genres = array();
-				
-				foreach( $_genres_raw as $_genre ){
-					$_genres[] = $_genre->name;
-				}
-	
-				$auteur_id = get_the_author_meta('ID');
-				$auteur = get_the_author_meta('display_name');
-				$auteur_link =  get_author_posts_url($auteur_id) ;
-
-				$ville =  get_ville( $post_id );
-				$salle = get_salle( $post_id );
-				
-				$dates_arrays = get_field('dates', $post_id);
-				$single_dates = array();
-				foreach( $dates_arrays as $date ){
-					
-					$ddate = str_replace('/', '-', $date['date_concert']);
-					$jour = date_i18n('D\&\n\b\s\p\;d\&\n\b\s\p\;M\&\n\b\s\p\;Y', strtotime($ddate));
-					
-					if( !empty($jour) && !empty($date['heure_concert'])){
-						$single_dates[] = $jour.'&nbsp;•&nbsp;'.$date['heure_concert'];
-					}
-					
-				}				
-				
-				/*
-				$today = date('d M Y');
-				$timestamp = strtotime($today);
-				
-				$date = date_i18n('D d M Y', $timestamp);
-				$year = date_i18n('Y', $timestamp);
-				$heure = get_time_concert( $post_id, date_i18n('Ymd', $timestamp) );
-				*/
-				
-				$prix = get_field('prix',$post_id );
-				$single_informations_supplementaires = get_field( 'informations_supplementaires' , $post_id );
-
-		?>
 		
 		<article id="post-<?php the_ID(); ?>" <?php post_class("post-agenda"); ?>>
 			
@@ -115,13 +69,51 @@
 								</li>
 							<?php
 							endif;
+							
 							?>
 						</ul>
 					</div><!-- #agenda_mini -->
 				</div>				
 				
 			</div>
+		<?php
 			
+			while ( have_posts() ) : the_post(); 
+			
+				$post_id = get_the_id();
+				$_genres_raw = get_genre($post_id, false,true);
+				$label = get_label($post_id);
+
+				$_genres = array();
+				
+				foreach( $_genres_raw as $_genre ){
+					$_genres[] = $_genre->name;
+				}
+	
+				$auteur_id = get_the_author_meta('ID');
+				$auteur = get_the_author_meta('display_name');
+				$auteur_link =  get_author_posts_url($auteur_id) ;
+
+				$ville =  get_ville( $post_id );
+				$salle = get_salle( $post_id );
+				
+				$dates_arrays = get_field('dates', $post_id);
+				$single_dates = array();
+				foreach( $dates_arrays as $date ){
+					
+					$ddate = str_replace('/', '-', $date['date_concert']);
+					$jour = date_i18n('D\&\n\b\s\p\;d\&\n\b\s\p\;M\&\n\b\s\p\;Y', strtotime($ddate));
+					
+					if( !empty($jour) && !empty($date['heure_concert'])){
+						$single_dates[] = $jour.'&nbsp;•&nbsp;'.$date['heure_concert'];
+					}
+					
+				}				
+				
+				$prix = get_field('prix',$post_id );
+				$single_informations_supplementaires = get_field( 'informations_supplementaires' , $post_id );
+
+		?>			
 			<div class="single-album-body">
 				<header class="entry-header">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' );?>
@@ -132,7 +124,7 @@
 					</div>
 					
 					<div class="single-agenda-salle-prix">
-						<span class="single-agenda-salle"><?php echo $salle;?></span>
+						<span class="single-agenda-salle"><span class="medium"><?php echo $salle;?></span> - <?php echo $ville?></span>
 						<span class="single-agenda-prix"><?php echo $prix['montant'];?></span>
 					</div>
 					
@@ -152,10 +144,12 @@
 			</div>
 		
 
-		</article><!-- #post-<?php the_ID(); ?> -->
+
 
 
 		<?php endwhile; ?>
+		</article><!-- #post-<?php the_ID(); ?> -->
+		
 		<section class="section">
 			<div class="section-inner">
 					<ul class="section-content--has-6-columns">

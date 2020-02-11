@@ -44,7 +44,7 @@
 				<span class="element-infos-supp"><?php echo implode(', ', $informations_supplementaires );?></span>
 				<?php endif; ?>
 				<span class="element-title"><?php echo $titre?></span>
-				<span class="element-location"><?php echo $salle;?> - <?php echo $ville?></span>
+				<span class="element-location"><span class="medium"><?php echo $salle;?></span> - <?php echo $ville?></span>
 				<span class="element-prix"><?php echo $prix['montant'];?></span>
 				<a href="<?php echo $permalien;?>" class="bouton"><?php _e('Plus de détails','panm360'); ?></a>
 			</div>

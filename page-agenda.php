@@ -121,7 +121,8 @@ $is_pub = false;
 								$post_start = 1;
 								
 								$start = $today;//$year.'/'.$month.'/01';
-								$end = $lastDayThisMonth;
+								//$end = $lastDayThisMonth;
+								$end = date('Y/m/d', strtotime("+30 days"));
 								
 								$calendrier = get_liste_concerts( $start, $end , $count );	
 								$count = 1000;

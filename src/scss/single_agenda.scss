@@ -30,17 +30,18 @@ h1.entry-title-agenda {
 	padding: 1em 0;
 	margin-bottom: 24px;
 	span {
-		display: block;
+		
 		font-family: $rubik;
 	}	
 	.single-agenda-salle {
 		font-size: 1em;
-		font-weight: 500;
+		//font-weight: 500;
 		text-transform: none;
 	}
 	.single-agenda-prix {
 		color: $bleu;
 		font-weight: 700;
+		display: block;
 	}
 }
 .single-agenda--agenda-mini {

@@ -1473,6 +1473,10 @@ select {
     text-transform: uppercase;
     font-weight: 500;
     color: #5BC6E8; }
+  .square-featured-slider--slide--content .element-location {
+    font-weight: 300; }
+    .square-featured-slider--slide--content .element-location .medium {
+      display: inline; }
   .square-featured-slider--slide--content .bouton, .square-featured-slider--slide--content .is-style-plus-infos a, .is-style-plus-infos .square-featured-slider--slide--content a {
     display: inline-block;
     margin: 1.6em 0 0 0;
@@ -1873,15 +1877,14 @@ h1.entry-title-agenda {
   padding: 1em 0;
   margin-bottom: 24px; }
   .single-agenda-salle-prix span {
-    display: block;
     font-family: "Rubik", sans-serif; }
   .single-agenda-salle-prix .single-agenda-salle {
     font-size: 1em;
-    font-weight: 500;
     text-transform: none; }
   .single-agenda-salle-prix .single-agenda-prix {
     color: #5BC6E8;
-    font-weight: 700; }
+    font-weight: 700;
+    display: block; }
 
 .single-agenda--agenda-mini {
   display: none;

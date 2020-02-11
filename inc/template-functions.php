@@ -350,7 +350,7 @@ function get_articles_par_terms( $term , $posts_per_page = -1 ){
 	);
 	
 	$my_query = new WP_Query($args);
-	
+	wp_reset_query();
 	return $my_query->posts;
 	
 }
