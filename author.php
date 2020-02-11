@@ -24,7 +24,7 @@ get_header();
 						$albums_count = 54;	
 						
 						$args = array(
-							'post_type' => 'records',
+							'post_type' => array('post','records','gig_review'),
 							'posts_per_page' => $albums_count,
 							'post_status' => 'publish',
 							'orderby' => 'rand',

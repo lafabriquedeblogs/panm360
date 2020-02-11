@@ -15,8 +15,6 @@
 				<!-- Go to www.addthis.com/dashboard to customize your tools -->
 				<div class="addthis_inline_share_toolbox"></div>
 				
-				
-				
 				<?php
 					
 					$am_start = date('Y/m/d');
@@ -29,7 +27,7 @@
 					$post_start = 1;
 				
 					$timeout = false;
-					$today_timestamp = strtotime($today);
+					$today_timestamp = strtotime($am_start);
 					
 					$count = 8;
 					
@@ -142,11 +140,7 @@
 				</footer><!-- .entry-footer -->
 
 			</div>
-		
-
-
-
-
+			
 		<?php endwhile; ?>
 		</article><!-- #post-<?php the_ID(); ?> -->
 		
