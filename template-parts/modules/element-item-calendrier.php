@@ -32,11 +32,11 @@
 
 <li class="aside-item-calendrier element <?php echo implode(" ", $class);?>">
 		
-		<?php if( $agenda_commente ): ?> <a href="<?php echo $permalien;?>"><?php endif; ?>
-			<img class="vignette" src="<?php echo $vignette;?>" width="80px" height="80px" />
+		<?php if( $agenda_commente ): ?> <a href="<?php echo $permalien;?>" class="link-vignette"><?php endif; ?>
+			<img class="vignette" src="<?php echo $vignette;?>" width="30px" height="30px" />
 		<?php if( $agenda_commente ): ?></a><?php endif; ?>
 		
-		<div class="detail">
+		<div class="detail <?php if( $agenda_commente ): ?>agenda-commente<?php endif; ?>">
 			<span class="date"><?php echo $date;?> • <?php echo $heure;?></span>
 			<span class="genre album-genre element-genre"><?php echo $genres?></span>
 			<span class="element-title"><?php echo $titre?></span>
@@ -49,6 +49,6 @@
 
 		
 		<?php if( $agenda_commente ): ?>
-		<a href="<?php echo $permalien;?>"><svg class="icon bleu"><use xlink:href="#plus_cercle"></use></svg></a>
+		<a href="<?php echo $permalien;?>" class="link-vignette"><svg class="icon bleu"><use xlink:href="#plus_cercle"></use></svg></a>
 		<?php endif; ?>
 </li>

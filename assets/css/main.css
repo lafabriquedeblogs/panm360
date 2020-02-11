@@ -1046,7 +1046,7 @@ p {
       grid-column: 1/4; } }
   @media screen and (min-width: 1280px) {
     .full-month-agenda .calendrier-ul-container {
-      grid-template-columns: 1fr 1fr 1fr 1fr; }
+      grid-template-columns: 1fr 1fr 1fr; }
     .full-row {
       grid-column: 1/5; } } }
 
@@ -1514,8 +1514,10 @@ img.lozad {
       align-self: flex-start;
       font-size: 12px;
       text-transform: uppercase;
-      color: #000;
+      color: #808080;
       margin-bottom: 1px; }
+      .element.aside-item-calendrier .date .medium {
+        color: #333333; }
     .element.aside-item-calendrier .detail {
       display: -webkit-box;
       display: flex;
@@ -1526,8 +1528,8 @@ img.lozad {
       -webkit-box-flex: 1;
               flex: 1 1;
       padding-right: 1.5em;
-      border-bottom: 2px solid #F4F4F8;
       padding-bottom: 20px;
+      border-bottom: 2px solid #F4F4F8;
       height: 100%;
       color: #808080; }
     .element.aside-item-calendrier .element-title {
@@ -1554,7 +1556,7 @@ img.lozad {
       width: 15px;
       height: 15px;
       margin-right: 1em; }
-    .element.aside-item-calendrier #n-blanc-rond-rouge {
+    .element.aside-item-calendrier #m-blanc-rond-rouge {
       width: 50px;
       height: 50px; }
     .element.aside-item-calendrier .icon.icon-agenda {

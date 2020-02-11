@@ -143,8 +143,11 @@ img.lozad {
 			align-self: flex-start;
 			font-size: 12px;
 			text-transform: uppercase;
-			color: #000;
+			color: $gris_medium;
 			margin-bottom: 1px;
+			.medium{
+				color: $gris_ultra_dark;
+			}
 		}
 		.detail{
 			display: flex;
@@ -152,10 +155,13 @@ img.lozad {
 			font-size: 0.813em;
 			flex: 1 1;
 			padding-right: 1.5em;
-			border-bottom: 2px solid $gris_ultra_light;
 			padding-bottom: 20px;
+			border-bottom: 2px solid $gris_ultra_light;
 			height: 100%;
 			color: $gris_medium;
+			
+			&.agenda-commente {
+			}
 		}
 		.element-title {
 			//font-size: 0.875em;
@@ -173,6 +179,7 @@ img.lozad {
 			color: $gris_medium;
 		}
 		.vignette {
+			
 			display:block;
 			//margin-top:5px;
 			width:30px;
@@ -182,6 +189,9 @@ img.lozad {
 			border-radius: 100px;
 			
 		}
+		.link-vignette {
+			//align-self: center;
+		}
 		.element-genre {
 			color: $gris_medium;
 		}
@@ -189,9 +199,9 @@ img.lozad {
 			width: 15px;
 			height: 15px;
 			margin-right: 1em;
-
+			
 		}
-		#n-blanc-rond-rouge {
+		#m-blanc-rond-rouge {
 			width: 50px;
 			height: 50px;
 		}
