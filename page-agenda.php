@@ -18,7 +18,7 @@ $lastDayThisMonth = date("Y/m/t");
 $years = array('2020','2021',/*'2022','2023','2024','2025','2026','2027','2028','2029','2030'*/);
 
 $months = get_months_list();
-$genres = get_main_genres( false );
+$_genres = get_main_genres( false );
 
 
 $dt = new DateTime($today);
@@ -46,27 +46,26 @@ $is_pub = false;
 		<main id="main" class="site-main">
 			<article>
 
-			<div id="wrap-new-featured-slider">
-				<ul id="new-featured-slider">
+			<div id="wrap-square-featured-slider">
+				<ul id="square-featured-slider">
 					<?php
-						$slider_count = 6;	
-						while( $slider_count > 0 ){
-							include( locate_template( '/template-parts/modules/element-slider.php', false, false ) );
-							$slider_count--;
+						$agendas_commentes = get_agendas_commentes();
+						foreach( $agendas_commentes as $item ){
+							include( locate_template( '/template-parts/modules/element-slider-square.php', false, false ) );
 						}
 					?>
 				</ul><!-- new-featured-slider -->
 			</div><!-- wrap-new-featured-slider -->
 							
-				<header class="entry-header section">
-					<h1 class="entry-title has-text-align-center"><?php the_title(); ?></h1>
+				<header class="entry-header">
+					<h1 class="entry-title has-text-align-center entry-title-agenda"><?php _e('Agenda','panm360'); ?> <span class="bold">360</span></h1>
 				</header>
 			
 				<div class="entry-content">
 					<?php the_content();?>
 				</div><!-- .entry-content -->
 				
-				<section class="section wide-screen" id="agenda-filtres-section">
+				<section class="wide-screen" id="agenda-filtres-section">
 					<form id="agenda-filtres">
 						<div class="icon-text">
 							<svg class="icon blanc"><use xlink:href="#M_panm"></use></svg>
@@ -93,7 +92,7 @@ $is_pub = false;
 						
 						<select id="agenda-genre">
 							<option value="0"><?php _e('Style musical','panm360'); ?></option>
-							<?php foreach( $genres as $genre): ?>
+							<?php foreach( $_genres as $genre): ?>
 								<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
 							<?php endforeach; ?>							
 						</select>

@@ -1,10 +1,16 @@
+h1.entry-title-agenda {
+	font-weight: 300;
+	text-align: left;
+	text-transform: capitalize;
+	margin-bottom: 50px;
+}
 .single-agenda-date-genre {
 	border-bottom: 2px solid $gris_ultra_light;
 	border-top: 2px solid $gris_ultra_light;
 	text-transform: uppercase;
-	padding: 10px 0;
+	padding: 1em 0;
 	span {
-		display: block;
+		
 		font-family: $rubik;
 	}
 	.single-agenda-date {
@@ -15,19 +21,20 @@
 		font-size: 0.938em;
 		font-weight: 400;
 		color: $rouge;
+		display: block;
 	}
 }
 .single-agenda-salle-prix {
 	border-bottom: 2px solid $gris_ultra_light;
 	text-transform: uppercase;
-	padding: 10px 0;
+	padding: 1em 0;
 	margin-bottom: 24px;
 	span {
 		display: block;
 		font-family: $rubik;
 	}	
 	.single-agenda-salle {
-		font-size: 20px;
+		font-size: 1em;
 		font-weight: 500;
 		text-transform: none;
 	}
@@ -69,6 +76,9 @@
 }
 
 @media screen and (min-width: 980px){
+	h1.entry-title-agenda {
+		font-size: 51px;
+	}
 	.single-agenda--agenda-mini {
 		display: block;
 	}
@@ -96,5 +106,11 @@
 	}
 	.post-agenda .single-album-body {
 		width: calc( 100% - ( 405px + 36px ));
+	}
+}
+
+@media screen and (min-width: 1024px){
+	h1.entry-title-agenda {
+		margin: 1.650em 0;
 	}
 }

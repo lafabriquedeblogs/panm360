@@ -1740,6 +1740,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/src/scss/slider_square.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/slider_square.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/src/scss/top-360-hero.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -2224,6 +2237,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/modules/element-main.php",
+		"oF": 0
+		},
+	"/template-parts/modules/element-slider-square.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/element-slider-square.php",
 		"oF": 0
 		},
 	"/template-parts/modules/element-slider.php": {

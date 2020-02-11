@@ -30,13 +30,16 @@
 
 	function array_flatten($array) {
 	
-	   $return = array();
-	   foreach ($array as $key => $value) {
-	       if (is_array($value)){ $return = array_merge($return, array_flatten($value));}
-	       else {$return[$key] = $value;}
-	   }
-	   return $return;
+		$return = array();
+		foreach ( $array as $key => $value ) {
+			if ( is_array($value) ){
+				$return = array_merge( $return , array_flatten( $value ) );
+			} else {
+				$return[$key] = $value;
+			}
+		}
 	
+		return $return;
 	}	
 
 	function my_posts_where( $where ) {
@@ -50,13 +53,13 @@
 		
 
   	
-/*
+	/*
     	$result = get_transient( 'liste_journaliere_des_concerts' );
 		
     	if ( false === $result ) {
     	    set_transient( 'liste_journaliere_des_concerts', $result, DAY_IN_SECONDS );
     	}
-*/
+	*/
 			$dates = createDateRange( $start , $end );
 					
 			$concerts = array();
@@ -111,6 +114,7 @@
 		return $result;//$events_query->posts;
 	}
 
+/*
 	add_action( 'publish_post', 'panm360_purge_agenda_transient' );
 	
 	function panm360_purge_agenda_transient( $ID, $post ) {
@@ -118,6 +122,7 @@
 	        delete_transient( 'liste_journaliere_des_concerts' );
 	    }
 	}
+*/
 	
 	function get_time_concert( $post_id, $date ){
 		
@@ -143,3 +148,60 @@
 		echo $lien_agenda_complet;
 	}
 	
+	function get_agendas_commentes(){
+		
+		$start = date('Y/m/d');
+		$end = date('Y/m/d', strtotime("+30 days"));
+		
+		$dates = createDateRange( $start , $end );
+					
+		$concerts = array();
+		$i = 0;
+		
+		add_filter( 'posts_where','my_posts_where' );
+		
+		
+		while( $i <= count($dates)-1 ){
+		
+			$args = array(
+			    'post_type' => 'agenda',
+			    'posts_per_page' => -1,
+			    'orderby' => 'meta_value',
+			    'order' => 'ASC',
+			    'suppress_filters' => false,
+			    'post_status' => 'publish',
+			    'meta_query' => array(
+				    'relation' => 'AND',
+			        array(
+			            'key' => 'dates_$_date_concert',
+			            'value' => $dates[$i],
+			            'compare' => '=',
+			        ),
+			        array(
+			            'key' => 'agenda_commente',
+			            'value' => 1,
+			            'compare' => '=',					        
+			        )		        
+			    ),
+			    
+			);	
+			
+			// Make the query
+			$events_query = new WP_query( $args );
+			$concerts[ $dates[$i] ] = $events_query->posts;
+			$i++;
+			
+		}
+		
+		
+		remove_filter( 'posts_where','my_posts_where' );
+		
+		wp_reset_query();
+		
+		$result = array_filter($concerts);
+		
+		$_result = array_flatten($result);
+		
+		$re_sult = array_unique($_result,SORT_REGULAR);		
+		return $re_sult;
+	}
