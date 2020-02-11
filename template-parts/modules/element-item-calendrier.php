@@ -43,7 +43,7 @@
 			<?php if( $informations_supplementaires ): ?>
 			<span class="element-infos-supp"><?php echo implode(', ', $informations_supplementaires );?></span>
 			<?php endif; ?>
-			<span class="element-location"><?php echo $salle;?> - <?php echo $ville?></span>
+			<span class="element-location"><span class="medium"><?php echo $salle;?></span> - <?php echo $ville?></span>
 			<span class="element-prix"><?php echo $prix['montant'];?></span>
 		</div>
 
