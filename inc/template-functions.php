@@ -329,6 +329,7 @@ function get_liste_filtre_artiste(){
 		//$id = $artiste->ID;
 		$liste[] = '<a href="'.$lien_album.'">'.$nom.'</a>';
 	}
+	wp_reset_query( );
 	return implode(" • ", $liste);
 }
 
@@ -352,4 +353,25 @@ function get_articles_par_terms( $term , $posts_per_page = -1 ){
 	
 	return $my_query->posts;
 	
+}
+
+function menu_langue(){
+	
+	global $post;
+	
+	$post_type = get_post_type( $post );
+	
+	$others_l = ( ICL_LANGUAGE_CODE == 'en' ) ? 'fr' : 'en';
+	$yop = icl_get_languages('skip_missing=1&orderby=KEY&order=DIR&link_empty_to=str');
+
+	$translations = apply_filters( 'wpml_element_has_translations', NULL , $post->ID, $post_type );
+	
+	if( $translations ) {
+		?>
+			<li id="panm-lang-switch" class="menu-item">
+				<a href="<?php echo $yop[$others_l]['url'];?>"><?php echo strtoupper( $others_l );?></a>
+			</li>	
+		<?php			
+	}
+	return;
 }

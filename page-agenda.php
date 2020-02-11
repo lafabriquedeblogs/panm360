@@ -45,6 +45,19 @@ $is_pub = false;
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<article>
+
+			<div id="wrap-new-featured-slider">
+				<ul id="new-featured-slider">
+					<?php
+						$slider_count = 6;	
+						while( $slider_count > 0 ){
+							include( locate_template( '/template-parts/modules/element-slider.php', false, false ) );
+							$slider_count--;
+						}
+					?>
+				</ul><!-- new-featured-slider -->
+			</div><!-- wrap-new-featured-slider -->
+							
 				<header class="entry-header section">
 					<h1 class="entry-title has-text-align-center"><?php the_title(); ?></h1>
 				</header>

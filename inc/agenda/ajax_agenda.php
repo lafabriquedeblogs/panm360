@@ -38,6 +38,7 @@ function fn_display_agenda(){
 	$month_string = date_i18n('F',  strtotime($start) );
 	$year_string = date_i18n('Y',  strtotime($start) );
 	
+
 	$events = get_liste_concerts( $start, $end, $count, $genre );
 
 

@@ -908,9 +908,6 @@ p {
 #agenda .plus-de {
   display: none; }
 
-#agenda .element.aside-item-calendrier {
-  margin-bottom: 50px; }
-
 .full-month-agenda .calendrier-ul-container {
   display: block; }
 
@@ -1517,8 +1514,8 @@ img.lozad {
       align-self: flex-start;
       font-size: 12px;
       text-transform: uppercase;
-      color: #4d4d4d;
-      margin-bottom: 7px; }
+      color: #000;
+      margin-bottom: 1px; }
     .element.aside-item-calendrier .detail {
       display: -webkit-box;
       display: flex;
@@ -1529,11 +1526,12 @@ img.lozad {
       -webkit-box-flex: 1;
               flex: 1 1;
       padding-right: 1.5em;
-      border-bottom: 1px solid #5BC6E8;
+      border-bottom: 2px solid #F4F4F8;
       padding-bottom: 20px;
-      height: 100%; }
+      height: 100%;
+      color: #808080; }
     .element.aside-item-calendrier .element-title {
-      margin-bottom: 0;
+      margin: 2px 0;
       font-size: 1.125em;
       font-weight: 500; }
     .element.aside-item-calendrier .element-infos-supp {
@@ -1545,11 +1543,13 @@ img.lozad {
       color: #808080; }
     .element.aside-item-calendrier .vignette {
       display: block;
-      width: 50px;
-      height: 50px;
-      margin-right: 24px;
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
       display: block;
       border-radius: 100px; }
+    .element.aside-item-calendrier .element-genre {
+      color: #808080; }
     .element.aside-item-calendrier .icon {
       width: 15px;
       height: 15px;

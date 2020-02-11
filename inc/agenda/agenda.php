@@ -50,10 +50,13 @@
 		
 
   	
+/*
     	$result = get_transient( 'liste_journaliere_des_concerts' );
 		
     	if ( false === $result ) {
-
+    	    set_transient( 'liste_journaliere_des_concerts', $result, DAY_IN_SECONDS );
+    	}
+*/
 			$dates = createDateRange( $start , $end );
 					
 			$concerts = array();
@@ -102,8 +105,7 @@
 			
 			$_result = array_flatten($result);
 
-    	    set_transient( 'liste_journaliere_des_concerts', $result, DAY_IN_SECONDS );
-    	}
+
     	
     	
 		return $result;//$events_query->posts;
