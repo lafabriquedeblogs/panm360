@@ -110,7 +110,7 @@ $is_pub = false;
 					
 				</section>
 				
-				<section class="section">
+				<section>
 					<div id="agenda" class="section-inner">
 						
 						<div class="full-month-agenda current-month">

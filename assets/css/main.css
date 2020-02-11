@@ -893,20 +893,28 @@ p {
     -webkit-box-flex: 0;
             flex: 0 0 auto; } }
 
+h1.entry-title-agenda {
+  font-weight: 300;
+  text-align: left;
+  text-transform: capitalize;
+  margin-bottom: 50px; }
+
 .is-style-agenda-first-part {
   color: red; }
 
-#agenda h4 {
-  text-transform: capitalize;
-  font-size: 2em; }
-  #agenda h4 .genre-nom {
-    text-transform: none;
-    color: #FE4A49;
-    font-weight: 500;
-    font-size: 0.750em; }
-
-#agenda .plus-de {
-  display: none; }
+#agenda {
+  margin-top: 50px; }
+  #agenda h4 {
+    text-transform: capitalize;
+    font-size: 1.7em;
+    font-weight: 500; }
+    #agenda h4 .genre-nom {
+      text-transform: none;
+      color: #FE4A49;
+      font-weight: 500;
+      font-size: 0.750em; }
+  #agenda .plus-de {
+    display: none; }
 
 .full-month-agenda .calendrier-ul-container {
   display: block; }
@@ -920,8 +928,8 @@ p {
 
 #agenda-filtres-section {
   background-color: #333333;
-  padding-top: 1em;
-  padding-bottom: 1em; }
+  padding-top: 1.20em;
+  padding-bottom: 1.20em; }
 
 #agenda-filtres {
   max-width: 1292px;
@@ -1008,6 +1016,9 @@ p {
       width: auto; } }
 
 @media screen and (min-width: 980px) {
+  h1.entry-title-agenda {
+    font-size: 51px;
+    margin: 0.680em 0; }
   #agenda-filtres {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1677,9 +1688,9 @@ img.lozad {
       color: #808080; }
     .element.aside-item-calendrier .vignette {
       display: block;
-      width: 30px;
-      height: 30px;
-      margin-right: 15px;
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
       display: block;
       border-radius: 100px; }
     .element.aside-item-calendrier .element-genre {
@@ -1849,12 +1860,6 @@ img.lozad {
     margin: 0 0 1em 0; } }
 
 /* Single Agenda */
-h1.entry-title-agenda {
-  font-weight: 300;
-  text-align: left;
-  text-transform: capitalize;
-  margin-bottom: 50px; }
-
 .single-agenda-date-genre {
   border-bottom: 2px solid #F4F4F8;
   border-top: 2px solid #F4F4F8;
@@ -1913,8 +1918,6 @@ h1.entry-title-agenda {
     max-width: 405px; } }
 
 @media screen and (min-width: 980px) {
-  h1.entry-title-agenda {
-    font-size: 51px; }
   .single-agenda--agenda-mini {
     display: block; }
   .post-agenda {
@@ -1940,10 +1943,6 @@ h1.entry-title-agenda {
     margin-left: 0; }
   .post-agenda .single-album-body {
     width: calc( 100% - ( 405px + 36px )); } }
-
-@media screen and (min-width: 1024px) {
-  h1.entry-title-agenda {
-    margin: 1.650em 0; } }
 
 @media screen and (min-width: 535px) {
   .album {

@@ -1,9 +1,4 @@
-h1.entry-title-agenda {
-	font-weight: 300;
-	text-align: left;
-	text-transform: capitalize;
-	margin-bottom: 50px;
-}
+
 .single-agenda-date-genre {
 	border-bottom: 2px solid $gris_ultra_light;
 	border-top: 2px solid $gris_ultra_light;
@@ -77,9 +72,7 @@ h1.entry-title-agenda {
 }
 
 @media screen and (min-width: 980px){
-	h1.entry-title-agenda {
-		font-size: 51px;
-	}
+
 	.single-agenda--agenda-mini {
 		display: block;
 	}
@@ -110,8 +103,3 @@ h1.entry-title-agenda {
 	}
 }
 
-@media screen and (min-width: 1024px){
-	h1.entry-title-agenda {
-		margin: 1.650em 0;
-	}
-}

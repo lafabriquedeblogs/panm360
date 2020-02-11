@@ -1,12 +1,20 @@
+h1.entry-title-agenda {
+	font-weight: 300;
+	text-align: left;
+	text-transform: capitalize;
+	margin-bottom: 50px;
+}
+
 .is-style-agenda-first-part {
 	color: red;
 }
 
 #agenda {
+	margin-top: 50px;
 	h4 {
 		text-transform: capitalize;
-		font-size: 2em;
-		
+		font-size: 1.7em;
+		font-weight: 500;
 		.genre-nom {
 			text-transform: none;
 			color: $rouge;
@@ -42,8 +50,8 @@
 
 #agenda-filtres-section {
 	background-color: $gris_ultra_dark;
-	padding-top:	1em;
-	padding-bottom: 1em;
+	padding-top:	1.20em;
+	padding-bottom: 1.20em;
 	
 }
 #agenda-filtres {
@@ -139,6 +147,10 @@
 	}
 }
 @media screen and (min-width:980px){
+	h1.entry-title-agenda {
+		font-size: 51px;
+		margin: 0.680em 0;
+	}
 	#agenda-filtres {
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -161,6 +173,7 @@
 		}
 	}
 }
+
 @media screen and (min-width:1280px){
 	.full-month-agenda {
 		.calendrier-ul-container {
