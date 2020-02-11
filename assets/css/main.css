@@ -909,10 +909,12 @@ h1.entry-title-agenda {
     font-size: 1.7em;
     font-weight: 500; }
     #agenda h4 .genre-nom {
-      text-transform: none;
+      text-transform: capitalize;
       color: #FE4A49;
-      font-weight: 500;
-      font-size: 0.750em; }
+      font-weight: 700;
+      font-size: 0.900em; }
+      #agenda h4 .genre-nom::before {
+        content: "- "; }
   #agenda .plus-de {
     display: none; }
 
@@ -940,7 +942,26 @@ h1.entry-title-agenda {
           align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: column; }
+          flex-direction: column;
+  /*
+	select {
+		border:none;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 10px 30px 10px 10px;
+		font-size: 11px;
+		font-family: $rubik;
+		font-weight: 700;
+		-moz-appearence: none;
+		-webkit-appearence: none;
+		appearance: none;
+		border-radius: 5px;
+		background: $bleu url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8.685' height='17.029' viewBox='0 0 8.685 17.029'><g><path d='M11.752,5.677l3,3,1.334-1.334L11.752,3,7.41,7.342,8.753,8.676Zm0,11.674-3-3L7.419,15.686l4.333,4.342,4.342-4.342-1.343-1.334Z' transform='translate(-7.41 -3)' fill='white'/></g></svg>") no-repeat;
+		background-position: right 10px top 50%;
+		margin: 5px;
+		width: calc( 100% - 20px );
+	}
+*/ }
   #agenda-filtres .icon-text {
     display: -webkit-box;
     display: flex;
@@ -957,29 +978,19 @@ h1.entry-title-agenda {
       font-family: "Rubik", sans-serif;
       font-size: .850em;
       font-weight: 500; }
-  #agenda-filtres select {
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 10px 30px 10px 10px;
-    font-size: 11px;
-    font-family: "Rubik", sans-serif;
-    font-weight: 700;
-    -moz-appearence: none;
-    -webkit-appearence: none;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    border-radius: 5px;
-    background: #5BC6E8 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8.685' height='17.029' viewBox='0 0 8.685 17.029'><g><path d='M11.752,5.677l3,3,1.334-1.334L11.752,3,7.41,7.342,8.753,8.676Zm0,11.674-3-3L7.419,15.686l4.333,4.342,4.342-4.342-1.343-1.334Z' transform='translate(-7.41 -3)' fill='white'/></g></svg>") no-repeat;
-    background-position: right 10px top 50%;
-    margin: 5px;
-    width: calc( 100% - 20px); }
+  #agenda-filtres .select-light {
+    margin: 5px 10px 10px 5px;
+    width: calc( 100% - 20px);
+    max-width: none; }
+    #agenda-filtres .select-light select {
+      width: 100%;
+      font-family: "Rubik", sans-serif; }
   #agenda-filtres .bouton, #agenda-filtres .is-style-plus-infos a, .is-style-plus-infos #agenda-filtres a {
     width: calc( 100% - 20px); }
   #agenda-filtres button {
     padding: 10px 20px;
-    background: #5BC6E8; }
+    background: #808080;
+    color: #fff; }
 
 .full-row {
   -webkit-box-flex: 0;
@@ -1006,12 +1017,20 @@ h1.entry-title-agenda {
     -webkit-box-direction: normal;
             flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 1em; }
+    padding: 0 1em;
+    /*
+		select {
+			width: auto;
+			margin: 0 10px 0 0;
+		}
+*/ }
     #agenda-filtres div {
       width: 100%; }
-    #agenda-filtres select {
-      width: auto;
-      margin: 0 10px 0 0; }
+    #agenda-filtres .select-light {
+      -webkit-box-flex: 1;
+              flex: auto;
+      margin: 0 10px 0 0;
+      width: auto; }
     #agenda-filtres .bouton, #agenda-filtres .is-style-plus-infos a, .is-style-plus-infos #agenda-filtres a {
       width: auto; } }
 
@@ -1028,6 +1047,14 @@ h1.entry-title-agenda {
     #agenda-filtres div {
       width: auto;
       margin-bottom: 0; }
+    #agenda-filtres .select-light {
+      -webkit-box-flex: 0;
+              flex: 0 0 15%;
+      margin: 0 10px 0 0;
+      width: auto;
+      padding-top: 8px; }
+      #agenda-filtres .select-light::after {
+        top: 7px; }
     #agenda-filtres .icon-text {
       margin-bottom: 0; }
   .full-month-agenda .calendrier-ul-container .element.aside-item-calendrier {

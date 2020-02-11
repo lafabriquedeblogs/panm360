@@ -71,7 +71,8 @@ $is_pub = false;
 							<svg class="icon blanc"><use xlink:href="#M_panm"></use></svg>
 							<p class="blanc no-margins upper"><?php _e('Recherche','panm360'); ?>:</p>
 						</div>
-						<select id="agenda-year">
+						<div class="select-light">
+							<select id="agenda-year">
 							<option value=""><?php _e('Année','panm360'); ?></option>
 								<?php
 									foreach( $years as $cyear ): 
@@ -80,22 +81,25 @@ $is_pub = false;
 								<option value="<?php echo $cyear;?>" <?php echo $selected;?>><?php echo $cyear;?></option>
 								<?php endforeach; ?>
 						</select>
-						
-						<select id="agenda-month">
-							<option value=""><?php _e('Mois','panm360'); ?></option>
-							<?php foreach( $months as $m => $string):
-								$selected = ($m == $month) ? 'selected' : ''; 
-							?>
-								<option value="<?php echo $m;?>" <?php echo $selected;?>><?php echo $string;?></option>
-							<?php endforeach; ?>
-						</select>
-						
-						<select id="agenda-genre">
-							<option value="0"><?php _e('Style musical','panm360'); ?></option>
-							<?php foreach( $_genres as $genre): ?>
-								<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
-							<?php endforeach; ?>							
-						</select>
+						</div>
+						<div class="select-light">
+							<select id="agenda-month">
+								<option value=""><?php _e('Mois','panm360'); ?></option>
+								<?php foreach( $months as $m => $string):
+									$selected = ($m == $month) ? 'selected' : ''; 
+								?>
+									<option value="<?php echo $m;?>" <?php echo $selected;?>><?php echo $string;?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="select-light">
+							<select id="agenda-genre">
+							   <option value="0"><?php _e('Style musical','panm360'); ?></option>
+							   <?php foreach( $_genres as $genre): ?>
+							   	<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
+							   <?php endforeach; ?>							
+							</select>
+						</div>
 						
 						<?php $nonce = wp_create_nonce("my_user_like_nonce"); ?>
 						<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>" />

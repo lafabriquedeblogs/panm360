@@ -16,10 +16,13 @@ h1.entry-title-agenda {
 		font-size: 1.7em;
 		font-weight: 500;
 		.genre-nom {
-			text-transform: none;
+			text-transform: capitalize;
 			color: $rouge;
-			font-weight:500;
-			font-size: 0.750em;
+			font-weight:700;
+			font-size: 0.900em;
+			&::before {
+				content:"- ";
+			}
 		}
 	}
 	.plus-de {
@@ -79,6 +82,20 @@ h1.entry-title-agenda {
 			
 		}
 	}
+	
+	.select-light {
+
+		margin: 5px 10px 10px 5px;
+		width: calc( 100% - 20px );
+		max-width: none;
+		select {
+			width: 100%;
+			//font-size: 11px;
+			font-family: $rubik;
+		}
+	}
+
+/*
 	select {
 		border:none;
 		color: #fff;
@@ -96,12 +113,14 @@ h1.entry-title-agenda {
 		margin: 5px;
 		width: calc( 100% - 20px );
 	}
+*/
 	.bouton {
 		width: calc( 100% - 20px );
 	}
 	button {
 		padding: 10px 20px;
-		background: $bleu;
+		background: $gris_medium;
+		color: #fff;
 	}
 }
 
@@ -137,10 +156,17 @@ h1.entry-title-agenda {
 		div {
 			width: 100%;
 		}
+		.select-light {
+			flex: auto;
+			margin:  0 10px 0 0;
+			width: auto;
+		}
+/*
 		select {
 			width: auto;
 			margin: 0 10px 0 0;
 		}
+*/
 		.bouton {
 			width: auto;
 		}
@@ -158,6 +184,15 @@ h1.entry-title-agenda {
 		div {
 			width: auto;
 			margin-bottom: 0;
+		}
+		.select-light {
+			flex: 0 0 15%;
+			margin:  0 10px 0 0;
+			width: auto;
+			padding-top: 8px;
+			&::after {
+				top: 7px;
+			}
 		}
 		.icon-text {
 			margin-bottom: 0;	
