@@ -16,9 +16,7 @@
 				foreach( $_genres_raw as $_genre ){
 					$_genres[] = $_genre->name;
 				}
-				
-				
-				
+	
 				$auteur_id = get_the_author_meta('ID');
 				$auteur = get_the_author_meta('display_name');
 				$auteur_link =  get_author_posts_url($auteur_id) ;

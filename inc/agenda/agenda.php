@@ -103,6 +103,7 @@
 				
 			}
 			remove_filter( 'posts_where','my_posts_where' );
+			wp_reset_query();
 			
 			$result = array_filter($concerts);
 			
