@@ -24,12 +24,27 @@
 				$ville =  get_ville( $post_id );
 				$salle = get_salle( $post_id );
 				
+				$dates_arrays = get_field('dates', $post_id);
+				$single_dates = array();
+				foreach( $dates_arrays as $date ){
+					
+					$ddate = str_replace('/', '-', $date['date_concert']);
+					$jour = date_i18n('D\&\n\b\s\p\;d\&\n\b\s\p\;M\&\n\b\s\p\;Y', strtotime($ddate));
+					
+					if( !empty($jour) && !empty($date['heure_concert'])){
+						$single_dates[] = $jour.'&nbsp;•&nbsp;'.$date['heure_concert'];
+					}
+					
+				}				
+				
+				/*
 				$today = date('d M Y');
 				$timestamp = strtotime($today);
 				
 				$date = date_i18n('D d M Y', $timestamp);
 				$year = date_i18n('Y', $timestamp);
 				$heure = get_time_concert( $post_id, date_i18n('Ymd', $timestamp) );
+				*/
 				
 				$prix = get_field('prix',$post_id );
 				$single_informations_supplementaires = get_field( 'informations_supplementaires' , $post_id );
@@ -112,7 +127,7 @@
 					<?php the_title( '<h1 class="entry-title">', '</h1>' );?>
 					<span class="single-agenda-infos-sup"><?php echo implode(', ', $single_informations_supplementaires );?></span>	
 					<div class="single-agenda-date-genre">
-						<span class="single-agenda-date"><?php echo $date;?> - <?php echo $heure;?></span>
+						<span class="single-agenda-date"><?php echo implode(' / ', $single_dates );?></span>
 						<span class="single-agenda-genre"><?php echo implode( ' / ', $_genres );?></span>
 					</div>
 					
