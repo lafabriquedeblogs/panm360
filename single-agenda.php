@@ -100,7 +100,7 @@
 				foreach( $dates_arrays as $date ){
 					
 					$ddate = str_replace('/', '-', $date['date_concert']);
-					$jour = date_i18n('D\&\n\b\s\p\;d\&\n\b\s\p\;M\&\n\b\s\p\;Y', strtotime($ddate));
+					$jour = date_i18n('D\&\n\b\s\p\;\<\s\p\a\n \c\l\a\s\s\=\"\b\o\l\d\"\>d\&\n\b\s\p\;M\<\/\s\p\a\n\>\&\n\b\s\p\;Y', strtotime($ddate));
 					
 					if( !empty($jour) && !empty($date['heure_concert'])){
 						$single_dates[] = $jour.'&nbsp;•&nbsp;'.$date['heure_concert'];

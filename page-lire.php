@@ -19,7 +19,7 @@ get_header();
 			
 					<section class="section">
 						<div id="critiques-albums" class="section-inner">
-							<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+							<h4 class="section-titre"><span><?php _e('Critiques d\'albums','panm360'); ?></span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 							
 							<div class="section-content ">
 								
@@ -64,7 +64,7 @@ get_header();
 								
 									
 									<div class="title-calendrier">
-										<h2><?php _e('Agenda','panm360'); ?><span class="bold">360</span></h2>
+										<h2><?php _e('Agenda','panm360'); ?> <span class="bold">360</span></h2>
 										<form id="choix-style-musical">
 											<div class="select-light">
 												<select id="agenda-genre">

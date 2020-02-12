@@ -512,7 +512,8 @@ h1, h2, h3, h4, h5.h6 {
   font-family: "Rubik", sans-serif;
   font-size: 1em;
   font-weight: 700;
-  margin: 0 0 1em 0; }
+  margin: 0 0 1em 0;
+  color: #333333; }
 
 h1 {
   font-size: 2.375em;
@@ -1902,7 +1903,7 @@ img.lozad {
     font-family: "Rubik", sans-serif; }
   .single-agenda-date-genre .single-agenda-date {
     font-size: 1.250em;
-    font-weight: 700; }
+    font-weight: 400; }
   .single-agenda-date-genre .single-agenda-genre {
     font-size: 0.938em;
     font-weight: 400;

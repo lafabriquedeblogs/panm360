@@ -60,7 +60,7 @@ get_header();
 								
 									
 									<div class="title-calendrier">
-										<h2><?php _e('Agenda','panm360'); ?><span class="bold">360</span></h2>
+										<h2><?php _e('Agenda','panm360'); ?> <span class="bold">360</span></h2>
 										<form id="choix-style-musical">
 											<div class="select-light">
 												<select id="agenda-genre">
