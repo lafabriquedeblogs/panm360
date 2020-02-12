@@ -48,7 +48,7 @@ img {
 a {
 	color: $gris_dark;
 }
-.panm-contents {
+.single .entry-content {
 	p, ul, ol {
 		a {
 			text-decoration: none;
@@ -457,6 +457,9 @@ h1.category-title {
 	}
 	h2.sub-title{
 		margin-top: 0;
+	}
+	.addthis_inline_share_toolbox {
+		transform: scale(0.8,0.8) translateX(-20px);
 	}
 }
 @media screen and (min-width:1280px){

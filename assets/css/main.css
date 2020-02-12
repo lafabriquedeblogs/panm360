@@ -316,6 +316,17 @@ template {
 figure {
   margin: 0; }
 
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  opacity: .5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background: url("../img/grid.png") center top repeat-y; }
+
 #primary, #masthead {
   max-width: 83em; }
 
@@ -323,7 +334,7 @@ figure {
   padding: 0; }
 
 .single #content, .single #primary {
-  padding: 0 1.125em; }
+  padding: 0 1.45em; }
 
 #content.collapse {
   height: 1px;
@@ -544,7 +555,7 @@ img {
 a {
   color: #4d4d4d; }
 
-.panm-contents p a, .panm-contents ul a, .panm-contents ol a {
+.single .entry-content p a, .single .entry-content ul a, .single .entry-content ol a {
   text-decoration: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#5BC6E8), to(#5BC6E8));
   background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#5BC6E8, #5BC6E8);
@@ -555,7 +566,7 @@ a {
   -webkit-transition: color 300ms ease-out;
   transition: color 300ms ease-out; }
 
-.panm-contents p a:hover, .panm-contents ul a:hover, .panm-contents ol a:hover {
+.single .entry-content p a:hover, .single .entry-content ul a:hover, .single .entry-content ol a:hover {
   color: #5BC6E8;
   background: none;
   text-decoration: none; }
@@ -905,7 +916,10 @@ p {
   h1.entry-title {
     margin-top: 0; }
   h2.sub-title {
-    margin-top: 0; } }
+    margin-top: 0; }
+  .addthis_inline_share_toolbox {
+    -webkit-transform: scale(0.8, 0.8) translateX(-20px);
+            transform: scale(0.8, 0.8) translateX(-20px); } }
 
 @media screen and (min-width: 1280px) {
   .infolettre .panm360-infolettre {
