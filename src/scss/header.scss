@@ -40,7 +40,6 @@
 	
 .site-branding {
 	background-color: rgba(255,255,255,1);
-	
 	display: none;
 	justify-content: space-between;
 	img {
@@ -49,16 +48,48 @@
 		top: 18px;
 	}
 }
+
 #branding-navigation{
 	//display: none;
+	a {
+		text-decoration: none;
+		display: block;
+		position: relative;
+		.baseline {
+			position: absolute;
+			top: 70px;
+			left: 0;
+			display: block;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: $rubik;
+			font-size: .780em;
+			font-weight: 500;
+		}
+	}
 	svg.icon {
 		height: 60px;
 		width: 250px;
-		//border: 1px solid red;
-		//transform: translateX(-15px);
 	}
 }
+
 #logo-mobile {
+	a {
+		text-decoration: none;
+		display: block;
+		position: relative;
+		.baseline {
+			position: absolute;
+			top: 53px;
+			left: 4px;
+			display: block;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: $rubik;
+			font-size: .880em;
+			font-weight: 500;
+		}
+	}
 	svg.icon {
 		height: 44px;
 		width: 200px;

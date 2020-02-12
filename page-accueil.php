@@ -26,7 +26,7 @@ get_header();
 								'post_type' => 'records',
 								'posts_per_page' => $albums_count,
 								'post_status' => 'publish',
-								'orderby' => 'date',
+								'orderby' => 'rand',
 								'order' => 'DESC'
 							);
 							
@@ -120,7 +120,7 @@ get_header();
 				</div>
 			</section>
 
-			
+<?php /* ?>			
 			<div id="top-360-hero" class="wide-screen"></div>			
 			<div id="text-introduction-panm360">
 				<?php
@@ -170,7 +170,7 @@ get_header();
 					
 				</div>
 			</section>
-	
+<?php */ ?>	
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

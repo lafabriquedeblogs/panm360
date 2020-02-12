@@ -5,7 +5,7 @@
 
 
 		
-		<article id="post-<?php the_ID(); ?>" <?php post_class("post-agenda"); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class("post-agenda section"); ?>>
 			
 			<div class="album-cover">
 				<div class="lp-cover">
@@ -16,7 +16,7 @@
 				<div class="addthis_inline_share_toolbox"></div>
 				
 				<?php
-					/*
+					/**/
 					$am_start = date('Y/m/d');
 					$am_end = '2020/06/30';
 									
@@ -29,7 +29,7 @@
 					$timeout = false;
 					$today_timestamp = strtotime($am_start);
 					
-					$count = 8;
+					$count = 5;
 					
 					$calendrier = get_liste_concerts( $am_start, $am_end , $count, false );
 					
@@ -72,7 +72,7 @@
 						</ul>
 					</div><!-- #agenda_mini -->
 				</div>				
-			<?php */ ?>	
+			<?php /**/ ?>	
 			</div>
 		<?php
 			

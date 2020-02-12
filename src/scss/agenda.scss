@@ -49,6 +49,7 @@ h1.entry-title-agenda {
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
+	margin-top: -10px;
 }
 
 #agenda-filtres-section {
@@ -131,9 +132,13 @@ h1.entry-title-agenda {
 		margin: 20px auto 50px;
 	}	
 }
-
+#agenda_mini {
+	padding: 0 1.125em;
+}
 @media screen and (min-width:550px){
-
+#agenda_mini {
+	padding: 0;
+}
 	.full-month-agenda {
 		.calendrier-ul-container {
 			display: flex;

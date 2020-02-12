@@ -5,7 +5,7 @@
 	max-width:$max-width;
 }
 #content, #primary {
-	padding: 0 1.125em;
+	padding: 0;
 }
 
 #content.collapse {
@@ -49,6 +49,9 @@
 }
 
 @media (min-width: 535px){
+#content, #primary {
+	padding: 0 1.125em;
+}
 	.section-content--main {
 		display: flex;
 		flex-direction: row;
@@ -117,7 +120,9 @@
 		margin: 0 auto;
 	}
 }
-
+@media (min-width: 768px){
+	
+}
 @media (min-width: 782px){
 /*
 	.wp-block-column:not(:first-child) {

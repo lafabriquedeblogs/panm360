@@ -55,6 +55,7 @@
 				<a href="<?php echo get_site_url();?>">
 					<?php /*<img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="Panm360"/>*/ ?>
 					<svg class="icon"><use xlink:href="#panm360"></use></svg>
+					<span class="baseline">Les meilleures musiques de partout</span>
 				</a>
 		</li>
 		<li id="menu-panm" >

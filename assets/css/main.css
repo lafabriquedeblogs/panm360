@@ -320,7 +320,7 @@ figure {
   max-width: 83em; }
 
 #content, #primary {
-  padding: 0 1.125em; }
+  padding: 0; }
 
 #content.collapse {
   height: 1px;
@@ -355,6 +355,8 @@ figure {
   list-style-type: none; }
 
 @media (min-width: 535px) {
+  #content, #primary {
+    padding: 0 1.125em; }
   .section-content--main {
     display: -webkit-box;
     display: flex;
@@ -609,7 +611,8 @@ h1.category-title {
   display: -webkit-box;
   display: flex;
   flex-wrap: nowrap;
-  align-content: center; }
+  align-content: center;
+  padding-left: 1.125em; }
   .section-titre span {
     margin-right: .7em; }
   .section-titre .icone {
@@ -874,6 +877,10 @@ p {
     height: 16px; } }
 
 /* END-LOADER */
+@media screen and (min-width: 535px) {
+  .section-titre {
+    padding-left: 0; } }
+
 @media screen and (min-width: 600px) {
   .filtres-content-tabs {
     -webkit-box-orient: horizontal;
@@ -943,7 +950,8 @@ h1.entry-title-agenda {
   display: flex;
   flex-wrap: nowrap;
   -webkit-box-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-top: -10px; }
 
 #agenda-filtres-section {
   background-color: #333333;
@@ -1015,7 +1023,12 @@ h1.entry-title-agenda {
   .full-row .publicite.publicite-banniere {
     margin: 20px auto 50px; }
 
+#agenda_mini {
+  padding: 0 1.125em; }
+
 @media screen and (min-width: 550px) {
+  #agenda_mini {
+    padding: 0; }
   .full-month-agenda .calendrier-ul-container {
     display: -webkit-box;
     display: flex;
@@ -1471,7 +1484,8 @@ select {
   left: -999em; }
   #square-featured-slider.slick-initialized {
     opacity: 1;
-    position: static;
+    position: relative;
+    left: auto;
     background-color: #F4F4F8; }
 
 .square-featured-slider--slide--row {
@@ -1819,7 +1833,7 @@ img.lozad {
 
 .title-calendrier {
   background: #5BC6E8;
-  padding: 1.750em 74px;
+  padding: 1.750em 30px 1em;
   margin-bottom: 1em; }
   .title-calendrier h2 {
     margin: 0;
@@ -1959,6 +1973,7 @@ img.lozad {
     padding-left: 19%; }
 
 .post-agenda h1.entry-title {
+  font-size: 1.5em;
   margin-bottom: 15px; }
 
 .single-agenda-infos-sup {
@@ -1969,7 +1984,11 @@ img.lozad {
 
 .post-agenda .entry-header .plus-de {
   text-align: left;
-  margin: 0 0 1em 0; }
+  margin: 0 0 1.54em 0; }
+
+@media screen and (min-width: 640px) {
+  .post-agenda h1.entry-title {
+    font-size: 2em; } }
 
 @media screen and (min-width: 768px) {
   .post-agenda .album-cover {
@@ -2008,6 +2027,10 @@ img.lozad {
   .post-agenda .single-album-body {
     width: calc( 100% - ( 405px + 36px )); } }
 
+@media screen and (min-width: 1024px) {
+  .post-agenda h1.entry-title {
+    font-size: 2.275em; } }
+
 @media screen and (min-width: 535px) {
   .album {
     max-width: calc( 50% - 18px); }
@@ -2039,6 +2062,14 @@ img.lozad {
             flex-direction: column; }
     .element.main-item > * {
       width: 100%; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1155px) {
+  .title-calendrier h2 {
+    font-size: 1.550em; } }
+
+@media screen and (min-width: 1024px) {
+  .title-calendrier {
+    padding: 1.750em 74px; } }
 
 @media screen and (min-width: 1280px) {
   .album {

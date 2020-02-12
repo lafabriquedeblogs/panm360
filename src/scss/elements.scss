@@ -290,8 +290,7 @@ img.lozad {
 
 .title-calendrier {
 	background: $bleu;
-
-	padding: 1.750em 74px;
+	padding: 1.750em 30px 1em;;
 	margin-bottom: 1em;
 	h2 {
 		margin: 0;
@@ -362,6 +361,18 @@ img.lozad {
 			width: 100%;
 		 }
 		}
+	}
+}
+@media screen and (min-width:1024px) and (max-width: 1155px){
+	.title-calendrier {
+		h2{
+			font-size: 1.550em;
+		}
+	}	
+}
+@media screen and(min-width:1024px){
+	.title-calendrier {
+		padding: 1.750em 74px;
 	}
 }
 @media screen and(min-width:1280px){

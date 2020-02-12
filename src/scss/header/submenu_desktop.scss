@@ -8,12 +8,12 @@
 	//display: none;
 		max-height: 1px;
 		border-top: 1px solid $gris_light;
-		margin-top: 1em;
+		margin-top: 0;
 }
 @media screen and (min-width:980px){
 	#border-top-menu {
 		display: block;
-
+		margin-top: 1.950em;
 	}
 	#triangle {
 		display:block;

@@ -39,6 +39,7 @@
 				<?php $my_home_url = apply_filters( 'wpml_home_url', get_option( 'home' ) ); ?>
 				<a href="<?php echo $my_home_url;?>">
 					<svg class="icon"><use xlink:href="#panm360"></use></svg>
+					<span class="baseline">Les meilleures musiques de partout</span>
 				</a>
 				
 			</div><!-- .site-branding -->
@@ -57,7 +58,7 @@
 	</header><!-- #masthead -->
 	
 	<!-- filet sous le menu principal -->
-<!-- 	<div id="border-top-menu"></div> -->	
+	<div id="border-top-menu"></div>	
 	
 	<div id="panm360-ghost"></div>
 

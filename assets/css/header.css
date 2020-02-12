@@ -23,9 +23,39 @@
     left: 18px;
     top: 18px; }
 
+#branding-navigation a {
+  text-decoration: none;
+  display: block;
+  position: relative; }
+  #branding-navigation a .baseline {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    font-size: .780em;
+    font-weight: 500; }
+
 #branding-navigation svg.icon {
   height: 60px;
   width: 250px; }
+
+#logo-mobile a {
+  text-decoration: none;
+  display: block;
+  position: relative; }
+  #logo-mobile a .baseline {
+    position: absolute;
+    top: 53px;
+    left: 4px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    font-size: .880em;
+    font-weight: 500; }
 
 #logo-mobile svg.icon {
   height: 44px;
@@ -301,8 +331,8 @@
     display: -webkit-box;
     display: flex;
     flex-wrap: nowrap;
-    -webkit-box-align: stretch;
-            align-items: stretch;
+    -webkit-box-align: center;
+            align-items: center;
     -webkit-box-pack: start;
             justify-content: flex-start;
     text-transform: uppercase;
@@ -338,11 +368,12 @@
 #border-top-menu {
   max-height: 1px;
   border-top: 1px solid #E6E6EA;
-  margin-top: 1em; }
+  margin-top: 0; }
 
 @media screen and (min-width: 980px) {
   #border-top-menu {
-    display: block; }
+    display: block;
+    margin-top: 1.950em; }
   #triangle {
     display: block;
     position: absolute;
