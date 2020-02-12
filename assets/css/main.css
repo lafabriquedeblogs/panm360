@@ -322,6 +322,9 @@ figure {
 #content, #primary {
   padding: 0; }
 
+.single #content, .single #primary {
+  padding: 0 1.125em; }
+
 #content.collapse {
   height: 1px;
   overflow: hidden; }
@@ -694,6 +697,10 @@ h1.category-title {
 
 p {
   line-height: 1.8; }
+
+.entry-content iframe {
+  display: block;
+  margin-top: 2.5em; }
 
 .liste-pages {
   padding: 1em 0;
@@ -1853,7 +1860,8 @@ img.lozad {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  margin-bottom: 2em; }
 
 .lp-metas {
   display: -webkit-box;
@@ -1905,10 +1913,12 @@ img.lozad {
     -webkit-box-align: end;
             align-items: flex-end; }
   .lp-cover {
-    max-width: 294px; }
+    max-width: 294px;
+    margin-bottom: 0; }
   .lp-metas {
-    margin-left: 36px;
-    width: 294px; } }
+    width: 294px; }
+  .lp-metas-addthis {
+    margin-left: 36px; } }
 
 @media screen and (min-width: 980px) {
   .post-album {
@@ -1917,7 +1927,6 @@ img.lozad {
     flex-wrap: nowrap;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    max-width: 1064px;
     margin: 80px auto 120px; }
   .album-cover {
     -webkit-box-orient: vertical;
@@ -1926,7 +1935,9 @@ img.lozad {
     width: 294px;
     -webkit-box-align: start;
             align-items: flex-start; }
-  .lp-metas {
+  .lp-cover {
+    margin-bottom: 1em; }
+  .lp-metas-addthis {
     margin-left: 0; }
   .single-album-body {
     width: calc( 100% - ( 294px + 36px )); }

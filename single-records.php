@@ -19,23 +19,26 @@
 				$auteur_link =  get_author_posts_url($auteur_id) ;
 		?>
 		
-		<article id="post-<?php the_ID(); ?>" <?php post_class("post-album"); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class("post-album section"); ?>>
 			
 			<div class="album-cover">
 				<div class="lp-cover">
 					<?php panm360_post_thumbnail(); ?>
 				</div>
-				<div class="lp-metas">
-					<span class="single-album-pays"><span  class="bleu bold meta-name"><?php _e('Pays','panm360'); ?> : </span><?php echo $pays;?></span>
-					<span class="single-album-label"><span class="bleu bold meta-name"><?php _e('Label','panm360'); ?> : </span><?php echo $label;?></span>
-					<span class="single-album-genre"><span class="bleu bold meta-name"><?php _e('Genres et styles','panm360'); ?> : </span><?php echo $genres;?></span>
-					<span class="single-album-annee"><span class="bleu bold meta-name"><?php _e('Année','panm360'); ?> : </span><?php echo $annee;?></span>
+				<div class="lp-metas-addthis">
+					<div class="lp-metas">
+						<span class="single-album-pays"><span  class="bleu bold meta-name"><?php _e('Pays','panm360'); ?> : </span><?php echo $pays;?></span>
+						<span class="single-album-label"><span class="bleu bold meta-name"><?php _e('Label','panm360'); ?> : </span><?php echo $label;?></span>
+						<span class="single-album-genre"><span class="bleu bold meta-name"><?php _e('Genres et styles','panm360'); ?> : </span><?php echo $genres;?></span>
+						<span class="single-album-annee"><span class="bleu bold meta-name"><?php _e('Année','panm360'); ?> : </span><?php echo $annee;?></span>
+						
+					</div>
+					<!-- Go to www.addthis.com/dashboard to customize your tools -->
+					<div class="addthis_inline_share_toolbox"></div>
 				</div>
+				<?php// $rows_icons = get_field("reseau_social",'options'); ?>
 				
-				<?php $rows_icons = get_field("reseau_social",'options'); ?>
 				
-				<!-- Go to www.addthis.com/dashboard to customize your tools -->
-				<div class="addthis_inline_share_toolbox"></div>
 				<?php /* ?>
 				<ul class="icones-de-partage">
 					<?php foreach( $rows_icons as $icon ){ ?>

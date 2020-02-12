@@ -2,6 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
+	margin-bottom: 2em;
 }
 .lp-metas {
 	display: flex;
@@ -59,12 +60,15 @@
 	}
 	.lp-cover {
 		max-width: 294px;
+		margin-bottom: 0;
 	}
 	.lp-metas{
-		margin-left: 36px;
+		
 		width: 294px;
 	}
-	
+	.lp-metas-addthis {
+		margin-left: 36px;
+	}
 }
 
 @media screen and (min-width: 980px){
@@ -72,7 +76,7 @@
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		max-width: 1064px;
+		//max-width: 1064px;
 		margin: 80px auto 120px;
 	}
 	.album-cover {
@@ -80,7 +84,10 @@
 		width: 294px;
 		align-items: flex-start;
 	}	
-	.lp-metas{
+	.lp-cover {
+		margin-bottom: 1em;
+	}
+	.lp-metas-addthis {
 		margin-left: 0;
 	}
 	.single-album-body {

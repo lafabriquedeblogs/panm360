@@ -229,6 +229,13 @@ h1.category-title {
 		line-height: 1.8;
 	}
 //}
+
+.entry-content {
+	iframe {
+		display: block;
+		margin-top: 2.5em;
+	}
+}
 .liste-pages {
 	padding: 1em 0;
 	border-top: 2px solid $gris_light;
