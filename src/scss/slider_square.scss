@@ -3,9 +3,12 @@
 	margin: 50px auto ;
 	opacity: 0;
 	transition: opacity 300ms ease-out;
-	background-color: $gris_ultra_light;
+	position: absolute;
+	left: -999em;
 	&.slick-initialized {
 		opacity: 1;
+		position: static;
+		background-color: $gris_ultra_light;
 	}
 }
 
@@ -115,6 +118,7 @@
 	}
 	.square-featured-slider--slide--picture {
 		flex: 0 0 300px;
+		flex: 0 0 33%;
 		height: 300px;
 		background-color: rgba(0,0,0,0.85);
 		background-size: cover !important;

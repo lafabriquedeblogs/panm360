@@ -114,6 +114,9 @@
 		?>			
 			<div class="single-album-body">
 				<header class="entry-header">
+					<div>
+						<?php lien_agenda_complet(); ?>
+					</div>
 					<?php the_title( '<h1 class="entry-title">', '</h1>' );?>
 					<span class="single-agenda-infos-sup"><?php echo implode(', ', $single_informations_supplementaires );?></span>	
 					<div class="single-agenda-date-genre">

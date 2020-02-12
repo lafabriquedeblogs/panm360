@@ -13,8 +13,11 @@
 	margin: 0 auto;
 	opacity: 0;
 	transition: opacity 300ms ease-out;
+	position: absolute;
+	left: -999em;
 	&.slick-initialized {
 		opacity: 1;
+		position: static;
 	}
 }
 
