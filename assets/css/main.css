@@ -1849,9 +1849,9 @@ img.lozad {
     margin: 0;
     font-size: 1.938em;
     line-height: 1.125em;
-    color: #fff; }
-  .title-calendrier span {
     color: #000; }
+  .title-calendrier span {
+    color: #fff; }
 
 .meta-name {
   display: inline-block; }
