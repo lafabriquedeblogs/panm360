@@ -113,7 +113,7 @@ get_header();
 									</div><!-- agenda_mini -->
 							<?php //get_template_part( '/template-parts/publicites/publicite', 'ilot' ); ?>
 							
-						</div>
+						</div><!-- .aside-content -->
 						
 					</div>
 					
