@@ -26,7 +26,7 @@
 
 	$permalien = get_permalink( $item->ID );
 	
-	$vignette_featured = get_the_post_thumbnail_url( $item->ID, 'medium' );
+	$vignette_featured = get_the_post_thumbnail_url( $item->ID, 'large' );
 	
 ?>
 <li class="square-featured-slider--slide">

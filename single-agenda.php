@@ -16,7 +16,7 @@
 				<div class="addthis_inline_share_toolbox"></div>
 				
 				<?php
-					
+					/*
 					$am_start = date('Y/m/d');
 					$am_end = '2020/06/30';
 									
@@ -72,7 +72,7 @@
 						</ul>
 					</div><!-- #agenda_mini -->
 				</div>				
-				
+			<?php */ ?>	
 			</div>
 		<?php
 			
