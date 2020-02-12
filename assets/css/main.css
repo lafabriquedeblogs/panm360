@@ -316,17 +316,6 @@ template {
 figure {
   margin: 0; }
 
-body::after {
-  content: "";
-  position: fixed;
-  z-index: -1;
-  opacity: .5;
-  left: 0;
-  top: 0;
-  width: 100%;
-  min-height: 100%;
-  background: url("../img/grid.png") center top repeat-y; }
-
 #primary, #masthead {
   max-width: 83em; }
 
