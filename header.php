@@ -39,7 +39,7 @@
 				<?php $my_home_url = apply_filters( 'wpml_home_url', get_option( 'home' ) ); ?>
 				<a href="<?php echo $my_home_url;?>">
 					<svg class="icon"><use xlink:href="#panm360"></use></svg>
-					<span class="baseline">Les meilleures musiques de partout</span>
+					<span class="baseline"><?php _e('Les meilleures musiques de partout','panm360'); ?></span>
 				</a>
 				
 			</div><!-- .site-branding -->
