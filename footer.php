@@ -7,8 +7,10 @@
 
 	<footer id="colophon" class="site-footer">
 		
+<!--
 		<nav id="nav-footer-menu">
 			<ul id="footer-menu" class="footer-top-360">
+-->
 				<?php
 				/*
 				echo wp_nav_menu( array(
@@ -23,6 +25,7 @@
 
 			<?php
 					//Footer Site
+/*
 				echo wp_nav_menu( array(
 					'menu' => 2,
 					'container' => '',
@@ -65,11 +68,14 @@
 					'container' => '',
 					'echo' => false,
 					'items_wrap' => '%3$s',
-				) );	
+				) );
+*/	
 						
 			?>
+<!--
 			</ul>			
 		</nav>
+-->
 		
 		<div id="panm_360_infos">
 			
