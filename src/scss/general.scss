@@ -394,11 +394,12 @@ h1.category-title {
 /* LOADER */
 .loader-filtre-genre {
   //display: inline-block;
-  //display: none;
+  display: none;
   position: relative;
   width: 40px !important;
   height: 45px !important;
-  margin-left: 1em;
+  //margin-left: 1em;
+  margin: 0 auto;
   opacity: 0;
   transition: opacity 500ms ease-out;
 }

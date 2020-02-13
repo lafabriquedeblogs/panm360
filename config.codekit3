@@ -545,6 +545,27 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/assets/js/lib/datepicker/datepicker.min.css": {
+		"aP": 1,
+		"bl": 1,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/js/lib/datepicker/datepicker.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/js/lib/datepicker/datepicker.min.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/lib/datepicker/min/datepicker.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/assets/js/lib/lozad.min.js": {
 		"bF": 6,
 		"ft": 64,
@@ -1394,8 +1415,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/src/js/min/app-min.js",
-		"oF": 0,
+		"oAP": "/assets/js/app-min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 1
 		},
@@ -1453,6 +1474,31 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
+		},
+	"/src/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/src/node_modules",
+		"oF": 0
+		},
+	"/src/node_modules/js-datepicker/dist/datepicker.min.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/src/node_modules/js-datepicker/dist/min/datepicker.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/src/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/src/package-lock-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"/src/scss/abonnements.scss": {
 		"aP": 1,
@@ -2301,7 +2347,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"allowInjectionReloads": 0,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,

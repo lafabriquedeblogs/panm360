@@ -17,6 +17,10 @@
 		border-color: $bleu;
 		border-color: #fff;
 	}
+	
+	&.disabled {
+		background: $jaune;
+	}
 }
 
 .at-share-btn-elements {

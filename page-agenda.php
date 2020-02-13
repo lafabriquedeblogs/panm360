@@ -64,8 +64,8 @@ $is_pub = false;
 				<div class="entry-content">
 					<?php the_content();?>
 				</div><!-- .entry-content -->
-				
-				<section class="wide-screen" id="agenda-filtres-section">
+				<?php /* ?>
+				<section class="wide-screen" id="agenda-filtres-section-old">
 					<form id="agenda-filtres">
 						<div class="icon-text">
 							<svg class="icon blanc"><use xlink:href="#M_panm"></use></svg>
@@ -113,13 +113,41 @@ $is_pub = false;
 					</form>
 					
 				</section>
+				<?php */ ?>
+				<section class="wide-screen" id="agenda-filtres-section">
+					<form id="agenda-filtres-date">		
+						<div class="icon-text">
+							<svg class="icon blanc"><use xlink:href="#M_panm"></use></svg>
+							<p class="blanc no-margins upper"><?php _e('Recherche','panm360'); ?>:</p>
+						</div>
+						<p><input class="start" type="text" id="agenda-start" data-date="" placeholder="Du:"></p>
+						<p><input class="end" type="text" id="agenda-end"  data-date="" placeholder="Au:"></p>
+						<div class="select-light">
+							<select id="agenda-genre">
+							   <option value="0"><?php _e('Style musical','panm360'); ?></option>
+							   <?php foreach( $_genres as $genre): ?>
+							   	<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
+							   <?php endforeach; ?>							
+							</select>
+						</div>
+						
+						<?php $nonce = wp_create_nonce("my_user_like_nonce"); ?>
+						<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>" />
+						<input type="hidden" id="agenda-count" value="1000" />
+						<button id="date_search" type="submit" ><?php _e('Chercher','panm360'); ?></button>							
+					</form>
+					<div id="date_search_message" class="panm360_message">
+							<?php _e('Veuillez choisir une date de début et une date de fin pour votre recherche','panm360'); ?>
+					</div>
+					<div class="loader-filtre-genre"><div></div><div></div><div></div></div>
+				</section>
 				
 				<section>
 					<div id="agenda" class="section-inner">
-						
+							
 						<div class="full-month-agenda current-month">
 							<h4><span class="regular"><?php echo date_i18n('F'); ?></span> <?php echo date_i18n('Y'); ?></h4>
-													
+					
 							<ul class="calendrier-ul-container">
 								<?php
 								$post_start = 1;

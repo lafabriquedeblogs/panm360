@@ -16,7 +16,8 @@
 	{
 	    $begin = new DateTime($startDate);
 	    $end = new DateTime($endDate);
-	
+		$end->modify('+1 day');
+		
 	    $interval = new DateInterval('P1D'); // 1 Day
 	    $dateRange = new DatePeriod($begin, $interval, $end);
 	

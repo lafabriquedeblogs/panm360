@@ -2,7 +2,8 @@ h1.entry-title-agenda {
 	font-weight: 300;
 	text-align: left;
 	text-transform: capitalize;
-	margin-bottom: 50px;
+	margin-bottom: 50px; 
+	padding-left: 1.125em;
 }
 
 .is-style-agenda-first-part {
@@ -13,7 +14,7 @@ h1.entry-title-agenda {
 	margin-top: 50px;
 	h4 {
 		text-transform: capitalize;
-		font-size: 1.7em;
+		font-size: 1.3em;
 		font-weight: 500;
 		.genre-nom {
 			text-transform: capitalize;
@@ -34,6 +35,7 @@ h1.entry-title-agenda {
 }
 
 .full-month-agenda {
+	padding: 0 1.125em;
 	.calendrier-ul-container {
 		display: block;		
 		.element.aside-item-calendrier {
@@ -58,13 +60,31 @@ h1.entry-title-agenda {
 	padding-bottom: 1.20em;
 	
 }
-#agenda-filtres {
-	max-width: 1292px;
+#agenda-filtres-date {
+	max-width: $max-width;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	font-family: $rubik;
+	text-transform: uppercase;
+	#agenda-start, #agenda-end {
+		color: #fff;
+		padding: 16px 5px;
+		background-color: transparent;
+		//border-top: 1px solid #4d4d4d;
+		border-bottom: 1px solid #4d4d4d;
+		text-align: center;
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		max-width: 156px;
+	}
 	
+	p {
+		margin: 0;
+		padding: 0 1em 0 0;
+	}
 	.icon-text {
 		display: flex;
 		flex-wrap: nowrap;
@@ -83,47 +103,24 @@ h1.entry-title-agenda {
 			
 		}
 	}
-	
+	button {
+		margin-top: 15px;
+	}
 	.select-light {
 
-		margin: 5px 10px 10px 5px;
+		margin: 16px 0 10px 0;
 		width: calc( 100% - 20px );
-		max-width: none;
+		max-width: 156px;
+		border-bottom: 1px solid #4d4d4d;
 		select {
 			width: 100%;
 			//font-size: 11px;
 			font-family: $rubik;
+		;
 		}
 	}
-
-/*
-	select {
-		border:none;
-		color: #fff;
-		text-transform: uppercase;
-		padding: 10px 30px 10px 10px;
-		font-size: 11px;
-		font-family: $rubik;
-		font-weight: 700;
-		-moz-appearence: none;
-		-webkit-appearence: none;
-		appearance: none;
-		border-radius: 5px;
-		background: $bleu url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8.685' height='17.029' viewBox='0 0 8.685 17.029'><g><path d='M11.752,5.677l3,3,1.334-1.334L11.752,3,7.41,7.342,8.753,8.676Zm0,11.674-3-3L7.419,15.686l4.333,4.342,4.342-4.342-1.343-1.334Z' transform='translate(-7.41 -3)' fill='white'/></g></svg>") no-repeat;
-		background-position: right 10px top 50%;
-		margin: 5px;
-		width: calc( 100% - 20px );
-	}
-*/
-	.bouton {
-		width: calc( 100% - 20px );
-	}
-	button {
-		padding: 10px 20px;
-		background: $gris_medium;
-		color: #fff;
-	}
 }
+
 
 .full-row {
 	flex: 0 0 100%;
@@ -135,10 +132,30 @@ h1.entry-title-agenda {
 #agenda_mini {
 	padding: 0 1.125em;
 }
-@media screen and (min-width:550px){
-#agenda_mini {
-	padding: 0;
+
+#date_search_message {
+	display: none;
+	font-family: $rubik;
+	font-weight: 400;
+	color: $rouge;
+	padding: 1.125em;
+	max-width: $max-width;
+	margin: 0 auto;
+	text-align: center;
 }
+
+@media screen and (min-width:535px){
+h1.entry-title-agenda {
+	padding-left: 0;
+}
+.full-month-agenda {
+	padding: 0;
+	}
+}
+@media screen and (min-width:550px){
+	#agenda_mini {
+		padding: 0;
+	}
 	.full-month-agenda {
 		.calendrier-ul-container {
 			display: flex;
@@ -154,26 +171,33 @@ h1.entry-title-agenda {
 	}
 }	
 @media screen and (min-width:570px){
-	#agenda-filtres {
+
+}
+@media screen and (min-width:760px){
+	#agenda-filtres-date {
 		flex-direction: row;
 		flex-wrap: wrap;
-		padding: 0 1em;
-		div {
-			width: 100%;
+		padding: 0 1.125em;	
+		justify-content: space-between;
+		#agenda-start, #agenda-end {
+			text-align: left;
+			width: auto;
+			padding: 9px 0 4px;
+		}
+		button {
+			margin-top: 0;
 		}
 		.select-light {
 			flex: auto;
-			margin:  0 10px 0 0;
+			margin:  0 1em 0 0;
 			width: auto;
+			padding: 9px 0 4px;
+			&::after {
+				top: 8px;
+			}		
 		}
-/*
-		select {
-			width: auto;
-			margin: 0 10px 0 0;
-		}
-*/
-		.bouton {
-			width: auto;
+		.icon-text {
+			flex: 0 0 100%;
 		}
 	}
 }
@@ -182,6 +206,18 @@ h1.entry-title-agenda {
 		font-size: 51px;
 		margin: 0.680em 0;
 	}
+	#agenda-filtres-date {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		.icon-text{
+			margin-bottom: 0;
+			flex: 0 1;
+		}
+		#agenda-start, #agenda-end {
+			text-align: left;
+		}
+	}
+/*
 	#agenda-filtres {
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -204,6 +240,7 @@ h1.entry-title-agenda {
 		}
 		
 	}
+*/
 	
 	.full-month-agenda {
 		.calendrier-ul-container {

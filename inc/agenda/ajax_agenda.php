@@ -13,6 +13,10 @@ function fn_display_agenda(){
 	$agenda_mini = $_POST['agenda_mini'];
 	
 	$agenda_start_date = $_POST['agenda_start_date'];
+	$agenda_end_date = $_POST['agenda_end_date'];
+	
+	$daterange = $_POST['daterange'];
+	
 	
 	$response['year'] = $year;
 	$response['month'] = $month;
@@ -20,7 +24,7 @@ function fn_display_agenda(){
 	$response['count'] = $count;
 	$response['agenda_mini'] = $agenda_mini;
 	$response['agenda_start_date'] = $agenda_start_date;
-
+	$response['agenda_end_date'] = $agenda_end_date;
 	
 	$response['type'] = 'success';
 	
@@ -31,16 +35,14 @@ function fn_display_agenda(){
 	
 	$response['yop'] = $lastDayThisMonth;
 	
-	
 	$start = ( !empty( $agenda_start_date ) ) ? $agenda_start_date : $year.'/'.$month.'/01';
 	$end = $lastDayThisMonth;
 	
 	$month_string = date_i18n('F',  strtotime($start) );
 	$year_string = date_i18n('Y',  strtotime($start) );
 	
-
-	$events = get_liste_concerts( $start, $end, $count, $genre );
-
+	
+	$events = $daterange ? get_liste_concerts( $agenda_start_date, $agenda_end_date, $count, $genre ) : get_liste_concerts( $start, $end, $count, $genre );
 
 	$counter = 1;
 	$timeout = true;
@@ -66,10 +68,15 @@ function fn_display_agenda(){
 
 	endif;
 	
+	
+	$from = date_i18n('d F Y',  strtotime($agenda_start_date) );
+	$to = date_i18n('d F Y',  strtotime($agenda_end_date) );
+	
 	$genre_nom = ( $genre == 0 ) ? __('Tous les styles','panm360') : get_term( $genre, 'genre' )->name;
 	
 	$events_list = '<div class="full-month-agenda">';
-	$events_list .= '<h4><span class="regular">'.$month_string.'</span> '.$year_string.' <span class="genre-nom">'.$genre_nom.'</span></h4>';
+	/*$events_list .= '<h4><span class="regular">'.$month_string.'</span> '.$year_string.' <span class="genre-nom">'.$genre_nom.'</span></h4>';*/
+	$events_list .= '<h4><span class="regular">'. __('Du','panm360').' '.$from.'</span> - '.__('au','panm360').' '.$to.' <span class="genre-nom">'.$genre_nom.'</span></h4>';
 	$events_list .= '<ul class="calendrier-ul-container">';
 	$events_list .= $inside;
 	$events_list .= '</ul>';
@@ -90,4 +97,5 @@ function fn_display_agenda(){
 
 add_action("wp_ajax_display_agenda", "fn_display_agenda");
 add_action("wp_ajax_nopriv_display_agenda", "fn_display_agenda");
+
 ?>
