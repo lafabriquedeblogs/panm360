@@ -18,6 +18,10 @@
 	&.slick-initialized {
 		opacity: 1;
 		position: static;
+	.slick-arrow {
+		position: absolute;
+		z-index: 20;
+	}
 	}
 }
 

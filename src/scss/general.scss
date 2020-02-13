@@ -49,6 +49,7 @@ a {
 	color: $gris_dark;
 }
 .single .entry-content {
+	overflow: hidden;
 	p, ul, ol {
 		a {
 			text-decoration: none;
@@ -438,6 +439,9 @@ h1.category-title {
 	.section-titre {
 		padding-left: 0;
 	}	
+	.single .entry-content {
+		overflow:auto;
+	}
 }
 @media screen and (min-width:600px){
 	.filtres-content-tabs {

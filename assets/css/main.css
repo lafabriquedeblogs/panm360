@@ -544,21 +544,22 @@ img {
 a {
   color: #4d4d4d; }
 
-.single .entry-content p a, .single .entry-content ul a, .single .entry-content ol a {
-  text-decoration: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#5BC6E8), to(#5BC6E8));
-  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#5BC6E8, #5BC6E8);
-  background-size: .05em 1px,.05em 1px,1px 1px;
-  background-repeat: no-repeat,no-repeat,repeat-x;
-  text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
-  background-position: 0 95%,100% 95%,0 95%;
-  -webkit-transition: color 300ms ease-out;
-  transition: color 300ms ease-out; }
-
-.single .entry-content p a:hover, .single .entry-content ul a:hover, .single .entry-content ol a:hover {
-  color: #5BC6E8;
-  background: none;
-  text-decoration: none; }
+.single .entry-content {
+  overflow: hidden; }
+  .single .entry-content p a, .single .entry-content ul a, .single .entry-content ol a {
+    text-decoration: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#5BC6E8), to(#5BC6E8));
+    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#5BC6E8, #5BC6E8);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
+    background-position: 0 95%,100% 95%,0 95%;
+    -webkit-transition: color 300ms ease-out;
+    transition: color 300ms ease-out; }
+  .single .entry-content p a:hover, .single .entry-content ul a:hover, .single .entry-content ol a:hover {
+    color: #5BC6E8;
+    background: none;
+    text-decoration: none; }
 
 .has-text-align-center {
   text-align: center; }
@@ -887,7 +888,9 @@ p {
 /* END-LOADER */
 @media screen and (min-width: 535px) {
   .section-titre {
-    padding-left: 0; } }
+    padding-left: 0; }
+  .single .entry-content {
+    overflow: auto; } }
 
 @media screen and (min-width: 600px) {
   .filtres-content-tabs {
@@ -1466,6 +1469,9 @@ select {
   #new-featured-slider.slick-initialized {
     opacity: 1;
     position: static; }
+    #new-featured-slider.slick-initialized .slick-arrow {
+      position: absolute;
+      z-index: 20; }
 
 .new-featured-slider--slide--row {
   display: -webkit-box;
