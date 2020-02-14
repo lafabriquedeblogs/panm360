@@ -16,7 +16,10 @@
 	height: 1px;
 	overflow: hidden;	
 }
-
+.section-content--main {
+	display: flex;
+	flex-direction: column-reverse;
+}
 .section-content--has-6-columns {
 	display: flex;
 	flex-direction: row;
@@ -53,12 +56,12 @@
 }
 
 @media (min-width: 535px){
-#content, #primary {
-	padding: 0 1.125em;
-}
+	#content, #primary {
+		padding: 0 1.125em;
+	}
 	.section-content--main {
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: row;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		
