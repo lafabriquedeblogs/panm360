@@ -364,8 +364,8 @@ figure {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
     -webkit-box-pack: justify;
             justify-content: space-between;
     flex-wrap: wrap;
