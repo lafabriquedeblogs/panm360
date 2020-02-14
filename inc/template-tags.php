@@ -118,7 +118,7 @@ if ( ! function_exists( 'panm360_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function panm360_post_thumbnail() {
+	function panm360_post_thumbnail( $size = 'panm360_square') {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
@@ -127,7 +127,7 @@ if ( ! function_exists( 'panm360_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail('panm360_square'); ?>
+				<?php the_post_thumbnail( $size ); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

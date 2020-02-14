@@ -83,6 +83,7 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 		//add_theme_support( 'editor-style' );
 		
 		add_image_size( 'panm360_square', 500, 500,true);
+		add_image_size( 'panm360_medium', 500, 0);
 	}
 endif;
 add_action( 'after_setup_theme', 'panm360_setup' );

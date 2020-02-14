@@ -9,7 +9,7 @@
 			
 			<div class="album-cover">
 				<div class="lp-cover">
-					<?php panm360_post_thumbnail(); ?>
+					<?php panm360_post_thumbnail('panm360_medium'); ?>
 				</div>
 								
 				<!-- Go to www.addthis.com/dashboard to customize your tools -->
