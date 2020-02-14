@@ -127,7 +127,7 @@ if ( ! function_exists( 'panm360_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('panm360_square'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
