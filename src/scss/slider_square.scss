@@ -41,7 +41,7 @@
 .square-featured-slider--slide--picture {
 	width: 100%;
 	height: 300px;
-	background-color: rgba(0,0,0,0.85);
+	//background-color: rgba(0,0,0,0.85);
 	//background-size: 0 0 !important;
 	img {
 		height: 300px;
@@ -99,13 +99,14 @@
 .square-featured-slider--slide--picture {
 	width: 100%;
 	height: 300px;
-	background-color: rgba(0,0,0,0.85);
-	background-size: 0 0 !important;
+	//background-color: rgba(0,0,0,0.85);
+	//background-size: 0 0 !important;
 	img {
 		height: 300px;
 		margin: 0 auto;
 		&.hidden {
 			position: static;
+			opacity: 0;
 		}
 	}
 }
@@ -124,7 +125,7 @@
 		background-color: rgba(0,0,0,0.85);
 		background-size: cover !important;
 		img {
-			height: 300px;
+			//height: 300px;
 			&.hidden {
 				position: absolute;
 			}

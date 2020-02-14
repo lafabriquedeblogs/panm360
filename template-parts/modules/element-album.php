@@ -24,7 +24,7 @@
 
 <li class="album element" data-filter="<?php echo $data_genre." ".$data_annee." ".$auteur;?>">
 	<div class="picture">
-		<a href="<?php echo $lien;?>"><img class="lozad" data-src="<?php echo $pochette; ?>" alt="<?php echo $titre;?>" width="320" height="320" /></a>
+		<a href="<?php echo $lien;?>"><img class="lozad" data-src="<?php echo $pochette; ?>" alt="<?php echo $titre;?>" width="100%" height="auto" /></a>
 	</div>
 	<div class="details">
 		<span class="element-title album-title"><a href="<?php echo $lien;?>"><?php echo $titre;?></a></span>

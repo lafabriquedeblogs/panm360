@@ -33,7 +33,7 @@
 	<div class="square-featured-slider--slide--row">
 		
 		<div class="square-featured-slider--slide--picture" style="background-image:url('<?php echo $vignette_featured; ?>'); background-size: cover;background-repeat: no-repeat; background-position: center center;">
-			<img src="<?php echo $vignette_featured; ?>"  class="hidden" alt="title" width="300" height ="300" />
+<!-- 			<img src="<?php echo $vignette_featured; ?>"  class="hidden" alt="title" width="300" height ="300" /> -->
 		</div>		
 		
 		<div class="square-featured-slider--slide--content">
