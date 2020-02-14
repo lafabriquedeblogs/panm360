@@ -3,7 +3,8 @@
 	background-color: $gris_ultra_light;
 	overflow: hidden;
 	.slick-arrow {
-		opacity: 0;
+			position: absolute;
+			z-index: 20;
 	}
 }
 
@@ -20,7 +21,6 @@
 		.slick-arrow {
 			position: absolute;
 			z-index: 20;
-			opacity: 1;
 		}
 	}
 }

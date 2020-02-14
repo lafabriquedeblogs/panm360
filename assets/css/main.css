@@ -1454,7 +1454,8 @@ select {
   background-color: #F4F4F8;
   overflow: hidden; }
   #wrap-new-featured-slider .slick-arrow {
-    opacity: 0; }
+    position: absolute;
+    z-index: 20; }
 
 #new-featured-slider {
   max-width: 83em;
@@ -1469,8 +1470,7 @@ select {
     position: relative; }
     #new-featured-slider.slick-initialized .slick-arrow {
       position: absolute;
-      z-index: 20;
-      opacity: 1; }
+      z-index: 20; }
 
 .new-featured-slider--slide--row {
   display: -webkit-box;
