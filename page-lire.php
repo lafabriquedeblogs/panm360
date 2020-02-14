@@ -122,7 +122,7 @@ get_header();
 							
 						</div>
 					</section>
-					
+					<?php /* ?>
 					
 					
 					<section class="section">
@@ -228,7 +228,7 @@ get_header();
 							</div>
 						</div>
 					</section>	
-	
+	<?php */ ?>
 			</div><!-- .entry-content -->
 
 
