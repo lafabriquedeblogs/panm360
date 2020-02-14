@@ -152,6 +152,10 @@
 		
 		add_filter( 'posts_where','my_posts_where' );
 		
+		// !!!!!!!
+		
+		$dates = array_slice($dates, 10);
+		// !!!!!!!
 		
 		while( $i <= count($dates)-1 ){
 		
@@ -194,6 +198,7 @@
 		
 		$_result = array_flatten($result);
 		
-		$re_sult = array_unique($_result,SORT_REGULAR);		
+		$re_sult = array_unique($_result,SORT_REGULAR);
+			
 		return $re_sult;
 	}
