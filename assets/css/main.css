@@ -329,7 +329,7 @@ figure {
   height: 1px;
   overflow: hidden; }
 
-.section-content--main {
+.section-content {
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;

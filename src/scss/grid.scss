@@ -16,9 +16,11 @@
 	height: 1px;
 	overflow: hidden;	
 }
-.section-content--main {
+.section-content {
 	display: flex;
 	flex-direction: column-reverse;
+	//order: 2;
+	
 }
 .section-content--has-6-columns {
 	display: flex;
