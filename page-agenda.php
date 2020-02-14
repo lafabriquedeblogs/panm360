@@ -50,6 +50,7 @@ $is_pub = false;
 				<ul id="square-featured-slider">
 					<?php
 						$agendas_commentes = get_agendas_commentes();
+						$agendas_commentes = array_slice($agendas_commentes,0, 10);
 						foreach( $agendas_commentes as $item ){
 							include( locate_template( '/template-parts/modules/element-slider-square.php', false, false ) );
 						}
