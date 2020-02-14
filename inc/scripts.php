@@ -28,10 +28,10 @@ function panm360_scripts() {
 	wp_enqueue_script( 'script-lozad', get_template_directory_uri() . '/assets/js/lib/lozad.min.js', array('jquery'), false, false );
 	wp_enqueue_script( 'script-app', get_template_directory_uri() . '/assets/js/app-min.js', array(), false, true );
 	
-	//if( is_page(array(6944))){
+	if( is_page( array( 6944 , 10003 ) ) ){
 		wp_enqueue_style( 'panm360-datepicker-style', get_template_directory_uri().'/assets/js/lib/datepicker/datepicker.min.css' );
 		wp_enqueue_script( 'script-datepicker', get_template_directory_uri() . '/assets/js/lib/datepicker/datepicker.min.js', array(), false, true );
-	//}	
+	}	
 	
 	$my_current_lang = apply_filters( 'wpml_current_language', NULL );
 	wp_localize_script( 'script-app', 'agendAjax', array(
