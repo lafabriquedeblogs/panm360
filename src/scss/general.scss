@@ -162,6 +162,7 @@ h1.category-title {
 	text-align: right;
 	padding-right: 5px;
 	text-transform: uppercase;
+	margin: 0 1.125em;
 	.icone {
 		//margin-left: 10px;
 		width: 19px;
@@ -446,6 +447,9 @@ h1.category-title {
 	.single .entry-content {
 		overflow:auto;
 	}
+.plus-de {
+	margin: 0;
+}
 }
 @media screen and (min-width:600px){
 	.filtres-content-tabs {
