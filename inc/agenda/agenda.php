@@ -154,7 +154,7 @@
 		
 		// !!!!!!!
 		
-		$dates = array_slice($dates, 10);
+		//$dates = array_slice($dates, 10);
 		// !!!!!!!
 		
 		while( $i <= count($dates)-1 ){
