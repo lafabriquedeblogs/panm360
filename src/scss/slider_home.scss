@@ -13,15 +13,15 @@
 	margin: 0 auto;
 	opacity: 0;
 	transition: opacity 300ms ease-out;
-	//position: absolute;
+	position: absolute;
 	left: -999em;
 	&.slick-initialized {
 		opacity: 1;
-		//position: relative;
-		.slick-arrow {
-			position: absolute;
-			z-index: 20;
-		}
+		position: static;
+	.slick-arrow {
+		position: absolute;
+		z-index: 20;
+	}
 	}
 }
 
