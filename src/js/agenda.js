@@ -133,63 +133,65 @@ export default function ajax_search_agenda(){
 			nextArrow: '<div class="slick-next-arrow"><svg class="icone"><use xlink:href="#slider-right-arrow"></use></svg></div>',
 		});
 	}
-
-
-
-
-	const local = (agendAjax.current_language == 'fr') ? 'fr-FR' : 'en-EN';
-	const local_m = (agendAjax.current_language == 'fr') ? 'fr' : 'en';
 	
-	const months = {
-		fr : ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jui', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Déc'],
-		en : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-	};
-	const days = {
-		fr : ['D','L', 'M', 'M', 'J', 'V', 'S'],
-		en : ['S', 'M', 'T', 'W', 'Th', 'F', 'S']
-	};				
-	const dates_options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-	const start = datepicker('.start', {
-
-		// Event callbacks.
-		onSelect: instance => {
-			// Show which date was selected.
-			//console.log(instance.dateSelected)
-		},
-		onShow: instance => {
-			//console.log('Calendar showing.')
-		},
-		onHide: instance => {
-			//console.log('Calendar hidden.')
-		},
-		onMonthChange: instance => {
-			// Show the month of the selected date.
-			//console.log(instance.currentMonthName)
-		},
+	load_more_items();
+	
+	let filtre_agenda = document.getElementById('agenda-filtres-section');
+		console.log(filtre_agenda);
+	
+	if( filtre_agenda !== null ){
+		const local = (agendAjax.current_language == 'fr') ? 'fr-FR' : 'en-EN';
+		const local_m = (agendAjax.current_language == 'fr') ? 'fr' : 'en';
 		
-		// Customizations.
-		formatter: (input, date, instance) => {
-			// This will display the date as `1/1/2019`.
-			input.value = date.toLocaleDateString(local, dates_options);
-			jQuery(input).attr("data-date",date.toISOString().split('T')[0]);
-		},
-		startDay: 1, // Calendar week starts on a Monday.
-		customDays: days[local_m],
-		customMonths: months[local_m],
-		id: 1		
-	});
-	const end = datepicker('.end', {
+		const months = {
+			fr : ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jui', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Déc'],
+			en : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+		};
+		const days = {
+			fr : ['D','L', 'M', 'M', 'J', 'V', 'S'],
+			en : ['S', 'M', 'T', 'W', 'Th', 'F', 'S']
+		};				
+		const dates_options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+		const start = datepicker('.start', {
+		
+			// Event callbacks.
+			onSelect: instance => {
+				// Show which date was selected.
+				//console.log(instance.dateSelected)
+			},
+			onShow: instance => {
+				//console.log('Calendar showing.')
+			},
+			onHide: instance => {
+				//console.log('Calendar hidden.')
+			},
+			onMonthChange: instance => {
+				// Show the month of the selected date.
+				//console.log(instance.currentMonthName)
+			},
+			
+			// Customizations.
 			formatter: (input, date, instance) => {
 				// This will display the date as `1/1/2019`.
-				//input.value = date.toISOString().split('T')[0];
 				input.value = date.toLocaleDateString(local, dates_options);
 				jQuery(input).attr("data-date",date.toISOString().split('T')[0]);
-		  },		
-		startDay: 1, // Calendar week starts on a Monday.
-		customDays: days[local_m],
-		customMonths: months[local_m],
-		id: 1 });
-
-	load_more_items();	
-	
+			},
+			startDay: 1, // Calendar week starts on a Monday.
+			customDays: days[local_m],
+			customMonths: months[local_m],
+			id: 1		
+		});
+		const end = datepicker('.end', {
+				formatter: (input, date, instance) => {
+					// This will display the date as `1/1/2019`.
+					//input.value = date.toISOString().split('T')[0];
+					input.value = date.toLocaleDateString(local, dates_options);
+					jQuery(input).attr("data-date",date.toISOString().split('T')[0]);
+			  },		
+			startDay: 1, // Calendar week starts on a Monday.
+			customDays: days[local_m],
+			customMonths: months[local_m],
+			id: 1 
+		});
+	}
 }

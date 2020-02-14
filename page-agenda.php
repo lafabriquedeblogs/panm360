@@ -65,56 +65,6 @@ $is_pub = false;
 				<div class="entry-content">
 					<?php the_content();?>
 				</div><!-- .entry-content -->
-				<?php /* ?>
-				<section class="wide-screen" id="agenda-filtres-section-old">
-					<form id="agenda-filtres">
-						<div class="icon-text">
-							<svg class="icon blanc"><use xlink:href="#M_panm"></use></svg>
-							<p class="blanc no-margins upper"><?php _e('Recherche','panm360'); ?>:</p>
-						</div>
-						<div class="select-light">
-							<select id="agenda-year">
-							<option value=""><?php _e('Année','panm360'); ?></option>
-								<?php
-									foreach( $years as $cyear ): 
-									$selected = ($cyear == $year) ? 'selected' : ''; 
-								?>
-								<option value="<?php echo $cyear;?>" <?php echo $selected;?>><?php echo $cyear;?></option>
-								<?php endforeach; ?>
-						</select>
-						</div>
-						<div class="select-light">
-							<select id="agenda-month">
-								<option value=""><?php _e('Mois','panm360'); ?></option>
-								<?php foreach( $months as $m => $string):
-									$selected = ($m == $month) ? 'selected' : ''; 
-								?>
-									<option value="<?php echo $m;?>" <?php echo $selected;?>><?php echo $string;?></option>
-								<?php endforeach; ?>
-							</select>
-						</div>
-						<div class="select-light">
-							<select id="agenda-genre">
-							   <option value="0"><?php _e('Style musical','panm360'); ?></option>
-							   <?php foreach( $_genres as $genre): ?>
-							   	<option value="<?php echo $genre['id'];?>"><?php echo $genre['name'];?></option>
-							   <?php endforeach; ?>							
-							</select>
-						</div>
-						
-						<?php $nonce = wp_create_nonce("my_user_like_nonce"); ?>
-						<input type="hidden" id="agenda-nonce" value="<?php echo $nonce;?>" />
-						<input type="hidden" id="agenda-count" value="1000" />
-						<input type="hidden" id="agenda-start" value="<?php echo $today;?>"/>
-						
-						<button type="submit"><?php _e('Chercher','panm360'); ?></button>
-						
-						<div class="loader-filtre-genre"><div></div><div></div><div></div></div>
-						
-					</form>
-					
-				</section>
-				<?php */ ?>
 				<section class="wide-screen" id="agenda-filtres-section">
 					<form id="agenda-filtres-date">		
 						<div class="icon-text">
