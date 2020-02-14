@@ -631,7 +631,7 @@ h1.category-title {
     width: 19px;
     height: 27px; }
 
-.hone .section-titre {
+.home .section-titre {
   display: none; }
 
 .wide-screen {
@@ -916,7 +916,7 @@ p {
       margin: 0 1em 0 0; } }
 
 @media screen and (min-width: 780px) {
-  .hone .section-titre {
+  .home .section-titre {
     display: -webkit-box;
     display: flex; } }
 
