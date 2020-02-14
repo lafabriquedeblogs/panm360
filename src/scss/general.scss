@@ -145,7 +145,11 @@ h1.category-title {
 		height: 27px;
 	}
 }
-
+.hone {
+	.section-titre {
+		display: none;
+	}
+}
 .wide-screen{
 	@include wide-screen;	
 }
@@ -455,6 +459,14 @@ h1.category-title {
 			margin: 0 1em 0 0;
 		}
 	}
+}
+
+@media screen and (min-width:780px){
+.hone {
+	.section-titre {
+		display: flex;
+	}
+}
 }
 @media screen and (min-width:980px){
 	h1.entry-title {

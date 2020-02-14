@@ -335,8 +335,6 @@ figure {
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
           flex-direction: column-reverse; }
-  .section-content .section-titre {
-    display: none; }
 
 .section-content--has-6-columns {
   display: -webkit-box;
@@ -450,8 +448,6 @@ figure {
     .section-content .aside-content {
       width: 100%;
       max-width: calc( 50% - 18px); }
-    .section-content .section-titre {
-      display: block; }
   .section-content--main {
     max-width: calc( 50% - 18px); } }
 
@@ -634,6 +630,9 @@ h1.category-title {
     fill: #5BC6E8;
     width: 19px;
     height: 27px; }
+
+.hone .section-titre {
+  display: none; }
 
 .wide-screen {
   margin-left: calc( -100vw / 2 + 100% / 2) !important;
@@ -915,6 +914,11 @@ p {
       margin: 0 1em 0 0; }
     .filtres-content-tabs > li {
       margin: 0 1em 0 0; } }
+
+@media screen and (min-width: 780px) {
+  .hone .section-titre {
+    display: -webkit-box;
+    display: flex; } }
 
 @media screen and (min-width: 980px) {
   h1.entry-title {
