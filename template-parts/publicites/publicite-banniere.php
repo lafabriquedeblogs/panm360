@@ -6,7 +6,7 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
- </section>
+</section>
   
 <!--
 <section class="publicite publicite-banniere">

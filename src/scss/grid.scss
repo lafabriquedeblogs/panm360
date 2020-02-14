@@ -19,6 +19,9 @@
 .section-content {
 	display: flex;
 	flex-direction: column-reverse;
+	.section-titre {
+		display: none;
+	}
 	//order: 2;
 	
 }
@@ -154,6 +157,9 @@
 			width: 100%;
 			max-width:calc( 50% - 18px);
 		}
+		.section-titre {
+			display: block;
+		}		
 	}	
 	.section-content--main {
 		max-width: calc( 50% - 18px);

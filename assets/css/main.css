@@ -335,6 +335,8 @@ figure {
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
           flex-direction: column-reverse; }
+  .section-content .section-titre {
+    display: none; }
 
 .section-content--has-6-columns {
   display: -webkit-box;
@@ -448,6 +450,8 @@ figure {
     .section-content .aside-content {
       width: 100%;
       max-width: calc( 50% - 18px); }
+    .section-content .section-titre {
+      display: block; }
   .section-content--main {
     max-width: calc( 50% - 18px); } }
 

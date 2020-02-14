@@ -14,7 +14,7 @@ get_header();
 
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
-					<h4 class="section-titre"><span>Critiques d'albums</span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+					<h4 class="section-titre"><span><?php _e('Critiques d\'albums','panm360'); ?></span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 					
 					<div class="section-content ">
 						
