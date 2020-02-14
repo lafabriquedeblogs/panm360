@@ -967,8 +967,7 @@ h1.entry-title-agenda {
   display: flex;
   flex-wrap: nowrap;
   -webkit-box-align: center;
-          align-items: center;
-  margin-top: -10px; }
+          align-items: center; }
 
 #agenda-filtres-section {
   background-color: #333333;
