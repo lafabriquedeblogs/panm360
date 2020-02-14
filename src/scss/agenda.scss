@@ -200,6 +200,21 @@ h1.entry-title-agenda {
 			flex: 0 0 100%;
 		}
 	}
+	
+/*
+	#agenda_mini {
+		font-size: 0.8em;
+		
+		.element{
+			&.aside-item-calendrier {
+				margin-bottom: 0;
+				.detail{
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+*/
 }
 @media screen and (min-width:980px){
 	h1.entry-title-agenda {

@@ -84,6 +84,7 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 		
 		add_image_size( 'panm360_square', 500, 500,true);
 		add_image_size( 'panm360_medium', 500, 0);
+		add_image_size( 'panm360_home_slider', 664, 350,true);
 	}
 endif;
 add_action( 'after_setup_theme', 'panm360_setup' );
