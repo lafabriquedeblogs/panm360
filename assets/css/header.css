@@ -55,7 +55,8 @@
     text-transform: uppercase;
     font-family: "Rubik", sans-serif;
     font-size: .880em;
-    font-weight: 500; }
+    font-weight: 500;
+    width: 100%; }
 
 #logo-mobile svg.icon {
   height: 44px;

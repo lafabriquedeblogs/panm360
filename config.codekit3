@@ -1415,8 +1415,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/assets/js/app-min.js",
-		"oF": 2,
+		"oAP": "/src/js/min/app-min.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
@@ -2347,7 +2347,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"allowInjectionReloads": 1,
+	"allowInjectionReloads": 0,
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,
