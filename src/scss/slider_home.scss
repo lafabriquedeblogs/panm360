@@ -17,7 +17,8 @@
 	left: -999em;
 	&.slick-initialized {
 		opacity: 1;
-		position: static;
+		position: relative;
+		left: auto;
 	.slick-arrow {
 		position: absolute;
 		z-index: 20;

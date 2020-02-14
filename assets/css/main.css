@@ -1467,7 +1467,8 @@ select {
   left: -999em; }
   #new-featured-slider.slick-initialized {
     opacity: 1;
-    position: static; }
+    position: relative;
+    left: auto; }
     #new-featured-slider.slick-initialized .slick-arrow {
       position: absolute;
       z-index: 20; }
