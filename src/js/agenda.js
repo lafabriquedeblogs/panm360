@@ -128,6 +128,7 @@ export default function ajax_search_agenda(){
 			autoplay: true,
 			autoplaySpeed: 4000,
 			adaptiveHeight: true,
+			lazyLoad: 'ondemand',
 			prevArrow: '<div class="slick-prev-arrow"><svg class="icone"><use xlink:href="#slider-left-arrow"></use></svg></div>',
 			nextArrow: '<div class="slick-next-arrow"><svg class="icone"><use xlink:href="#slider-right-arrow"></use></svg></div>',
 		});

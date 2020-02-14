@@ -1415,8 +1415,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/src/js/min/app-min.js",
-		"oF": 0,
+		"oAP": "/assets/js/app-min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 1
 		},
