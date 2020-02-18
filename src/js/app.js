@@ -19,6 +19,7 @@ import ajax_search_agenda from './agenda.js';
 	let spotify = d.querySelector(".wp-block-embed-spotify .wp-block-embed__wrapper iframe");
 	
 	
+	
 	function toggle_menu(){
 		menu_mobile.classList.toggle("open");
 		menu_mobile_open = d.querySelector("#site-navigation.open");
@@ -62,11 +63,9 @@ import ajax_search_agenda from './agenda.js';
 	
 	$(document).ready(function(){
 		
-		$(window).load(function(){
+		$(w).load(function(){
 			$(".at-share-btn-elements").prepend('<a class="a-icon-instagram-link" role="button" href="https://www.instagram.com/panm360/" target="_blank"><svg class="icon-instagram-link"><use xlink:href="#instagram"></use></svg></a>');
 		});
-		
-		
 		
 		if( $("#new-featured-slider").length > 0 ){
 			$("#new-featured-slider").slick({
