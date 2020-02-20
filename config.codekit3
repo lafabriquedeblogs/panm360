@@ -807,6 +807,14 @@
 		"oAP": "/inc/abonnements/abonnements.php",
 		"oF": 0
 		},
+	"/inc/abonnements/shortcodes-abonnements.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/abonnements/shortcodes-abonnements.php",
+		"oF": 0
+		},
 	"/inc/agenda/agenda.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -853,14 +861,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/inc/scripts.php",
-		"oF": 0
-		},
-	"/inc/shortcodes-abonnements.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/inc/shortcodes-abonnements.php",
 		"oF": 0
 		},
 	"/inc/taxonomies.php": {
@@ -2331,6 +2331,142 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/woocommerce/checkout/form-checkout.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/dashboard.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/dashboard.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/downloads.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/downloads.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-add-payment-method.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-add-payment-method.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-edit-account.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-edit-account.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-edit-address.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-edit-address.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-login.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-login.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-lost-password.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-lost-password.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-reset-password.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-reset-password.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/lost-password-confirmation.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/lost-password-confirmation.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/my-account.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-account.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/my-address.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-address.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/my-downloads.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-downloads.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/my-orders.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-orders.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/navigation.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/navigation.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/orders.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/orders.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/payment-methods.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/payment-methods.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/view-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/view-order.php",
 		"oF": 0
 		}
 	},

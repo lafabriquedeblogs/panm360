@@ -5,7 +5,13 @@
 		opacity: 0;
 	}
 }
-
+form{
+	label {
+		font-size: .800em;
+		font-weight: 700;
+	}
+	
+}
 .gform_confirmation_message {
 	//border: 1px solid red;
 	margin: 1em 0 0;

@@ -1,3 +1,69 @@
 .woocommerce-notices-wrapper {
 	display: none;
 }
+
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+	border: none;
+    padding: 0 1.125em;
+    margin: 2em 0;
+    text-align: left;
+    border-radius: none;
+}
+
+.woocommerce form.login {
+	//max-width: 400px;
+	.form-row {
+		display: flex;
+		flex-direction: column;
+	}
+	button {
+		margin: 1em 0;
+	}
+}
+
+.woocommerce-LostPassword {
+	font-size: .800em;
+	font-weight: 700;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	font-family:$rubik;
+	color: #fff;
+	background: $gris_ultra_dark;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 700;
+	border: 1px $gris_dark solid;
+	border-radius: 5px;
+	line-height: 1;
+	padding: 16px 36px;
+	transition: all .3s ease-out;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		box-shadow: 0px 0px 0px 2px #add9e7;
+		border-color: $bleu;
+		border-color: #fff;
+	}	
+}
+
+@media screen and (min-width:535px){
+	.woocommerce form.checkout_coupon,
+	.woocommerce form.login,
+	.woocommerce form.register {
+		padding: 0;
+    }
+    .woocommerce form.login {
+	    display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    .form-row-wide {
+		    flex: 0 0 50%;
+	    }
+    }
+}

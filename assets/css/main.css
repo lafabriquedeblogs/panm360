@@ -1298,10 +1298,79 @@ h2.annee-top {
 .woocommerce-notices-wrapper {
   display: none; }
 
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+  border: none;
+  padding: 0 1.125em;
+  margin: 2em 0;
+  text-align: left;
+  border-radius: none; }
+
+.woocommerce form.login .form-row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+
+.woocommerce form.login button {
+  margin: 1em 0; }
+
+.woocommerce-LostPassword {
+  font-size: .800em;
+  font-weight: 700; }
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+  background: #333333;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px #4d4d4d solid;
+  border-radius: 5px;
+  line-height: 1;
+  padding: 16px 36px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  cursor: pointer;
+  text-decoration: none; }
+  .woocommerce #respond input#submit:hover,
+  .woocommerce a.button:hover,
+  .woocommerce button.button:hover,
+  .woocommerce input.button:hover {
+    box-shadow: 0px 0px 0px 2px #add9e7;
+    border-color: #5BC6E8;
+    border-color: #fff; }
+
+@media screen and (min-width: 535px) {
+  .woocommerce form.checkout_coupon,
+  .woocommerce form.login,
+  .woocommerce form.register {
+    padding: 0; }
+  .woocommerce form.login {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap; }
+    .woocommerce form.login .form-row-wide {
+      -webkit-box-flex: 0;
+              flex: 0 0 50%; } }
+
 .no-label label, .no-label .gfield_label {
   position: absolute;
   left: -999em;
   opacity: 0; }
+
+form label {
+  font-size: .800em;
+  font-weight: 700; }
 
 .gform_confirmation_message {
   margin: 1em 0 0;
