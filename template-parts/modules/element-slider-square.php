@@ -10,6 +10,8 @@
 
 	$dates = array();
 	
+	$my_current_lang = apply_filters( 'wpml_current_language', NULL );
+	
 	if( is_array($dates_arrays)){
 		foreach( $dates_arrays as $date ){
 			
@@ -17,7 +19,17 @@
 			$jour = date_i18n('D\&\n\b\s\p\;d\&\n\b\s\p\;M\&\n\b\s\p\;Y', strtotime($ddate));
 			
 			if( !empty($jour) && !empty($date['heure_concert'])){
-				$dates[] = $jour.'&nbsp;•&nbsp;'.$date['heure_concert'];
+				
+				$h = $date['heure_concert'];
+
+				if( $my_current_lang == 'en' ){
+					
+					$h = new DateTime( $date['heure_concert'] . ' 01/01/2020');
+					$h = $h->format('h:i a');
+					
+				}
+				
+				$dates[] = $jour.'&nbsp;•&nbsp;'.$h;
 			}
 			
 		}

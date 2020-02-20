@@ -123,8 +123,19 @@
 		if( !$row ) return '';
 		foreach( $row as $c_date ){
 			if( $c_date['date_concert'] = $date ){
-				$heure = $c_date['heure_concert'];
-				return $heure;
+				
+				$h = $c_date['heure_concert'];
+				
+				$my_current_lang = apply_filters( 'wpml_current_language', NULL );
+				
+				if( $my_current_lang == 'en' ){
+					
+					$h = new DateTime( $c_date['heure_concert'] . ' 01/01/2020');
+					$h = $h->format('h:i a');
+					
+				}
+
+				return $h;
 			}
 		}
 

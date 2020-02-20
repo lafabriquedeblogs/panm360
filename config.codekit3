@@ -767,6 +767,14 @@
 		"oAP": "/dev new.php",
 		"oF": 0
 		},
+	"/dev.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dev.php",
+		"oF": 0
+		},
 	"/footer.php": {
 		"cB": 0,
 		"ft": 8192,
