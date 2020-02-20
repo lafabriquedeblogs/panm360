@@ -38,6 +38,15 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<div class="" id="customer_details">
 			<div class="col-1">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
+				
+				<?php
+					global $wp;
+					$order_id = $wp->query_vars['order-pay'];
+					$order = wc_get_order($order_id);
+					$pay_now_url = $order->get_checkout_payment_url('/checkout/order-received/{{order_number}}/?pay_for_order=true&key={{order_key}}');
+					
+					echo $pay_now_url;
+				?>
 			</div>
 
 			<div class="col-2">
