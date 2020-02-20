@@ -1,4 +1,6 @@
 <?php
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+
 	
 function remove_wc_memberships_the_restricted_content_message($message, $args){
 	$message = '';
