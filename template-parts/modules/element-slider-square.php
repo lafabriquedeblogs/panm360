@@ -9,15 +9,18 @@
 	$dates_arrays = get_field('dates', $item->ID);
 
 	$dates = array();
-	foreach( $dates_arrays as $date ){
-		
-		$ddate = str_replace('/', '-', $date['date_concert']);
-		$jour = date_i18n('D\&\n\b\s\p\;d\&\n\b\s\p\;M\&\n\b\s\p\;Y', strtotime($ddate));
-		
-		if( !empty($jour) && !empty($date['heure_concert'])){
-			$dates[] = $jour.'&nbsp;•&nbsp;'.$date['heure_concert'];
+	
+	if( is_array($dates_arrays)){
+		foreach( $dates_arrays as $date ){
+			
+			$ddate = str_replace('/', '-', $date['date_concert']);
+			$jour = date_i18n('D\&\n\b\s\p\;d\&\n\b\s\p\;M\&\n\b\s\p\;Y', strtotime($ddate));
+			
+			if( !empty($jour) && !empty($date['heure_concert'])){
+				$dates[] = $jour.'&nbsp;•&nbsp;'.$date['heure_concert'];
+			}
+			
 		}
-		
 	}
 	//$heure = get_time_concert( $item->ID, date_i18n('Ymd', $timestamp) );
 	

@@ -120,15 +120,14 @@
 		
 		$row = get_field('dates',$post_id );
 		
+		if( !$row ) return '';
 		foreach( $row as $c_date ){
 			if( $c_date['date_concert'] = $date ){
 				$heure = $c_date['heure_concert'];
 				return $heure;
 			}
 		}
-		//$time = get_sub_field();
-		
-		//return $time;
+
 	};
 	
 	function lien_agenda_complet(){

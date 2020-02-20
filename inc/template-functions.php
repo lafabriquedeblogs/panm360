@@ -66,39 +66,97 @@ function get_genre( $album_id, $data = false, $raw = false ){
 	return $genres_txt;
 }
 
+
+function get_post_primary_category($post_id, $term='category', $return_all_categories=false){
+    
+    $return = array();
+
+    if (class_exists('WPSEO_Primary_Term')){
+        // Show Primary category by Yoast if it is enabled & set
+        $wpseo_primary_term = new WPSEO_Primary_Term( $term, $post_id );
+        $primary_term = get_term($wpseo_primary_term->get_primary_term());
+		
+        if (!is_wp_error($primary_term)){
+            $return['primary_category'] = $primary_term;
+        }
+    }
+
+    if (empty($return['primary_category']) || $return_all_categories){
+        $categories_list = get_the_terms($post_id, $term);
+
+        if (empty($return['primary_category']) && !empty($categories_list)){
+            $return['primary_category'] = $categories_list[0];  //get the first category
+        }
+        if ($return_all_categories){
+            $return['all_categories'] = array();
+
+            if (!empty($categories_list)){
+                foreach($categories_list as &$category){
+                    $return['all_categories'][] = $category->term_id;
+                }
+            }
+        }
+    }
+    return $return;
+}
+
+
+function get_term_top_most_parent( $term, $taxonomy ) {
+    // Start from the current term
+    $parent  = get_term( $term, $taxonomy );
+    // Climb up the hierarchy until we reach a term with parent = '0'
+    while ( $parent->parent != '0' ) {
+        $term_id = $parent->parent;
+        $parent  = get_term( $term_id, $taxonomy);
+    }
+    return $parent;
+}
+
+
 function get_genre_parents( $post_id , $link = false){
 	
-	//$_terms = get_genre( $post_id, false, true );
-    $_terms = get_the_terms( $post_id,'genre');
+	$taxonomy = 'genre';
+	
+	$_terms = wp_get_object_terms( $post_id,$taxonomy);
+	
+	$top_parent_terms = array();
+	$output = array();
+	
+	$post_categories = get_post_primary_category( $post_id, $taxonomy);
+	$primary_category = $post_categories['primary_category'];
+	$primary_category_name = $primary_category->name;
 
     if( empty($_terms) ) return '';
     
+    
     foreach ($_terms as $_term) {
-       
-       if( $_term->parent == 0 ){
-       	
-            if( !$link ){
-	            $genres[] = $_term->name ;
-            } else {
-	            $link_term = get_term_link( $_term->term_id, 'genre' );
-	            $genres[] = '<a href="'.$link_term.'">'.$_term->name.'</a>';
-            }
-            	        
-        } else {
-	        
-	        $parent = get_term( $_term->parent, 'genre');
-            if( !$link ){
-	            $genres[] = $parent->name ;
-            } else {
-	            $link_term = get_term_link( $parent->term_id, 'genre' );
-	            $genres[] = '<a href="'.$link_term.'">'.$parent->name.'</a>';
-            }
-        }
+	
+		$top_parent = get_term_top_most_parent( $_term, $taxonomy );
+		
+		if ( !in_array( $top_parent, $top_parent_terms ) ) {
+			$top_parent_terms[] = $top_parent;
+		}
 	}
+
+	foreach ( $top_parent_terms as $term ) {
+		//Add every term
+		if( $link ){
+			$output[] = '<a href="'. get_term_link( $term ) . '">' . $term->name . '</a>';
+		} else {
+			$output[] =  $term->name;
+		}
+	}
+
+		if( $link ){
+			array_unshift($output ,  '<a href="'. get_term_link( $primary_category ) . '">' . $primary_category_name . '</a>' );
+		} else {
+			array_unshift($output ,  $primary_category_name);
+		}
 	
-	$genres = array_unique($genres);
 	
-    $genres_txt = implode(" / ", $genres);
+	$output = array_unique($output);
+	
+    $genres_txt = implode(" / ", $output);
     return $genres_txt;
 }
 

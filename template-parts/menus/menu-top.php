@@ -1,10 +1,10 @@
 <?php
 	// devenir membre page ID
 	$devenir_membre_page_id = 113;
-	if ( function_exists('icl_object_id') ) {
+	//if ( function_exists('icl_object_id') ) {
 	     //something
 	     $devenir_membre_page_id = apply_filters( 'wpml_object_id', $devenir_membre_page_id, 'page', TRUE );
-	}	
+	//}	
 ?>
 <div id="menu-top-container">
 	<ul id="menu-top" class="menu">
