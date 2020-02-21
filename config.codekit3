@@ -807,22 +807,6 @@
 		"oAP": "/inc/abonnements/abonnements.php",
 		"oF": 0
 		},
-	"/inc/abonnements/shortcodes-abonnements.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/inc/abonnements/shortcodes-abonnements.php",
-		"oF": 0
-		},
-	"/inc/agenda/agenda.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/inc/agenda/agenda.php",
-		"oF": 0
-		},
 	"/inc/agenda/ajax_agenda.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1045,14 +1029,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/sidebar.php",
-		"oF": 0
-		},
-	"/single-agenda.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/single-agenda.php",
 		"oF": 0
 		},
 	"/single-artiste.php": {
@@ -2283,14 +2259,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/modules/element-main.php",
-		"oF": 0
-		},
-	"/template-parts/modules/element-slider-square.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/template-parts/modules/element-slider-square.php",
 		"oF": 0
 		},
 	"/template-parts/modules/element-slider.php": {
