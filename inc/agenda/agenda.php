@@ -116,26 +116,33 @@
 		return $result;//$events_query->posts;
 	}
 	
+	function transform_time_to_langue( $time ){
+			
+			$my_current_lang = apply_filters( 'wpml_current_language', NULL );
+				
+			if( $my_current_lang == 'en' ){
+					
+				$h = new DateTime( $time . ' 01/01/1970');
+				$h = $h->format('h:i a');
+				
+				return $h;	
+			}
+			
+			return $time;		
+	}
+	
 	function get_time_concert( $post_id, $date ){
 		
 		$row = get_field('dates',$post_id );
 		
 		if( !$row ) return '';
+		
 		foreach( $row as $c_date ){
 			if( $c_date['date_concert'] = $date ){
 				
-				$h = $c_date['heure_concert'];
-				
-				$my_current_lang = apply_filters( 'wpml_current_language', NULL );
-				
-				if( $my_current_lang == 'en' ){
-					
-					$h = new DateTime( $c_date['heure_concert'] . ' 01/01/2020');
-					$h = $h->format('h:i a');
-					
-				}
+				$heure = transform_time_to_langue( $c_date['heure_concert'] );
 
-				return $h;
+				return $heure;
 			}
 		}
 

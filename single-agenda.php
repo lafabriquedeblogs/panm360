@@ -22,7 +22,6 @@
 									
 					$am_year = date('Y');
 					$am_month =  date('m');
-					//$nonce = wp_create_nonce("my_user_like_nonce");
 												
 					$post_start = 1;
 				
@@ -103,7 +102,10 @@
 					$jour = date_i18n('D\&\n\b\s\p\;\<\s\p\a\n \c\l\a\s\s\=\"\b\o\l\d\"\>d\&\n\b\s\p\;M\<\/\s\p\a\n\>\&\n\b\s\p\;Y', strtotime($ddate));
 					
 					if( !empty($jour) && !empty($date['heure_concert'])){
-						$single_dates[] = $jour.'&nbsp;•&nbsp;'.$date['heure_concert'];
+						
+						$heure = transform_time_to_langue(  $date['heure_concert'] );
+						
+						$single_dates[] = $jour.'&nbsp;•&nbsp;'.$heure;
 					}
 					
 				}				
