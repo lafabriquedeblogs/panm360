@@ -9,7 +9,27 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+
+			<?php
+				$from = strtotime("2020-02-19");
+				$to = strtotime("2020-03-08");
+				$to_day = date("Y-m-d");
+				$today = strtotime($to_day);
+				
+				if( $from < $today && $to > $today ):
+					
+			?>
 			
+				<section class="publicite publicite-banniere" style="padding-bottom: 60px;">
+					<a href="https://www.analekta.com/" target="_blank">
+						<img src="https://panm360.com/wp-content/uploads/2020/02/Analekta_banniere.jpg" width="728" height="90" alt="publicite"/>
+					</a> 
+				</section>
+	
+			<?php endif; ?>
+			
+			
+						
 			<?php the_content(); ?>
 
 			<section class="section">

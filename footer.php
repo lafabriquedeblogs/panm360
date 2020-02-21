@@ -1,5 +1,5 @@
 
-	<?php get_template_part( '/template-parts/publicites/publicite', 'banniere' ); ?>
+	<?php get_template_part( '/template-parts/publicites/publicite', 'banniere-footer' ); ?>
 	<?php get_template_part( '/template-parts/modules/element', 'infolettre' ); ?>
 	
 

@@ -2317,12 +2317,28 @@
 		"oAP": "/template-parts/modules/six-columns-albums.php",
 		"oF": 0
 		},
-	"/template-parts/publicites/publicite-banniere.php": {
+	"/template-parts/publicites/publicite-banniere-footer.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/template-parts/publicites/publicite-banniere.php",
+		"oAP": "/template-parts/publicites/publicite-banniere-footer.php",
+		"oF": 0
+		},
+	"/template-parts/publicites/publicite-banniere-google.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/publicites/publicite-banniere-google.php",
+		"oF": 0
+		},
+	"/template-parts/publicites/publicite-banniere-header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/publicites/publicite-banniere-header.php",
 		"oF": 0
 		},
 	"/template-parts/publicites/publicite-ilot.php": {
