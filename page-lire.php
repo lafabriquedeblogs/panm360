@@ -17,7 +17,7 @@ get_header();
 				$to_day = date("Y-m-d");
 				$today = strtotime($to_day);
 				
-				if( $from < $today && $to > $today ):
+				if( $from < $today && $to > $today && is_page( array( 2691 , 5750 ))):
 					
 			?>
 				<section class="publicite publicite-banniere">
