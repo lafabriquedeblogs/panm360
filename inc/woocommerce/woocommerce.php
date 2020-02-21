@@ -79,3 +79,7 @@ function wc_disable_select2() {
 }
  
 add_action('wp_enqueue_scripts', 'wc_disable_select2', 100);
+
+
+
+

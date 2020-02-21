@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 */
 	do_action( 'woocommerce_before_my_account' );
 	
-	odjodjoajsojaoidsj
+	
 	
 	/**
 	 * Deprecated woocommerce_after_my_account action.

@@ -135,7 +135,7 @@ function add_addthis(){
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="manifest.json">
+	<link rel="manifest" href="/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
@@ -310,7 +310,41 @@ function tc_acf_svg_icon_file_path( $file_path ) {
     return get_theme_file_path( 'assets/img/panm360_sprite.svg' );
 }
 
+/* ----------- / REDIRECTS / --------------- */
 
+add_action( 'login_form_register', 'redirect_login_form_register' );
+
+function redirect_login_form_register(){
+	$abonnement_id = apply_filters( 'wpml_object_id', 113, 'page', TRUE  );
+	$abonnement_lonk = get_permalink( $abonnement_id );
+    wp_redirect( $abonnement_lonk );
+    exit(); // always call `exit()` after `wp_redirect`
+}
+
+//add_action('init','custom_login');
+
+function custom_login(){
+	global $pagenow;
+	$moncompte_id = apply_filters( 'wpml_object_id', 6966, 'page', TRUE  );
+	$moncompte_lonk = get_permalink( $moncompte_id );
+	
+	if( 'wp-login.php' == $pagenow ) {
+		wp_redirect( $moncompte_lonk );
+		exit();
+	}
+}
+
+add_action(  'login_init', 'user_registration_login_init'  );
+function user_registration_login_init () {
+	$moncompte_id = apply_filters( 'wpml_object_id', 6966, 'page', TRUE  );
+	$moncompte_lonk = get_permalink( $moncompte_id );
+     if( ! is_user_logged_in() ) {
+        wp_redirect( $moncompte_lonk );
+        exit;
+      }
+}
+
+/* ----------- / END REDIRECTS / --------------- */
 
 	
 require get_template_directory() . '/inc/template-tags.php';
