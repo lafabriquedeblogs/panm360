@@ -807,6 +807,22 @@
 		"oAP": "/inc/abonnements/abonnements.php",
 		"oF": 0
 		},
+	"/inc/abonnements/shortcodes-abonnements.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/abonnements/shortcodes-abonnements.php",
+		"oF": 0
+		},
+	"/inc/agenda/agenda.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/agenda/agenda.php",
+		"oF": 0
+		},
 	"/inc/agenda/ajax_agenda.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1031,6 +1047,14 @@
 		"oAP": "/sidebar.php",
 		"oF": 0
 		},
+	"/single-agenda.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-agenda.php",
+		"oF": 0
+		},
 	"/single-artiste.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1045,6 +1069,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/single-concerts.php",
+		"oF": 0
+		},
+	"/single-product.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-product.php",
 		"oF": 0
 		},
 	"/single-records.php": {
@@ -2261,6 +2293,14 @@
 		"oAP": "/template-parts/modules/element-main.php",
 		"oF": 0
 		},
+	"/template-parts/modules/element-slider-square.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/element-slider-square.php",
+		"oF": 0
+		},
 	"/template-parts/modules/element-slider.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2429,12 +2469,28 @@
 		"oAP": "/woocommerce/myaccount/payment-methods.php",
 		"oF": 0
 		},
+	"/woocommerce/myaccount/related-orders.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/related-orders.php",
+		"oF": 0
+		},
 	"/woocommerce/myaccount/view-order.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/woocommerce/myaccount/view-order.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/view-subscription.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/view-subscription.php",
 		"oF": 0
 		}
 	},

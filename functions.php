@@ -315,33 +315,30 @@ function tc_acf_svg_icon_file_path( $file_path ) {
 add_action( 'login_form_register', 'redirect_login_form_register' );
 
 function redirect_login_form_register(){
-	$abonnement_id = apply_filters( 'wpml_object_id', 113, 'page', TRUE  );
-	$abonnement_lonk = get_permalink( $abonnement_id );
-    wp_redirect( $abonnement_lonk );
+	$abonnement_link = get_lien_page_abonnement();
+    wp_redirect( $abonnement_link );
     exit(); // always call `exit()` after `wp_redirect`
-}
-
-//add_action('init','custom_login');
-
-function custom_login(){
-	global $pagenow;
-	$moncompte_id = apply_filters( 'wpml_object_id', 6966, 'page', TRUE  );
-	$moncompte_lonk = get_permalink( $moncompte_id );
-	
-	if( 'wp-login.php' == $pagenow ) {
-		wp_redirect( $moncompte_lonk );
-		exit();
-	}
 }
 
 add_action(  'login_init', 'user_registration_login_init'  );
 function user_registration_login_init () {
-	$moncompte_id = apply_filters( 'wpml_object_id', 6966, 'page', TRUE  );
-	$moncompte_lonk = get_permalink( $moncompte_id );
-     if( ! is_user_logged_in() ) {
-        wp_redirect( $moncompte_lonk );
+	$moncompte_link = get_lien_page_mon_compte();
+    if( ! is_user_logged_in() ) {
+        wp_redirect( $moncompte_link );
         exit;
-      }
+    }
+}
+
+function get_lien_page_abonnement(){
+	$abonnement_id = apply_filters( 'wpml_object_id', 113, 'page', TRUE  );
+	$abonnement_link = get_permalink( $abonnement_id );
+	return $abonnement_link;
+}
+
+function get_lien_page_mon_compte(){
+	$moncompte_id = apply_filters( 'wpml_object_id', 6966, 'page', TRUE  );
+	$moncompte_link = get_permalink( $moncompte_id );	
+	return $moncompte_link;
 }
 
 /* ----------- / END REDIRECTS / --------------- */
