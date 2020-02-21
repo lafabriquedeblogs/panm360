@@ -1347,6 +1347,14 @@ h2.annee-top {
     border-color: #5BC6E8;
     border-color: #fff; }
 
+.woocommerce-MyAccount-navigation li {
+  list-style-type: none;
+  padding: 0; }
+  .woocommerce-MyAccount-navigation li a {
+    font-size: 0.750em;
+    font-weight: 700;
+    text-decoration: none; }
+
 @media screen and (min-width: 535px) {
   .woocommerce form.checkout_coupon,
   .woocommerce form.login,

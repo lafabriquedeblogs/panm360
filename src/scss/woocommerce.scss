@@ -52,6 +52,18 @@
 	}	
 }
 
+.woocommerce-MyAccount-navigation {
+	li {
+		list-style-type: none;
+		padding: 0;
+		a {
+			font-size: 0.750em;
+			font-weight: 700;
+			text-decoration: none;
+		}
+	}
+	
+}
 @media screen and (min-width:535px){
 	.woocommerce form.checkout_coupon,
 	.woocommerce form.login,
