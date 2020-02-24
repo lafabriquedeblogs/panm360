@@ -63,9 +63,19 @@ function abos_panm_st( $atts ) {
 						<?php /**/ ?>
 						<div>
 							
-							<?php $abo_id = ( $prefix_class == 'gratuit') ? "6972" : "6973";?>
+							<?php
+								
+								$my_current_lang = apply_filters( 'wpml_current_language', NULL );	
+								
+								$abo_id = ( $prefix_class == 'gratuit') ? "6972" : "6973";
+								
+								if( $my_current_lang == 'en' ){
+									$abo_id = ( $prefix_class == 'free') ? "10201" : "10200";
+								}
+								
+							?>
 							
-							<a href="?add-to-cart=<?php echo $abo_id;?>" data-quantity="1" class="bouton product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="6973" data-product_sku="" aria-label="Ajouter “Abonnement Premium” à votre panier" rel="nofollow">Je m'abonne</a>
+							<a href="?add-to-cart=<?php echo $abo_id;?>" data-quantity="1" class="bouton product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="<?php echo $abo_id;?>" data-product_sku="" aria-label="<?php _e('Ajouter “Abonnement '.$prefix_class.'” à votre panier','panm360'); ?>" rel="nofollow"><?php _e('Je m\'abonne','panm360'); ?></a>
 							<!-- <button class=""><?php _e('Je m\'abonne','panm360-abonnement'); ?></button> -->
 						</div>
 						<?php /* */ ?>

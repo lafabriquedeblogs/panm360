@@ -426,6 +426,20 @@ figure {
   #primary, #masthead {
     margin: 0 auto; } }
 
+@media (min-width: 768px) {
+  .row--2 {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+            align-items: flex-start; }
+    .row--2 > * {
+      -webkit-box-flex: 0;
+              flex: 0 0 50%;
+      max-width: calc( 50% - 18px); } }
+
 @media (min-width: 782px) {
   /*
 	.wp-block-column:not(:first-child) {
@@ -1349,11 +1363,33 @@ h2.annee-top {
 
 .woocommerce-MyAccount-navigation li {
   list-style-type: none;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 0; }
   .woocommerce-MyAccount-navigation li a {
     font-size: 0.750em;
     font-weight: 700;
     text-decoration: none; }
+
+.hentry .wc_payment_method {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  .hentry .wc_payment_method.payment_method_netbanx label img {
+    display: inline-block; }
+  .hentry .wc_payment_method .payment_box.payment_method_netbanx {
+    margin-bottom: 0; }
+    .hentry .wc_payment_method .payment_box.payment_method_netbanx p {
+      margin: 0;
+      font-size: 0.750em; }
+
+.woocommerce-privacy-policy-text {
+  font-size: 0.750em;
+  font-weight: 700;
+  line-height: 1.3; }
+
+.woocommerce #payment #place_order,
+.woocommerce-page #payment #place_order {
+  float: none; }
 
 @media screen and (min-width: 535px) {
   .woocommerce form.checkout_coupon,
@@ -1518,7 +1554,10 @@ select {
     #gform_fields_6 #field_6_4 {
       flex-basis: 100%; } }
 
-.bouton, .is-style-plus-infos a, button, input[type="submit"] {
+.bouton, .woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt, .is-style-plus-infos a, button, input[type="submit"] {
   font-family: "Rubik", sans-serif;
   color: #fff;
   background: #333333;
@@ -1533,12 +1572,27 @@ select {
   transition: all .3s ease-out;
   cursor: pointer;
   text-decoration: none; }
-  .bouton:hover, .is-style-plus-infos a:hover, button:hover, input[type="submit"]:hover {
+  .bouton:hover, .woocommerce #respond input#submit.alt:hover,
+  .woocommerce a.button.alt:hover,
+  .woocommerce button.button.alt:hover,
+  .woocommerce input.button.alt:hover, .is-style-plus-infos a:hover, button:hover, input[type="submit"]:hover {
     box-shadow: 0px 0px 0px 2px #add9e7;
     border-color: #5BC6E8;
     border-color: #fff; }
-  .bouton.disabled, .is-style-plus-infos a.disabled, button.disabled, input[type="submit"].disabled {
+  .bouton.disabled, .woocommerce #respond input.disabled#submit.alt,
+  .woocommerce a.disabled.button.alt,
+  .woocommerce button.disabled.button.alt,
+  .woocommerce input.disabled.button.alt, .is-style-plus-infos a.disabled, button.disabled, input[type="submit"].disabled {
     background: #FED766; }
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background: #5BC6E8;
+  box-shadow: 0px 0px 0px 2px #add9e7 !important;
+  border-color: #5BC6E8 !important;
+  border-color: #fff !important; }
 
 .at-share-btn-elements {
   display: -webkit-box !important;
@@ -1714,7 +1768,10 @@ select {
     font-weight: 300; }
     .square-featured-slider--slide--content .element-location .medium {
       display: inline; }
-  .square-featured-slider--slide--content .bouton, .square-featured-slider--slide--content .is-style-plus-infos a, .is-style-plus-infos .square-featured-slider--slide--content a {
+  .square-featured-slider--slide--content .bouton, .square-featured-slider--slide--content .woocommerce #respond input#submit.alt, .woocommerce #respond .square-featured-slider--slide--content input#submit.alt,
+  .square-featured-slider--slide--content .woocommerce a.button.alt, .woocommerce .square-featured-slider--slide--content a.button.alt,
+  .square-featured-slider--slide--content .woocommerce button.button.alt, .woocommerce .square-featured-slider--slide--content button.button.alt,
+  .square-featured-slider--slide--content .woocommerce input.button.alt, .woocommerce .square-featured-slider--slide--content input.button.alt, .square-featured-slider--slide--content .is-style-plus-infos a, .is-style-plus-infos .square-featured-slider--slide--content a {
     display: inline-block;
     margin: 1.6em 0 0 0;
     background-color: #5BC6E8;

@@ -23,6 +23,24 @@
 	}
 }
 
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	@extend .bouton
+	
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background: $bleu;
+	box-shadow: 0px 0px 0px 2px #add9e7 !important;
+	border-color: $bleu !important;
+	border-color: #fff !important;
+}
+
 .at-share-btn-elements {
 	display: flex !important;
 	align-items: center;

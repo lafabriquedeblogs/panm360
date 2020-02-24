@@ -130,7 +130,16 @@
 	}
 }
 @media (min-width: 768px){
-	
+	.row--2 {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		& > * {
+			flex: 0 0 50%;
+			max-width: calc( 50% - 18px );
+		}
+	}
 }
 @media (min-width: 782px){
 /*

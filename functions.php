@@ -329,6 +329,13 @@ function user_registration_login_init () {
     }
 }
 
+function get_aboonement_gartuit_by_lang(){
+	
+	$free = apply_filters( 'wpml_object_id', 6972, 'product', TRUE  );
+	$$premium = apply_filters( 'wpml_object_id', 6973, 'product', TRUE  );
+	
+}
+
 function get_lien_page_abonnement(){
 	$abonnement_id = apply_filters( 'wpml_object_id', 113, 'page', TRUE  );
 	$abonnement_link = get_permalink( $abonnement_id );
