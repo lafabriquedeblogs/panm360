@@ -1,6 +1,6 @@
 <?php
 
-//add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
+add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
 
 /*******************************/
 // wc_memberships_is_user_member( $user_id = null, $membership_plan );
@@ -10,6 +10,15 @@
 function filter_the_content_in_the_main_loop( $content ) {
 		
 	$user_id = get_current_user_id();
+	
+	//$membership_plan = 6969;//premium
+	//$membership_plan = 6968;//free
+/*
+	$statuses = array(
+		'status' => array( 'active', 'complimentary', 'pending', 'free_trial' ),
+	);
+	$active_memberships = wc_memberships_get_user_memberships( $user_id, $statuses );
+*/
 	
 	// Page abonnement 
 	if( is_page() ){

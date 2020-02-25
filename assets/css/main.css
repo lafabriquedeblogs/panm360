@@ -1428,6 +1428,7 @@ input[type="email"],
 input[type="number"],
 input[type="url"],
 input[type="password"],
+input[type="tel"],
 select,
 textarea {
   padding: 20px;
@@ -1456,6 +1457,7 @@ select {
 .gform_wrapper input[type="number"],
 .gform_wrapper input[type="url"],
 .gform_wrapper input[type="password"],
+.gform_wrapper input[type="tel"],
 .gform_wrapper textarea {
   padding: 20px;
   display: block;

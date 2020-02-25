@@ -799,20 +799,20 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
-	"/inc/abonnements/abonnements.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/inc/abonnements/abonnements.php",
-		"oF": 0
-		},
 	"/inc/abonnements/shortcodes-abonnements.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/inc/abonnements/shortcodes-abonnements.php",
+		"oF": 0
+		},
+	"/inc/abonnements/woocommerce.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/abonnements/woocommerce.php",
 		"oF": 0
 		},
 	"/inc/agenda/agenda.php": {
@@ -901,14 +901,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/inc/updater/updater.php",
-		"oF": 0
-		},
-	"/inc/woocommerce/woocommerce.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/inc/woocommerce/woocommerce.php",
 		"oF": 0
 		},
 	"/index.php": {
@@ -2453,12 +2445,28 @@
 		"oAP": "/woocommerce/myaccount/my-downloads.php",
 		"oF": 0
 		},
+	"/woocommerce/myaccount/my-memberships.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-memberships.php",
+		"oF": 0
+		},
 	"/woocommerce/myaccount/my-orders.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/woocommerce/myaccount/my-orders.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/my-subscriptions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-subscriptions.php",
 		"oF": 0
 		},
 	"/woocommerce/myaccount/navigation.php": {
