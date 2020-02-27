@@ -138,48 +138,77 @@ function sv_free_checkout_fields() {
 	}
 
 }
-add_action( 'wp', 'sv_free_checkout_fields' );
+//add_action( 'wp', 'sv_free_checkout_fields' );
 
 /**
- * There are two ways we could prevent purchasing more than one membership:
- *  1. prevent access if the customer already has an active membership
- *  2. prevent access if the customer already has any membership
- *
- * This snippet shows the first scenario.
- */
-
-
-/**
- * Do not grant membership access to purchasers if they already hold an active membership
- *
- * @param bool $grant_access true if the purchaser should get memberships access from this order
- * @param array $args {
- *	@type int $user_id purchaser's WordPress user ID
- *	@type int $product_id the ID of the access-granting product
- *	@type int $order_id the ID of order for this purchase
- * }
- * @return bool $grant_access
- */
-function sv_wc_memberships_limit_membership_count( $grant_access, $args ) {
-
-	// get all active memberships for the purchaser
-	// you can remove any of these if you don't want to allow multiples
-	// ie you may not want to count complimentary memberships
-/*
-	$statuses = array(
-		'status' => array( 'active', 'complimentary', 'pending', 'free_trial' ),
-	);
-	
-	$active_memberships = wc_memberships_get_user_memberships( $args['user_id'], $statuses );
+* @snippet       Display FREE if Price Zero or Empty - WooCommerce Single Product
+* @how-to        Get CustomizeWoo.com FREE
+* @author        Rodolfo Melogli
+* @testedwith    WooCommerce 3.8
+* @donate $9     https://businessbloomer.com/bloomer-armada/
 */
-	$active_memberships = wc_memberships_get_user_memberships( $args['user_id'] );
-	
-	// if there are any active memberships returned, do not grant access from purchase
-	if ( ! empty( $active_memberships ) ) {
-		return false;
-	}
-
-	return $grant_access;
+  
+add_filter( 'woocommerce_subscriptions_product_price_string', 'bbloomer_price_free_zero_empty', 9999, 3 );
+   
+function bbloomer_price_free_zero_empty( $subscription_string, $product, $include ){
+    if ( '' === $product->get_price() || 0 == $product->get_price() ) {
+        $srting = __("Gratuit",'panm360');
+        return $srting;
+    }  
+    return $subscription_string;
 }
-add_filter( 'wc_memberships_grant_access_from_new_purchase', 'sv_wc_memberships_limit_membership_count', 1, 2 );
 
+/**
+ * Remove woocommerce_template_single_sharing
+*/
+function woocommerce_template_single_sharing(){
+	return false;
+	//wc_get_template( 'single-product/share.php' );
+}
+/**
+ * Remove woocommerce_template_single_meta
+*/
+function woocommerce_template_single_meta() {
+	return false;
+    //wc_get_template( 'single-product/meta.php' );
+}
+/**
+ * Remove woocommerce_template_single_title
+*/
+function woocommerce_template_single_title() {
+	return false;
+    //wc_get_template( 'single-product/meta.php' );
+}
+/**
+ * Remove woocommerce_template_single_price
+*/
+function woocommerce_template_single_price() {
+	return false;
+    //wc_get_template( 'single-product/meta.php' );
+}
+
+
+/**
+ * Remove related products output
+ */
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+
+/**
+ * Remove the breadcrumbs 
+ */
+add_action( 'init', 'woo_remove_wc_breadcrumbs' );
+function woo_remove_wc_breadcrumbs() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
+
+
+// define the woocommerce_product_single_add_to_cart_text callback 
+function filter_woocommerce_product_single_add_to_cart_text( $var, $instance ) { 
+    // make filter magic happen here... 
+    $var = __("Je m'abonne",'panm360');
+    return $var; 
+}; 
+         
+// add the filter 
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'filter_woocommerce_product_single_add_to_cart_text', 10, 2 );

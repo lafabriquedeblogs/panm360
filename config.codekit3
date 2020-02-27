@@ -25,6 +25,14 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/__single-product.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/__single-product.php",
+		"oF": 0
+		},
 	"/_page-dev.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1063,11 +1071,19 @@
 		"oAP": "/single-concerts.php",
 		"oF": 0
 		},
-	"/single-product.php": {
+	"/single-product-abonnements.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
+		"oAP": "/single-product-abonnements.php",
+		"oF": 0
+		},
+	"/single-product.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
 		"oAP": "/single-product.php",
 		"oF": 0
 		},
@@ -2349,6 +2365,14 @@
 		"oAP": "/woocommerce/checkout/form-checkout.php",
 		"oF": 0
 		},
+	"/woocommerce/content-single-product.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/content-single-product.php",
+		"oF": 0
+		},
 	"/woocommerce/myaccount/dashboard.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2515,6 +2539,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/woocommerce/myaccount/view-subscription.php",
+		"oF": 0
+		},
+	"/woocommerce/single-product/add-to-cart/grouped.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/single-product/add-to-cart/grouped.php",
+		"oF": 0
+		},
+	"/woocommerce/single-product/add-to-cart/subscription.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/single-product/add-to-cart/subscription.php",
 		"oF": 0
 		}
 	},

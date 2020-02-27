@@ -1391,6 +1391,23 @@ h2.annee-top {
 .woocommerce-page #payment #place_order {
   float: none; }
 
+/* abonnements */
+.woocommerce-grouped-product-list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+
+#bouton-je-mabonne {
+  display: block;
+  margin: 1em auto; }
+
+.woocommerce-grouped-product-list-item {
+  border: 1px solid #4d4d4d;
+  cursor: pointer; }
+
+/* !abonnements */
 @media screen and (min-width: 535px) {
   .woocommerce form.checkout_coupon,
   .woocommerce form.login,
@@ -1406,6 +1423,32 @@ h2.annee-top {
     .woocommerce form.login .form-row-wide {
       -webkit-box-flex: 0;
               flex: 0 0 50%; } }
+
+@media screen and (min-width: 768px) {
+  .woocommerce-grouped-product-list {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+    .woocommerce-grouped-product-list > li {
+      -webkit-box-flex: 0;
+              flex: 0 0 1;
+      max-width: calc( 50% - 18px);
+      text-align: center; }
+    .woocommerce-grouped-product-list #product-6972 {
+      -webkit-box-flex: 0;
+              flex: 0 0 100%;
+      max-width: none; } }
+
+@media screen and (min-width: 1024px) {
+  .woocommerce-grouped-product-list > li {
+    -webkit-box-flex: 0;
+            flex: 0 0 100%;
+    max-width: calc( 33% - 18px); } }
 
 .no-label label, .no-label .gfield_label {
   position: absolute;
