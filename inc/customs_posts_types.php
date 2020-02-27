@@ -157,10 +157,7 @@ function panm360_customs_posts_types() {
 	);
 	register_post_type( 'agenda', $args );	
 	
-	unset($labels);
-	unset($args);
 
-/**/
 	$labels = array(
 		'name'                  => _x( 'Critique de concert', 'Post Type General Name', 'panm360' ),
 		'singular_name'         => _x( 'Critique de concert', 'Post Type Singular Name', 'panm360' ),
@@ -211,9 +208,7 @@ function panm360_customs_posts_types() {
 		'show_in_rest'          => true,
 	);
 	register_post_type( 'gig_review', $args );
-/**/
-	unset($labels);
-	unset($args);
+
 	
 	$labels = array(
 		'name'                  => _x( 'Publicités', 'Post Type General Name', 'panm360' ),
@@ -265,6 +260,60 @@ function panm360_customs_posts_types() {
 		'show_in_rest'          => true,
 	);
 	register_post_type( 'panm360_ads', $args );
+
+	
+	$labels_interviews = array(
+		'name'                  => _x( 'Interviews', 'Post Type General Name', 'panm360' ),
+		'singular_name'         => _x( 'Interview', 'Post Type Singular Name', 'panm360' ),
+		'menu_name'             => __( 'Interviews', 'panm360' ),
+		'name_admin_bar'        => __( 'Interviews', 'panm360' ),
+		'archives'              => __( 'Item Archives', '' ),
+		'attributes'            => __( 'Item Attributes', '' ),
+		'parent_item_colon'     => __( 'Parent Item:', '' ),
+		'all_items'             => __( 'All Items', '' ),
+		'add_new_item'          => __( 'Add New Item', '' ),
+		'add_new'               => __( 'Add New', '' ),
+		'new_item'              => __( 'New Item', '' ),
+		'edit_item'             => __( 'Edit Item', '' ),
+		'update_item'           => __( 'Update Item', '' ),
+		'view_item'             => __( 'View Item', '' ),
+		'view_items'            => __( 'View Items', '' ),
+		'search_items'          => __( 'Search Item', '' ),
+		'not_found'             => __( 'Not found', '' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', '' ),
+		'featured_image'        => __( 'Featured Image', '' ),
+		'set_featured_image'    => __( 'Set featured image', '' ),
+		'remove_featured_image' => __( 'Remove featured image', '' ),
+		'use_featured_image'    => __( 'Use as featured image', '' ),
+		'insert_into_item'      => __( 'Insert into item', '' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', '' ),
+		'items_list'            => __( 'Items list', '' ),
+		'items_list_navigation' => __( 'Items list navigation', '' ),
+		'filter_items_list'     => __( 'Filter items list', '' ),
+	);
+	$args_interviews = array(
+		'label'                 => __( 'Interviews', 'panm360' ),
+		'description'           => __( 'Interviews', 'panm360' ),
+		'labels'                => $labels_interviews,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes', 'post-formats','author','excerpt' ),
+		'taxonomies'            => array( 'category', 'post_tag', 'pays', 'genre','salle' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 20,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'post',
+		'show_in_rest'          => true,
+		);
+		
+	register_post_type( 'interviews', $args_interviews );
+	
 }
 add_action( 'init', 'panm360_customs_posts_types', 0 );
 

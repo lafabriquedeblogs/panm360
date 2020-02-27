@@ -415,6 +415,8 @@ function get_articles_par_terms( $term , $posts_per_page = -1 ){
 
 function menu_langue(){
 	
+	if( is_admin()) return '';
+	
 	global $post;
 	
 	$post_type = get_post_type( $post );

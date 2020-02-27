@@ -253,7 +253,8 @@ function panm360_allowed_block_types( $allowed_blocks, $post ) {
 		'woocommerce/featured-product',
 		'acf/section_un',
 		'acf/agenda_360',
-		'acf/section_trois_colonnes'
+		'acf/section_trois_colonnes',
+		'acf/header_interview'
 	);
  
 	
@@ -348,6 +349,23 @@ function get_lien_page_mon_compte(){
 	return $moncompte_link;
 }
 
+
+/*
+function slug_post_type_template() {
+	$page_type_object = get_post_type_object( 'interviews' );
+	$page_type_object->template = [
+
+						    [ 'acf/header_interview',[] ],
+							[ 'core/columns', [], [
+								[ 'core/column', [], [] ],
+								[ 'core/column', [], [] ],
+							]],
+
+	];
+}
+add_action( 'init', 'slug_post_type_template' );
+*/
+
 /* ----------- / END REDIRECTS / --------------- */
 
 	
@@ -374,3 +392,4 @@ require get_template_directory() . '/template-parts/blocks/section_un.php';
 require get_template_directory() . '/template-parts/blocks/section_3_colonnes.php';
 require get_template_directory() . '/template-parts/blocks/block_agenda_360.php';
 require get_template_directory() . '/template-parts/blocks/block_slider_1.php';
+require get_template_directory() . '/template-parts/blocks/block_header_interview.php';

@@ -2166,6 +2166,14 @@
 		"oAP": "/template-parts/blocks/block_agenda_360.php",
 		"oF": 0
 		},
+	"/template-parts/blocks/block_header_interview.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/blocks/block_header_interview.php",
+		"oF": 0
+		},
 	"/template-parts/blocks/block_slider_1.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2214,6 +2222,14 @@
 		"oAP": "/template-parts/blocks/section_un.php",
 		"oF": 0
 		},
+	"/template-parts/content-interviews.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/content-interviews.php",
+		"oF": 0
+		},
 	"/template-parts/content-none.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2228,6 +2244,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/content-page.php",
+		"oF": 0
+		},
+	"/template-parts/content-records.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/content-records.php",
 		"oF": 0
 		},
 	"/template-parts/content-search.php": {
