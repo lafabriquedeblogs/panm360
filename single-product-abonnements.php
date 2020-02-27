@@ -30,10 +30,10 @@ get_header( 'shop' ); ?>
 				
 				<?php
 					
-					$page_abo = get_the_content( null, false, 113 );
-					$page_abo_content = apply_filters( 'the_content', $page_abo );
+					//$page_abo = get_the_content( null, false, 113 );
+					//$page_abo_content = apply_filters( 'the_content', $page_abo );
 					
-					echo $page_abo_content;
+					//echo $page_abo_content;
 				?>
 				
 				

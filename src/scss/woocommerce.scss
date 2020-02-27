@@ -100,22 +100,6 @@
 	float: none;	
 }
 
-/* abonnements */
-.woocommerce-grouped-product-list {
-	display: flex;
-	flex-direction: column;
-}
-
-#bouton-je-mabonne {
-	display: block;
-	margin: 1em auto;
-}
-
-.woocommerce-grouped-product-list-item {
-	border: 1px solid $gris_dark;
-	cursor: pointer;
-}
-/* !abonnements */
 @media screen and (min-width:535px){
 	.woocommerce form.checkout_coupon,
 	.woocommerce form.login,
@@ -132,31 +116,4 @@
     }
 }
 
-@media screen and (min-width:768px){
-	.woocommerce-grouped-product-list {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		
-		& > li {
-			flex: 0 0 1;
-			max-width: calc( 50% - 18px );
-			text-align: center;
-		}
-		
-		#product-6972 {
-			flex: 0 0 100%;
-			max-width: none;
-		}
-	}	
-}
-
-@media screen and (min-width:1024px){
-	.woocommerce-grouped-product-list {
-		& > li {
-			flex: 0 0 100%;
-			max-width: calc( 33% - 18px );
-		}
-	}	
-}
+@import "woocommerce/product";

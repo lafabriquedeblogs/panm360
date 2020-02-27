@@ -1391,23 +1391,6 @@ h2.annee-top {
 .woocommerce-page #payment #place_order {
   float: none; }
 
-/* abonnements */
-.woocommerce-grouped-product-list {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column; }
-
-#bouton-je-mabonne {
-  display: block;
-  margin: 1em auto; }
-
-.woocommerce-grouped-product-list-item {
-  border: 1px solid #4d4d4d;
-  cursor: pointer; }
-
-/* !abonnements */
 @media screen and (min-width: 535px) {
   .woocommerce form.checkout_coupon,
   .woocommerce form.login,
@@ -1424,7 +1407,80 @@ h2.annee-top {
       -webkit-box-flex: 0;
               flex: 0 0 50%; } }
 
+.single-product #primary {
+  padding: 0; }
+
+.woocommerce-grouped-product-list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+
+#bouton-je-mabonne {
+  display: block;
+  margin: 1em auto; }
+
+.woocommerce-grouped-product-list-item {
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+  padding: 0;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  position: relative;
+  background-color: #fff;
+  z-index: 1; }
+  .woocommerce-grouped-product-list-item.inactive {
+    opacity: 0.8;
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+    cursor: pointer;
+    background-color: #F4F4F8; }
+  .woocommerce-grouped-product-list-item.active {
+    cursor: pointer;
+    border: 1px #FE4A49 solid;
+    opacity: 1;
+    -webkit-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+    padding: 0;
+    z-index: 3; }
+
+.wc-grouped-product-add-to-cart-checkbox {
+  position: absolute;
+  opacity: 0;
+  left: -999em; }
+
+.woocommerce-grouped-product-list-item__label {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase; }
+  .woocommerce-grouped-product-list-item__label a {
+    text-decoration: none; }
+
+.woocommerce-grouped-product-list-item__description {
+  font-size: 13px;
+  color: #000;
+  max-width: 250px;
+  margin: 0 auto; }
+
+.woocommerce .abo-thumbnail {
+  width: 20%;
+  height: 20%; }
+
+.abo-content {
+  padding: 5px; }
+
 @media screen and (min-width: 768px) {
+  .single-product #primary {
+    padding: 0 1.45em; }
   .woocommerce-grouped-product-list {
     display: -webkit-box;
     display: flex;
@@ -1435,20 +1491,26 @@ h2.annee-top {
     -webkit-box-pack: justify;
             justify-content: space-between; }
     .woocommerce-grouped-product-list > li {
+      display: block;
       -webkit-box-flex: 0;
               flex: 0 0 1;
-      max-width: calc( 50% - 18px);
-      text-align: center; }
-    .woocommerce-grouped-product-list #product-6972 {
-      -webkit-box-flex: 0;
-              flex: 0 0 100%;
-      max-width: none; } }
+      text-align: center;
+      max-width: 50%; }
+  .woocommerce .abo-thumbnail {
+    width: 100%;
+    height: auto; }
+  .abo-content {
+    padding: 1em 0; } }
 
 @media screen and (min-width: 1024px) {
   .woocommerce-grouped-product-list > li {
     -webkit-box-flex: 0;
             flex: 0 0 100%;
-    max-width: calc( 33% - 18px); } }
+    max-width: 33%; }
+  .woocommerce-grouped-product-list #product-6972, .woocommerce-grouped-product-list #product-6973 {
+    -webkit-box-flex: 0;
+            flex: 0 0 100%;
+    max-width: 50%; } }
 
 .no-label label, .no-label .gfield_label {
   position: absolute;

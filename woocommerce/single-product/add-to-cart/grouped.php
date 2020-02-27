@@ -39,7 +39,14 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				setup_postdata( $post );
 
 				echo '<li id="product-' . esc_attr( $grouped_product_child->get_id() ) . '" class="woocommerce-grouped-product-list-item ' . esc_attr( implode( ' ', wc_get_product_class( '', $grouped_product_child ) ) ) . '">';
-
+				
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $grouped_product_child->get_id() ), 'panm360_square' );
+				
+				echo '<img class="abo-thumbnail" src="'.$image[0].'" width="500" height="500" alt=""/>';
+				
+				echo '<div class="abo-content">';
+				//$image = get_image( $size = 'woocommerce_thumbnail', $attr = array(), $placeholder = true )
+				
 				// Output columns for each product.
 				foreach ( $grouped_product_columns as $column_id ) {
 					do_action( 'woocommerce_grouped_product_list_before_' . $column_id, $grouped_product_child );
@@ -90,8 +97,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				
 				$product_details = $grouped_product_child->get_short_description();
 				$product_get_short_description = '<span>'.$product_details.'</span>';	
-				echo '<div style="color:red;">'.$product_get_short_description.'</div>';
+				echo '<div class="woocommerce-grouped-product-list-item__description">'.$product_get_short_description.'</div>';
 				
+				echo '</div> <!--abo-content-->';
 				
 				echo '</li>';
 			}
@@ -131,8 +139,19 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		
 		$(".woocommerce-grouped-product-list-item").each( function(index){
 			$(this).on("click", function(){
+				
+				if( $(this).hasClass("active")){
+					$(".woocommerce-grouped-product-list-item").removeClass("active").removeClass("inactive");
+					return;
+				}
+				
 				$(".wc-grouped-product-add-to-cart-checkbox").prop("checked", false);
-				$(this).children(".wc-grouped-product-add-to-cart-checkbox").prop("checked", true);
+				$(this).find(".wc-grouped-product-add-to-cart-checkbox").prop("checked", true);
+				
+				$(".woocommerce-grouped-product-list-item").removeClass("active").addClass("inactive");
+				$(this).addClass("active").removeClass("inactive");
+				
+				return false;
 			});
 		});
 	});

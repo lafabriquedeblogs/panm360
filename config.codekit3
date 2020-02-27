@@ -1568,6 +1568,26 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/src/scss/css/checkout.css": {
+		"aP": 1,
+		"bl": 1,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/src/scss/css/checkout-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/src/scss/css/product.css": {
+		"aP": 1,
+		"bl": 1,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/src/scss/css/product-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/src/scss/dev.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -1850,6 +1870,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/woocommerce.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/woocommerce/product.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/css/product.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
