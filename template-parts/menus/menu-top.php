@@ -82,6 +82,12 @@
 		
 		<?php */ ?>
 		
+		<li id="panm-signin" class="menu-item">
+				<a href="<?php echo get_permalink( $devenir_membre_page_id );?>">
+					<svg class="icon"><use xlink:href="#fingerprint"></use></svg>
+					<span><?php _e('S\'abonner','panm360'); ?></span>
+				</a>
+		</li>
 		
 		
 		<li id="menu-toggle-mobile">

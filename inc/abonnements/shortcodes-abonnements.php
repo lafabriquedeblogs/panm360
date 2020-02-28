@@ -60,7 +60,7 @@ function abos_panm_st( $atts ) {
 								}
 							?>
 						</ul>
-						<?php /**/ ?>
+						<?php /* ?>
 						<div>
 							
 							<?php
@@ -78,7 +78,7 @@ function abos_panm_st( $atts ) {
 							<a href="?add-to-cart=<?php echo $abo_id;?>" data-quantity="1" class="bouton product_type_subscription add_to_cart_button ajax_add_to_cart" data-product_id="<?php echo $abo_id;?>" data-product_sku="" aria-label="<?php _e('Ajouter “Abonnement '.$prefix_class.'” à votre panier','panm360'); ?>" rel="nofollow"><?php _e('Je m\'abonne','panm360'); ?></a>
 							<!-- <button class=""><?php _e('Je m\'abonne','panm360-abonnement'); ?></button> -->
 						</div>
-						<?php /* */ ?>
+						<?php */ ?>
 					</div><!-- abo-bloc abo-bloc-gratuit -->		
 				<?php
 			}	
