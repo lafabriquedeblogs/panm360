@@ -79,25 +79,25 @@
 		<section class="section">
 			<div class="section-inner">
 					<ul class="section-content--has-6-columns">
-					<?php
-						$albums_count = 12;	
-					
-						$args = array(
-							'post_type' => 'records',
-							'posts_per_page' => $albums_count,
-							'post_status' => 'publish',
-							'orderby' => 'rand',
-						);
+						<?php
+							$albums_count = 12;	
 						
-						$albums = new WP_Query($args);
-						
-						while($albums->have_posts() ){
-								$albums->the_post();
-								
-								include( locate_template( '/template-parts/modules/element-album.php', false, false ) );			
-							$albums_count--;
-						}
-					?>
+							$args = array(
+								'post_type' => 'records',
+								'posts_per_page' => $albums_count,
+								'post_status' => 'publish',
+								'orderby' => 'rand',
+							);
+							
+							$albums = new WP_Query($args);
+							
+							while($albums->have_posts() ){
+									$albums->the_post();
+									
+									include( locate_template( '/template-parts/modules/element-album.php', false, false ) );			
+								$albums_count--;
+							}
+						?>
 					</ul>
 			</div>
 		</section>

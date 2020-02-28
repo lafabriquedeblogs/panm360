@@ -46,6 +46,7 @@ img.lozad {
 	margin-bottom: 36px;
 	a {
 		text-decoration: none;
+		background: none !important;
 		font-family: $rubik;
 		&:hover {
 			text-decoration: underline;
@@ -310,11 +311,14 @@ img.lozad {
 	//width: 50px;
 }
 
+
+
 /* Single Album */
 @import "single_record";
 /* Single Agenda */
 @import "single_agenda";
-
+/* Single Interview */
+@import "single_interview";
 
 
 @media screen and(min-width:535px){

@@ -29,8 +29,14 @@
 	<div class="details">
 		<span class="element-title album-title"><a href="<?php echo $lien;?>"><?php echo $titre;?></a></span>
 		<span class="artiste album-artiste"><?php echo $artiste;?></span>
-		<span class="artiste album-annee"><?php echo $annee;?></span>
-		<span class="genre album-genre"><?php echo $genres;?></span>
+		
+		<?php if(!empty($annee)): ?>
+			<span class="artiste album-annee"><?php echo $annee;?></span>
+		<?php endif; ?>
+		<?php if(!empty($genres)): ?>
+			<span class="genre album-genre"><?php echo $genres;?></span>
+		<?php endif; ?>
+		
 		<a class="author album-author" href="<?php echo $auteur_link;?>"><?php _e('par','panm360'); ?> <?php echo $auteur;?></a>
 	</div>
 </li>

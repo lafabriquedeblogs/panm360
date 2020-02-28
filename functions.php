@@ -140,7 +140,6 @@ function add_addthis(){
 	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="google-site-verification" content="=VTCijZR84yTYbBCjuRst-zSYuF6B-qWIRe9ItH1ceSE" />
-	<!-- Go to www.addthis.com/dashboard to customize your tools -->
 	<script type="text/javascript" async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df97d325d480cb8"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147470280-1"></script>
@@ -393,3 +392,5 @@ require get_template_directory() . '/template-parts/blocks/section_3_colonnes.ph
 require get_template_directory() . '/template-parts/blocks/block_agenda_360.php';
 require get_template_directory() . '/template-parts/blocks/block_slider_1.php';
 require get_template_directory() . '/template-parts/blocks/block_header_interview.php';
+require get_template_directory() . '/template-parts/blocks/block_single_album.php';
+require get_template_directory() . '/template-parts/blocks/block_single_agenda.php';

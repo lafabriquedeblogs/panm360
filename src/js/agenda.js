@@ -6,12 +6,12 @@ export default function ajax_search_agenda(){
 	let stepin;
 	let items;
 	let items_remaining;
-	let pages_number;
+	//let pages_number;
 	
 	let year, month, genre, nonce;
 	let count;//jQuery("#agenda-count").val();
 	
-	let fade_results = false;
+	//let fade_results = false;
 	
 	let agenda_full = false;
 	
@@ -57,7 +57,7 @@ export default function ajax_search_agenda(){
 
 			},
 			complete: function(response){
-				console.log(response);
+				//console.log(response);
 			}
 		});		
 	}
@@ -130,14 +130,14 @@ export default function ajax_search_agenda(){
 			adaptiveHeight: true,
 			lazyLoad: 'ondemand',
 			prevArrow: '<div class="slick-prev-arrow"><svg class="icone"><use xlink:href="#slider-left-arrow"></use></svg></div>',
-			nextArrow: '<div class="slick-next-arrow"><svg class="icone"><use xlink:href="#slider-right-arrow"></use></svg></div>',
+			nextArrow: '<div class="slick-next-arrow"><svg class="icone"><use xlink:href="#slider-right-arrow"></use></svg></div>'
 		});
 	}
 	
 	load_more_items();
 	
 	let filtre_agenda = document.getElementById('agenda-filtres-section');
-		console.log(filtre_agenda);
+		//console.log(filtre_agenda);
 	
 	if( filtre_agenda !== null ){
 		const local = (agendAjax.current_language == 'fr') ? 'fr-FR' : 'en-EN';

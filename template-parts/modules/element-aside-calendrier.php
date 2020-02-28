@@ -19,6 +19,7 @@
 	
 				if( $post_start > $count ) break;
 					
+/*
 				if( $is_pub && $post_start-1 == $count/2 ) {
 					?>
 						<li class="full-row">
@@ -28,6 +29,7 @@
 						</li>
 					<?php
 					}
+*/
 					include( locate_template( '/template-parts/modules/element-item-calendrier.php', false, false ) );
 					$post_start++;
 				}

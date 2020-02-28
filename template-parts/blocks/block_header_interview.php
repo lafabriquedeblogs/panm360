@@ -32,20 +32,25 @@ function header_interview_render_callback( $block, $content = '', $is_preview = 
 	if( !empty($block['align']) ) {
 	    $className .= ' align' . $block['align'];
 	}
+	
+	
 	$image_data =  get_field('image');
-	$image = $image_data['sizes']['medium'];
+	
+	$image = $image_data['sizes']['medium_large'];
 	$introduction_presentation = get_field('introduction_presentation');
 	$author = get_the_author();
 	?>
 			<div id="header_interview">
 				
-				<div>
+				<div class="portrait"
+						style="background-image: url('<?php echo $image;?>');background-size:cover; background-repeat: no-repeat;background-position: center center;"
+				>
 					<img src="<?php echo $image;?>" />
 				</div>
-				<div>
-					<h2><?php the_title(); ?></h2>
-					<span><?php echo $author;?></span>
-					<p><?php echo $introduction_presentation;?></p>
+				<div class="interview-header">
+					<h1><?php the_title(); ?></h1>
+					<span class="author"><?php _e('Interview réalisé par','panm360'); ?> <?php echo $author;?></span>
+					<div class="chapeau-header"><?php echo $introduction_presentation;?></div>
 				</div>
 			</div><!-- wrap-new-featured-slider -->						
 	<?php

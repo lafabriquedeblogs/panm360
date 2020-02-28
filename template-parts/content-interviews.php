@@ -13,11 +13,12 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-interview'); ?>>
+<?php /* ?>
 	<header class="entry-header section">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-
+<?php */ ?>
 
 	<?php //panm360_post_thumbnail(); ?>
 
