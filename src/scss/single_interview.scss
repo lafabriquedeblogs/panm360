@@ -19,6 +19,7 @@
 	.single-album-list {
 		.album{
 			text-align: left;
+			margin-bottom: 0;
 		}
 		.album-author {
 			@include screen-reader	

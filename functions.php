@@ -60,12 +60,6 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'panm360_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		/**
@@ -85,6 +79,8 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 		add_image_size( 'panm360_square', 500, 500,true);
 		add_image_size( 'panm360_medium', 500, 0);
 		add_image_size( 'panm360_home_slider', 664, 350,true);
+		
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'panm360_setup' );

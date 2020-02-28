@@ -237,10 +237,18 @@ h1.category-title {
 	}
 //}
 
+.wp-block-embed {
+	margin: 0 0 2em 0;
+
+}
+
 .entry-content {
 	iframe {
 		display: block;
+/*
 		margin-top: 2.5em;
+		margin-bottom: 2em;
+*/
 	}
 }
 .liste-pages {
