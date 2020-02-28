@@ -41,6 +41,11 @@
 			?>	
 			</ul>
 		</li>
+		
+		
+		<?php /* ?>
+		
+		
 		<?php
 			
 			$moncompte_id = apply_filters( 'wpml_object_id', 6966, 'page', TRUE  );
@@ -74,6 +79,10 @@
 				</a>
 			</li>
 		<?php endif; ?>
+		
+		<?php */ ?>
+		
+		
 		
 		<li id="menu-toggle-mobile">
 			<a class="bouton-menu-toggle-mobile">
