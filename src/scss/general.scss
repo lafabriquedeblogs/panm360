@@ -158,7 +158,7 @@ h1.category-title {
 }
 .home {
 	.section-titre {
-		display: none;
+		//display: none;
 	}
 }
 .wide-screen{
@@ -475,9 +475,9 @@ h1.category-title {
 	.single .entry-content {
 		overflow:auto;
 	}
-.plus-de {
-	margin: 0;
-}
+	.plus-de {
+		margin: 0;
+	}
 }
 @media screen and (min-width:600px){
 	.filtres-content-tabs {
@@ -496,7 +496,7 @@ h1.category-title {
 @media screen and (min-width:780px){
 .home {
 	.section-titre {
-		display: flex;
+		//display: flex;
 	}
 }
 }

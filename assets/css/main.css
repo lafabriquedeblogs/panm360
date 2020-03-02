@@ -809,9 +809,6 @@ h1.category-title {
     width: 19px;
     height: 27px; }
 
-.home .section-titre {
-  display: none; }
-
 .wide-screen {
   margin-left: calc( -100vw / 2 + 100% / 2) !important;
   margin-right: calc( -100vw / 2 + 100% / 2) !important;
@@ -1105,11 +1102,6 @@ p {
       margin: 0 1em 0 0; }
     .filtres-content-tabs > li {
       margin: 0 1em 0 0; } }
-
-@media screen and (min-width: 780px) {
-  .home .section-titre {
-    display: -webkit-box;
-    display: flex; } }
 
 @media screen and (min-width: 980px) {
   h1.entry-title {
@@ -2300,6 +2292,9 @@ img.lozad {
   .element.main-item .genre {
     font-size: 0.938em;
     font-weight: 400; }
+  .element.main-item .details {
+    padding-left: 1.125em;
+    padding-right: 1.125em; }
   .element.main-item .element-title {
     text-transform: uppercase;
     font-size: 2.375em;
@@ -2676,6 +2671,9 @@ img.lozad {
     margin: 0; } }
 
 @media screen and (min-width: 535px) {
+  .element.main-item .details {
+    padding-left: 0;
+    padding-right: 0; }
   .album {
     max-width: calc( 50% - 18px); }
   .section-content--has-6-columns .album {

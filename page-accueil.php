@@ -47,6 +47,7 @@ $interviews = my_translate_object_id( 11684, 'page' );
 						<div class="section-content--main">
 							
 							<div class="section--element">
+																
 								<h4 class="section-titre"><span><?php _e('Interviews','panm360'); ?></span> <a href="<?php echo get_permalink( $interviews );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 								
 								<?php
