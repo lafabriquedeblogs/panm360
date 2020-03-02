@@ -5,7 +5,7 @@
 .post-interview {
 	.chapeau-header {
 		font-size: 1em;
-		font-weight: 600;
+		font-weight: 700;
 		p {
 			line-height: 24px;	
 		}
@@ -65,6 +65,22 @@
 		}		
 	}
 }
+.post-interview .entry-header{
+	
+	.plus-de {
+		text-align: left;
+		margin: 0 0 1.54em 0;
+	}
+	
+}
+
+.interview-header{
+	.plus-de {
+		text-align: left;
+		margin: 1em;
+	}
+	
+}
 
 @media screen and (min-width: 768px){
 	.post-interview {
@@ -113,6 +129,11 @@
 		.interview-header {
 			flex: 0 0 50%;
 			max-width: calc( 50% - 18px );
+		}
+	}
+	.interview-header{
+		.plus-de {
+			margin: 0;
 		}
 	}
 }

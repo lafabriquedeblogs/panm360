@@ -48,6 +48,9 @@ function header_interview_render_callback( $block, $content = '', $is_preview = 
 					<img src="<?php echo $image;?>" />
 				</div>
 				<div class="interview-header">
+					<div class="has-text-align-left">
+						<?php lien_critiques_dalbum_complet(); ?>
+					</div>
 					<h1><?php the_title(); ?></h1>
 					<span class="author"><?php _e('Interview réalisé par','panm360'); ?> <?php echo $author;?></span>
 					<div class="chapeau-header"><?php echo $introduction_presentation;?></div>

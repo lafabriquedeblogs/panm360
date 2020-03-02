@@ -74,6 +74,7 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 			'flex-height' => true,
 		) );
 		add_post_type_support( 'records', 'author' );
+		add_post_type_support( 'agenda', 'author' );
 		//add_theme_support( 'editor-style' );
 		
 		add_image_size( 'panm360_square', 500, 500,true);
@@ -344,6 +345,50 @@ function get_lien_page_mon_compte(){
 	return $moncompte_link;
 }
 
+/**
+ * Returns the translated object ID(post_type or term) or original if missing
+ *
+ * @param $object_id integer|string|array The ID/s of the objects to check and return
+ * @param $type the object type: post, page, {custom post type name}, nav_menu, nav_menu_item, category, tag etc.
+ * @return string or array of object ids
+ */
+function my_translate_object_id( $object_id, $type ) {
+    $current_language= apply_filters( 'wpml_current_language', NULL );
+    // if array
+    if( is_array( $object_id ) ){
+        $translated_object_ids = array();
+        foreach ( $object_id as $id ) {
+            $translated_object_ids[] = apply_filters( 'wpml_object_id', $id, $type, true, $current_language );
+        }
+        return $translated_object_ids;
+    }
+    // if string
+    elseif( is_string( $object_id ) ) {
+        // check if we have a comma separated ID string
+        $is_comma_separated = strpos( $object_id,"," );
+ 
+        if( $is_comma_separated !== FALSE ) {
+            // explode the comma to create an array of IDs
+            $object_id     = explode( ',', $object_id );
+ 
+            $translated_object_ids = array();
+            foreach ( $object_id as $id ) {
+                $translated_object_ids[] = apply_filters ( 'wpml_object_id', $id, $type, true, $current_language );
+            }
+ 
+            // make sure the output is a comma separated string (the same way it came in!)
+            return implode ( ',', $translated_object_ids );
+        }
+        // if we don't find a comma in the string then this is a single ID
+        else {
+            return apply_filters( 'wpml_object_id', intval( $object_id ), $type, true, $current_language );
+        }
+    }
+    // if int
+    else {
+        return apply_filters( 'wpml_object_id', $object_id, $type, true, $current_language );
+    }
+}
 
 /*
 function slug_post_type_template() {

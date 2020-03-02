@@ -1,42 +1,39 @@
 <?php
 
 /*
-	Template name: Accueil
+	Template name: Critiques Albums
 */
 
 get_header();
 
-
-$critiques_dalbums = my_translate_object_id( 11680, 'page' );
-$interviews = my_translate_object_id( 11684, 'page' );
-//my_translate_object_id( $object_id, $type )
-
-
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<?php
-				$from = strtotime("2020-02-19");
-				$to = strtotime("2020-03-08");
-				$to_day = date("Y-m-d");
-				$today = strtotime($to_day);
+		<main id="main" class="site-main">			
+			
+			<article>
 				
-				if( $from < $today && $to > $today ):
-					
-			?>
-			
-				<section class="publicite publicite-banniere" style="padding-bottom: 60px;">
-					<a href="https://www.analekta.com/" target="_blank">
-						<img src="https://panm360.com/wp-content/uploads/2020/02/Analekta_banniere.jpg" width="728" height="90" alt="publicite"/>
-					</a> 
-				</section>
-	
-			<?php endif; ?>
-			
-			
+			<div id="wrap-square-featured-slider">
+				<ul id="square-featured-slider">
+					<?php
+				
+						$args = array(
+							'post_type' => 'records',
+							'posts_per_page' => 15,
+							'post_status' => array('publish'),
+							'orderby' => 'date',	
+							'order' => 'DESC',
+						);
 						
+						$albums_query = new WP_Query($args);
+						$albums = $albums_query->posts;
+						foreach( $albums as $item ){
+							include( locate_template( '/template-parts/modules/element-slider-square.php', false, false ) );
+						}
+					?>
+				</ul><!-- new-featured-slider -->
+			</div><!-- wrap-new-featured-slider -->
+									
 			<?php the_content(); ?>
 
 			<section class="section">
@@ -46,77 +43,30 @@ $interviews = my_translate_object_id( 11684, 'page' );
 						
 						<div class="section-content--main">
 							
-							<div class="section--element">
-								<h4 class="section-titre"><span><?php _e('Interviews','panm360'); ?></span> <a href="<?php echo get_permalink( $interviews );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
-								
-								<?php
-									
-									$interviews_args = array(
-										'post_type' => 'interviews',
-										'posts_per_page' => 3,
-										'post_status' => array('publish'),
-										'orderby' => 'date',
-										'order' => 'DESC'
-									);
-									
-									$interviews_query = new WP_Query($interviews_args);
-									$interviews = $interviews_query->posts;
-									$interview = array_shift($interviews);
-								?>
-								
-								
-								<?php
-								$post_id = $interview->ID;
-									if( !$image_src ){
-										$image_src = get_template_directory_uri()."/assets/img/default/sample-album.png";
-									}
-									
-									include( locate_template( '/template-parts/modules/element-main.php', false, false ) );
-									
-								?>
-								
-								<?php if( count($interviews) > 0 ): ?>	
-								<ul class="content-list-articles--max-2-cols">
-									
-									<?php
-
-										foreach( $interviews as $interview ){
-											
-											$post_id = $interview->ID;
-
-									
-											if( !$image_src ){
-												$image_src = get_template_directory_uri()."/assets/img/default/sample-album.png";
-											}
-									?>
-										<li>
-											<?php include( locate_template( '/template-parts/modules/element-article.php', false, false ) ); ?>
-										</li>									
-									<?php		
-										}
-										
-									?>
-
-								</ul>
-								<?php endif; ?>
-								
-								
-							</div><!-- section--element -->
-							
 							
 							<div class="section--element">
-								<h4 class="section-titre"><span><?php _e('Critiques d\'albums','panm360'); ?></span> <a href="<?php echo get_permalink( $critiques_dalbums );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+								<h4 class="section-titre"><span><?php _e('Critiques d\'albums','panm360'); ?></span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 								
 								<ul class="section-list-albums">
 								<?php
-									$albums_count = 24;	
+									
+									$albums_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+									$albums_count = 36;	
 									
 									$args = array(
 										'post_type' => 'records',
 										'posts_per_page' => $albums_count,
 										'post_status' => array('publish'),
-										'orderby' => 'date',
-										'order' => 'DESC'
+										'tax_query' => array(
+											'relation' => 'AND',
+										    	array(
+										    	    'taxonomy' => 'annee',
+										    	    'operator' => 'EXISTS'
+										    	),
+										),
+										'orderby' => array( 'date' => 'DESC', 'annee' => 'DESC'),	
+										'order' => 'DESC',
+										'paged' => $albums_paged,																
 									);
 									
 									$albums = new WP_Query($args);
@@ -129,15 +79,32 @@ $interviews = my_translate_object_id( 11684, 'page' );
 									}
 								?>
 								</ul>
-								
-								<a href="<?php echo get_permalink( $critiques_dalbums );?>" class="bouton"><?php _e('Lire la suite','panm360'); ?></a>
+	
+								<div id="pages-liste-navigation">
+									<nav class="navigation pagination" role="navigation" aria-label="Publications">
+										<div class="nav-links">
+										     <?php
+										     $big = 999999999;
+										     echo paginate_links( array(
+										          'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+										          'format' => '?paged=%#%',
+										          'current' => max( 1, get_query_var('paged') ),
+										          'total' => $albums->max_num_pages,
+										          'prev_text' => '&laquo;',
+										          'next_text' => '&raquo;'
+										     ) );
+										?>
+										</div>
+									</nav>
+								</div><!-- pages-liste-navigation -->						
+								<?php wp_reset_postdata(); ?>
 								
 							</div><!-- section--element -->
 						</div> <!-- section-content--main -->
 						
 						<div class="aside-content">
 							<?php
-								$count = 8;
+								$count = 12;
 								$start = date('Y/m/d');
 								$end = '2020/06/30';
 								
@@ -214,7 +181,8 @@ $interviews = my_translate_object_id( 11684, 'page' );
 					
 				</div>
 			</section>
-
+		
+		</article>
 <?php /* ?>			
 			<div id="top-360-hero" class="wide-screen"></div>			
 			<div id="text-introduction-panm360">

@@ -291,6 +291,12 @@ function panm360_customs_posts_types() {
 		'items_list_navigation' => __( 'Items list navigation', '' ),
 		'filter_items_list'     => __( 'Filter items list', '' ),
 	);
+	$rewrite_interviews = array(
+		'slug'                  => 'interviews-panm360',
+		'with_front'            => false,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
 	$args_interviews = array(
 		'label'                 => __( 'Interviews', 'panm360' ),
 		'description'           => __( 'Interviews', 'panm360' ),
@@ -310,6 +316,7 @@ function panm360_customs_posts_types() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 		'show_in_rest'          => true,
+		'rewrite'				=> $rewrite_interviews
 		);
 		
 	register_post_type( 'interviews', $args_interviews );

@@ -28,8 +28,32 @@ add_filter( 'body_class', 'panm360_body_classes' );
 
 function get_artiste( $album_id , $get_lien = true ){
 	
-	$artiste = get_the_title( get_field('relier_artiste',$album_id) );
-	$artiste_lien = get_permalink( get_field('relier_artiste',$album_id) );
+	$artiste_id =  get_field('relier_artiste',$album_id);
+	
+	if( empty( $artiste_id ) ) return '';
+	
+	if( is_array( $artiste_id ) ) {
+		
+		$art_array = array();
+		
+		foreach( $artiste_id as $art_id) {
+
+			$artiste = get_the_title( $art_id );
+			$artiste_lien = get_permalink( $art_id );
+			
+			if( $get_lien ){
+				$art_array[] = '<a href="'.$artiste_lien.'">'.$artiste.'</a>';
+			} else {
+				$art_array[] = $artiste;
+			}			
+		}
+		
+		return implode(" ", $art_array);
+	}
+
+	$artiste = get_the_title( $artiste_id );
+
+	$artiste_lien = get_permalink( $artiste_id );
 	
 	$artiste_output = $artiste;
 	
@@ -466,4 +490,72 @@ function get_image_sizes( $size = '' ) {
         }
     }
     return $sizes;
+}
+
+
+function lien_critiques_dalbum_complet(){
+	$critiques_dalbums = my_translate_object_id( 11680, 'page' );
+	$critiques_dalbums_permalien = get_permalink( $critiques_dalbums );
+	$lien_critiques_dalbum_complet = '<a href="'.$critiques_dalbums_permalien.'" class="plus-de">'. __('Critiques d\'albums','panm360').'<svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>';	
+
+	echo $lien_critiques_dalbum_complet;
+}
+	
+	
+function return_acf_block_content_interview_introduction_presentation( $post_content = '', $block_name = '', $post_id = 0 ){
+
+	if( $post_id == 0 ) return '';
+	
+	if ( function_exists( 'get_field' ) ) {
+		//$pid = get_post();
+		if ( has_blocks( $post_content ) ) {
+			$blocks = parse_blocks( $post_content );
+			foreach ( $blocks as $block ) {
+				if ( $block['blockName'] === $block_name ) {
+					
+					$content = $block['attrs']['data']['introduction_presentation'];
+
+				} elseif ( $block['blockName'] === 'core/block' ) {
+					$block_content = parse_blocks( get_post( $block['attrs']['ref'] )->post_content );
+					if ( $block_content[0]['blockName'] === $block_name ) {
+						// Access to "some" block data
+						$content = $block_content[0]['attrs']['data']['introduction_presentation'];
+					}
+				}
+			}
+		}
+		
+		return $content;
+	}
+	
+	return '';	
+}
+
+function return_acf_block_content_interview_introduction_image( $post_content = '', $block_name = '', $post_id = 0 ){
+
+	if( $post_id == 0 ) return '';
+	
+	if ( function_exists( 'get_field' ) ) {
+		//$pid = get_post();
+		if ( has_blocks( $post_content ) ) {
+			$blocks = parse_blocks( $post_content );
+			foreach ( $blocks as $block ) {
+				if ( $block['blockName'] === $block_name ) {
+
+					$content = $block['attrs']['data']['image'];
+
+				} elseif ( $block['blockName'] === 'core/block' ) {
+					$block_content = parse_blocks( get_post( $block['attrs']['ref'] )->post_content );
+					if ( $block_content[0]['blockName'] === $block_name ) {
+						// Access to "some" block data
+						$content = $block_content[0]['attrs']['data']['image'];
+					}
+				}
+			}
+		}
+		
+		return $content;
+	}
+	
+	return '';	
 }

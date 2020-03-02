@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -393,6 +394,9 @@ figure {
   -webkit-box-direction: reverse;
           flex-direction: column-reverse; }
 
+.section--element {
+  margin-bottom: 3em; }
+
 .section-content--has-6-columns {
   display: -webkit-box;
   display: flex;
@@ -402,12 +406,7 @@ figure {
   -webkit-box-pack: justify;
           justify-content: space-between;
   flex-wrap: wrap;
-  /*
-	&::after {
-		content: "";
-		flex: auto;
-	}
-*/ }
+  padding: 0 1.125em; }
   .section-content--has-6-columns li {
     list-style-type: none; }
   .section-content--has-6-columns > * {
@@ -420,6 +419,9 @@ figure {
 
 .wp-block-gallery.columns-2 .blocks-gallery-grid li {
   list-style-type: none; }
+
+.content-list-articles--max-2-cols {
+  padding: 0 1.125em; }
 
 @media (min-width: 535px) {
   #content, #primary {
@@ -434,6 +436,17 @@ figure {
             justify-content: space-between;
     flex-wrap: wrap;
     width: 100%; }
+  .section-list-albums {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; }
+  .section-content--has-2-columns,
   .section-content--has-3-columns {
     display: -webkit-box;
     display: flex;
@@ -443,6 +456,7 @@ figure {
     -webkit-box-pack: justify;
             justify-content: space-between;
     flex-wrap: wrap; }
+    .section-content--has-2-columns > *,
     .section-content--has-3-columns > * {
       max-width: calc( 50% - 18px); }
   .section-content--has-4-columns {
@@ -464,7 +478,8 @@ figure {
             flex-direction: row;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding: 0; }
     .section-content--has-6-columns > * {
       max-width: calc( 32.5% - 18px); }
   .wp-block-gallery.columns-2 .blocks-gallery-grid {
@@ -477,11 +492,25 @@ figure {
             justify-content: space-between;
     flex-wrap: wrap; }
     .wp-block-gallery.columns-2 .blocks-gallery-grid > * {
-      max-width: calc( 50% - 18px); } }
+      max-width: calc( 50% - 18px); }
+  .content-list-articles--max-2-cols {
+    padding: 0; } }
 
 @media screen and (min-width: 600px) {
   #primary, #masthead {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .content-list-articles--max-2-cols {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    padding: 0; }
+    .content-list-articles--max-2-cols > * {
+      max-width: calc( 50% - 18px); } }
 
 @media (min-width: 768px) {
   .row--2 {
@@ -498,11 +527,6 @@ figure {
       max-width: calc( 50% - 18px); } }
 
 @media (min-width: 782px) {
-  /*
-	.wp-block-column:not(:first-child) {
-    	margin-left: 36px;
-	}
-*/
   .section-content {
     display: -webkit-box;
     display: flex;
@@ -520,7 +544,11 @@ figure {
       width: 100%;
       max-width: calc( 50% - 18px); }
   .section-content--main {
-    max-width: calc( 50% - 18px); } }
+    max-width: calc( 50% - 18px); }
+  .content-list-articles--max-2-cols {
+    display: block; }
+    .content-list-articles--max-2-cols > * {
+      max-width: none; } }
 
 @media (min-width: 980px) {
   .section-content .aside-content {
@@ -531,11 +559,48 @@ figure {
   .section-content--has-3-columns > * {
     max-width: 31.5%; }
   .section-content--has-4-columns > * {
-    max-width: 23%; } }
+    max-width: 23%; }
+  .content-list-articles--max-2-cols {
+    display: -webkit-box;
+    display: flex; }
+    .content-list-articles--max-2-cols > * {
+      max-width: calc( 50% - 18px); } }
 
 @media screen and (min-width: 1024px) {
   #masthead {
     padding: 0 1.125em; } }
+
+@supports (display: grid) {
+  @media (min-width: 535px) {
+    .section-content--has-6-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 36px;
+      min-height: 0;
+      /* NEW */
+      min-width: 0;
+      /* NEW; needed for Firefox */ }
+      .section-content--has-6-columns > * {
+        max-width: none; }
+      .section-content--has-6-columns .album {
+        width: 100%;
+        max-width: none !important;
+        overflow: hidden;
+        /* NEW */
+        min-width: 0;
+        /* NEW; needed for Firefox */ } }
+  @media screen and (min-width: 690px) {
+    .section-content--has-6-columns {
+      grid-template-columns: 1fr 1fr 1fr; } }
+  @media screen and (min-width: 900px) {
+    .section-content--has-6-columns {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
+  @media screen and (min-width: 1150px) {
+    .section-content--has-6-columns {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr; } }
+  @media screen and (min-width: 1280px) {
+    .section-content--has-6-columns {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; } } }
 
 .panm-columns-1 {
   display: -webkit-box;
@@ -672,6 +737,14 @@ a {
     color: #5BC6E8;
     background: none;
     text-decoration: none; }
+
+p.lire-la-suite a {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif; }
+  p.lire-la-suite a::after {
+    content: " »"; }
 
 .has-text-align-center {
   text-align: center; }
@@ -1940,6 +2013,12 @@ select {
   .square-featured-slider--slide--picture img {
     height: 300px;
     margin: 0 auto; }
+  .square-featured-slider--slide--picture.slide--picture--carre {
+    width: 100%;
+    height: auto; }
+    .square-featured-slider--slide--picture.slide--picture--carre img {
+      width: 100%;
+      height: auto; }
 
 .square-featured-slider--slide--content {
   display: -webkit-box;
@@ -1967,6 +2046,10 @@ select {
   .square-featured-slider--slide--content .element-title {
     text-transform: uppercase;
     font-size: 1.2em; }
+  .square-featured-slider--slide--content .album-artiste {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400; }
   .square-featured-slider--slide--content .element-prix {
     text-transform: uppercase;
     font-weight: 500;
@@ -2004,13 +2087,15 @@ select {
             align-items: stretch; }
   .square-featured-slider--slide--picture {
     -webkit-box-flex: 0;
-            flex: 0 0 300px;
-    flex: 0 0 33%;
+            flex: 0 0 33%;
     height: 300px;
     background-color: rgba(0, 0, 0, 0.85);
     background-size: cover !important; }
     .square-featured-slider--slide--picture img.hidden {
       position: absolute; }
+    .square-featured-slider--slide--picture.slide--picture--carre {
+      -webkit-box-flex: 0;
+              flex: 0 0 350px; }
   .square-featured-slider--slide--content .excerpt {
     padding: 0 1em; }
   .square-featured-slider--slide--content .slide-content {
@@ -2072,6 +2157,8 @@ img.lozad {
   text-align: center; }
   .album .genre {
     margin-top: 20px; }
+  .album .picture {
+    border: 1px #F4F4F8 solid; }
 
 .element {
   margin-bottom: 36px; }
@@ -2086,18 +2173,24 @@ img.lozad {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
-    padding: 1em 0; }
+            flex-direction: column; }
     .element .details p {
       line-height: 1.4em;
       font-size: 0.938em; }
     .element .details .liste-genres {
       text-transform: uppercase; }
+  .element.album .details {
+    padding: 1em 0; }
+  .element.article.article-interview .author {
+    display: block;
+    border-top: 1px #ccc solid;
+    padding-top: 0.8em;
+    margin: 0 0 0.8em; }
   .element.article .details {
     background-color: #F4F4F8;
-    padding-left: 3.063em;
-    padding-right: 3.063em;
-    padding-bottom: 3.063em; }
+    padding-left: 2.063em;
+    padding-right: 2.063em;
+    padding-bottom: 2.063em; }
   .element.article .element-title {
     margin-top: 1em;
     margin-bottom: 1em; }
@@ -2211,13 +2304,22 @@ img.lozad {
     text-transform: uppercase;
     font-size: 2.375em;
     font-weight: 700;
-    margin-top: .4em; }
+    margin-top: .4em;
+    margin-bottom: .4em;
+    line-height: 1; }
   .element.main-item .sub-title {
     font-size: 1.875em;
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;
     display: block;
     margin-bottom: .6em; }
+  .element.main-item.main-interview .author {
+    display: block;
+    border-top: 1px #ccc solid;
+    padding-top: 0.8em;
+    margin: 0 0 0.8em; }
+  .element.main-item.main-interview .intro-interview {
+    font-weight: 700; }
   .element.new-featured-slider--slide {
     margin-bottom: 0;
     text-align: center; }
@@ -2401,15 +2503,15 @@ img.lozad {
   font-size: 1.5em;
   margin-bottom: 15px; }
 
+.post-agenda .plus-de {
+  text-align: left;
+  margin: 1em 0; }
+
 .single-agenda-infos-sup {
   display: block;
   margin-bottom: 15px;
   font-style: italic;
   font-size: 1.1em; }
-
-.post-agenda .entry-header .plus-de {
-  text-align: left;
-  margin: 0 0 1.54em 0; }
 
 @media screen and (min-width: 640px) {
   .post-agenda h1.entry-title {
@@ -2435,6 +2537,8 @@ img.lozad {
     -webkit-box-pack: justify;
             justify-content: space-between;
     margin: 80px auto 120px; }
+    .post-agenda .plus-de {
+      margin: 0 0 1em; }
   .post-agenda .album-cover {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2462,7 +2566,7 @@ img.lozad {
 
 .post-interview .chapeau-header {
   font-size: 1em;
-  font-weight: 600; }
+  font-weight: 700; }
   .post-interview .chapeau-header p {
     line-height: 24px; }
 
@@ -2529,6 +2633,14 @@ img.lozad {
   margin: 0 0 1em 0;
   padding: 0; }
 
+.post-interview .entry-header .plus-de {
+  text-align: left;
+  margin: 0 0 1.54em 0; }
+
+.interview-header .plus-de {
+  text-align: left;
+  margin: 1em; }
+
 @media screen and (min-width: 768px) {
   .post-interview .single-album-list .album {
     text-align: left; }
@@ -2559,7 +2671,9 @@ img.lozad {
     #header_interview .interview-header {
       -webkit-box-flex: 0;
               flex: 0 0 50%;
-      max-width: calc( 50% - 18px); } }
+      max-width: calc( 50% - 18px); }
+  .interview-header .plus-de {
+    margin: 0; } }
 
 @media screen and (min-width: 535px) {
   .album {

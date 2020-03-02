@@ -25,6 +25,22 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/acf-json/en/group_5e5c8aad066e9.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/en/group_5e5c8aad066e9-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/fr/group_5dd7053e1e183.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5dd7053e1e183-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/acf-json/fr/group_5e34346f7fd5d.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -53,6 +69,14 @@
 		"ft": 524288,
 		"oA": 1,
 		"oAP": "/acf-json/fr/group_5e4177aeca61f-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/fr/group_5e5816942d809.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5e5816942d809-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -101,13 +125,71 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/assets/css/main.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
+	"/assets/img/default/image-featured-home-slider-dev.png": {
+		"ft": 32768,
+		"iS": 574323,
 		"oA": 0,
-		"oAP": "/assets/css/main.css.map",
-		"oF": 0
+		"oAP": "/assets/img/default/image-featured-home-slider-dev.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/default/mai102-the-canadian-press1.jpg": {
+		"ft": 16384,
+		"iS": 84359,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/default/mai102-the-canadian-press1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/default/publicite-banniere.png": {
+		"ft": 32768,
+		"iS": 440,
+		"oA": 0,
+		"oAP": "/assets/img/default/publicite-banniere.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/default/sample-album-2.jpg": {
+		"ft": 16384,
+		"iS": 95120,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/default/sample-album-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/default/sample-album.png": {
+		"ft": 32768,
+		"iS": 1479,
+		"oA": 0,
+		"oAP": "/assets/img/default/sample-album.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/default/sample-article.png": {
+		"ft": 32768,
+		"iS": 721,
+		"oA": 0,
+		"oAP": "/assets/img/default/sample-article.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/assets/img/eye.svg": {
 		"ft": 2097152,
@@ -957,6 +1039,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-agenda.php",
+		"oF": 0
+		},
+	"/page-critiques-dalbums.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-critiques-dalbums.php",
+		"oF": 0
+		},
+	"/page-interviews.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-interviews.php",
 		"oF": 0
 		},
 	"/page-lire.php": {

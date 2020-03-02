@@ -68,6 +68,17 @@ a {
 	}
 	
 }
+p.lire-la-suite {
+	a {
+		display: block;
+		font-size: 12px;
+		font-weight: 700;
+		font-family: $rubik;
+		&::after {
+			content:" »"
+		}
+	}
+}
 .has-text-align-center {
 	text-align: center;	
 }

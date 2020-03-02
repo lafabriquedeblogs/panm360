@@ -40,6 +40,9 @@ img.lozad {
 	.genre {
 		margin-top: 20px;
 	}
+	.picture {
+		border: 1px $gris_ultra_light solid;
+	}
 }
 
 .element {
@@ -55,7 +58,7 @@ img.lozad {
 	.details {
 		display: flex;
 		flex-direction: column;
-		padding: 1em 0;
+		//padding: 1em 0;
 		p {
 			line-height: 1.4em;
 			font-size: 0.938em;
@@ -65,12 +68,31 @@ img.lozad {
 		}
 	}
 	
+	&.album {
+		.details {
+			padding: 1em 0;
+		}
+	}
+	
 	&.article {
+		
+		&.article-interview {
+			.author {
+				display: block;
+				border-top: 1px #ccc solid;
+				padding-top: 0.8em;
+				margin: 0 0 0.8em;				
+			}
+		}
+		
 		.details{
 			background-color: $gris_ultra_light;
-			padding-left: 3.063em;
-			padding-right: 3.063em;
-			padding-bottom: 3.063em;
+			padding-left: 	2.063em;
+			padding-right: 	2.063em;
+			padding-bottom: 2.063em;
+			//padding-left: 3.063em;
+			//padding-right: 3.063em;
+			//padding-bottom: 3.063em;
 		}
 		.element-title {
 			margin-top: 1em;
@@ -223,6 +245,7 @@ img.lozad {
 	}
 	
 	&.main-item  {
+		
 		.genre {
 			font-size: 0.938em;
 			font-weight: 400;
@@ -232,6 +255,8 @@ img.lozad {
 			font-size: 2.375em;
 			font-weight: 700;
 			margin-top: .4em;
+			margin-bottom: .4em;
+			line-height: 1;
 		}
 		.sub-title {
 			font-size:1.875em;
@@ -240,6 +265,17 @@ img.lozad {
 			display: block;
 			margin-bottom: .6em;
 			
+		}
+		&.main-interview {
+			.author {
+				display: block;
+				border-top: 1px #ccc solid;
+				padding-top: 0.8em;
+				margin: 0 0 0.8em;				
+			}
+			.intro-interview {
+				font-weight: 700;
+			}
 		}
 	}
 	
@@ -289,6 +325,7 @@ img.lozad {
 	}
 }
 
+
 .title-calendrier {
 	background: $bleu;
 	padding: 1.750em 30px 1em;;
@@ -322,6 +359,7 @@ img.lozad {
 
 
 @media screen and(min-width:535px){
+
 	.album{
 		max-width: calc( 50% - 18px);
 	}
@@ -396,4 +434,8 @@ img.lozad {
 			max-width: calc( 15.8% - 18px);
 		}		
 	}
+}
+
+@supports(display: grid){
+
 }

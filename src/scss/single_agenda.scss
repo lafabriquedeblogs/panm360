@@ -52,6 +52,10 @@
 		font-size: 1.5em;
 		margin-bottom: 15px;
 	}
+	.plus-de {
+		text-align: left;
+		margin: 1em 0;
+	}
 }
 .single-agenda-infos-sup {
 	display: block;
@@ -60,14 +64,7 @@
 	font-size: 1.1em;
 }
 
-.post-agenda .entry-header{
-	
-	.plus-de {
-		text-align: left;
-		margin: 0 0 1.54em 0;
-	}
-	
-}
+
 
 @media screen and (min-width: 640px){
 	.post-agenda {
@@ -99,6 +96,10 @@
 		justify-content: space-between;
 		//max-width: 1064px;
 		margin: 80px auto 120px;
+		
+		.plus-de {
+			margin: 0 0 1em;
+		}
 	}
 	.post-agenda .album-cover {
 		flex-direction: column;
@@ -118,6 +119,7 @@
 	.post-agenda .single-album-body {
 		width: calc( 100% - ( 405px + 36px ));
 	}
+
 }
 @media screen and (min-width: 1024px){
 	.post-agenda {

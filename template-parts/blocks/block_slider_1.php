@@ -48,7 +48,7 @@ function slider_1_render_callback( $block, $content = '', $is_preview = false ){
 						$cta_lien = $cta['lien'];
 						
 						
-						$image = get_template_directory_uri()."/src/img/image-featured-home-slider-dev.png";
+						$image = get_template_directory_uri()."/assets/img/default/image-featured-home-slider-dev.png";
 						
 						if( $image_data ){
 							$image = $image_data['sizes']['panm360_home_slider'];

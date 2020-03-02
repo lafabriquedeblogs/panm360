@@ -75,7 +75,7 @@ export default function ajax_search_agenda(){
 		jQuery(".loader-filtre-genre").css("display","block").css("opacity","1");
 		
 		agenda_full = true;
-		fade_results = true;
+		//fade_results = true;
 		agenda_mini = false;
 		daterange = true;
 		nonce = jQuery("#agenda-nonce").val(); 
@@ -91,7 +91,7 @@ export default function ajax_search_agenda(){
 	jQuery("#choix-style-musical select").on("change",function(e){
 		e.preventDefault();
 		agenda_full = false;
-		fade_results = false;
+		//fade_results = false;
 		agenda_mini = true;
 		
 		agenda_start_date = jQuery("#agenda-start").val();

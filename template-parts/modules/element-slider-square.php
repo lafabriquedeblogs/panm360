@@ -1,5 +1,10 @@
 <?php
-
+	
+	$post_type = get_post_type( $item->ID );
+	
+	
+	if( $post_type == 'agenda'):
+	
 	$titre = get_the_title( $item->ID );
 	$genres = get_genre_parents( $item->ID , false );
 	
@@ -60,3 +65,38 @@
 
 	</div><!-- new-featured-slider--slide--row -->
 </li><!-- new-featured-slider--slide -->
+
+<?php else: ?>
+
+<?php
+
+	$titre = get_the_title( $item->ID );
+	$genres = get_genre_parents( $item->ID , false );
+	$permalien = get_permalink( $item->ID );
+	$artiste = get_artiste( $album_id , false );
+	$vignette_featured = get_the_post_thumbnail_url( $item->ID, 'medium-large' );
+	
+	$artiste = get_artiste( $item->ID , false );
+?>
+
+<li class="square-featured-slider--slide">
+	<div class="square-featured-slider--slide--row">
+		
+		<div class="square-featured-slider--slide--picture slide--picture--carre">
+			<img src="<?php echo $vignette_featured; ?>"  alt="title" width="300" height ="300" />
+		</div>		
+		
+		<div class="square-featured-slider--slide--content">
+			<div class="slide-content">
+				<span class="genre album-genre element-genre"><?php echo $genres?></span>
+				<span class="element-title"><?php echo $titre?></span>
+				<span class="artiste album-artiste"><?php echo $artiste;?></span>
+				<a href="<?php echo $permalien;?>" class="bouton"><?php _e('Plus de détails','panm360'); ?></a>
+			</div>
+		</div>
+		
+
+	</div><!-- new-featured-slider--slide--row -->
+</li><!-- new-featured-slider--slide -->
+
+<?php endif; ?>

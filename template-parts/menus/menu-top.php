@@ -1,7 +1,8 @@
 <?php
 	// devenir membre page ID
 	$devenir_membre_page_id = 113;
-	$mon_compte_id = 
+	$produit_abonnement = 11328;
+	//$mon_compte_id = 
 	//if ( function_exists('icl_object_id') ) {
 	     //something
 	     $devenir_membre_page_id = apply_filters( 'wpml_object_id', $devenir_membre_page_id, 'page', TRUE );

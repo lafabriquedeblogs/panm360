@@ -7,6 +7,7 @@
 	$data_annee =  get_annee($album_id, true);
 	
 	$artiste = get_artiste( $album_id , false );
+
 	$genres = get_genre($album_id);
 	
 	$data_genre = get_genre($album_id, true );
@@ -18,11 +19,11 @@
 	
 	$pochette = get_the_post_thumbnail_url( $album_id, array(500,500) );
 	
-	if( !$pochette ) $pochette =  get_template_directory_uri()."/src/img/sample-album.png";
+	if( !$pochette ) $pochette =  get_template_directory_uri()."/assets/img/default/sample-album.png";
 	
 ?>
 
-<li class="album element" data-filter="<?php echo $data_genre." ".$data_annee." ".$auteur;?>">
+<li id="album-<?php echo $album_id;?>" class="album element" data-filter="<?php echo $data_genre." ".$data_annee." ".$auteur;?>">
 	<div class="picture">
 		<a href="<?php echo $lien;?>"><img class="lozad" data-src="<?php echo $pochette; ?>" alt="<?php echo $titre;?>" width="100%" height="auto" /></a>
 	</div>
