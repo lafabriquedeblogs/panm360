@@ -147,11 +147,12 @@ function get_genre_parents( $post_id , $link = false){
 	$output = array();
 	
 	$post_categories = get_post_primary_category( $post_id, $taxonomy);
-	$primary_category = $post_categories['primary_category'];
-	$primary_category_name = $primary_category->name;
 
-    if( empty($_terms) ) return '';
+
+    if( empty($_terms) || empty($post_categories) ) return '';
     
+ 	$primary_category = $post_categories['primary_category'];
+	$primary_category_name = $primary_category->name;   
     
     foreach ($_terms as $_term) {
 	
