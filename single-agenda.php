@@ -159,7 +159,7 @@
 							'post_type' => 'records',
 							'posts_per_page' => $albums_count,
 							'post_status' => 'publish',
-							'orderby' => 'rand',
+							'orderby' => 'date',
 						);
 						
 						$albums = new WP_Query($args);

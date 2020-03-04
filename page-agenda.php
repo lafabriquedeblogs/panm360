@@ -101,14 +101,29 @@ $is_pub = false;
 					
 							<ul class="calendrier-ul-container">
 								<?php
-								$post_start = 1;
+									
+									
+								$trans_calendrier = get_transient( 'agenda_panm' );	
 								
-								$start = $today;//$year.'/'.$month.'/01';
-								//$end = $lastDayThisMonth;
-								$end = date('Y/m/d', strtotime("+30 days"));
+								if ( ( false !== $trans_calendrier ) ) {
+		
+									// Return the array stored in the transient.
+									$calendrier = $trans_calendrier;
 								
-								$calendrier = get_liste_concerts( $start, $end , $count );	
-								$count = 1000;
+								} else {
+									$post_start = 1;
+									
+									$start = $today;//$year.'/'.$month.'/01';
+									//$end = $lastDayThisMonth;
+									$end = date('Y/m/d', strtotime("+30 days"));
+									
+									$calendrier = get_liste_concerts( $start, $end , $count );	
+									$count = 1000;
+									
+									set_site_transient( 'agenda_panm', $calendrier, 1 * DAY_IN_SECONDS );								
+								}
+									
+
 								
 								if( count($calendrier) > 0 ):
 								
