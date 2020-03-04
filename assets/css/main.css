@@ -705,7 +705,8 @@ h1 {
 h2 {
   font-weight: 300;
   font-size: 2.375em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1; }
 
 h3 {
   font-size: 1.5em;
@@ -1526,14 +1527,35 @@ h2.annee-top {
     border-color: #5BC6E8;
     border-color: #fff; }
 
-.woocommerce-MyAccount-navigation li {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 0; }
-  .woocommerce-MyAccount-navigation li a {
-    font-size: 0.750em;
-    font-weight: 700;
-    text-decoration: none; }
+.woocommerce button[type="submit"] {
+  margin: 10px 0; }
+
+.subscription_details a.button, .order_details a.button {
+  padding: 10px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #808080;
+  border-color: #808080;
+  background-color: #fff;
+  margin-left: 10px; }
+
+.woocommerce-MyAccount-navigation {
+  padding: 1em 1.125em;
+  border-top: 1px solid #E6E6EA;
+  border-bottom: 1px solid #E6E6EA; }
+  .woocommerce-MyAccount-navigation ul {
+    margin: 0; }
+  .woocommerce-MyAccount-navigation li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+    font-family: "Rubik", sans-serif; }
+    .woocommerce-MyAccount-navigation li a {
+      font-size: 0.900em;
+      font-weight: 500;
+      text-decoration: none; }
+    .woocommerce-MyAccount-navigation li::before {
+      content: "» "; }
 
 .hentry .wc_payment_method {
   list-style-type: none;
@@ -1555,6 +1577,38 @@ h2.annee-top {
 .woocommerce #payment #place_order,
 .woocommerce-page #payment #place_order {
   float: none; }
+
+.woocommerce-account h2 {
+  font-size: 1.250em;
+  text-transform: none;
+  font-weight: 500;
+  color: #000; }
+
+.woocommerce-account input[type="text"],
+.woocommerce-account input[type="email"],
+.woocommerce-account input[type="number"],
+.woocommerce-account input[type="url"],
+.woocommerce-account input[type="password"],
+.woocommerce-account input[type="tel"],
+.woocommerce-account select,
+.woocommerce-account textarea {
+  padding: 10px;
+  display: block;
+  border: 1px solid #808080;
+  background-color: transparent;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 0.8em; }
+
+.woocommerce-account fieldset {
+  border: 1px solid #808080;
+  border-radius: 3px;
+  background-color: #F4F4F8; }
+  .woocommerce-account fieldset legend {
+    font-size: 0.8em;
+    font-weight: 500; }
+  .woocommerce-account fieldset input[type="password"] {
+    background-color: #fff; }
 
 @media screen and (min-width: 535px) {
   .woocommerce form.checkout_coupon,

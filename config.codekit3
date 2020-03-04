@@ -2502,6 +2502,14 @@
 		"oAP": "/template-parts/modules/six-columns-albums.php",
 		"oF": 0
 		},
+	"/template-parts/my-account-awards.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/my-account-awards.php",
+		"oF": 0
+		},
 	"/template-parts/publicites/publicite-banniere-footer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2550,20 +2558,20 @@
 		"oAP": "/woocommerce/content-single-product.php",
 		"oF": 0
 		},
+	"/woocommerce/emails/email-header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/email-header.php",
+		"oF": 0
+		},
 	"/woocommerce/myaccount/dashboard.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/woocommerce/myaccount/dashboard.php",
-		"oF": 0
-		},
-	"/woocommerce/myaccount/downloads.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/woocommerce/myaccount/downloads.php",
 		"oF": 0
 		},
 	"/woocommerce/myaccount/form-add-payment-method.php": {
@@ -2580,6 +2588,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/woocommerce/myaccount/form-edit-account.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-edit-address copie.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-edit-address copie.php",
 		"oF": 0
 		},
 	"/woocommerce/myaccount/form-edit-address.php": {
@@ -2635,7 +2651,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/woocommerce/myaccount/my-address.php",
+		"oAP": "/woocommerce/myaccount/my-address copie.php",
 		"oF": 0
 		},
 	"/woocommerce/myaccount/my-downloads.php": {

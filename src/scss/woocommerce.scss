@@ -32,6 +32,7 @@
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button {
+	
 	font-family:$rubik;
 	color: #fff;
 	background: $gris_ultra_dark;
@@ -49,18 +50,44 @@
 		box-shadow: 0px 0px 0px 2px #add9e7;
 		border-color: $bleu;
 		border-color: #fff;
-	}	
+	}
 }
 
+.woocommerce button[type="submit"]{
+	margin: 10px 0;
+}
+
+.subscription_details, .order_details {
+	a.button {
+		padding: 10px;
+		font-size: 10px;
+		font-weight: 400;
+		color: $gris_medium;
+		border-color: $gris_medium;
+		background-color: #fff;
+		margin-left: 10px;
+	}
+}
 .woocommerce-MyAccount-navigation {
+	padding: 1em 1.125em;
+	border-top: 1px solid $gris_light;
+	border-bottom: 1px solid $gris_light;
+	ul {
+		margin: 0;
+	}
 	li {
 		list-style-type: none;
 		padding: 0;
 		margin-bottom: 0;
+		font-family: $rubik;
 		a {
-			font-size: 0.750em;
-			font-weight: 700;
+			font-size: 0.900em;
+			font-weight: 500;
 			text-decoration: none;
+			
+		}
+		&::before {
+			content:"» ";
 		}
 	}
 	
@@ -98,6 +125,46 @@
 .woocommerce #payment #place_order,
 .woocommerce-page #payment #place_order {
 	float: none;	
+}
+
+
+.woocommerce-account {
+	h2 {
+		font-size: 1.250em;
+		text-transform: none;
+		font-weight: 500;
+		color: #000;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="url"],
+	input[type="password"],
+	input[type="tel"],
+	select,
+	textarea {
+		padding: 10px;
+		display: block;
+		border: 1px solid $gris_medium;
+		background-color: transparent;
+		width: 100%;
+		border-radius: 3px;
+		font-size: 0.8em;
+	}
+	
+	fieldset {
+		border: 1px solid $gris_medium;
+		border-radius: 3px;
+		background-color: $gris_ultra_light;
+		legend {
+			font-size: 0.8em;
+			font-weight: 500;
+		}
+		input[type="password"] {
+			background-color: #fff;
+		}
+	}
+
 }
 
 @media screen and (min-width:535px){

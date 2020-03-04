@@ -14,13 +14,25 @@ add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
 // Our hooked in function - $fields is passed via the filter!
 function custom_override_checkout_fields( $fields ) {
-     unset($fields['order']['order_comments']);
-     unset($fields['billing']['billing_address_1']);
-	 unset($fields['billing']['billing_address_2']);
-	 unset($fields['billing']['billing_phone']);
-	 unset($fields['billing']['billing_company']);
-     return $fields;
+    unset( $fields['order']['order_comments']);
+    unset( $fields['billing']['billing_address_1']);
+	unset( $fields['billing']['billing_address_2']);
+	unset( $fields['billing']['billing_phone']);
+	unset( $fields['billing']['billing_company']);
+    return $fields;
 }
+add_filter( 'woocommerce_billing_fields' , 'custom_override_billing_fields' );
+function custom_override_billing_fields( $fields ) {
+    unset( $fields['billing_address_1']);
+	unset( $fields['billing_address_2']);
+	unset( $fields['billing_phone']);
+	unset( $fields['billing_company']);
+    return $fields;
+}
+
+//add_filter( 'woocommerce_shipping_fields' , 'custom_override_checkout_fields' );
+
+
 
 /**
  * @snippet       Redirect to Checkout Upon Add to Cart - WooCommerce
@@ -212,3 +224,25 @@ function filter_woocommerce_product_single_add_to_cart_text( $var, $instance ) {
          
 // add the filter 
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'filter_woocommerce_product_single_add_to_cart_text', 10, 2 );
+
+
+
+/**********************************/
+
+add_action( 'init', 'my_account_new_endpoints' );
+
+function my_account_new_endpoints() {
+	add_rewrite_endpoint( 'awards', EP_ROOT | EP_PAGES );
+}
+
+add_action( 'woocommerce_account_awards_endpoint', 'awards_endpoint_content' );
+
+function awards_endpoint_content() {
+     get_template_part('template-parts/my-account-awards');
+}
+
+ function my_account_menu_order($menuOrder) {
+ 	$menuOrder['awards'] = __( 'Awards', 'panm360' );
+ 	return $menuOrder;
+ }
+ add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order', 10, 1 );
