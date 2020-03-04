@@ -25,7 +25,7 @@ $address = wc_get_account_formatted_address( $load_address ,$customer_id);
 $billing_form =  WC()->checkout->get_checkout_fields();
 $address = $billing_form['billing'];
 echo '<pre>';
-var_dump($customer->get_checkout_fields());
+var_dump($customer->get_checkout_fields('billing'));
 echo '</pre>';
 
 
