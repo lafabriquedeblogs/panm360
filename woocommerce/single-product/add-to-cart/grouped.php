@@ -18,6 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product, $post;
+$parent_product_post = $post;
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
@@ -27,9 +28,10 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			$quantites_required      = false;
 			$previous_post           = $post;
 			$grouped_product_columns = apply_filters( 'woocommerce_grouped_product_columns', array(
-				'quantity',
 				'label',
-				'price'
+				'price',
+				'description',
+				'quantity'
 			), $product );
 
 			foreach ( $grouped_products as $grouped_product_child ) {
@@ -55,7 +57,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 						case 'quantity':
 							ob_start();
 
-							if ( ! $grouped_product_child->is_purchasable() || $grouped_product_child->has_options() || ! $grouped_product_child->is_in_stock() ) {
+							//if ( !$grouped_product_child->is_purchasable() || $grouped_product_child->has_options() || ! $grouped_product_child->is_in_stock() ) {
+							if ( $grouped_product_child->is_sold_individually() || ! $grouped_product_child->is_purchasable() ){
 								woocommerce_template_loop_add_to_cart();
 							} elseif ( $grouped_product_child->is_sold_individually() ) {
 								echo '<input type="checkbox" name="' . esc_attr( 'quantity[' . $grouped_product_child->get_id() . ']' ) . '" value="1" class="wc-grouped-product-add-to-cart-checkbox" />';
@@ -71,16 +74,21 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 								do_action( 'woocommerce_after_add_to_cart_quantity' );
 							}
-
+							
 							$value = ob_get_clean();
 							break;
 						case 'label':
 							$value  = '<label for="product-' . esc_attr( $grouped_product_child->get_id() ) . '">';
-							$value .= $grouped_product_child->is_visible() ? '<a href="' . esc_url( apply_filters( 'woocommerce_grouped_product_list_link', $grouped_product_child->get_permalink(), $grouped_product_child->get_id() ) ) . '">' . $grouped_product_child->get_name() . '</a>' : $grouped_product_child->get_name();
+							$value .= $grouped_product_child->is_visible() ? $grouped_product_child->get_name() : $grouped_product_child->get_name();
 							$value .= '</label>';
 							break;
 						case 'price':
 							$value = '';$grouped_product_child->get_price_html() . wc_get_stock_html( $grouped_product_child );
+							break;
+						case 'description':
+							$product_details = $grouped_product_child->get_short_description();
+							$product_get_short_description = '<span>'.$product_details.'</span>';	
+							$value = '<div class="woocommerce-grouped-product-list-item__description">'.$product_get_short_description.'</div>';							
 							break;
 						default:
 							$value = '';
@@ -88,23 +96,20 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					}
 
 					echo '<div class="woocommerce-grouped-product-list-item__' . esc_attr( $column_id ) . '">' . apply_filters( 'woocommerce_grouped_product_list_column_' . $column_id, $value, $grouped_product_child ) . '</div>'; // WPCS: XSS ok.
-
-					
-					
 					
 					do_action( 'woocommerce_grouped_product_list_after_' . $column_id, $grouped_product_child );
 				}
-				
-				$product_details = $grouped_product_child->get_short_description();
-				$product_get_short_description = '<span>'.$product_details.'</span>';	
-				echo '<div class="woocommerce-grouped-product-list-item__description">'.$product_get_short_description.'</div>';
-				
 				echo '</div> <!--abo-content-->';
 				
 				echo '</li>';
 			}
-			$post = $previous_post; // WPCS: override ok.
-			setup_postdata( $post );
+			//$post = $previous_post; // WPCS: override ok.
+			
+			//setup_postdata( $post );
+				// Reset to parent grouped product
+				$post    = $parent_product_post;
+				$product = wc_get_product( $parent_product_post->ID );
+				setup_postdata( $parent_product_post );
 			?>
 	</ul>
 
@@ -116,7 +121,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 		<button id="bouton-je-mabonne" type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
-		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+		<?php  do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
 	<?php endif; ?>
 </form>
@@ -125,18 +130,23 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	jQuery(document).ready(function($){
 		
 		$(".wc-grouped-product-add-to-cart-checkbox").each(function(index){
+/*
 			$(this).on("click", function(){
 				$(".wc-grouped-product-add-to-cart-checkbox").prop("checked", false);
 				$(this).prop("checked", true);
 			});
+*/
 			
+/*
 			$(".woocommerce-grouped-product-list-item__label a")
 			.attr("href","")
 			.on("click", function(e){
 				e.preventDefault();
 			});
+*/
 		});
 		
+/*
 		$(".woocommerce-grouped-product-list-item").each( function(index){
 			$(this).on("click", function(){
 				
@@ -154,6 +164,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				return false;
 			});
 		});
+*/
 	});
 </script>
 <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>

@@ -1181,7 +1181,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/single-product.php",
 		"oF": 0
 		},
@@ -1527,7 +1527,7 @@
 		"bF": 6,
 		"ft": 64,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "/assets/js/app-min.js",
 		"oF": 2,
@@ -2718,6 +2718,14 @@
 		"oAP": "/woocommerce/myaccount/view-subscription.php",
 		"oF": 0
 		},
+	"/woocommerce/single-product/add-to-cart/_grouped.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/woocommerce/single-product/add-to-cart/_grouped.php",
+		"oF": 0
+		},
 	"/woocommerce/single-product/add-to-cart/grouped.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2748,7 +2756,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"allowInjectionReloads": 1,
+	"allowInjectionReloads": 0,
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,
