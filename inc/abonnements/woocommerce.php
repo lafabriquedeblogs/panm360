@@ -93,66 +93,6 @@ function wc_disable_select2() {
 add_action('wp_enqueue_scripts', 'wc_disable_select2', 100);
 
 /**
- * Removes coupon form, order notes, and several billing fields if the checkout doesn't require payment.
- *
- * REQUIRES PHP 5.3+
- *
- * Tutorial: http://skyver.ge/c
- */
-function sv_free_checkout_fields() {
-
-	// first, bail if WC isn't active since we're hooked into a general WP hook
-	if ( ! function_exists( 'WC' ) ) {
-		return;	
-	}
-
-	// bail if the cart needs payment, we don't want to do anything
-	if ( WC()->cart && WC()->cart->needs_payment() ) {
-		return;
-	}
-
-	// now continue only if we're at checkout
-	// is_checkout() was broken as of WC 3.2 in ajax context, double-check for is_ajax
-	// I would check WOOCOMMERCE_CHECKOUT but testing shows it's not set reliably
-	if ( function_exists( 'is_checkout' ) && ( is_checkout() || is_ajax() ) ) {
-
-		// remove coupon forms since why would you want a coupon for a free cart??
-		remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
-
-		// Remove the "Additional Info" order notes
-		add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
-
-		// Unset the fields we don't want in a free checkout
-/*
-		add_filter( 'woocommerce_checkout_fields', function( $fields ) {
-
-			// add or remove billing fields you do not want
-			// fields: http://docs.woothemes.com/document/tutorial-customising-checkout-fields-using-actions-and-filters/#section-2
-			$billing_keys = array(
-				'billing_company',
-				'billing_phone',
-				'billing_address_1',
-				'billing_address_2',
-				'billing_city',
-				'billing_postcode',
-				'billing_country',
-				'billing_state',
-			);
-
-			// unset each of those unwanted fields
-			foreach( $billing_keys as $key ) {
-				unset( $fields['billing'][ $key ] );
-			}
-
-			return $fields;
-		});
-*/
-	}
-
-}
-//add_action( 'wp', 'sv_free_checkout_fields' );
-
-/**
 * @snippet       Display FREE if Price Zero or Empty - WooCommerce Single Product
 * @how-to        Get CustomizeWoo.com FREE
 * @author        Rodolfo Melogli
@@ -225,8 +165,6 @@ function filter_woocommerce_product_single_add_to_cart_text( $var, $instance ) {
 // add the filter 
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'filter_woocommerce_product_single_add_to_cart_text', 10, 2 );
 
-
-
 /**********************************/
 
 add_action( 'init', 'my_account_new_endpoints' );
@@ -238,7 +176,8 @@ function my_account_new_endpoints() {
 add_action( 'woocommerce_account_awards_endpoint', 'awards_endpoint_content' );
 
 function awards_endpoint_content() {
-     get_template_part('template-parts/my-account-awards');
+    get_template_part('template-parts/my-account-awards');
+    //get_template_part('woocommerce/myaccount/form-edit-address');
 }
 
  function my_account_menu_order($menuOrder) {
@@ -246,3 +185,5 @@ function awards_endpoint_content() {
  	return $menuOrder;
  }
  add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order', 10, 1 );
+ 
+ /**********************************/

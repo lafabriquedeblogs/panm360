@@ -2646,6 +2646,14 @@
 		"oAP": "/woocommerce/myaccount/my-account.php",
 		"oF": 0
 		},
+	"/woocommerce/myaccount/my-address copie.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-address copie.php",
+		"oF": 0
+		},
 	"/woocommerce/myaccount/my-address.php": {
 		"cB": 0,
 		"ft": 8192,
