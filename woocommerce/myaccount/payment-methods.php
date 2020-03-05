@@ -27,6 +27,9 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 
 <?php if ( $has_methods ) : ?>
 
+<p></p>
+<h3><?php _e('Méthode de paiement','panm360'); ?></h3>
+
 	<table class="woocommerce-MyAccount-paymentMethods shop_table shop_table_responsive account-payment-methods-table">
 		<thead>
 			<tr>

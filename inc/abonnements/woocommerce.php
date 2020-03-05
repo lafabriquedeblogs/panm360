@@ -35,19 +35,22 @@ function custom_override_billing_fields( $fields ) {
 // -------------------------------
 // 1. First, hide the tab that needs to be merged/moved (edit-address in this case)
  
+
 add_filter( 'woocommerce_account_menu_items', 'bbloomer_remove_address_my_account', 999 );
   
 function bbloomer_remove_address_my_account( $items ) {
-unset($items['edit-address']);
-unset($items['subscriptions']);
-unset($items['view-subscription']);
-unset($items['edit-account']);
-unset($items['payment-methods']);
-unset($items['lost-password']);
-return $items;
+	unset($items['dashboard']);
+	unset($items['edit-address']);
+	//unset($items['subscriptions']);
+	unset($items['edit-account']);
+	unset($items['payment-methods']);
+	unset($items['lost-password']);
+	return $items;
 }
-
-
+add_action( 'woocommerce_account_awards_endpoint', 'woocommerce_account_edit_address' );
+add_action( 'woocommerce_account_awards_endpoint', 'woocommerce_account_edit_account' );
+//add_action( 'woocommerce_account_awards_endpoint', 'woocommerce_myaccount_subscriptions', 999 );
+add_action( 'woocommerce_account_subscriptions_endpoint', 'woocommerce_account_payment_methods' );
 /**
  * @snippet       Redirect to Checkout Upon Add to Cart - WooCommerce
  * @how-to        Get CustomizeWoo.com FREE
@@ -197,7 +200,7 @@ function awards_endpoint_content() {
 }
 
  function my_account_menu_order($menuOrder) {
- 	$menuOrder['awards'] = __( 'Awards', 'panm360' );
+ 	$menuOrder['awards'] = __( 'Détails de mon compte', 'panm360' );
  	return $menuOrder;
  }
  add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order', 10, 1 );

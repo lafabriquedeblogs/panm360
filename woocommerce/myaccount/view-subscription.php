@@ -15,6 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 wc_print_notices();
 
+?>
+
+
+<?php
 /**
  * Gets subscription details table template
  * @param WC_Subscription $subscription A subscription object

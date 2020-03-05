@@ -2726,6 +2726,14 @@
 		"oAP": "/woocommerce/myaccount/related-orders.php",
 		"oF": 0
 		},
+	"/woocommerce/myaccount/subscriptions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/subscriptions.php",
+		"oF": 0
+		},
 	"/woocommerce/myaccount/view-order.php": {
 		"cB": 0,
 		"ft": 8192,

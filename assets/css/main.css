@@ -1610,15 +1610,11 @@ h2.annee-top {
   font-weight: 400;
   color: #808080;
   border-color: #808080;
-  background-color: #fff;
-  margin-left: 10px; }
+  background-color: #fff; }
 
-/*
 .woocommerce-MyAccount-paymentMethods a.button {
-	display: inline-block;
-	margin-bottom: 5px;
-}
-*/
+  margin-bottom: 5px; }
+
 
 .woocommerce .bouton.edit,
 .woocommerce #respond input.edit#submit.alt,
