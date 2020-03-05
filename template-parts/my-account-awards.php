@@ -22,10 +22,9 @@ $customer = new WC_Checkout($customer_id, false);
 $load_address = 'billing';
 $address = wc_get_account_formatted_address( $load_address ,$customer_id);	
 
-$billing_form =  WC()->checkout->get_checkout_fields();
-$address = $billing_form['billing'];
+//$address = $billing_form['billing'];
 echo '<pre>';
-var_dump($customer->get_checkout_fields('billing'));
+var_dump(WC()->customer->billing);
 echo '</pre>';
 
 

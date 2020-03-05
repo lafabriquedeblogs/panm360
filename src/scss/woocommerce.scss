@@ -31,8 +31,9 @@
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
-.woocommerce input.button {
-	
+.woocommerce input.button,
+.woocommerce .bouton.edit {
+	float: none;
 	font-family:$rubik;
 	color: #fff;
 	background: $gris_ultra_dark;
@@ -57,17 +58,23 @@
 	margin: 10px 0;
 }
 
-.subscription_details, .order_details {
-	a.button {
-		padding: 10px;
-		font-size: 10px;
-		font-weight: 400;
-		color: $gris_medium;
-		border-color: $gris_medium;
-		background-color: #fff;
-		margin-left: 10px;
-	}
+.subscription_details, .order_details a.button,
+.woocommerce .bouton.edit {
+	
+	padding: 10px;
+	font-size: 10px;
+	font-weight: 400;
+	color: $gris_medium;
+	border-color: $gris_medium;
+	background-color: #fff;
+	margin-left: 10px;
+	
 }
+.woocommerce .bouton.edit {
+	display: inline-block;
+	margin: 1em 0 0;
+}
+
 .woocommerce-MyAccount-navigation {
 	padding: 1em 1.125em;
 	border-top: 1px solid $gris_light;

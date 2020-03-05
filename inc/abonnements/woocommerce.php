@@ -166,7 +166,6 @@ function filter_woocommerce_product_single_add_to_cart_text( $var, $instance ) {
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'filter_woocommerce_product_single_add_to_cart_text', 10, 2 );
 
 /**********************************/
-
 add_action( 'init', 'my_account_new_endpoints' );
 
 function my_account_new_endpoints() {
@@ -185,5 +184,5 @@ function awards_endpoint_content() {
  	return $menuOrder;
  }
  add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order', 10, 1 );
- 
+
  /**********************************/

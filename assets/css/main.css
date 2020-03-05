@@ -1504,7 +1504,15 @@ h2.annee-top {
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
-.woocommerce input.button {
+.woocommerce input.button,
+.woocommerce .bouton.edit,
+.woocommerce #respond input.edit#submit.alt,
+.woocommerce a.edit.button.alt,
+.woocommerce button.edit.button.alt,
+.woocommerce input.edit.button.alt,
+.woocommerce .is-style-plus-infos a.edit,
+.is-style-plus-infos .woocommerce a.edit {
+  float: none;
   font-family: "Rubik", sans-serif;
   color: #fff;
   background: #333333;
@@ -1522,7 +1530,14 @@ h2.annee-top {
   .woocommerce #respond input#submit:hover,
   .woocommerce a.button:hover,
   .woocommerce button.button:hover,
-  .woocommerce input.button:hover {
+  .woocommerce input.button:hover,
+  .woocommerce .bouton.edit:hover,
+  .woocommerce #respond input.edit#submit.alt:hover,
+  .woocommerce a.edit.button.alt:hover,
+  .woocommerce button.edit.button.alt:hover,
+  .woocommerce input.edit.button.alt:hover,
+  .woocommerce .is-style-plus-infos a.edit:hover,
+  .is-style-plus-infos .woocommerce a.edit:hover {
     box-shadow: 0px 0px 0px 2px #add9e7;
     border-color: #5BC6E8;
     border-color: #fff; }
@@ -1530,7 +1545,14 @@ h2.annee-top {
 .woocommerce button[type="submit"] {
   margin: 10px 0; }
 
-.subscription_details a.button, .order_details a.button {
+.subscription_details, .order_details a.button,
+.woocommerce .bouton.edit,
+.woocommerce #respond input.edit#submit.alt,
+.woocommerce a.edit.button.alt,
+.woocommerce button.edit.button.alt,
+.woocommerce input.edit.button.alt,
+.woocommerce .is-style-plus-infos a.edit,
+.is-style-plus-infos .woocommerce a.edit {
   padding: 10px;
   font-size: 10px;
   font-weight: 400;
@@ -1538,6 +1560,17 @@ h2.annee-top {
   border-color: #808080;
   background-color: #fff;
   margin-left: 10px; }
+
+
+.woocommerce .bouton.edit,
+.woocommerce #respond input.edit#submit.alt,
+.woocommerce a.edit.button.alt,
+.woocommerce button.edit.button.alt,
+.woocommerce input.edit.button.alt,
+.woocommerce .is-style-plus-infos a.edit,
+.is-style-plus-infos .woocommerce a.edit {
+  display: inline-block;
+  margin: 1em 0 0; }
 
 .woocommerce-MyAccount-navigation {
   padding: 1em 1.125em;
