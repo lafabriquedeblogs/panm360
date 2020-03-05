@@ -1511,6 +1511,23 @@ h2.annee-top {
 .woocommerce button.edit.button.alt,
 .woocommerce input.edit.button.alt,
 .woocommerce .is-style-plus-infos a.edit,
+.is-style-plus-infos .woocommerce a.edit,
+.woocommerce #respond input.edit#submit.alt,
+.woocommerce a.edit.button.alt,
+.woocommerce button.edit.button.alt,
+.woocommerce input.edit.button.alt,
+.woocommerce .is-style-plus-infos a.edit,
+.is-style-plus-infos .woocommerce a.edit,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce .bouton.edit,
+.woocommerce #respond input.edit#submit.alt,
+.woocommerce a.edit.button.alt,
+.woocommerce button.edit.button.alt,
+.woocommerce input.edit.button.alt,
+.woocommerce .is-style-plus-infos a.edit,
 .is-style-plus-infos .woocommerce a.edit {
   float: none;
   font-family: "Rubik", sans-serif;
@@ -1537,6 +1554,23 @@ h2.annee-top {
   .woocommerce button.edit.button.alt:hover,
   .woocommerce input.edit.button.alt:hover,
   .woocommerce .is-style-plus-infos a.edit:hover,
+  .is-style-plus-infos .woocommerce a.edit:hover,
+  .woocommerce #respond input.edit#submit.alt:hover,
+  .woocommerce a.edit.button.alt:hover,
+  .woocommerce button.edit.button.alt:hover,
+  .woocommerce input.edit.button.alt:hover,
+  .woocommerce .is-style-plus-infos a.edit:hover,
+  .is-style-plus-infos .woocommerce a.edit:hover,
+  .woocommerce #respond input#submit:hover,
+  .woocommerce a.button:hover,
+  .woocommerce button.button:hover,
+  .woocommerce input.button:hover,
+  .woocommerce .bouton.edit:hover,
+  .woocommerce #respond input.edit#submit.alt:hover,
+  .woocommerce a.edit.button.alt:hover,
+  .woocommerce button.edit.button.alt:hover,
+  .woocommerce input.edit.button.alt:hover,
+  .woocommerce .is-style-plus-infos a.edit:hover,
   .is-style-plus-infos .woocommerce a.edit:hover {
     box-shadow: 0px 0px 0px 2px #add9e7;
     border-color: #5BC6E8;
@@ -1545,6 +1579,24 @@ h2.annee-top {
 .woocommerce button[type="submit"] {
   margin: 10px 0; }
 
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce .bouton.edit,
+.woocommerce #respond input.edit#submit.alt,
+.woocommerce a.edit.button.alt,
+.woocommerce button.edit.button.alt,
+.woocommerce input.edit.button.alt,
+.woocommerce .is-style-plus-infos a.edit,
+.is-style-plus-infos .woocommerce a.edit,
+.woocommerce #respond input.edit#submit.alt,
+.woocommerce a.edit.button.alt,
+.woocommerce button.edit.button.alt,
+.woocommerce input.edit.button.alt,
+.woocommerce .is-style-plus-infos a.edit,
+.is-style-plus-infos .woocommerce a.edit,
+.woocommerce-MyAccount-paymentMethods a.button,
 .subscription_details, .order_details a.button,
 .woocommerce .bouton.edit,
 .woocommerce #respond input.edit#submit.alt,
@@ -1561,6 +1613,12 @@ h2.annee-top {
   background-color: #fff;
   margin-left: 10px; }
 
+/*
+.woocommerce-MyAccount-paymentMethods a.button {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+*/
 
 .woocommerce .bouton.edit,
 .woocommerce #respond input.edit#submit.alt,
@@ -1571,6 +1629,21 @@ h2.annee-top {
 .is-style-plus-infos .woocommerce a.edit {
   display: inline-block;
   margin: 1em 0 0; }
+
+.woocommerce-Address address {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.8em; }
+
+.payment-method-method,
+.payment-method-expires {
+  font-size: 0.750em;
+  font-weight: 700; }
+
+.woocommerce table.shop_table_responsive tr td.payment-method-actions::before,
+.woocommerce-page table.shop_table_responsive tr td.payment-method-actions::before {
+  content: none; }
 
 .woocommerce-MyAccount-navigation {
   padding: 1em 1.125em;
@@ -1658,6 +1731,15 @@ h2.annee-top {
     .woocommerce form.login .form-row-wide {
       -webkit-box-flex: 0;
               flex: 0 0 50%; } }
+
+@media screen and (min-width: 768px) {
+  .woocommerce table.shop_table_responsive tr td.payment-method-actions,
+  .woocommerce-page table.shop_table_responsive tr td.payment-method-actions {
+    /*
+	&::before {
+		content: attr(data-title) ": ";
+	}
+*/ } }
 
 .single-product #primary {
   padding: 0; }

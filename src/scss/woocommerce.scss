@@ -27,7 +27,17 @@
 	font-size: .800em;
 	font-weight: 700;
 }
-
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce .bouton.edit,
+.woocommerce #respond input.edit#submit.alt,
+.woocommerce a.edit.button.alt,
+.woocommerce button.edit.button.alt,
+.woocommerce input.edit.button.alt,
+.woocommerce .is-style-plus-infos a.edit,
+.is-style-plus-infos .woocommerce a.edit,
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
@@ -57,7 +67,18 @@
 .woocommerce button[type="submit"]{
 	margin: 10px 0;
 }
-
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce .bouton.edit,
+.woocommerce #respond input.edit#submit.alt,
+.woocommerce a.edit.button.alt,
+.woocommerce button.edit.button.alt,
+.woocommerce input.edit.button.alt,
+.woocommerce .is-style-plus-infos a.edit,
+.is-style-plus-infos .woocommerce a.edit,
+.woocommerce-MyAccount-paymentMethods a.button,
 .subscription_details, .order_details a.button,
 .woocommerce .bouton.edit {
 	
@@ -70,11 +91,37 @@
 	margin-left: 10px;
 	
 }
+/*
+.woocommerce-MyAccount-paymentMethods a.button {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+*/
 .woocommerce .bouton.edit {
 	display: inline-block;
 	margin: 1em 0 0;
 }
+.woocommerce-Address {
+	address {
+		font-style: normal;
+		font-weight: 500;
+		font-family: $rubik;
+		font-size: 0.8em;
+	}
+}
 
+.payment-method-method,
+.payment-method-expires {
+	font-size: 0.750em;
+	font-weight: 700;
+}
+
+.woocommerce table.shop_table_responsive tr td.payment-method-actions,
+.woocommerce-page table.shop_table_responsive tr td.payment-method-actions {
+	&::before {
+		content: none;
+	}
+}
 .woocommerce-MyAccount-navigation {
 	padding: 1em 1.125em;
 	border-top: 1px solid $gris_light;
@@ -190,4 +237,15 @@
     }
 }
 
+@media screen and (min-width:768px){
+
+.woocommerce table.shop_table_responsive tr td.payment-method-actions,
+.woocommerce-page table.shop_table_responsive tr td.payment-method-actions {
+/*
+	&::before {
+		content: attr(data-title) ": ";
+	}
+*/
+}
+}
 @import "woocommerce/product";

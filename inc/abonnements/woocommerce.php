@@ -32,6 +32,20 @@ function custom_override_billing_fields( $fields ) {
 
 //add_filter( 'woocommerce_shipping_fields' , 'custom_override_checkout_fields' );
 
+// -------------------------------
+// 1. First, hide the tab that needs to be merged/moved (edit-address in this case)
+ 
+add_filter( 'woocommerce_account_menu_items', 'bbloomer_remove_address_my_account', 999 );
+  
+function bbloomer_remove_address_my_account( $items ) {
+unset($items['edit-address']);
+unset($items['subscriptions']);
+unset($items['view-subscription']);
+unset($items['edit-account']);
+unset($items['payment-methods']);
+unset($items['lost-password']);
+return $items;
+}
 
 
 /**
@@ -165,7 +179,10 @@ function filter_woocommerce_product_single_add_to_cart_text( $var, $instance ) {
 // add the filter 
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'filter_woocommerce_product_single_add_to_cart_text', 10, 2 );
 
-/**********************************/
+
+/**************************************************************************************************************************************/
+
+
 add_action( 'init', 'my_account_new_endpoints' );
 
 function my_account_new_endpoints() {
@@ -185,4 +202,5 @@ function awards_endpoint_content() {
  }
  add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order', 10, 1 );
 
- /**********************************/
+
+/**************************************************************************************************************************************/
