@@ -66,10 +66,8 @@ function filter_the_content_in_the_main_loop( $content ) {
 			return $content;
 		}
 		
-		$viewed_interviews = get_user_meta( $user_id , 'viewed_interviews', true );
-		$viewed_albums = get_user_meta( $user_id , 'viewed_albums', true );
-		$viewed_review = get_user_meta( $user_id , 'viewed_review', true );
-		$viewed_chronique = get_user_meta( $user_id , 'viewed_chronique', true );
+		$viewed_interviews = get_user_meta( $user_id , 'viewed_posts', true );
+
 		
 		
 	}
