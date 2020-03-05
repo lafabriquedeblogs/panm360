@@ -44,7 +44,7 @@
 		</li>
 		
 		
-		<?php /* ?>
+		<?php /**/ ?>
 		
 		
 		<?php
@@ -81,7 +81,7 @@
 			</li>
 		<?php endif; ?>
 		
-		<?php */ ?>
+		<?php /**/ ?>
 		
 		<li id="panm-signin" class="menu-item">
 				<a href="<?php echo get_permalink( $devenir_membre_page_id );?>">
