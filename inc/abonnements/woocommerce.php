@@ -200,7 +200,7 @@ function awards_endpoint_content() {
 }
 
  function my_account_menu_order($menuOrder) {
- 	$menuOrder['awards'] = __( 'Détails de mon compte', 'panm360' );
+ 	$menuOrder['awards'] = __( 'Mon profil', 'panm360' );
  	return $menuOrder;
  }
  add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order', 10, 1 );
