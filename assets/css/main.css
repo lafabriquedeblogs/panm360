@@ -1534,7 +1534,7 @@ h2.annee-top {
   color: #fff;
   background: #333333;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   border: 1px #4d4d4d solid;
   border-radius: 5px;
@@ -1606,7 +1606,7 @@ h2.annee-top {
 .woocommerce .is-style-plus-infos a.edit,
 .is-style-plus-infos .woocommerce a.edit {
   padding: 10px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   color: #808080;
   border-color: #808080;
@@ -1711,6 +1711,21 @@ h2.annee-top {
     font-weight: 500; }
   .woocommerce-account fieldset input[type="password"] {
     background-color: #fff; }
+
+.woocommerce-MyAccount-content > * {
+  max-width: 610px; }
+
+.woocommerce .order_details {
+  font-weight: 700;
+  font-size: 0.750em; }
+  .woocommerce .order_details .order_item .product-name a {
+    color: #5BC6E8; }
+  .woocommerce .order_details .wcs-switch-link {
+    color: #808080 !important;
+    margin: 10px 0; }
+
+.woocommerce-form-row em {
+  font-size: 0.750em; }
 
 @media screen and (min-width: 535px) {
   .woocommerce form.checkout_coupon,

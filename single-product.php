@@ -4,6 +4,4 @@
     exit(); // always call `exit()` after `wp_redirect`
     	
 	get_header();
-	
-
 ?>
