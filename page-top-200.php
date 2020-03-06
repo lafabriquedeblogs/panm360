@@ -64,9 +64,12 @@ get_header();
 						<?php
 							
 							
-							$years = get_years_list();							
-							
+							$years = get_years_list();
+
+							array_shift($years);						
+
 							foreach( $years as $year ){
+								
 								$posts_array = get_posts(
 								    array(
 								    	
@@ -74,10 +77,12 @@ get_header();
 								        'post_type' => 'records',
 								        'orderby' => 'relier_artiste',
 								        'tax_query' => array(
+									        'relation' => 'AND',
 								            array(
-								            'taxonomy' => 'annee',
-								            'field' => 'slug',
-								            'terms' => $year->name,
+								            	'taxonomy' => 'annee',
+												'field' => 'slug',
+									            'terms' => $year->name,
+									            'operator' => 'IN',
 								            )
 								        )
 								    )

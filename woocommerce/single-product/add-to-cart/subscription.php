@@ -18,7 +18,6 @@ if ( ! $product->is_purchasable() && ( ! is_user_logged_in() || 'no' === wcs_get
 
 $user_id = get_current_user_id();
 
-//echo wp_kses_post( wc_get_stock_html( $product ) );
 
 ?>
 

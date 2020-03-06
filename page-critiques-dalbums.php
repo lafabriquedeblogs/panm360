@@ -57,14 +57,9 @@ get_header();
 										'post_type' => 'records',
 										'posts_per_page' => $albums_count,
 										'post_status' => array('publish'),
-										'tax_query' => array(
-											'relation' => 'AND',
-										    	array(
-										    	    'taxonomy' => 'annee',
-										    	    'operator' => 'EXISTS'
-										    	),
-										),
-										'orderby' => array( 'date' => 'DESC', 'annee' => 'DESC'),	
+										'category__not_in' => array(969),
+										'tag__not_in' => array(2512),
+										'orderby' => 'date',	
 										'order' => 'DESC',
 										'paged' => $albums_paged,																
 									);

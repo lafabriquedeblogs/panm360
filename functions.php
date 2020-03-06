@@ -334,7 +334,7 @@ function get_aboonement_gartuit_by_lang(){
 }
 
 function get_lien_page_abonnement(){
-	$abonnement_id = apply_filters( 'wpml_object_id', 113, 'page', TRUE  );
+	$abonnement_id = apply_filters( 'wpml_object_id', 11845, 'product', TRUE  );
 	$abonnement_link = get_permalink( $abonnement_id );
 	return $abonnement_link;
 }

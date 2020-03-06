@@ -2758,14 +2758,6 @@
 		"oAP": "/woocommerce/myaccount/view-subscription.php",
 		"oF": 0
 		},
-	"/woocommerce/single-product/add-to-cart/_grouped.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/woocommerce/single-product/add-to-cart/_grouped.php",
-		"oF": 0
-		},
 	"/woocommerce/single-product/add-to-cart/grouped.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2786,7 +2778,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/woocommerce/single-product/add-to-cart/variable-subscription.php",
 		"oF": 0
 		}

@@ -116,6 +116,8 @@ $interviews = my_translate_object_id( 11684, 'page' );
 										'post_type' => 'records',
 										'posts_per_page' => $albums_count,
 										'post_status' => array('publish'),
+										'category__not_in' => array(969),
+										'tag__not_in' => array(2512),
 										'orderby' => 'date',
 										'order' => 'DESC'
 									);

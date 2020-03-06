@@ -339,6 +339,14 @@ function get_salle($album_id){
 	return $salle_txt;
 }
 
+function removeElementWithValue($array, $key, $value){
+     foreach($array as $subKey => $subArray){
+          if($subArray[$key] == $value){
+               unset($array[$subKey]);
+          }
+     }
+     return $array;
+}
 
 function get_years_list(){
 							

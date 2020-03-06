@@ -1,9 +1,5 @@
 <?php
-	// Page s'abonner
-	//$devenir_membre_page_id = 113;
-	$produit_abonnement = 11845;
-	$devenir_membre_page_id = apply_filters( 'wpml_object_id', $produit_abonnement, 'product', TRUE );
-	
+
 	// Page mon compte
 	$moncompte_id = apply_filters( 'wpml_object_id', 6966, 'page', TRUE  );
 	$moncompte_lonk = get_permalink( $moncompte_id );
@@ -61,18 +57,12 @@
 					<span><?php _e('Connexion','panm360'); ?></span>
 				</a>
 			</li>
-			<li id="panm-signin" class="menu-item">
-				<a href="<?php echo get_permalink( $devenir_membre_page_id );?>">
-					<svg class="icon"><use xlink:href="#fingerprint"></use></svg>
-					<span><?php _e('S\'abonner','panm360'); ?></span>
-				</a>
-			</li>
 		<?php endif; ?>
 		
 		<?php /**/ ?>
 		
 		<li id="panm-signin" class="menu-item">
-				<a href="<?php echo get_permalink( $devenir_membre_page_id );?>">
+				<a href="<?php echo get_lien_page_abonnement();?>">
 					<svg class="icon"><use xlink:href="#fingerprint"></use></svg>
 					<span><?php _e('S\'abonner','panm360'); ?></span>
 				</a>

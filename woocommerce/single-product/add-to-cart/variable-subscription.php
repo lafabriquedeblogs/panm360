@@ -14,123 +14,58 @@ global $product;
 $attribute_keys = array_keys( $attributes );
 $user_id        = get_current_user_id();
 
+$action = esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) );
+$data_product_id = $product->get_id();
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo htmlspecialchars( wcs_json_encode( $available_variations ) ) ?>">
+
 	<?php do_action( 'woocommerce_before_variations_form' ); ?>
-
-	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
-		<p class="stock out-of-stock"><?php esc_html_e( 'This product is currently out of stock and unavailable.', 'woocommerce-subscriptions' ); ?></p>
-	<?php else : ?>
-
-
-		<?php if ( ! $product->is_purchasable() && 0 !== $user_id && 'no' !== wcs_get_product_limitation( $product ) && wcs_is_product_limited_for_user( $product, $user_id ) ) : ?>
-			<?php $resubscribe_link = wcs_get_users_resubscribe_link_for_product( $product->get_id() ); ?>
-			<?php if ( ! empty( $resubscribe_link ) && 'any' === wcs_get_product_limitation( $product ) && wcs_user_has_subscription( $user_id, $product->get_id(), wcs_get_product_limitation( $product ) ) && ! wcs_user_has_subscription( $user_id, $product->get_id(), 'active' ) && ! wcs_user_has_subscription( $user_id, $product->get_id(), 'on-hold' ) ) : // customer has an inactive subscription, maybe offer the renewal button. ?>
-				<a href="<?php echo esc_url( $resubscribe_link ); ?>" class="woocommerce-button button product-resubscribe-link"><?php esc_html_e( 'Resubscribe', 'woocommerce-subscriptions' ); ?></a>
-			<?php else : ?>
-				<p class="limited-subscription-notice notice"><?php esc_html_e( 'You have an active subscription to this product already.', 'woocommerce-subscriptions' ); ?></p>
-			<?php endif; ?>
-		<?php else : ?>
-			<?php if ( wp_list_filter( $available_variations, array( 'is_purchasable' => false ) ) ) : ?>
-				<p class="limited-subscription-notice notice"><?php esc_html_e( 'You have added a variation of this product to the cart already.', 'woocommerce-subscriptions' ); ?></p>
-			<?php endif; ?>
-			<table class="variations" cellspacing="0">
-				<tbody>
-				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
-					<tr>
-						<td class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></label></td>
-						<td class="value">
-							<?php
-							$selected = isset( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ? wc_clean( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) : $product->get_variation_default_attribute( $attribute_name );
+	
+			<div id="yo">
+				<ul class="woocommerce-grouped-product-list group_table">
+					<?php foreach($available_variations as $variation ):
 						
-							wc_dropdown_variation_attribute_options( array( 'options' => $options, 'attribute' => $attribute_name, 'product' => $product, 'selected' => $selected ) );
-							echo wp_kses( end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . __( 'Clear', 'woocommerce-subscriptions' ) . '</a>' ) : '', array( 'a' => array( 'class' => array(), 'href' => array() ) ) );
-							?>
-						</td>
-					</tr>
-				<?php endforeach; ?>
-				</tbody>
-			</table>
+						$product = wc_get_product( $variation['variation_id'] );
+					?>
+					
+					<li  id="product-<?php echo $product->get_id();?>" class="woocommerce-grouped-product-list-item">
+						<form class="_variations_form cart" action="<?php echo $action; ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo $data_product_id; ?>">
 
-			<?php
-			/**
-			 * Post WC 3.4 the woocommerce_before_add_to_cart_button hook is triggered by the callback @see woocommerce_single_variation_add_to_cart_button() hooked onto woocommerce_single_variation.
-			 */
-			if ( WC_Subscriptions::is_woocommerce_pre( '3.4' ) ) {
-				do_action( 'woocommerce_before_add_to_cart_button' );
-			}
-			?>
+					<?php
+						
+							echo '<h4>'.$variation['attributes']['attribute_abonnements'].'</h4>';
+							echo '<span class="bold">'.$variation['price_html'].'</span>';
+							echo '<p>'.$variation['variation_description'].'</p>';
+						
+					?>
 
-			<div class="single_variation_wrap">
-				<?php
-				/**
-				 * woocommerce_before_single_variation Hook.
-				 */
-				do_action( 'woocommerce_before_single_variation' );
 
-				/**
-				 * woocommerce_single_variation hook. Used to output the cart button and placeholder for variation data.
-				 *
-				 * @since  2.4.0
-				 * @hooked woocommerce_single_variation - 10 Empty div for variation data.
-				 * @hooked woocommerce_single_variation_add_to_cart_button - 20 Qty and cart button.
-				 */
-				do_action( 'woocommerce_single_variation' );
-
-				/**
-				 * woocommerce_after_single_variation Hook.
-				 */
-				do_action( 'woocommerce_after_single_variation' );
-				?>
-			</div>
-
-			<?php
-			/**
-			 * Post WC 3.4 the woocommerce_after_add_to_cart_button hook is triggered by the callback @see woocommerce_single_variation_add_to_cart_button() hooked onto woocommerce_single_variation.
-			 */
-			if ( WC_Subscriptions::is_woocommerce_pre( '3.4' ) ) {
-				do_action( 'woocommerce_after_add_to_cart_button' );
-			}
-			?>
-		<?php endif; ?>
-	<?php endif; ?>
+							<div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-enabled">
+									
+									<div class="quantity hidden" style="display: none;">
+									<input type="hidden" id="quantity_5e62a21cb4462" class="qty" name="quantity" value="1" min="1" max="">
+								</div>
+								
+								<button type="submit" class="single_add_to_cart_button button alt ">Je m'abonne</button>
+							
+								
+								<input type="hidden" name="add-to-cart" value="11845">
+								<input type="hidden" name="product_id" value="11845">
+								<input type="hidden" name="variation_id" class="variation_id" value="<?php echo $variation['variation_id'];?>">
+							</div>
+					</form>
+						</li>
+					<?php
+						endforeach;
+					?>
+				
+				
 
 	<?php do_action( 'woocommerce_after_variations_form' ); ?>
+	</ul>
 
-
-			<div id="yo">
-
-				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
-					<tr>
-						<td class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></label></td>
-						<td class="value">
-							<?php
-							//$selected = isset( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ? wc_clean( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) : $product->get_variation_default_attribute( $attribute_name );
-							
-							echo '<pre>';
-							var_dump($options);
-							echo '</pre>';
-
-							
-							wc_dropdown_variation_attribute_options(
-								array(
-									'options' => $options,
-									'attribute' => $attribute_name,
-									'product' => $product,
-									'selected' => $selected
-								)
-							);
-
-							?>
-						</td>
-					</tr>
-				<?php endforeach; ?>				
-			</div>
-
-
-</form>
+</div>
 
 <?php
 do_action( 'woocommerce_after_add_to_cart_form' );

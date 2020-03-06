@@ -26,15 +26,6 @@ get_header( 'shop' ); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<article id="post-<?php the_ID(); ?>" <?php post_class("section"); ?>>
-				<h1>Hello</h1>
-				
-				<?php
-					
-					//$page_abo = get_the_content( null, false, 113 );
-					//$page_abo_content = apply_filters( 'the_content', $page_abo );
-					
-					//echo $page_abo_content;
-				?>
 				
 				
 				<?php
