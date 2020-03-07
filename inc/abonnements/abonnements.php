@@ -1,5 +1,5 @@
 <?php
-	// Add Shortcode
+// Add Shortcode
 function abos_panm_st( $atts ) {
 
 	// Attributes

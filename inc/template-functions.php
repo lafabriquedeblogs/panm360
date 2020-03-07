@@ -257,6 +257,31 @@ function get_months_list(){
 	return $months;
 };
 
+function get_months_strings_list( $month , $getkey = true ){
+	$months = array(
+		'january' => 'janvier',
+		'february' => 'février',
+		'march' => 'mars',
+		'april' => 'avril',
+		'may' => 'mai',
+		'june' => 'juin',
+		'july' => 'juillet',
+		'august' => 'août',
+		'september' => 'septembre',
+		'october' => 'octobre',
+		'november' => 'novembre',
+		'december' => 'décembre',
+	);
+	
+	if( $getkey ){
+		$key = array_search ($getkey, $months);
+		return $key;
+	}
+	
+	return $months[$month];
+	
+};
+
 function get_month_name( $m ){
 
 	$months = get_months_list();
@@ -568,3 +593,81 @@ function return_acf_block_content_interview_introduction_image( $post_content = 
 	
 	return '';	
 }
+
+if (!function_exists('array_key_first')) {
+    function array_key_first(array $arr) {
+        foreach($arr as $key => $unused) {
+            return $key;
+        }
+        return NULL;
+    }
+}
+
+/********************************************************************************/
+/*
+/* 	FILTER CONTENT
+/*	GESTION DES ARTICLES VUS POUR LES ABONNÉS GRATUITS
+/*
+/********************************************************************************/
+add_action( 'woocommerce_subscription_renewal_payment_complete', 'panm360_subscription_renewal_update', 10, 2 );
+
+function panm360_subscription_renewal_update( $subscription , $last_order ){
+	$_customer_user = get_post_meta( $subscription->ID, '_customer_user', true );
+	delete_user_meta( $_customer_user, 'viewed_posts', false );
+	
+}
+
+add_action('woocommerce_subscription_date_updated', 'subscription_date_update', 10, 3);
+
+function subscription_date_update($subscription, $date_type, $datetime){
+	//Do your stuff here...
+	$_customer_user = get_post_meta( $subscription->ID, '_customer_user', true );
+	delete_user_meta( $_customer_user, 'viewed_posts', false );
+}
+
+
+function is_user_membership_premium( $user_id ){
+	$args = array( 
+		'status' => array( 'active', 'complimentary', 'pending','free_trial'),
+	);  
+	
+	$active_memberships = wc_memberships_get_user_memberships( $user_id, $args );
+	
+	$active_memberships_names = array();
+	
+	foreach( $active_memberships as $membership){
+		$active_memberships_names[] = $membership->plan->name;
+	}
+	
+	if( in_array('Premium', $active_memberships_names ) ){
+		
+		// on efface le contenu des articles lus
+		// dans le cas ou l'utilisateur est passé
+		//d'un abonnement gratuit a un abonnement payant
+		$viewed_posts = get_user_meta( $user_id , 'viewed_posts', false );
+		if( $viewed_posts ) delete_user_meta( $user_id, 'viewed_posts');
+		
+		return true;
+	}
+	
+	return false;
+}
+
+function next_payment_user_viewed_posts( $user_id ){
+	$customer_subscriptions = wcs_get_users_subscriptions( $user_id );
+	$key  = array_key_first( $customer_subscriptions);
+	$date_renouvellement = get_post_meta( $key, '_schedule_next_payment', true );	
+	return $date_renouvellement;
+}
+
+function increase_user_viewed_posts( $user_id, $post_id ){
+	update_user_meta( $user_id, 'viewed_posts',  $post_id, false);
+}
+
+function delete_user_viewed_posts(){
+	
+}
+/********************************************************************************/
+/*
+/*
+/*******************************************************************************/

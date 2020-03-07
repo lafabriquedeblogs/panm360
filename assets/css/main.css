@@ -1475,6 +1475,14 @@ h2.annee-top {
     .abo-bloc.abo-bloc-premium .frequence {
       color: #E6E6EA; }
 
+.restrited-content-message {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 2em;
+  margin-top: 2em; }
+  .restrited-content-message h3 {
+    font-weight: 500; }
+
 .woocommerce-notices-wrapper {
   display: none; }
 
@@ -1762,68 +1770,60 @@ h2.annee-top {
   -webkit-box-direction: normal;
           flex-direction: column; }
 
-#bouton-je-mabonne {
-  display: block;
-  margin: 1em auto; }
-
 .woocommerce-grouped-product-list-item {
   box-sizing: border-box;
   cursor: pointer;
   -webkit-transition: all 150ms ease-out;
   transition: all 150ms ease-out;
-  padding: 0;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  padding: 0 1em 2em;
   display: -webkit-box;
   display: flex;
   flex-wrap: nowrap;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: row;
+          flex-direction: column;
   position: relative;
   background-color: #fff;
   z-index: 1; }
-  .woocommerce-grouped-product-list-item.inactive {
-    opacity: 0.8;
-    -webkit-transform: scale(0.9, 0.9);
-            transform: scale(0.9, 0.9);
-    cursor: pointer;
-    background-color: #F4F4F8; }
-  .woocommerce-grouped-product-list-item.active {
-    cursor: pointer;
-    border: 1px #FE4A49 solid;
-    opacity: 1;
-    -webkit-transform: scale(1.05, 1.05);
-            transform: scale(1.05, 1.05);
-    padding: 0;
-    z-index: 3; }
 
-.wc-grouped-product-add-to-cart-checkbox {
-  position: absolute;
-  opacity: 0;
-  left: -999em; }
+.abo_price_html .price {
+  font-size: 0.8em;
+  display: block;
+  text-transform: uppercase;
+  margin: 10px 0;
+  line-height: 1.1; }
 
 .woocommerce-grouped-product-list-item__label {
   font-family: "Rubik", sans-serif;
-  font-size: 1.5em;
-  text-transform: uppercase; }
+  font-size: 1.125em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  line-height: 1; }
   .woocommerce-grouped-product-list-item__label a {
     text-decoration: none; }
 
-.woocommerce-grouped-product-list-item__description {
+div.woocommerce-grouped-product-list-item__description p {
   font-size: 13px;
-  color: #000;
-  max-width: 250px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  line-height: 1.3; }
 
 .woocommerce .abo-thumbnail {
-  width: 20%;
-  height: 20%; }
+  width: 70px;
+  height: 70px;
+  float: left; }
 
 .abo-content {
-  padding: 5px; }
+  margin-left: 90px;
+  line-height: 1; }
 
-@media screen and (min-width: 768px) {
+.woocommerce button.button.single_add_to_cart_button.alt {
+  padding: 13px 18px;
+  border-radius: 2px;
+  font-weight: 500;
+  margin-top: 2em; }
+
+@media screen and (min-width: 736px) {
   .single-product #primary {
     padding: 0 1.45em; }
   .woocommerce-grouped-product-list {
@@ -1841,21 +1841,44 @@ h2.annee-top {
               flex: 0 0 1;
       text-align: center;
       max-width: 50%; }
+  .woocommerce-grouped-product-list-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row; }
   .woocommerce .abo-thumbnail {
     width: 100%;
-    height: auto; }
+    height: auto;
+    margin: 0;
+    float: none; }
   .abo-content {
-    padding: 1em 0; } }
+    padding: 1em 0;
+    margin: 0 auto; }
+  .woocommerce button.button.single_add_to_cart_button.alt {
+    /*
+		padding: 13px 18px;
+		border-radius: 2px;
+		font-weight: 500;
+*/ } }
 
 @media screen and (min-width: 1024px) {
+  .woocommerce-grouped-product-list {
+    /*
+		#product-11847,
+		#product-11848 {
+			flex: 0 0 100%;
+			max-width: 50%;
+		}
+*/ }
+    .woocommerce-grouped-product-list > li {
+      -webkit-box-flex: 0;
+              flex: 0 0 100%;
+      max-width: 33%; } }
+
+@media screen and (min-width: 1280px) {
   .woocommerce-grouped-product-list > li {
     -webkit-box-flex: 0;
             flex: 0 0 100%;
-    max-width: 33%; }
-  .woocommerce-grouped-product-list #product-11326, .woocommerce-grouped-product-list #product-11327 {
-    -webkit-box-flex: 0;
-            flex: 0 0 100%;
-    max-width: 50%; } }
+    max-width: calc( 100% / 5); } }
 
 .no-label label, .no-label .gfield_label {
   position: absolute;

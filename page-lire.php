@@ -37,7 +37,7 @@ get_header();
 					<?php the_content();?>
 			
 					<section class="section">
-						<div id="critiques-albums" class="section-inner">
+						<div id="critiques-albums" class="section-content">
 
 						<div class="section-content--main">
 							
@@ -55,9 +55,11 @@ get_header();
 										'post_type' => 'records',
 										'posts_per_page' => $albums_count,
 										'post_status' => array('publish'),
-										'orderby' => 'date',	
+										'category__not_in' => array(969),
+										'tag__not_in' => array(2512),
+										'orderby' => 'date',
 										'order' => 'DESC',
-										'paged' => $albums_paged,																
+										'paged' => $albums_paged																
 									);
 									
 									$albums = new WP_Query($args);
@@ -66,7 +68,7 @@ get_header();
 											$albums->the_post();
 											
 											include( locate_template( '/template-parts/modules/element-album.php', false, false ) );
-										$albums_count--;
+										//$albums_count--;
 									}
 								?>
 								</ul>

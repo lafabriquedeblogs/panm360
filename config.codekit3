@@ -889,12 +889,12 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
-	"/inc/abonnements/shortcodes-abonnements.php": {
+	"/inc/abonnements/abonnements.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/inc/abonnements/shortcodes-abonnements.php",
+		"oAP": "/inc/abonnements/abonnements.php",
 		"oF": 0
 		},
 	"/inc/abonnements/woocommerce.php": {

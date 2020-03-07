@@ -1,27 +1,6 @@
 <?php
 
-add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
-
-/*******************************/
-// wc_memberships_is_user_member( $user_id = null, $membership_plan );
-/*******************************/
-
-
-function filter_the_content_in_the_main_loop( $content ) {
-	
-
-	
-	$user_id = get_current_user_id();
-	
-	// Page abonnement 
-	if( is_page() ){
-		return $content;
-	}
-	
-	if( $user_id == 0 && !is_page() && is_main_query() && in_the_loop() ){
-		
-		global $post;
-		
+function return_post_excerpt( $content, $post, $member = false ){
 		$content_strip = strip_tags($post->post_content);
 		$content_total_length = str_word_count($content_strip);
 		$words = $content_total_length / 5 ;
@@ -29,71 +8,119 @@ function filter_the_content_in_the_main_loop( $content ) {
 		 
 		$excerpt = wp_trim_words( $content, $words, $more );
 		
+		if( !$member ){
+			ob_start();
+?>
+			
+			<div class="restrited-content-message please-subscribe">
+				
+				<h3><a href="#">Abonnez-vous</a> ou <a href="#">connectez-vous</a> afin d'accéder à la totalité du contenu</h3>
+				
+			</div>
+			
+<?php
+			$excerpt .= ob_get_clean();
+			return $excerpt;
+		}	
+
 		ob_start();
-		?>
-		
-		<div>
+?>
 			
-			<h2>Abonnez vous pour accéder au contenu</h2>
+			<div class="restrited-content-message already-subscribe">
+				<h3>Vous avez atteint votre limite de 5 articles gratuits</h3>
+				<p>Text</p>
+			</div>
 			
-		</div>
-		
-		<?php
-		$excerpt .= ob_get_clean();
-		return $excerpt;
-		
-	} elseif( $user_id > 0 && !is_page() && is_main_query() && in_the_loop() ) {
+<?php
+			$excerpt .= ob_get_clean();
+			return $excerpt;
+
+}
 
 
+function return_nombre_de_posts_consultes( $viewed_posts ){
+		ob_start();
+?>
+			
+			<div id="nombre-posts-consultes already-subscribe">
+				<p>Vous avez consulté {X} articles</p>
+				<h3>Il vous reste {X} articles à consulter</h3>
+				<p>Votre</p>
+			</div>
+			
+<?php
+			$excerpt .= ob_get_clean();
+			return $excerpt;	
+}
 
-	//$membership_plan = 6969;//premium
-	//$membership_plan = 6968;//free
-	$statuses = array(
-		'status' => array( 'active', 'complimentary', 'pending', 'free_trial' ),
-	);
-	$active_memberships = wc_memberships_get_user_memberships( $user_id, $statuses );
+
+add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
+
+
+function filter_the_content_in_the_main_loop( $content ) {
+
+	global $post;
+	$user_id = get_current_user_id();
 	
-	foreach( $active_memberships as $ms ){
-		echo '<pre>';
-		var_dump($ms->plan_id);
-		echo '</pre>';
+	$user_premium = is_user_membership_premium( $user_id );
+	
+	$viewed_posts = get_user_meta( $user_id , 'viewed_posts', false );
+	
+
+	
+	// l'utilisateur est un abonné premium
+	// ou on est sur une page 
+	// full accès au contenu
+	if( is_page() || $user_premium ){
+		return $content;
 	}
-
-		$customer_subscriptions = get_posts( array(
-		    'numberposts' => 1,
-		    'meta_key'    => '_customer_user',
-		    'meta_value'  => $user_id, // Or $user_id
-		    'post_type'   => 'shop_subscription', // WC orders post type
-		    'post_status' => 'wc-active' // Only orders with status "completed"
-		) );
+	
+	// on est sur une page single
+	// l'utilisateur n'est pas un abonné premium ou gratuit
+	// restricted accès au contenu	
+	if( $user_id == 0 && !is_page() && is_main_query() && in_the_loop() ){
 		
-		echo '<pre>';
-			var_dump($customer_subscriptions);
-		echo '</pre>';
+		return return_post_excerpt( $content, $post );
+	}
+	
+	// on est sur une page single
+	// l'utilisateur est un abonné gratuit
+	// il a le droit a 5 article par periode de renouvellement (/mois)
+			
+	if( $user_id > 0 && !is_page() && is_main_query() && in_the_loop() ) {
 		
-
+		if( empty( $viewed_posts ) ){
+			increase_user_viewed_posts( $user_id, $post->ID );
+			return $content;
 		
-		$args = array( 
-			'status' => array( 'active', 'complimentary', 'pending','free_trial' ),
-		);  
-		
-		$active_memberships = wc_memberships_get_user_memberships( $user_id, $args );
-		$active_subscriptions = wcs_get_users_subscriptions($user_id);
-		
-		$active_memberships_names = array();
-		
-		foreach( $active_memberships as $membership){
-			$active_memberships_names[] = $membership->plan->name;
 		}
 		
-		if( in_array('Premium', $active_memberships_names ) ){
+		$date_renouvellement = next_payment_user_viewed_posts( $user_id );
+		$today = date("Y-m-d H:i:s");		
+		
+		// nombre d'article maximum autorisé
+		// todo: créer l'option dans l'admin
+		$max_posts = 5;
+		
+		// on regarde combien d'articles l'utilisateur a lu
+		// et si la date du prochain renouvellement d'abonnement
+		// est dans le futur
+		
+		// nombre d'articles lus
+		$total_viewed_posts = count( $viewed_posts );		
+		
+		// il faut que la date de renouvellement soit supérieur à aujourd'hui
+		// et que le nombre d'articles lus soit inférieur au maximum autorisé
+			
+		if( $total_viewed_posts < $max_posts && $date_renouvellement > $today ){
+			add_user_meta( $user_id, 'viewed_posts',  $post->ID, false);
 			return $content;
 		}
 		
-		$viewed_interviews = get_user_meta( $user_id , 'viewed_posts', true );
-
+		return return_post_excerpt( $content, $post, true );
 		
 		
 	}
-	return;
+	
 }
+
