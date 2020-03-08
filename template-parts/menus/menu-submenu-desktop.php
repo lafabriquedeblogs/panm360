@@ -288,6 +288,7 @@ class panm360_Walker_sub_menu extends Walker_Nav_Menu {
 			'items_wrap' => '%3$s',
 			'walker' => new panm360_Walker_sub_menu()
 		) );
+/*
 		$menu .= wp_nav_menu( array(
 			'menu' => 286,
 			//'container' => '',
@@ -324,6 +325,7 @@ class panm360_Walker_sub_menu extends Walker_Nav_Menu {
 		
 			'walker' => new panm360_Walker_sub_menu()
 		) );
+*/
 		
 		echo $menu;		
 	?>

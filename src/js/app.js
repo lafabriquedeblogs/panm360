@@ -1,4 +1,4 @@
-//import main_menu_subMenu from './sub_menu.js';
+import main_menu_subMenu from './sub_menu.js';
 
 import ajax_search_agenda from './agenda.js';
 
@@ -15,6 +15,7 @@ import ajax_search_agenda from './agenda.js';
 	let loupe_search = d.querySelector("#panm-search a");
 	let search_div = d.getElementById("searchform");
 	let close_searchform = d.getElementById("close-searchform");
+
 	
 	let spotify = d.querySelector(".wp-block-embed-spotify .wp-block-embed__wrapper iframe");
 	
@@ -62,6 +63,8 @@ import ajax_search_agenda from './agenda.js';
 	*/
 	
 	$(document).ready(function(){
+		
+
 		
 		$(w).load(function(){
 			$(".at-share-btn-elements").prepend('<a class="a-icon-instagram-link" role="button" href="https://www.instagram.com/panm360/" target="_blank"><svg class="icon-instagram-link"><use xlink:href="#instagram"></use></svg></a>');
@@ -114,7 +117,18 @@ import ajax_search_agenda from './agenda.js';
 			$("#menu-panm .sub-menu").hide();
 		});	
 		
-		reportWindowSize();
+		
+		$(".gfield_checkbox").on("click","label", function(){
+			$(this).parent().toggleClass("selected");
+		});
+		
+		$("#close-window-posts-consultes").on("click", function(e){
+			e.preventDefault();
+			$("#window-posts-consultes").fadeOut(200);
+		});
+		
+		if( spotify != null) spotify.setAttribute("width","100%");
+
 
 		const observer = lozad('.lozad', {
 			rootMargin: '10px 0px', // syntax similar to that of CSS Margin
@@ -124,15 +138,9 @@ import ajax_search_agenda from './agenda.js';
 			}
 		});
 		observer.observe();		
-		
-		$(".gfield_checkbox").on("click","label", function(e){
-			$(this).parent().toggleClass("selected");
-		});
-		
-		
-		if( spotify != null) spotify.setAttribute("width","100%");
-		
-		//main_menu_subMenu();
+				
+		main_menu_subMenu();
+		reportWindowSize();
 		ajax_search_agenda();
 	});
 	

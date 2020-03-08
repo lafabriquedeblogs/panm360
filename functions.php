@@ -390,6 +390,14 @@ function my_translate_object_id( $object_id, $type ) {
     }
 }
 
+function iam_admin(){
+	$current_user = wp_get_current_user();
+	if( is_user_logged_in() && user_can( $current_user, 'administrator' ) ){
+		return true;
+	}
+	return false;
+}
+	
 /*
 function slug_post_type_template() {
 	$page_type_object = get_post_type_object( 'interviews' );

@@ -661,12 +661,73 @@ function next_payment_user_viewed_posts( $user_id ){
 }
 
 function increase_user_viewed_posts( $user_id, $post_id ){
-	update_user_meta( $user_id, 'viewed_posts',  $post_id, false);
+	add_user_meta( $user_id, 'viewed_posts',  $post_id, false);
+	$viewed_posts = get_user_meta( $user_id , 'viewed_posts', false );
+	echo return_nombre_de_posts_consultes( $viewed_posts );
+}
+function return_nombre_de_posts_consultes( $viewed_posts ){
+		// nombre d'article maximum autorisé
+		// todo: créer l'option dans l'admin
+		$max_posts = 5;
+				
+		$current_posts = count($viewed_posts);
+		$remain_posts = $max_posts - $current_posts;
+
+		ob_start();
+?>
+			
+			<div id="window-posts-consultes">
+				<a href="#" id="close-window-posts-consultes">&times;</a>
+				<p>Vous avez consulté <?php echo $current_posts;?> articles</p>
+				<h3>Il vous reste <?php echo $remain_posts;?> articles à consulter</h3>
+				<p>Votre... </p>
+			</div>
+			
+<?php
+			$excerpt .= ob_get_clean();
+			echo $excerpt;	
 }
 
-function delete_user_viewed_posts(){
-	
+function return_post_excerpt( $content, $post, $member = false ){
+		
+		$content_strip = strip_tags($post->post_content);
+		$content_total_length = str_word_count($content_strip);
+		$words = $content_total_length / 5 ;
+		$more = '…';
+		 
+		$excerpt = wp_trim_words( $content, $words, $more );
+		
+		if( !$member ){
+			ob_start();
+?>
+			
+			<div class="restrited-content-message please-subscribe">
+				
+				<h3><a href="#">Abonnez-vous</a> ou <a href="#">connectez-vous</a> afin d'accéder à la totalité du contenu</h3>
+				
+			</div>
+			
+<?php
+			$excerpt .= ob_get_clean();
+			return $excerpt;
+		}	
+
+		ob_start();
+?>
+			
+			<div class="restrited-content-message already-subscribe">
+				<h3>Vous avez atteint votre limite de 5 articles gratuits</h3>
+				<p><a href="#">Abonnez-vous</a> à partir de 3.60$ par mois pour profiter de la totalité de nos contenus</p>
+			</div>
+			
+<?php
+			$excerpt .= ob_get_clean();
+			return $excerpt;
+
 }
+
+
+
 /********************************************************************************/
 /*
 /*

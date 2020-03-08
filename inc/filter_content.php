@@ -1,64 +1,14 @@
 <?php
 
-function return_post_excerpt( $content, $post, $member = false ){
-		$content_strip = strip_tags($post->post_content);
-		$content_total_length = str_word_count($content_strip);
-		$words = $content_total_length / 5 ;
-		$more = '…';
-		 
-		$excerpt = wp_trim_words( $content, $words, $more );
-		
-		if( !$member ){
-			ob_start();
-?>
-			
-			<div class="restrited-content-message please-subscribe">
-				
-				<h3><a href="#">Abonnez-vous</a> ou <a href="#">connectez-vous</a> afin d'accéder à la totalité du contenu</h3>
-				
-			</div>
-			
-<?php
-			$excerpt .= ob_get_clean();
-			return $excerpt;
-		}	
-
-		ob_start();
-?>
-			
-			<div class="restrited-content-message already-subscribe">
-				<h3>Vous avez atteint votre limite de 5 articles gratuits</h3>
-				<p>Text</p>
-			</div>
-			
-<?php
-			$excerpt .= ob_get_clean();
-			return $excerpt;
-
-}
-
-
-function return_nombre_de_posts_consultes( $viewed_posts ){
-		ob_start();
-?>
-			
-			<div id="nombre-posts-consultes already-subscribe">
-				<p>Vous avez consulté {X} articles</p>
-				<h3>Il vous reste {X} articles à consulter</h3>
-				<p>Votre</p>
-			</div>
-			
-<?php
-			$excerpt .= ob_get_clean();
-			return $excerpt;	
-}
-
-
 add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
 
 
 function filter_the_content_in_the_main_loop( $content ) {
-
+	
+	if( iam_admin() ){
+		return $content;
+	}
+	
 	global $post;
 	$user_id = get_current_user_id();
 	
@@ -67,6 +17,7 @@ function filter_the_content_in_the_main_loop( $content ) {
 	$viewed_posts = get_user_meta( $user_id , 'viewed_posts', false );
 	
 
+	
 	
 	// l'utilisateur est un abonné premium
 	// ou on est sur une page 
@@ -88,6 +39,17 @@ function filter_the_content_in_the_main_loop( $content ) {
 	// il a le droit a 5 article par periode de renouvellement (/mois)
 			
 	if( $user_id > 0 && !is_page() && is_main_query() && in_the_loop() ) {
+		
+		
+		/*
+		<!--/ a effacer pour css seulement /-->
+		*/
+		//return_nombre_de_posts_consultes( $viewed_posts );
+		//return $content;
+		/*
+		<!--/--/-->
+		*/
+		
 		
 		if( empty( $viewed_posts ) ){
 			increase_user_viewed_posts( $user_id, $post->ID );
@@ -113,7 +75,7 @@ function filter_the_content_in_the_main_loop( $content ) {
 		// et que le nombre d'articles lus soit inférieur au maximum autorisé
 			
 		if( $total_viewed_posts < $max_posts && $date_renouvellement > $today ){
-			add_user_meta( $user_id, 'viewed_posts',  $post->ID, false);
+			increase_user_viewed_posts( $user_id, $post->ID );
 			return $content;
 		}
 		
