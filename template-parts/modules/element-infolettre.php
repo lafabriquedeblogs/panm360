@@ -7,8 +7,8 @@
 	?>
 	<section class="section infolettre">	
 		<div class="panm360-infolettre">
-			<span class="infolettre-titre"><?php _e('Abonnez-vous à l\'infolettre','panm360'); ?></span>
+			<span class="infolettre-titre"><?php _e('Inscrivez-vous à l\'infolettre','panm360'); ?></span>
 			<svg class="icon"><use xlink:href="#panm360"></use></svg>
-			<button onclick="window.location.href = '<?php echo $infolettre_page_permalink;?>'"><?php _e('M\'abonner','panm360'); ?></button>
+			<button onclick="window.location.href = '<?php echo $infolettre_page_permalink;?>'"><?php _e('M\'inscrire','panm360'); ?></button>
 		</div>
 	</section>

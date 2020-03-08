@@ -122,6 +122,10 @@ import ajax_search_agenda from './agenda.js';
 			$(this).parent().toggleClass("selected");
 		});
 		
+		$("#type-d-abonne li").on("click","label", function(){
+			$(this).toggleClass("selected");
+		});
+		
 		$("#close-window-posts-consultes").on("click", function(e){
 			e.preventDefault();
 			$("#window-posts-consultes").fadeOut(200);

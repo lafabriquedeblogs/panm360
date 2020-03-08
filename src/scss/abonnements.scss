@@ -132,3 +132,35 @@
 	    z-index: 5;
     }
 }
+
+#type-d-abonne {
+	li {
+		list-style-type: none;
+		
+		.regular-text {
+			position: absolute;
+			opacity: 0;
+			width: 1px;
+			height: 1px;
+		}
+		label {
+		    display: -webkit-box;
+			display: flex;
+			align-items: center;
+		}
+		label::before {
+		    content: "";
+		    display: inline-block;
+		    width: 20px;
+		    height: 20px;
+		    background-color: #fff;
+		    margin-right: 8px;
+		    border-radius: 15px;
+		    border: 1px solid #5BC6E8;	
+		}
+		label.selected::before {
+		    background-color: #5BC6E8;
+		    border: 6px double #fff;
+		}
+	}
+}

@@ -47,10 +47,9 @@ function bbloomer_remove_address_my_account( $items ) {
 	unset($items['lost-password']);
 	return $items;
 }
-add_action( 'woocommerce_account_awards_endpoint', 'woocommerce_account_edit_address' );
-add_action( 'woocommerce_account_awards_endpoint', 'woocommerce_account_edit_account' );
-//add_action( 'woocommerce_account_awards_endpoint', 'woocommerce_myaccount_subscriptions', 999 );
-add_action( 'woocommerce_account_subscriptions_endpoint', 'woocommerce_account_payment_methods' );
+add_action( 'woocommerce_account_preferences_endpoint', 'woocommerce_account_edit_address' );
+add_action( 'woocommerce_account_preferences_endpoint', 'woocommerce_account_edit_account' );
+//add_action( 'woocommerce_account_subscriptions_endpoint', 'woocommerce_account_payment_methods' );
 /**
  * @snippet       Redirect to Checkout Upon Add to Cart - WooCommerce
  * @how-to        Get CustomizeWoo.com FREE
@@ -189,21 +188,79 @@ add_filter( 'woocommerce_product_single_add_to_cart_text', 'filter_woocommerce_p
 add_action( 'init', 'my_account_new_endpoints' );
 
 function my_account_new_endpoints() {
-	add_rewrite_endpoint( 'awards', EP_ROOT | EP_PAGES );
+	add_rewrite_endpoint( 'preferences', EP_ROOT | EP_PAGES );
+	flush_rewrite_rules();
+}
+/**
+ * Add new query var.
+ *
+ * @param array $vars
+ * @return array
+ */
+function my_custom_query_vars( $vars ) {
+	$vars[] = 'preferences';
+
+	return $vars;
 }
 
-add_action( 'woocommerce_account_awards_endpoint', 'awards_endpoint_content' );
+add_filter( 'query_vars', 'my_custom_query_vars', 0 );
+add_action( 'woocommerce_account_preferences_endpoint', 'preferences_endpoint_content' );
 
-function awards_endpoint_content() {
-    get_template_part('template-parts/my-account-awards');
-    //get_template_part('woocommerce/myaccount/form-edit-address');
+function preferences_endpoint_content() {
+    get_template_part('template-parts/my-account-preferences');
 }
 
  function my_account_menu_order($menuOrder) {
- 	$menuOrder['awards'] = __( 'Mon profil', 'panm360' );
+ 	$menuOrder['preferences'] = __( 'Mes préférences', 'panm360' );
  	return $menuOrder;
  }
  add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order', 10, 1 );
 
+/*
 
+add_action( 'woocommerce_checkout_update_user_meta', 'checkout_update_user_type_abonne', 10, 2 );
+
+function checkout_update_user_type_abonne( $customer_id, $data ) {
+
+if ( !empty( $_POST['melomane'] ) )
+	update_user_meta( $customer_id,'melomane', $_POST['melomane'] );
+if ( !empty( $_POST['professionnel'] ) )
+    update_user_meta( $customer_id,'professionnel', $_POST['professionnel'] );
+if ( !empty( $_POST['amateur'] ) )
+    update_user_meta( $customer_id,'amateur', $_POST['amateur'] );
+if ( !empty( $_POST['contributeur'] ) )
+    update_user_meta( $customer_id,'contributeur', $_POST['contributeur'] );
+if ( !empty( $_POST['fournisseur'] ) )
+    update_user_meta( $customer_id,'fournisseur', $_POST['fournisseur'] );
+if ( !empty( $_POST['artiste'] ) )
+    update_user_meta( $customer_id,'artiste', $_POST['artiste'] );
+
+}
+*/
+
+function check_updated_type_abonne(){
+	$user_id = get_current_user_id(  );
+	
+	if ( !empty( $_POST['melomane'] ) ) {
+		update_user_meta( $user_id,'melomane', $_POST['melomane'] );
+	}
+	if ( !empty( $_POST['professionnel'] ) ) {
+		update_user_meta( $user_id,'professionnel', $_POST['professionnel'] );
+	}
+	if ( !empty( $_POST['amateur'] ) ) {
+		update_user_meta( $user_id,'amateur', $_POST['amateur'] );
+	}
+	if ( !empty( $_POST['contributeur'] ) ) {
+		update_user_meta( $user_id,'contributeur', $_POST['contributeur'] );
+	}
+	if ( !empty( $_POST['fournisseur'] ) ) {
+		update_user_meta( $user_id,'fournisseur', $_POST['fournisseur'] );
+	}
+	if ( !empty( $_POST['artiste'] ) ){
+		update_user_meta( $user_id,'artiste', $_POST['artiste'] );
+	}
+			
+}
+
+//add_action( 'init', 'check_updated_type_abonne');
 /**************************************************************************************************************************************/

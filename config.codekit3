@@ -2518,12 +2518,12 @@
 		"oAP": "/template-parts/modules/six-columns-albums.php",
 		"oF": 0
 		},
-	"/template-parts/my-account-awards.php": {
+	"/template-parts/my-account-preferences.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/template-parts/my-account-awards.php",
+		"oAP": "/template-parts/my-account-preferences.php",
 		"oF": 0
 		},
 	"/template-parts/publicites/publicite-banniere-footer.php": {
