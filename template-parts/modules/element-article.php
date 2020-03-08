@@ -8,6 +8,7 @@
 
 <?php
 
+/*
 	$title = $interview->post_title;
 	$content = return_acf_block_content_interview_introduction_presentation( $interview->post_content, 'acf/header-interview', $interview->ID );
 	$genre = get_genre( $interview->ID ); 
@@ -21,6 +22,7 @@
 	$auteur_id = get_the_author_meta($interview->post_author);
 	$Author = get_the_author_meta('display_name', $auteur_id);
 	$auteur_link =  get_author_posts_url( $auteur_id );	
+*/
 ?>
 
 <div class="article element article-interview">

@@ -19,13 +19,15 @@ get_header();
 				<div id="critiques-albums" class="section-inner">
 					<div class="section-content ">
 						<div class="section-content--main">
-							<div class="section--element">
-						
+														<div class="section--element">
+																
+								<h4 class="section-titre"><span><?php _e('Interviews','panm360'); ?></span> <a href="<?php echo get_permalink( $interviews );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+								
 								<?php
 									
 									$interviews_args = array(
 										'post_type' => 'interviews',
-										'posts_per_page' => 13,
+										'posts_per_page' => -1,
 										'post_status' => array('publish'),
 										'orderby' => 'date',
 										'order' => 'DESC'
@@ -38,31 +40,16 @@ get_header();
 								
 								
 								<?php
-									
-									$post_id = $interview->ID;
-									$title = $interview->post_title;
-									$content = return_acf_block_content_interview_introduction_presentation( $interview->post_content, 'acf/header-interview', $interview->ID );
-									$genre = get_genre( $interview->ID ); 
-									$permalien = $interview->guid;
-									
-									$attachment_id = return_acf_block_content_interview_introduction_image( $interview->post_content, 'acf/header-interview', $interview->ID );
-									
-									$image_src_array = wp_get_attachment_image_src( $attachment_id, 'panm360_square' );
-									$image_src = $image_src_array[0];
-									
-									$auteur_id = get_the_author_meta($interview->post_author);
-									$Author = get_the_author_meta('display_name');
-									$auteur_link =  get_author_posts_url($auteur_id) ;
-									
+								$post_id = $interview->ID;
 									if( !$image_src ){
 										$image_src = get_template_directory_uri()."/assets/img/default/sample-album.png";
 									}
 									
-									
 									include( locate_template( '/template-parts/modules/element-main.php', false, false ) );
 									
 								?>
-									
+								
+								<?php if( count($interviews) > 0 ): ?>	
 								<ul class="content-list-articles--max-2-cols">
 									
 									<?php
@@ -70,19 +57,7 @@ get_header();
 										foreach( $interviews as $interview ){
 											
 											$post_id = $interview->ID;
-											$title = $interview->post_title;
-											$content = return_acf_block_content_interview_introduction_presentation( $interview->post_content, 'acf/header-interview', $interview->ID );
-											$genre = get_genre( $interview->ID ); 
-											$permalien = $interview->guid;
-											
-											$attachment_id = return_acf_block_content_interview_introduction_image( $interview->post_content, 'acf/header-interview', $interview->ID );
-											
-											$image_src_array = wp_get_attachment_image_src( $attachment_id, 'panm360_home_slider' );
-											$image_src = $image_src_array[0];
-											
-											$auteur_id = get_the_author_meta($interview->post_author);
-											$Author = get_the_author_meta('display_name', $auteur_id);
-											$auteur_link =  get_author_posts_url($auteur_id) ;
+
 									
 											if( !$image_src ){
 												$image_src = get_template_directory_uri()."/assets/img/default/sample-album.png";
@@ -97,6 +72,8 @@ get_header();
 									?>
 
 								</ul>
+								<?php endif; ?>
+								
 								
 							</div><!-- section--element -->
 							

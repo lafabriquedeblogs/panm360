@@ -416,7 +416,7 @@ add_action( 'init', 'slug_post_type_template' );
 
 /* ----------- / END REDIRECTS / --------------- */
 
-	
+require get_template_directory() . '/inc/template-user-meta.php';	
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customs_posts_types.php';
@@ -427,6 +427,7 @@ require get_template_directory() . '/inc/abonnements/woocommerce.php';
 require get_template_directory() . '/inc/filter_content.php';
 require get_template_directory() . '/inc/agenda/agenda.php';
 require get_template_directory() . '/inc/agenda/ajax_agenda.php';
+
 /*
  *
  * CUSTOM BLOCKS

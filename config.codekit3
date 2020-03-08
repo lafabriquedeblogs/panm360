@@ -977,6 +977,14 @@
 		"oAP": "/inc/template-tags.php",
 		"oF": 0
 		},
+	"/inc/template-user-meta.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/template-user-meta.php",
+		"oF": 0
+		},
 	"/inc/updater/Parsedown.php": {
 		"cB": 0,
 		"ft": 8192,
