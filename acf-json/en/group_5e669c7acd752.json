@@ -1,9 +1,9 @@
 {
-    "key": "group_5e66317f6f032",
+    "key": "group_5e669c7acd752",
     "title": "Informations supplémentaires (interviews,...)",
     "fields": [
         {
-            "key": "field_5e665053cc23d",
+            "key": "field_5e669c7acd76e",
             "label": "Informations supplémentaires (interviews,...)",
             "name": "informations_supplementaires",
             "type": "flexible_content",
@@ -24,7 +24,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e6650a13eb23",
+                            "key": "field_5e669c7ad373d",
                             "label": "Événements passés et à venir",
                             "name": "evenements_passes_et_a_venir",
                             "type": "group",
@@ -40,7 +40,7 @@
                             "wpml_cf_preferences": 2,
                             "sub_fields": [
                                 {
-                                    "key": "field_5e6650d63eb24",
+                                    "key": "field_5e669c7af35e7",
                                     "label": "Titre",
                                     "name": "titre",
                                     "type": "text",
@@ -60,7 +60,7 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5e6650ef3eb25",
+                                    "key": "field_5e669c7af35f5",
                                     "label": "Agenda",
                                     "name": "agenda",
                                     "type": "clone",
@@ -94,7 +94,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e665bb3a3258",
+                            "key": "field_5e669c7b5eeea",
                             "label": "Lecteur",
                             "name": "lecteur",
                             "type": "clone",
@@ -126,7 +126,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e665576ea53f",
+                            "key": "field_5e669c7b7e3a9",
                             "label": "Titre",
                             "name": "titre",
                             "type": "text",
@@ -146,7 +146,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5e665594b616a",
+                            "key": "field_5e669c7b9e425",
                             "label": "Albums panm 360",
                             "name": "albums_panm_360",
                             "type": "clone",
@@ -168,7 +168,7 @@
                             "prefix_name": 0
                         },
                         {
-                            "key": "field_5e6655d1ef350",
+                            "key": "field_5e669c7bbe2d4",
                             "label": "Lecteurs audio",
                             "name": "lecteur_audio",
                             "type": "repeater",
@@ -188,7 +188,7 @@
                             "wpml_cf_preferences": 0,
                             "sub_fields": [
                                 {
-                                    "key": "field_5e665c9ecaacc",
+                                    "key": "field_5e669c7bc3d0b",
                                     "label": "Lecteur",
                                     "name": "lecteur",
                                     "type": "clone",
@@ -222,7 +222,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e665eb41c522",
+                            "key": "field_5e669c7bcf5f8",
                             "label": "Titre",
                             "name": "titre",
                             "type": "text",
@@ -242,7 +242,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5e665ebe1c523",
+                            "key": "field_5e669c7bef3b1",
                             "label": "Contenu riche",
                             "name": "contenu_riche",
                             "type": "wysiwyg",
@@ -286,7 +286,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1583782432
+    "modified": 1583783036
 }

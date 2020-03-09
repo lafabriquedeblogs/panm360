@@ -340,6 +340,7 @@ function get_lien_page_mon_compte(){
 	return $moncompte_link;
 }
 
+
 /**
  * Returns the translated object ID(post_type or term) or original if missing
  *
@@ -385,6 +386,17 @@ function my_translate_object_id( $object_id, $type ) {
     }
 }
 
+function iam_author(){
+	$current_user = wp_get_current_user();
+	$user = get_userdata( $current_user->ID );
+	$user_roles = $user->roles;
+	
+	if( in_array( 'author', $user_roles, true ) ){
+		return true;
+	}
+	return false;
+}
+
 function iam_admin(){
 	$current_user = wp_get_current_user();
 	if( is_user_logged_in() && user_can( $current_user, 'administrator' ) ){
@@ -392,7 +404,8 @@ function iam_admin(){
 	}
 	return false;
 }
-	
+
+
 /*
 function slug_post_type_template() {
 	$page_type_object = get_post_type_object( 'interviews' );
@@ -439,3 +452,4 @@ require get_template_directory() . '/template-parts/blocks/block_slider_1.php';
 require get_template_directory() . '/template-parts/blocks/block_header_interview.php';
 require get_template_directory() . '/template-parts/blocks/block_single_album.php';
 require get_template_directory() . '/template-parts/blocks/block_single_agenda.php';
+require get_template_directory() . '/template-parts/blocks/block_lecteur_audio.php';

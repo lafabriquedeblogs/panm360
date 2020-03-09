@@ -613,6 +613,15 @@ function get_lien_abonnements(){
 	return $permalien_abonnements;	
 }
 
+function lien_page_interviews(){
+	$lien_interviews_id = my_translate_object_id( 11684, 'page' );
+	$permalien_interviews = get_permalink($lien_interviews_id);
+
+	$permalien_interviews_complet = '<a href="'.$permalien_interviews.'" class="plus-de">'. __('Interviews','panm360').'<svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>';	
+	
+	return $permalien_interviews_complet;		
+}
+
 /********************************************************************************/
 /*
 /* 	FILTER CONTENT

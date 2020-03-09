@@ -8,16 +8,15 @@
 
 <?php
 
-
 	$title = $interview->post_title;
 	$content = return_acf_block_content_interview_introduction_presentation( $interview->post_content, 'acf/header-interview', $interview->ID );
 	$genre = get_genre( $interview->ID ); 
 	$permalien = $interview->guid;
 	
-	$attachment_id = return_acf_block_content_interview_introduction_image( $interview->post_content, 'acf/header-interview', $interview->ID );
-	
-	$image_src_array = wp_get_attachment_image_src( $attachment_id, 'panm360_home_slider' );
-	$image_src = $image_src_array[0];
+	$image = get_the_post_thumbnail_url( $interview->ID ,'medium_large' );//$image_data['sizes']['medium_large'];
+
+	$content = get_field('lead');
+	$author = get_the_author();
 	
 	//$auteur_id = get_the_author_meta($interview->post_author);
 	$Author = get_the_author_meta('display_name', $interview->post_author);
@@ -26,7 +25,7 @@
 
 <div class="article element article-interview">
 	<div class="picture">
-		<a href="<?php echo $permalien;?>"><img src="<?php echo $image_src; ?>" width="530" height="500"  alt="title"/></a>
+		<a href="<?php echo $permalien;?>"><img src="<?php echo $image[0]; ?>" width="530" height="500"  alt="title"/></a>
 	</div>
 	<div class="details">
 		<span class="element-title album-title"><a href="<?php echo $permalien;?>"><?php echo $title;?></a></span>
