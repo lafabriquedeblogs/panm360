@@ -22,7 +22,7 @@ function filter_the_content_in_the_main_loop( $content ) {
 	// l'utilisateur est un abonné premium
 	// ou on est sur une page 
 	// full accès au contenu
-	if( is_page() || $user_premium || is_singular("interviews")){
+	if( is_page() || $user_premium  || is_singular("interviews") ){
 		return $content;
 	}
 	

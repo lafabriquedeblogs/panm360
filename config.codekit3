@@ -121,6 +121,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/acf-json/fr/group_5e66317f6f032.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5e66317f6f032-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
