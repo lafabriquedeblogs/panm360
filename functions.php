@@ -312,7 +312,7 @@ function tc_acf_svg_icon_file_path( $file_path ) {
 add_action( 'login_form_register', 'redirect_login_form_register' );
 
 function redirect_login_form_register(){
-	$abonnement_link = get_lien_page_abonnement();
+	$abonnement_link = get_lien_abonnements();
     wp_redirect( $abonnement_link );
     exit(); // always call `exit()` after `wp_redirect`
 }
@@ -333,11 +333,6 @@ function get_aboonement_gartuit_by_lang(){
 	
 }
 
-function get_lien_page_abonnement(){
-	$abonnement_id = apply_filters( 'wpml_object_id', 11845, 'product', TRUE  );
-	$abonnement_link = get_permalink( $abonnement_id );
-	return $abonnement_link;
-}
 
 function get_lien_page_mon_compte(){
 	$moncompte_id = apply_filters( 'wpml_object_id', 6966, 'page', TRUE  );

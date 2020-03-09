@@ -42,16 +42,18 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 								echo '<div class="woocommerce-grouped-product-list-item__description">'.$variation['variation_description'].'</div>';
 						
 						?>
+							<?php echo '</div>';?>
+	
 								<div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-enabled">
 									<div class="quantity hidden" style="display: none;">
 										<input type="hidden" id="quantity_5e62a21cb4462" class="qty" name="quantity" value="1" min="1" max="">
 									</div>
 									<button type="submit" class="single_add_to_cart_button button alt "><?php _e('Je m\'abonne','panm360'); ?></button>
-									<input type="hidden" name="add-to-cart" value="11845">
-									<input type="hidden" name="product_id" value="11845">
+									<input type="hidden" name="add-to-cart" value="<?php echo $product->get_id();?>">
+									<input type="hidden" name="product_id" value="<?php echo $product->get_id();?>">
 									<input type="hidden" name="variation_id" class="variation_id" value="<?php echo $variation['variation_id'];?>">
 								</div>
-							<?php echo '</div>';?>
+	
 						</form>
 						</li>
 					<?php

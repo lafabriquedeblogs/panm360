@@ -472,10 +472,11 @@ function get_articles_par_terms( $term , $posts_per_page = -1 ){
 }
 
 function menu_langue(){
-	
-	if( is_admin()) return '';
-	
 	global $post;
+	
+	if( is_admin() || !is_object($post) ) return '';
+	
+	
 	
 	$post_type = get_post_type( $post );
 	
@@ -603,6 +604,15 @@ if (!function_exists('array_key_first')) {
     }
 }
 
+
+function get_lien_abonnements(){
+	// local == 11845
+	// prod == 12519
+	$lien_abonnements_id = my_translate_object_id( 12519, 'product' );
+	$permalien_abonnements = get_permalink($lien_abonnements_id);
+	return $permalien_abonnements;	
+}
+
 /********************************************************************************/
 /*
 /* 	FILTER CONTENT
@@ -665,22 +675,59 @@ function increase_user_viewed_posts( $user_id, $post_id ){
 	$viewed_posts = get_user_meta( $user_id , 'viewed_posts', false );
 	echo return_nombre_de_posts_consultes( $viewed_posts );
 }
-function return_nombre_de_posts_consultes( $viewed_posts ){
+function return_nombre_de_posts_consultes( $viewed_posts , $last = false ){
 		// nombre d'article maximum autorisé
 		// todo: créer l'option dans l'admin
 		$max_posts = 5;
-				
+		
 		$current_posts = count($viewed_posts);
 		$remain_posts = $max_posts - $current_posts;
+		
+		$article = '';
+		
+		switch( $current_posts ){
+			case 1:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'premier' : 'first';
+				break;
+			case 2:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'deuxième' : 'second';
+				break;
+			case 3:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'troisème' : 'third';
+				break;
+			case 4:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'quatrième' : 'fourth';
+				break;
+			case 5:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'cinquième' : 'fifth';
+		}
 
+		if( $last ) {
+			//Vous avez lu les 5 messages
+			$message = get_field('vous_avez_lu_les_5_messages','options');
+			$message = str_replace('{%y%}', $max_posts , $message);
+			$message = strip_tags($message, '<span>');
+			return $message;
+
+		}
+		
+				
+		$article = '<span>'.$article.'</span>';
+		$max_posts = '<span>'.$max_posts.'</span>';
+		
+		$message = get_field('vous_avez_lu_X_messages','options');
+		$message = str_replace('{%x%}', $article , $message);
+		$message = str_replace('{%y%}', $max_posts , $message);
+		
+		$message = strip_tags($message, '<span>');		
 		ob_start();
 ?>
 			
 			<div id="window-posts-consultes">
 				<a href="#" id="close-window-posts-consultes">&times;</a>
-				<p>Vous avez consulté <?php echo $current_posts;?> articles</p>
-				<h3>Il vous reste <?php echo $remain_posts;?> articles à consulter</h3>
-				<p>Votre... </p>
+				<h3><?php echo $message;?></h3>
+				<a href="<?php echo get_lien_abonnements();?>" class="bouton"><?php _e('Abonnez-vous','panm360'); ?></a>					
+
 			</div>
 			
 <?php
@@ -702,28 +749,38 @@ function return_post_excerpt( $content, $post, $member = false ){
 ?>
 			
 			<div class="restrited-content-message please-subscribe">
-				
-				<h3><a href="#">Abonnez-vous</a> ou <a href="#">connectez-vous</a> afin d'accéder à la totalité du contenu</h3>
-				
+			<!-- <h3><a href="#">Abonnez-vous</a> ou <a href="#">connectez-vous</a> afin d'accéder à la totalité du contenu</h3> -->
+				<img src="<?php echo get_template_directory_uri();?>/assets/img/panm-icones/250x250/m-blanc-sur-bleu.jpg" alt="m-blanc-sur-bleu" width="250" height="250" />
+				<div class="restrited-content-message--content">
+					<?php echo get_field('message_incitatif','options');?>
+					<a href="<?php echo get_lien_abonnements();?>" class="bouton"><?php _e('Abonnez-vous','panm360'); ?></a>					
+				</div>
+
 			</div>
-			
 <?php
+		
 			$excerpt .= ob_get_clean();
 			return $excerpt;
-		}	
-
+		}
+		
+		$viewed_posts = array('a','b','c','d','e');	
+		$exc = return_nombre_de_posts_consultes( $viewed_posts , true );
 		ob_start();
 ?>
 			
-			<div class="restrited-content-message already-subscribe">
-				<h3>Vous avez atteint votre limite de 5 articles gratuits</h3>
-				<p><a href="#">Abonnez-vous</a> à partir de 3.60$ par mois pour profiter de la totalité de nos contenus</p>
-			</div>
-			
-<?php
-			$excerpt .= ob_get_clean();
-			return $excerpt;
+			<div class="restrited-content-message last-message-lus">
+			<!-- <h3><a href="#">Abonnez-vous</a> ou <a href="#">connectez-vous</a> afin d'accéder à la totalité du contenu</h3> -->
+				<img src="<?php echo get_template_directory_uri();?>/assets/img/panm-icones/250x250/m-blanc-sur-bleu.jpg" alt="m-blanc-sur-bleu" width="250" height="250" />
+				<div class="restrited-content-message--content">
+					<?php echo '<h3>'.$exc.'</h3>';?>
+					<a href="<?php echo get_lien_abonnements();?>" class="bouton"><?php _e('Abonnez-vous','panm360'); ?></a>					
+				</div>
 
+			</div>
+<?php
+		$excerpt .= ob_get_clean();
+		
+		return $excerpt;
 }
 
 

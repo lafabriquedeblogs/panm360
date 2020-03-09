@@ -36,20 +36,6 @@
 					<!-- Go to www.addthis.com/dashboard to customize your tools -->
 					<div class="addthis_inline_share_toolbox"></div>
 				</div>
-				<?php// $rows_icons = get_field("reseau_social",'options'); ?>
-				
-				
-				<?php /* ?>
-				<ul class="icones-de-partage">
-					<?php foreach( $rows_icons as $icon ){ ?>
-						<li class="reseau-partage">
-							<a href="#" id="<?php echo $icon['icone_reseau_social']['ID'];?>">
-								<svg class="icon"><use xlink:href="#<?php echo $icon['icone_reseau_social']['ID'];?>"></use></svg>
-							</a>
-						</li>
-					<?php }	?>
-				</ul>
-				<?php */ ?>
 			</div>
 			
 			<div class="single-album-body">

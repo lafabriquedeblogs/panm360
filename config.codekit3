@@ -33,6 +33,22 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/acf-json/en/group_5e653a13448f7.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/en/group_5e653a13448f7-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/en/group_5e6573d74d074.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/en/group_5e6573d74d074-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/acf-json/fr/group_5dd7053e1e183.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -93,6 +109,14 @@
 		"ft": 524288,
 		"oA": 1,
 		"oAP": "/acf-json/fr/group_5e596404062b1-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/fr/group_5e6572519d7cb.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5e6572519d7cb-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -1193,6 +1217,14 @@
 		"oAP": "/single-product-abonnements.php",
 		"oF": 0
 		},
+	"/single-product-packages-panm360.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-product-packages-panm360.php",
+		"oF": 0
+		},
 	"/single-product.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1516,6 +1548,17 @@
 		"oA": 0,
 		"oAP": "/src/index.php",
 		"oF": 0
+		},
+	"/src/js/_sub_menu copie.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/min/_sub_menu copie-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
 		},
 	"/src/js/agenda.js": {
 		"bF": 6,
@@ -2804,7 +2847,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"allowInjectionReloads": 0,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,

@@ -14,7 +14,9 @@
 		font-weight: 400;
 		li {
 			padding: 0 1em;
-
+			&.menu-item a:hover {
+				color: $bleu;
+			}
 			&:nth-child(-n+4){
 				a {
 					color: #000;

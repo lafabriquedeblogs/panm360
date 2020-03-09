@@ -77,10 +77,8 @@ $interviews = my_translate_object_id( 11684, 'page' );
 								?>
 								
 								<?php
-echo '<pre>';
-	var_dump($interviews);
-echo '</pre>';
-									if( count($interviews) > 0 ): ?>	
+								
+								if( count($interviews) > 0 ): ?>	
 								<ul class="content-list-articles--max-2-cols">
 									
 									<?php

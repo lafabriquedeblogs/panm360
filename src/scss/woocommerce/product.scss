@@ -55,20 +55,31 @@ div.woocommerce-grouped-product-list-item__description {
 }
 
 .woocommerce .abo-thumbnail {
-	width: 70px;
-	height: 70px;
+	width: 100px;
+	height: 100px;
 	float: left;
 }
 .abo-content {
-	margin-left: 90px;
+	margin-left: 110px;
 	line-height: 1;
+	min-height: 100px;
+	&:after {
+		content: "";
+		clear: both;
+	}
 }
-
+.woocommerce-variation-add-to-cart:before {
+	content: "";
+	clear: both;
+	float: none;
+}
 .woocommerce button.button.single_add_to_cart_button.alt {
-	padding: 13px 18px;
+	padding: 10px 14px;
 	border-radius: 2px;
 	font-weight: 500;
-	margin-top: 2em;
+	font-size: 10px;
+	margin-top: 1em;
+	max-width: 100px;
 }
 
 @media screen and (min-width:736px){
@@ -118,7 +129,7 @@ div.woocommerce-grouped-product-list-item__description {
 	.woocommerce-grouped-product-list {
 		& > li {
 			flex: 0 0 100%;
-			max-width: 33%;
+			max-width: 25%;
 		}
 /*
 		#product-11847,

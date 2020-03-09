@@ -10,6 +10,16 @@
 	color: $bleu;
 	fill: $bleu;
 }
+.jaune {
+	color: $jaune;
+	fill: $jaune;
+}
+.bg-bleu {
+	background: $bleu;
+}
+.bg-jaune {
+	background: $jaune;
+}
 .bg-dark {
 	background: $gris_ultra_dark;
 }
@@ -41,6 +51,10 @@
 }
 .tall {
 	font-size: 1.1em;
+}
+
+.block{
+	display: block;
 }
 .rubik {
 	font-family: $rubik;

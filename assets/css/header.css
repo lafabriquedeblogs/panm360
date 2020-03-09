@@ -340,6 +340,8 @@
     font-weight: 400; }
     #main-menu-desktop li {
       padding: 0 1em; }
+      #main-menu-desktop li.menu-item a:hover {
+        color: #5BC6E8; }
       #main-menu-desktop li:nth-child(-n+4) a {
         color: #000;
         font-weight: 700; }
@@ -373,8 +375,7 @@
 
 @media screen and (min-width: 980px) {
   #border-top-menu {
-    display: block;
-    margin-top: 1.950em; }
+    display: block; }
   #triangle {
     display: block;
     position: absolute;
@@ -399,7 +400,7 @@
     -webkit-transition: opacity 300ms ease-out;
     transition: opacity 300ms ease-out;
     color: #b5b5b5;
-    margin-top: 20px; }
+    margin-top: 30px; }
     #sub-nav-desktop a:nth-child(1) {
       display: none; }
     #sub-nav-desktop .sub-menu {

@@ -1,5 +1,5 @@
 <?php
-	$abonnement_link = get_lien_page_abonnement();
+	$abonnement_link = get_lien_abonnements();
     wp_redirect( $abonnement_link );
     exit(); // always call `exit()` after `wp_redirect`
     	
