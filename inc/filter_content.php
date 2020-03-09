@@ -5,7 +5,7 @@ add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
 
 function filter_the_content_in_the_main_loop( $content ) {
 	
-	if( iam_admin() ){
+	if( iam_admin() || is_author()){
 		return $content;
 	}
 	
