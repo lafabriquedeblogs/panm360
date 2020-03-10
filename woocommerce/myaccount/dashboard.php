@@ -29,6 +29,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 		'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
 		esc_url( wc_logout_url() )
 	);
+	
+	if( iam_admin() ){
+		$user_id = get_current_user_id();
+		//$display_name = get_the_author_meta('display_name', $user_id);
+		if( $user_id == 4 ):
+	?>
+		<ul>
+			<li><a href="/wp-admin">Accéder à l'admin de WP</a></li>
+			<li><a href="/wp-admin/edit.php?post_type=interviews">Accéder aux interviews</a></li>
+			<li><a href="/wp-admin/edit.php?post_type=records">Accéder aux Critiques d'albums</a></li>
+			<li><a href="/wp-admin/edit.php?post_type=agenda">Accéder à l'agenda</a></li>
+		</ul>
+		
+	<?php
+		endif;
+	}
+	
 ?></p>
 <?php /* ?>
 <p><?php

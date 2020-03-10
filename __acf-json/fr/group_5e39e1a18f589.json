@@ -1,0 +1,152 @@
+{
+    "key": "group_5e39e1a18f589",
+    "title": "Section 3 colonnes",
+    "fields": [
+        {
+            "key": "field_5e39e1d6ff8f7",
+            "label": "Marges internes",
+            "name": "marges_internes",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "oui": "oui",
+                "non": "non"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "wpml_cf_preferences": 2
+        },
+        {
+            "key": "field_5e39e2eb2fac5",
+            "label": "Automatique",
+            "name": "automatique_ou_manuel",
+            "type": "button_group",
+            "instructions": "Si le choix est oui, les articles affichés seront les derniers publiés de la catégorie choisie.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "oui": "oui",
+                "non": "non"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "wpml_cf_preferences": 0
+        },
+        {
+            "key": "field_5e39e27715209",
+            "label": "Choisir la categorie",
+            "name": "choisir_la_categorie",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e39e2eb2fac5",
+                        "operator": "==",
+                        "value": "oui"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "taxonomy": "category",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_5e39e3462fac6",
+            "label": "Choix des articles",
+            "name": "choix_des_articles",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e39e2eb2fac5",
+                        "operator": "==",
+                        "value": "non"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5e39e49e2fac7",
+            "min": 1,
+            "max": 3,
+            "layout": "table",
+            "button_label": "Ajouter un article",
+            "wpml_cf_preferences": 2,
+            "sub_fields": [
+                {
+                    "key": "field_5e39e49e2fac7",
+                    "label": "Article",
+                    "name": "article",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": "",
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "wpml_cf_preferences": 2,
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-trois-colonnes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1580852801
+}

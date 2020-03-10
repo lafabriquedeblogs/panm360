@@ -1,9 +1,9 @@
 {
-    "key": "group_5e66317f6f032",
+    "key": "group_5e67d29f70013",
     "title": "Informations supplémentaires (interviews,...)",
     "fields": [
         {
-            "key": "field_5e665053cc23d",
+            "key": "field_5e67d29f7009b",
             "label": "Informations supplémentaires (interviews,...)",
             "name": "informations_supplementaires",
             "type": "flexible_content",
@@ -24,7 +24,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e6650a13eb23",
+                            "key": "field_5e67d29f7be19",
                             "label": "Événements passés et à venir",
                             "name": "evenements_passes_et_a_venir",
                             "type": "group",
@@ -40,7 +40,7 @@
                             "wpml_cf_preferences": 2,
                             "sub_fields": [
                                 {
-                                    "key": "field_5e6650d63eb24",
+                                    "key": "field_5e67d29fc9fcd",
                                     "label": "Titre",
                                     "name": "titre",
                                     "type": "text",
@@ -60,7 +60,7 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5e6650ef3eb25",
+                                    "key": "field_5e67d29fca01b",
                                     "label": "Agenda",
                                     "name": "agenda",
                                     "type": "clone",
@@ -94,7 +94,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e665bb3a3258",
+                            "key": "field_5e67d2a0c8a9c",
                             "label": "Lecteur",
                             "name": "lecteur",
                             "type": "clone",
@@ -108,7 +108,7 @@
                             },
                             "wpml_cf_preferences": 2,
                             "clone": [
-                                "group_5e665a778efe5"
+                                "field_5e66b03340133"
                             ],
                             "display": "group",
                             "layout": "block",
@@ -126,7 +126,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e665576ea53f",
+                            "key": "field_5e67d2a0f3278",
                             "label": "Titre",
                             "name": "titre",
                             "type": "text",
@@ -146,7 +146,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5e665594b616a",
+                            "key": "field_5e67d2a1056a3",
                             "label": "Albums panm 360",
                             "name": "albums_panm_360",
                             "type": "clone",
@@ -168,7 +168,7 @@
                             "prefix_name": 0
                         },
                         {
-                            "key": "field_5e6655d1ef350",
+                            "key": "field_5e67d2a13a5dd",
                             "label": "Lecteurs audio",
                             "name": "lecteur_audio",
                             "type": "repeater",
@@ -188,7 +188,7 @@
                             "wpml_cf_preferences": 0,
                             "sub_fields": [
                                 {
-                                    "key": "field_5e665c9ecaacc",
+                                    "key": "field_5e67d2a1463af",
                                     "label": "Lecteur",
                                     "name": "lecteur",
                                     "type": "clone",
@@ -202,7 +202,7 @@
                                     },
                                     "wpml_cf_preferences": 0,
                                     "clone": [
-                                        "group_5e665a778efe5"
+                                        "field_5e66b03340133"
                                     ],
                                     "display": "group",
                                     "layout": "block",
@@ -222,7 +222,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e665eb41c522",
+                            "key": "field_5e67d2a1567da",
                             "label": "Titre",
                             "name": "titre",
                             "type": "text",
@@ -242,7 +242,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5e665ebe1c523",
+                            "key": "field_5e67d2a167a93",
                             "label": "Contenu riche",
                             "name": "contenu_riche",
                             "type": "wysiwyg",
@@ -288,5 +288,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1583862446
+    "modified": 1583862688
 }

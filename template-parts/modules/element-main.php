@@ -1,6 +1,6 @@
 <?php
 	
-	$post_type = get_post_type( $post_id );
+	$post_type = get_post_type( $interview->ID );
 	
 ?>
 
@@ -17,7 +17,7 @@
 	$content = get_field('lead', $interview->ID);
 	
 	$genre = get_genre( $interview->ID ); 
-	$permalien = $interview->guid;
+	$permalien = get_permalink( $interview->ID );
 	
 	$auteur_id = get_the_author_meta($interview->post_author);
 	$Author = get_the_author_meta('display_name');

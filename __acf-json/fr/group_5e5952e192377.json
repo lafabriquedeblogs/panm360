@@ -1,0 +1,67 @@
+{
+    "key": "group_5e5952e192377",
+    "title": "Album single",
+    "fields": [
+        {
+            "key": "field_5e59534039167",
+            "label": "Selectionner un ou des albums",
+            "name": "selectionner_un_album",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "records"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 1,
+            "return_format": "id",
+            "wpml_cf_preferences": 2,
+            "ui": 1
+        },
+        {
+            "key": "field_5e5953aa39168",
+            "label": "Saisir une ou plusieurs ID d'albums",
+            "name": "saisir_une_ou_plusieurs_id_dalbums",
+            "type": "text",
+            "instructions": "Séparer les id par une virgules. L'id d'un album est disponible dans l'url d'édition de l'album \"post=XXXX\" ex.: http:\/\/panm.test\/wp-admin\/post.php?post=5595&action=edit&lang=fr",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/single-album"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1582912883
+}

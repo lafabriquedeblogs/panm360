@@ -216,51 +216,5 @@ function preferences_endpoint_content() {
  }
  add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order', 10, 1 );
 
-/*
 
-add_action( 'woocommerce_checkout_update_user_meta', 'checkout_update_user_type_abonne', 10, 2 );
-
-function checkout_update_user_type_abonne( $customer_id, $data ) {
-
-if ( !empty( $_POST['melomane'] ) )
-	update_user_meta( $customer_id,'melomane', $_POST['melomane'] );
-if ( !empty( $_POST['professionnel'] ) )
-    update_user_meta( $customer_id,'professionnel', $_POST['professionnel'] );
-if ( !empty( $_POST['amateur'] ) )
-    update_user_meta( $customer_id,'amateur', $_POST['amateur'] );
-if ( !empty( $_POST['contributeur'] ) )
-    update_user_meta( $customer_id,'contributeur', $_POST['contributeur'] );
-if ( !empty( $_POST['fournisseur'] ) )
-    update_user_meta( $customer_id,'fournisseur', $_POST['fournisseur'] );
-if ( !empty( $_POST['artiste'] ) )
-    update_user_meta( $customer_id,'artiste', $_POST['artiste'] );
-
-}
-*/
-
-function check_updated_type_abonne(){
-	$user_id = get_current_user_id(  );
-	
-	if ( !empty( $_POST['melomane'] ) ) {
-		update_user_meta( $user_id,'melomane', $_POST['melomane'] );
-	}
-	if ( !empty( $_POST['professionnel'] ) ) {
-		update_user_meta( $user_id,'professionnel', $_POST['professionnel'] );
-	}
-	if ( !empty( $_POST['amateur'] ) ) {
-		update_user_meta( $user_id,'amateur', $_POST['amateur'] );
-	}
-	if ( !empty( $_POST['contributeur'] ) ) {
-		update_user_meta( $user_id,'contributeur', $_POST['contributeur'] );
-	}
-	if ( !empty( $_POST['fournisseur'] ) ) {
-		update_user_meta( $user_id,'fournisseur', $_POST['fournisseur'] );
-	}
-	if ( !empty( $_POST['artiste'] ) ){
-		update_user_meta( $user_id,'artiste', $_POST['artiste'] );
-	}
-			
-}
-
-//add_action( 'init', 'check_updated_type_abonne');
 /**************************************************************************************************************************************/

@@ -36,15 +36,7 @@ get_header();
 									$interviews_query = new WP_Query($interviews_args);
 									$interviews = $interviews_query->posts;
 									$interview = array_shift($interviews);
-								?>
-								
-								
-								<?php
-								$post_id = $interview->ID;
-									if( !$image_src ){
-										$image_src = get_template_directory_uri()."/assets/img/default/sample-album.png";
-									}
-									
+
 									include( locate_template( '/template-parts/modules/element-main.php', false, false ) );
 									
 								?>
@@ -55,13 +47,6 @@ get_header();
 									<?php
 
 										foreach( $interviews as $interview ){
-											
-											$post_id = $interview->ID;
-
-									
-											if( !$image_src ){
-												$image_src = get_template_directory_uri()."/assets/img/default/sample-album.png";
-											}
 									?>
 										<li>
 											<?php include( locate_template( '/template-parts/modules/element-article.php', false, false ) ); ?>
