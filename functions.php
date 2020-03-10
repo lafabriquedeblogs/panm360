@@ -386,12 +386,15 @@ function my_translate_object_id( $object_id, $type ) {
     }
 }
 
-function iam_author(){
+function iam_author_contributor(){
 	$current_user = wp_get_current_user();
 	$user = get_userdata( $current_user->ID );
 	$user_roles = $user->roles;
 	
 	if( in_array( 'author', $user_roles, true ) ){
+		return true;
+	}
+	if( in_array( 'contributor', $user_roles, true ) ){
 		return true;
 	}
 	return false;

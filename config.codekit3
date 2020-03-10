@@ -1169,6 +1169,14 @@
 		"oAP": "/page-lire.php",
 		"oF": 0
 		},
+	"/page-shop.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-shop.php",
+		"oF": 0
+		},
 	"/page-top-200.php": {
 		"cB": 0,
 		"ft": 8192,
