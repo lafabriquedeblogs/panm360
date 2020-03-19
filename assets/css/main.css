@@ -1613,6 +1613,9 @@ h2.annee-top {
 .woocommerce-notices-wrapper {
   display: none; }
 
+.woocommerce-account .woocommerce-notices-wrapper {
+  display: block; }
+
 .woocommerce form.checkout_coupon,
 .woocommerce form.login,
 .woocommerce form.register {

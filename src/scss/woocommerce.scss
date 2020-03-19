@@ -2,6 +2,10 @@
 	display: none;
 }
 
+.woocommerce-account .woocommerce-notices-wrapper {
+	display: block;
+}
+
 .woocommerce form.checkout_coupon,
 .woocommerce form.login,
 .woocommerce form.register {
