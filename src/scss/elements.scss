@@ -36,12 +36,14 @@ img.lozad {
 }
 
 .album{
+	//overflow-y: visible;
 	text-align: center;
 	.genre {
 		margin-top: 20px;
 	}
 	.picture {
 		border: 1px $gris_ultra_light solid;
+		
 	}
 }
 
@@ -67,7 +69,9 @@ img.lozad {
 			text-transform: uppercase;
 		}
 	}
-	
+	.picture {
+		position: relative;
+	}
 	&.album {
 		.details {
 			padding: 1em 0;
@@ -113,6 +117,7 @@ img.lozad {
 			border-bottom: none;
 		}
 		div.picture {
+			
 			width: 100px;
 		}
 		div.details {
@@ -146,7 +151,7 @@ img.lozad {
 		margin-bottom: 10px;
 		opacity: 1;
 		transition: opacity 600ms ease-out;
-		
+		position: relative;
 		&.hide-me {
 			opacity: 0;
 			transition: opacity 600ms ease-out;
@@ -349,7 +354,38 @@ img.lozad {
 	//width: 50px;
 }
 
-
+.iam-free {
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	
+	background-color: $bleu;
+	padding: 5px 10px;
+	color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+	
+	font-size: 10px;
+	text-transform: uppercase;
+	font-family: $rubik;
+	font-weight: 700;
+	line-height: 1;
+	
+	z-index:2;	
+}
+.aside-item-calendrier {
+	.iam-free {
+		position: static;
+		transform: none;
+		align-self: flex-start;
+		margin: 5px 0 0 0;
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
 
 /* Single Album */
 @import "single_record";
@@ -416,7 +452,14 @@ img.lozad {
 	.album{
 		max-width: calc( 32.5% - 18px);
 	}
-
+		.main-item.element, .article.element{
+		.iam-free {
+			left: 20px;
+			top: 20px;
+			bottom: auto;
+		}
+	}
+	
 }
 
 @media screen and(min-width: 780px) and (max-width: 980px){

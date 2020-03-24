@@ -20,12 +20,15 @@
 	
 	//$auteur_id = get_the_author_meta($interview->post_author);
 	$Author = get_the_author_meta('display_name', $interview->post_author);
-	$auteur_link =  get_author_posts_url( $interview->post_author );	
-?>
+	$auteur_link =  get_author_posts_url( $interview->post_author );
+	
+	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$interview->ID);
+	$iam_free = ($free == '1') ? '<div class="iam-free">'.__('gratuit','panm360').'</div>' : '';
 
+?>
 <div class="article element article-interview">
 	<div class="picture">
-		<a href="<?php echo $permalien;?>"><img src="<?php echo $image; ?>" width="530" height="500"  alt="title"/></a>
+		<a href="<?php echo $permalien;?>"><img src="<?php echo $image; ?>" width="530" height="500"  alt="title"/><?php echo $iam_free;?></a>
 	</div>
 	<div class="details">
 		<span class="element-title album-title"><a href="<?php echo $permalien;?>"><?php echo $title;?></a></span>

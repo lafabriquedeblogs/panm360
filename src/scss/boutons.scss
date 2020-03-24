@@ -56,3 +56,13 @@
 	width: 25px;
 	height: 25px;
 }
+
+.new-featured-slider--slide.element {
+	a.bouton {
+		background: $gris_ultra_dark !important;
+		&:hover {
+			text-decoration: none;
+			background: $bleu !important;
+		}
+	}
+}

@@ -6,23 +6,16 @@ add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
 function filter_the_content_in_the_main_loop( $content ) {
 	
 	global $post;
-	$user_id = get_current_user_id();
 	
-	$is_good = get_field( 'rendre_ce_contenu_accessible_dans_abonnement', $user_id);
 	
-	/*
-		if( iam_admin() && get_current_user_id() == 4 ){
-			echo '<pre>';
-				var_dump($is_good);
-			echo '</pre>';
-		}
-	*/
+	$is_good = get_field( 'rendre_ce_contenu_accessible_dans_abonnement', $post->ID);
+
 	
 	if( iam_admin() || iam_author_contributor() || $is_good == '1'){
 		return $content;
 	}
 	
-
+	$user_id = get_current_user_id();
 	
 	$user_premium = is_user_membership_premium( $user_id );
 	

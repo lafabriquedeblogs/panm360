@@ -27,7 +27,10 @@
 	$class = array();
 	//$class[] = $timeout ? "hide-me" : "";
 	$class[] = ( $timestamp < $today_timestamp ) ? "out-dated" : "";
-	
+
+	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$item->ID);
+	$iam_free = ($free == '1') ? '<div class="iam-free"><a href="'.$permalien.'">'.__('gratuit','panm360').'</a></div>' : '';
+		
 ?>
 
 <li class="aside-item-calendrier element <?php echo implode(" ", $class);?>">
@@ -45,10 +48,14 @@
 			<?php endif; ?>
 			<span class="element-location"><span class="medium"><?php echo $salle;?></span> - <?php echo $ville?></span>
 			<span class="element-prix"><?php echo $prix['montant'];?></span>
+			<?php echo $iam_free;?>
 		</div>
 
 		
 		<?php if( $agenda_commente ): ?>
-		<a href="<?php echo $permalien;?>" class="link-vignette"><svg class="icon bleu"><use xlink:href="#plus_cercle"></use></svg></a>
+		<a href="<?php echo $permalien;?>" class="link-vignette">
+			<svg class="icon bleu"><use xlink:href="#plus_cercle"></use></svg>
+			
+		</a>
 		<?php endif; ?>
 </li>

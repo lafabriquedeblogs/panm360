@@ -1,9 +1,9 @@
 {
-    "key": "group_5e665a778efe5",
+    "key": "group_5e66b033400c0",
     "title": "Lecteur audio",
     "fields": [
         {
-            "key": "field_5e668484e3575",
+            "key": "field_5e66b03340133",
             "label": "Code",
             "name": "code",
             "type": "textarea",
@@ -38,7 +38,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 0,
+    "active": false,
     "description": "",
-    "modified": 1583776943
+    "modified": 1583788083
 }

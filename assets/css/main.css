@@ -2226,6 +2226,14 @@ select {
   width: 25px;
   height: 25px; }
 
+.new-featured-slider--slide.element a.bouton,
+.new-featured-slider--slide.element .woocommerce a.button.alt, .woocommerce .new-featured-slider--slide.element a.button.alt, .new-featured-slider--slide.element .is-style-plus-infos a, .is-style-plus-infos .new-featured-slider--slide.element a {
+  background: #333333 !important; }
+  .new-featured-slider--slide.element a.bouton:hover,
+  .new-featured-slider--slide.element .woocommerce a.button.alt:hover, .woocommerce .new-featured-slider--slide.element a.button.alt:hover, .new-featured-slider--slide.element .is-style-plus-infos a:hover, .is-style-plus-infos .new-featured-slider--slide.element a:hover {
+    text-decoration: none;
+    background: #5BC6E8 !important; }
+
 #wrap-new-featured-slider {
   margin-left: calc( -100vw / 2 + 100% / 2) !important;
   margin-right: calc( -100vw / 2 + 100% / 2) !important;
@@ -2515,6 +2523,8 @@ img.lozad {
       font-size: 0.938em; }
     .element .details .liste-genres {
       text-transform: uppercase; }
+  .element .picture {
+    position: relative; }
   .element.album .details {
     padding: 1em 0; }
   .element.article.article-interview .author {
@@ -2569,7 +2579,8 @@ img.lozad {
     margin-bottom: 10px;
     opacity: 1;
     -webkit-transition: opacity 600ms ease-out;
-    transition: opacity 600ms ease-out; }
+    transition: opacity 600ms ease-out;
+    position: relative; }
     .element.aside-item-calendrier.hide-me {
       opacity: 0;
       -webkit-transition: opacity 600ms ease-out;
@@ -2704,6 +2715,34 @@ img.lozad {
 
 .meta-name {
   display: inline-block; }
+
+.iam-free {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #5BC6E8;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  z-index: 2; }
+
+.aside-item-calendrier .iam-free {
+  position: static;
+  -webkit-transform: none;
+          transform: none;
+  align-self: flex-start;
+  margin: 5px 0 0 0; }
+  .aside-item-calendrier .iam-free a {
+    color: #fff;
+    text-decoration: none; }
 
 /* Single Album */
 .album-cover {
@@ -3047,7 +3086,11 @@ img.lozad {
 
 @media screen and (min-width: 980px) {
   .album {
-    max-width: calc( 32.5% - 18px); } }
+    max-width: calc( 32.5% - 18px); }
+  .main-item.element .iam-free, .article.element .iam-free {
+    left: 20px;
+    top: 20px;
+    bottom: auto; } }
 
 @media screen and (min-width: 780px) and (max-width: 980px) {
   .element.main-item {

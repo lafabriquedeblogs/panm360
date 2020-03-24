@@ -47,13 +47,11 @@ function slider_1_render_callback( $block, $content = '', $is_preview = false ){
 						$cta_texte = $cta['titre'];
 						$cta_lien = $cta['lien'];
 						
-						
 						$image = get_template_directory_uri()."/assets/img/default/image-featured-home-slider-dev.png";
 						
 						if( $image_data ){
 							$image = $image_data['sizes']['panm360_home_slider'];
 						}
-						
 						
 						?>
 						
@@ -65,6 +63,11 @@ function slider_1_render_callback( $block, $content = '', $is_preview = false ){
 										<h2 class="element-title"><?php echo $titre;?></h2>
 										<h3 class="sub-title"><?php echo $soustitre;?></h3>
 										<p class="excerpt"><?php echo $content;?></p>
+										<?php if( !empty($cta_texte) ): ?>
+										<p>
+											<a class="bouton" href="<?php echo $cta_lien;?>"><?php echo $cta_texte;?></a>
+										</p>
+										<?php endif; ?>
 									</div>
 								</div>
 								

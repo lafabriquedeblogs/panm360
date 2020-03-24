@@ -21,11 +21,16 @@
 	
 	if( !$pochette ) $pochette =  get_template_directory_uri()."/assets/img/default/sample-album.png";
 	
+	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$album_id);
+	$iam_free = ($free == '1') ? '<div class="iam-free">'.__('gratuit','panm360').'</div>' : '';
+	
+
 ?>
 
 <li id="album-<?php echo $album_id;?>" class="album element" data-filter="<?php echo $data_genre." ".$data_annee." ".$auteur;?>">
 	<div class="picture">
-		<a href="<?php echo $lien;?>"><img class="lozad" data-src="<?php echo $pochette; ?>" alt="<?php echo $titre;?>" width="100%" height="auto" /></a>
+		<a href="<?php echo $lien;?>"><img class="lozad" data-src="<?php echo $pochette; ?>" alt="<?php echo $titre;?>" width="100%" height="auto" /><?php echo $iam_free;?></a>
+		
 	</div>
 	<div class="details">
 		<span class="element-title album-title"><a href="<?php echo $lien;?>"><?php echo $titre;?></a></span>
