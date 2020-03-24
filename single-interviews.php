@@ -39,11 +39,14 @@
 					<div class="addthis_inline_share_toolbox"></div>
 					
 					<h4><?php _e('renseignements supplémentaires','panm360'); ?></h4>
-					<?php
-						/*
-						 *	
-						*/
-						
+						<?php
+							
+							if( iam_admin() && get_current_user_id(  ) == 4 ){
+								echo '<pre>';
+									var_dump(get_field('informations_supplementaires'));
+								echo '</pre>';;
+							}
+							
 							if( have_rows('informations_supplementaires') ):
 							
 								   // Loop through rows.
@@ -69,6 +72,7 @@
 												'posts_per_page' => $agendas_count,
 												'post_status' => 'publish',
 												'post__in' => $agendas
+												
 											);
 											
 											$list_agendas = new WP_Query($args);
@@ -148,6 +152,7 @@
 										
 									   // Case: Download layout.
 									   elseif( get_row_layout() == 'lecteur_audio_bandcampspotify' ): 
+										   
 										   $lecteurs = get_sub_field('lecteur');
 										  
 										  foreach( $lecteurs as $lecteur ):
