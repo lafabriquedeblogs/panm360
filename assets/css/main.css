@@ -573,6 +573,10 @@ figure {
 
 @supports (display: grid) {
   @media (min-width: 535px) {
+    .section-content--has-3-columns {
+      display: block; }
+      .section-content--has-3-columns > * {
+        max-width: none; }
     .section-content--has-6-columns {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -591,11 +595,21 @@ figure {
         min-width: 0;
         /* NEW; needed for Firefox */ } }
   @media screen and (min-width: 690px) {
+    .section-content--has-3-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 36px;
+      min-height: 0;
+      /* NEW */
+      min-width: 0;
+      /* NEW; needed for Firefox */ }
     .section-content--has-6-columns {
       grid-template-columns: 1fr 1fr 1fr; } }
   @media screen and (min-width: 900px) {
     .section-content--has-6-columns {
-      grid-template-columns: 1fr 1fr 1fr 1fr; } }
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .section-content--has-3-columns {
+      grid-template-columns: 1fr 1fr 1fr; } }
   @media screen and (min-width: 1150px) {
     .section-content--has-6-columns {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr; } }
@@ -2525,7 +2539,8 @@ img.lozad {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column; }
+            flex-direction: column;
+    padding: 0 1.125em; }
     .element .details p {
       line-height: 1.4em;
       font-size: 0.938em; }
@@ -2534,16 +2549,16 @@ img.lozad {
   .element .picture {
     position: relative; }
   .element.album .details {
-    padding: 1em 0; }
+    padding: 1em 1.125em; }
   .element.article.article-interview .author {
     display: block;
     border-top: 1px #ccc solid;
     padding-top: 0.8em;
     margin: 0 0 0.8em; }
   .element.article .details {
-    padding-left: 2.063em;
-    padding-right: 2.063em;
-    padding-bottom: 2.063em; }
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0; }
   .element.article .element-title {
     margin-top: 1.5em;
     margin-bottom: 1em; }
@@ -3071,6 +3086,9 @@ img.lozad {
 
 @media screen and (min-width: 535px) {
   .element.main-item .details {
+    padding-left: 0;
+    padding-right: 0; }
+  .element.album .details, .element.article .details {
     padding-left: 0;
     padding-right: 0; }
   .album {

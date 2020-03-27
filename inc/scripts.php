@@ -15,7 +15,6 @@ function my_gutenberg_scripts() {
     //wp_enqueue_style( 'panm360-css', get_theme_file_uri( '/assets/css/editor_main.css' ), false );
 }
 
-
 function panm360_scripts() {
 	//wp_dequeue_style( 'wp-block-library' );
 	wp_enqueue_style( 'panm360-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Rubik:300,400,500,700,900&display=swap' );
@@ -46,12 +45,9 @@ function panm360_scripts() {
 
 function panm360_header_style(){
 	?>
-		<style>
-			<?php include get_template_directory().'/assets/css/header.css'; ?>
-		</style>
+		<style><?php include get_template_directory().'/assets/css/header.css'; ?></style>
 	<?php
 }
-
 
 function remove_editor_blocks_assets() {
 	if ( !is_admin() ) {
@@ -59,8 +55,6 @@ function remove_editor_blocks_assets() {
 		
 	}
 }
-
-
 
 function panm360_admin_css() {
 	echo '<style type="text/css">
@@ -76,8 +70,6 @@ function panm360_admin_css() {
 function wps_deregister_styles() {
     wp_dequeue_style( 'wp-block-library' );
 }
-
-
 
 function add_addthis(){
 	?>

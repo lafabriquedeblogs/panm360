@@ -60,7 +60,7 @@ img.lozad {
 	.details {
 		display: flex;
 		flex-direction: column;
-		//padding: 1em 0;
+		padding: 0 1.125em;
 		p {
 			line-height: 1.4em;
 			font-size: 0.938em;
@@ -74,7 +74,7 @@ img.lozad {
 	}
 	&.album {
 		.details {
-			padding: 1em 0;
+			padding: 1em 1.125em;
 		}
 	}
 	
@@ -90,13 +90,10 @@ img.lozad {
 		}
 		
 		.details{
-			//background-color: $gris_ultra_light;
-			padding-left: 	2.063em;
-			padding-right: 	2.063em;
-			padding-bottom: 2.063em;
-			//padding-left: 3.063em;
-			//padding-right: 3.063em;
-			//padding-bottom: 3.063em;
+			padding-left: 	0;
+			padding-right: 	0;
+			padding-bottom: 0;
+
 		}
 		.element-title {
 			margin-top: 1.5em;
@@ -417,10 +414,18 @@ img.lozad {
 				padding-left: 0;
 				padding-right: 0;
 			}
+		}
+		
+		&.album, &.article {
+			.details {
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}	
 	}
 	.album{
 		max-width: calc( 50% - 18px);
+		
 	}
 	.section-content--has-6-columns {
 		.album {
