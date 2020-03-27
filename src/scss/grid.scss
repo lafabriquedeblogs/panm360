@@ -18,8 +18,9 @@
 }
 .section-content {
 	display: flex;
-	flex-direction: column-reverse;
-	//order: 2;
+	/* until end of COVID-19 */
+	//flex-direction: column-reverse;
+	flex-direction: column;
 	
 }
 .section--element {

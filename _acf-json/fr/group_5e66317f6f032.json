@@ -1,9 +1,9 @@
 {
-    "key": "group_5e66b0513a3a6",
+    "key": "group_5e66317f6f032",
     "title": "Informations supplémentaires (interviews,...)",
     "fields": [
         {
-            "key": "field_5e66b0513a406",
+            "key": "field_5e665053cc23d",
             "label": "Informations supplémentaires (interviews,...)",
             "name": "informations_supplementaires",
             "type": "flexible_content",
@@ -24,7 +24,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e66b05146013",
+                            "key": "field_5e6650a13eb23",
                             "label": "Événements passés et à venir",
                             "name": "evenements_passes_et_a_venir",
                             "type": "group",
@@ -36,11 +36,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "block",
                             "wpml_cf_preferences": 2,
+                            "layout": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_5e66b05173989",
+                                    "key": "field_5e6650d63eb24",
                                     "label": "Titre",
                                     "name": "titre",
                                     "type": "text",
@@ -60,7 +60,7 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5e66b051739d7",
+                                    "key": "field_5e6650ef3eb25",
                                     "label": "Agenda",
                                     "name": "agenda",
                                     "type": "clone",
@@ -94,7 +94,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e66b051db916",
+                            "key": "field_5e665bb3a3258",
                             "label": "Lecteur",
                             "name": "lecteur",
                             "type": "clone",
@@ -108,7 +108,7 @@
                             },
                             "wpml_cf_preferences": 2,
                             "clone": [
-                                "field_5e66b03340133"
+                                "group_5e665a778efe5"
                             ],
                             "display": "group",
                             "layout": "block",
@@ -126,7 +126,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e66b0527cf39",
+                            "key": "field_5e665576ea53f",
                             "label": "Titre",
                             "name": "titre",
                             "type": "text",
@@ -146,7 +146,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5e66b05295069",
+                            "key": "field_5e665594b616a",
                             "label": "Albums panm 360",
                             "name": "albums_panm_360",
                             "type": "clone",
@@ -168,7 +168,7 @@
                             "prefix_name": 0
                         },
                         {
-                            "key": "field_5e66b052c95c2",
+                            "key": "field_5e6655d1ef350",
                             "label": "Lecteurs audio",
                             "name": "lecteur_audio",
                             "type": "repeater",
@@ -180,15 +180,15 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 2,
                             "collapsed": "",
                             "min": 0,
                             "max": 0,
                             "layout": "table",
                             "button_label": "",
-                            "wpml_cf_preferences": 0,
                             "sub_fields": [
                                 {
-                                    "key": "field_5e66b053016ac",
+                                    "key": "field_5e665c9ecaacc",
                                     "label": "Lecteur",
                                     "name": "lecteur",
                                     "type": "clone",
@@ -200,9 +200,9 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "wpml_cf_preferences": 0,
+                                    "wpml_cf_preferences": 2,
                                     "clone": [
-                                        "field_5e66b03340133"
+                                        "group_5e665a778efe5"
                                     ],
                                     "display": "group",
                                     "layout": "block",
@@ -222,7 +222,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e66b0533fb70",
+                            "key": "field_5e665eb41c522",
                             "label": "Titre",
                             "name": "titre",
                             "type": "text",
@@ -242,7 +242,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5e66b05370b6b",
+                            "key": "field_5e665ebe1c523",
                             "label": "Contenu riche",
                             "name": "contenu_riche",
                             "type": "wysiwyg",
@@ -288,5 +288,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1583789089
+    "modified": 1585229796
 }

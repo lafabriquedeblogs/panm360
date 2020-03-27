@@ -537,6 +537,7 @@ function lien_critiques_dalbum_complet(){
 }
 	
 	
+/*
 function return_acf_block_content_interview_introduction_presentation( $post_content = '', $block_name = '', $post_id = 0 ){
 
 	if( $post_id == 0 ) return '';
@@ -594,6 +595,7 @@ function return_acf_block_content_interview_introduction_image( $post_content = 
 	
 	return '';	
 }
+*/
 
 if (!function_exists('array_key_first')) {
     function array_key_first(array $arr) {
@@ -791,7 +793,16 @@ function return_post_excerpt( $content, $post, $member = false ){
 		
 		return $excerpt;
 }
-
+function return_post_excerpt_list_item( $post_id ){
+	$the_post = get_post( $post_id );
+	//$content_strip = strip_tags($the_post->post_content);
+	$words = 30 ;
+	$more = '…';	
+	
+	$excerpt = wp_trim_words( $the_post->post_content, $words, $more );
+	
+	return $excerpt;
+}
 
 
 /********************************************************************************/

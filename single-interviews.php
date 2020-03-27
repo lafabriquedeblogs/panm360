@@ -6,8 +6,8 @@
 		<?php
 			
 			while ( have_posts() ) : the_post(); 
-			
-				$artiste = get_artiste( $album_id , false );
+				$page_id = get_the_id();
+				$artiste = get_artiste( $page_id , false );
 				//$image_data =  get_field('image');
 				$image = get_the_post_thumbnail_url( get_the_id(),'medium_large' );//$image_data['sizes']['medium_large'];
 				$introduction_presentation = get_field('lead');
@@ -41,16 +41,17 @@
 					<h4><?php _e('renseignements supplémentaires','panm360'); ?></h4>
 						<?php
 							
-							if( iam_admin() && get_current_user_id(  ) == 4 ){
+							if( iam_admin() && get_current_user_id()  == 4 ){
 								echo '<pre>';
-									var_dump(get_field('informations_supplementaires'));
-								echo '</pre>';;
+									var_dump($page_id);
+									var_dump( get_field('informations_supplementaires_yeah_0_code'));
+								echo '</pre>';
 							}
 							
-							if( have_rows('informations_supplementaires') ):
+							if( have_rows('informations_supplementaires', $page_id ) ):
 							
 								   // Loop through rows.
-								   while ( have_rows('informations_supplementaires') ) : the_row();
+								   while ( have_rows('informations_supplementaires', $page_id ) ) : the_row();
 							
 									   // Case: Paragraph layout.
 									   if( get_row_layout() == 'evenements_passes_et_a_venir' ):

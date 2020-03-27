@@ -19,7 +19,7 @@ get_header();
 				<div id="critiques-albums" class="section-inner">
 					<div class="section-content ">
 						<div class="section-content--main">
-														<div class="section--element">
+							<div class="section--element">
 																
 								<h4 class="section-titre"><span><?php _e('Interviews','panm360'); ?></span> <a href="<?php echo get_permalink( $interviews );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 								

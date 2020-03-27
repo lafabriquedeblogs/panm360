@@ -49,6 +49,11 @@ img {
 a {
 	color: $gris_dark;
 }
+
+.article-single {
+	max-width: 980px;
+	margin: 0 auto;
+}
 .single .entry-content {
 	overflow: hidden;
 	p, ul, ol {
