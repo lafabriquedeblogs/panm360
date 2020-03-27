@@ -131,8 +131,19 @@ p {
 h1.category-title {
 	text-transform: uppercase;	
 }
+.single{
+	.article-single {
+		.entry-meta {
+			font-weight: 500;
+			font-size: 12px;
+			padding: 0 0 30px 0;
+			font-family: $rubik, sans-serif;			
+		}
+	}
+}
 
-
+    
+    
 .section {
 	margin-top: 80px;
 

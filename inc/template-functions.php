@@ -79,14 +79,18 @@ function get_genre( $album_id, $data = false, $raw = false ){
 		}
 	}
 	
-	$genres_txt = implode(" / ", $genres);
-	
 	if( $data ){
+		$genres = array();
 		$genres_txt = '';
 		foreach( $genres_list as $genre ){
 			$genres_txt .= " ".sanitize_title( $genre->name );
+			$genres[] = $genre->name;
 		}
+		
 	}
+
+	$genres_txt = implode(" / ", $genres);
+
 	return $genres_txt;
 }
 
@@ -623,6 +627,29 @@ function lien_page_interviews(){
 	
 	return $permalien_interviews_complet;		
 }
+
+
+function get_replacement_image( $size ){
+	$attachment_id = 15051;
+	
+	//$attahcments = array( 2813,2814,2815,2816,2817,2818,2819,2820,2821,2822,2823,2824,2825,2826,2827,2828,2829,2830,2831,2832,2833,2834,2835,2836,2837,2839,2840,2841,2842,2843,2844,2845,2846,2847,2848,2849,2851,2852,2853,2854,2855,2856,2857,2858,2860,2861,2862,2863,2864,2865,2866,2867,2868,2869,2870,2871,2872,2873,2874,2875,2876,2877,2878,2879,2880,2881,2882,2883,2884,2885,2886,2887,2888,2889,2890,2891,2892,2893,5036,5039,5046,5049,5053,5056,5062,5069,5071,5077,5082,5085,5105,5107,5110,5114,5116,5121,5128,5134,5137,5539);
+	//$rand_keys = array_rand( $attahcments );
+
+	$image = wp_get_attachment_image_src( $attachment_id, $size );
+	return $image[0];
+}
+
+function get_first_paragraph( $post_id ){
+	
+	$post = get_post($post_id);
+	$post_content = apply_filters( 'the_content', $post->post_content );
+	//$str = wpautop( $post_content );
+	$str = substr( $post_content, 0, strpos( $post_content, '</p>' ) + 4 );
+	$str = strip_tags($str, '<a><strong><em>');
+
+	return $str;
+}
+
 
 /********************************************************************************/
 /*

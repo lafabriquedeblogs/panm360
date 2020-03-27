@@ -98,7 +98,8 @@
 			.wp-block-column:nth-child(1) {
 				max-width: 30%;
 			}
-		}		
+		}	
+			
 	}
 
 }
@@ -116,19 +117,27 @@
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: space-between;
+		align-items: stretch;
+		align-content: center;
 		.portrait{
 			flex: 0 0 50%;
 			max-width: calc( 50% - 18px );
 			margin-left: 0 !important;
 			margin-right: 0 !important;
-			background: none !important;
+			//background: none !important;
 			img {
-				opacity: 1;
+				//opacity: 1;
+				position: absolute;
+				left: -999em;
 			}
 		}
 		.interview-header {
 			flex: 0 0 50%;
 			max-width: calc( 50% - 18px );
+			min-height: 350px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 	}
 	.interview-header{

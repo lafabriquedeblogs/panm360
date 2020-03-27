@@ -10,27 +10,44 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				panm360_posted_on();
-				panm360_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<?php
 
-	<?php panm360_post_thumbnail(); ?>
 
+				$page_id = get_the_id();
+				$artiste = get_artiste( $page_id , false );
+				//$image_data =  get_field('image');
+				$image = get_the_post_thumbnail_url( get_the_id(),'medium_large' );//$image_data['sizes']['medium_large'];
+				
+				if( $image == false ){
+					$image = get_replacement_image('panm360_square' );
+				}				
+				
+				$author = get_the_author();
+				$lead = get_field('lead');
+	
+				if( $lead == false ):
+					//$lead = get_first_paragraph($post_id);
+					$lead = '';
+				endif;
+		?>
+
+			<div id="header_interview">
+				
+				<div class="portrait"
+						style="background-image: url('<?php echo $image;?>');background-size:cover; background-repeat: no-repeat;background-position: center center;"
+				>
+					<img src="<?php echo $image;?>" />
+				</div>
+				<div class="interview-header">
+					<h1><?php the_title(); ?></h1>
+					<span class="author"><?php _e('par','panm360'); ?> <?php echo $author;?></span>
+					<div class="lead"><?php echo $lead;?></div>
+				</div>
+			</div><!-- wrap-new-featured-slider -->	
+
+	
+	
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
@@ -54,6 +71,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php panm360_entry_footer(); ?>
+		<?php //panm360_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

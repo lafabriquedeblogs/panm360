@@ -193,6 +193,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/acf-json/en/group_5e66ad766831e.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/en/group_5e66ad766831e-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/acf-json/en/group_5e7d14335d6d8.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -213,6 +221,14 @@
 		"ft": 524288,
 		"oA": 1,
 		"oAP": "/acf-json/fr/group_5e66317f6f032-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/fr/group_5e6687120cc07.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5e6687120cc07-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -1207,6 +1223,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-lire.php",
+		"oF": 0
+		},
+	"/page-nouvelles.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-nouvelles.php",
+		"oF": 0
+		},
+	"/page-regarder.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-regarder.php",
 		"oF": 0
 		},
 	"/page-shop.php": {
@@ -2753,11 +2785,19 @@
 		"oAP": "/woocommerce/content-single-product.php",
 		"oF": 0
 		},
-	"/woocommerce/emails/email-header.php": {
+	"/woocommerce/emails/__email-header.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
+		"oAP": "/woocommerce/emails/__email-header.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/email-header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
 		"oAP": "/woocommerce/emails/email-header.php",
 		"oF": 0
 		},

@@ -41,12 +41,14 @@
 					<h4><?php _e('renseignements supplémentaires','panm360'); ?></h4>
 						<?php
 							
+/*
 							if( iam_admin() && get_current_user_id()  == 4 ){
 								echo '<pre>';
 									var_dump($page_id);
 									var_dump( get_field('informations_supplementaires_yeah_0_code'));
 								echo '</pre>';
 							}
+*/
 							
 							if( have_rows('informations_supplementaires', $page_id ) ):
 							
