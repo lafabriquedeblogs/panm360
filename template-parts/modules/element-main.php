@@ -13,10 +13,12 @@
 	
 	$genre = get_genre( $article->ID ); 
 	$permalien = get_permalink( $article->ID );
+
+
+	$author = get_the_author_meta('display_name', $article->post_author);
+	$auteur_link =  get_author_posts_url( $article->post_author );
+		
 	
-	$auteur_id = get_the_author_meta($article->post_author);
-	$Author = get_the_author_meta('display_name');
-	$auteur_link =  get_author_posts_url($auteur_id) ;	
 	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$article->ID);
 	$iam_free = ($free == '1') ? '<div class="iam-free">'.__('gratuit','panm360').'</div>' : '';	
 ?>
@@ -33,7 +35,7 @@
 		<?php endif; ?>
 		
 		<h4 class="element-title album-title"><a href="<?php echo $permalien;?>"><?php echo $title;?></a></h4>
-		<a class="author article-author" href="<?php echo $auteur_link;?>"><?php _e('Interview réalisé par','panm360'); ?>: <?php echo $Author;?></a>
+		<a class="author article-author" href="<?php echo $auteur_link;?>"><?php _e('Interview réalisé par','panm360'); ?>: <?php echo $author;?></a>
 		
 		<div class="intro-interview"><?php echo $content;?></div>
 		<p class="lire-la-suite"><a href="<?php echo $permalien;?>"><?php _e('Lire l\'interview','panm360'); ?></a></p>
@@ -54,8 +56,8 @@
 
 	$permalien = get_permalink( $post_id );
 	
-	$author = get_the_author();
-	$auteur_link =  esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
+	$author = get_the_author_meta('display_name', $article->post_author);
+	$auteur_link =  get_author_posts_url( $article->post_author );
 		
 	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$article->ID);
 	$iam_free = ($free == '1') ? '<div class="iam-free">'.__('gratuit','panm360').'</div>' : '';		

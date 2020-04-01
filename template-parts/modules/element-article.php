@@ -18,8 +18,7 @@
 	$content = get_field('lead', $article->ID);
 	$author = get_the_author();
 	
-	//$auteur_id = get_the_author_meta($article->post_author);
-	$Author = get_the_author_meta('display_name', $article->post_author);
+	$author = get_the_author_meta('display_name', $article->post_author);
 	$auteur_link =  get_author_posts_url( $article->post_author );
 	
 	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$article->ID);
@@ -32,7 +31,7 @@
 	</div>
 	<div class="details">
 		<span class="element-title album-title"><a href="<?php echo $permalien;?>"><?php echo $title;?></a></span>
-		<a class="author article-author" href="<?php echo $auteur_link;?>"><?php _e('Interview réalisé par','panm360'); ?>: <?php echo $Author;?></a>
+		<a class="author article-author" href="<?php echo $auteur_link;?>"><?php _e('Interview réalisé par','panm360'); ?>: <?php echo $author;?></a>
 
 		<?php echo $content;?>
 		
@@ -72,8 +71,8 @@
 	//$genre = get_genre( $post_id ); 	
 	$genre = get_genre( $post_id ,true );
 	
-	$author = get_the_author();
-	$auteur_link =  esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
+	$author = get_the_author_meta('display_name', $article->post_author);
+	$auteur_link =  get_author_posts_url( $article->post_author );
 	
 /*
 	$lead = get_field('lead');

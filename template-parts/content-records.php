@@ -6,16 +6,14 @@
  *
  * @package panm360
  */
-
-/*
-
-*/
-
 ?>
 
 
 	
 	<?php
+		
+		while( have_posts() ):
+		the_post();
 		
 		$album_id = get_the_id();
 		$artiste = get_artiste( $album_id , false );
@@ -97,7 +95,7 @@
 							'post_type' => 'records',
 							'posts_per_page' => $albums_count,
 							'post_status' => 'publish',
-							'orderby' => 'rand',
+							'orderby' => 'date',
 						);
 						
 						$albums = new WP_Query($args);

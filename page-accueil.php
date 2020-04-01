@@ -51,7 +51,7 @@ $interviews = my_translate_object_id( 11684, 'page' );
 								<h4 class="section-titre"><span><?php _e('Interviews','panm360'); ?></span> <a href="<?php echo get_permalink( $interviews );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 								
 								<?php
-									
+									wp_reset_query();
 									$interviews_args = array(
 										'post_type' => 'interviews',
 										'posts_per_page' => 3,
@@ -62,7 +62,7 @@ $interviews = my_translate_object_id( 11684, 'page' );
 									
 									$interviews_query = new WP_Query($interviews_args);
 									$interviews = $interviews_query->posts;
-									$interview = array_shift($interviews);
+									$article = array_shift($interviews);
 								?>
 								
 								
@@ -83,7 +83,7 @@ $interviews = my_translate_object_id( 11684, 'page' );
 									
 									<?php
 
-										foreach( $interviews as $interview ){
+										foreach( $interviews as $article ){
 											
 											$post_id = $interview->ID;
 

@@ -353,10 +353,10 @@ function iam_author_contributor(){
 	$user = get_userdata( get_current_user_id() );
 	$user_roles = $user->roles;
 	
-	if( in_array( 'author', $user_roles, true ) ){
+	if( is_user_logged_in() && in_array( 'author', $user_roles, true ) ){
 		return true;
 	}
-	if( in_array( 'contributor', $user_roles, true ) ){
+	if( is_user_logged_in() && in_array( 'contributor', $user_roles, true ) ){
 		return true;
 	}
 	return false;
