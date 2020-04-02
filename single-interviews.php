@@ -41,15 +41,6 @@
 					<h4><?php _e('renseignements supplémentaires','panm360'); ?></h4>
 						<?php
 							
-/*
-							if( iam_admin() && get_current_user_id()  == 4 ){
-								echo '<pre>';
-									var_dump($page_id);
-									var_dump( get_field('informations_supplementaires_yeah_0_code'));
-								echo '</pre>';
-							}
-*/
-							
 							if( have_rows('informations_supplementaires', $page_id ) ):
 							
 								   // Loop through rows.
@@ -168,7 +159,20 @@
 									<?php
 										endforeach;
 										
-									   // Case: Download layout.
+										
+										$new_lecteurs = get_sub_field( 'code' );
+										
+										 // foreach( $new_lecteurs as $lecteur ):
+									?>
+										<div class="wp-block-group">
+											<div class="wp-block-group__inner-container">
+												<?php echo $new_lecteurs;?>
+											</div>
+										</div>									
+									<?php
+										//endforeach;
+										
+									   // Case: Albums layout.
 									   elseif( get_row_layout() == 'albums' ): 
 										 
 										$titre = get_sub_field('titre');
