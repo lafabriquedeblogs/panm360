@@ -24,8 +24,8 @@
 ?>
 
 <div class="main-item element main-interview">
-	<div class="picture">
-		<a href="<?php echo $permalien;?>"><img src="<?php echo $image;?>" width="530" height="530"  alt="title"/><?php echo $iam_free;?></a>
+	<div class="picture" style="background: url(<?php echo $image;?>) center center no-repeat;background-size:cover;">
+		<a href="<?php echo $permalien;?>"><img class="hidden" src="<?php echo $image;?>" width="530" height="530"  alt="title"/><?php echo $iam_free;?></a>
 	</div>
 	<div class="details">
 		<!-- <a class="genre article-genre" href="">Genre</a> -->
@@ -68,8 +68,8 @@
 
 <div id="main-element-<?php echo $post_id;?>" class="main-item element">
 	
-	<div class="picture">
-		<a href="<?php echo $permalien;?>"><img src="<?php echo $image; ?>" width="500" height="500"  alt="title"/><?php echo $iam_free;?></a>
+	<div class="picture"  style="background: url(<?php echo $image;?>) center center no-repeat;background-size:cover;">
+		<a href="<?php echo $permalien;?>"><img class="hidden" src="<?php echo $image; ?>" width="500" height="500"  alt="title"/><?php echo $iam_free;?></a>
 	</div>
 	
 	<div class="details">

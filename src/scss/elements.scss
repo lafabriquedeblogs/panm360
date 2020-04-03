@@ -441,7 +441,7 @@ img.lozad {
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		align-items: center;
+		align-items: stretch;
 		& > * {
 			width: calc( 50% - 18px );
 		 }

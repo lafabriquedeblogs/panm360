@@ -63,10 +63,12 @@
 			get_the_title()
 		) );
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'panm360' ),
-			'after'  => '</div>',
-		) );
+		if( is_user_logged_in( ) ){
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'panm360' ),
+				'after'  => '</div>',
+			) );			
+		}
 		?>
 	</div><!-- .entry-content -->
 

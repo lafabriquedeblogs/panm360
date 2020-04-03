@@ -22,6 +22,19 @@
 
 	<div class="entry-content">
 		<?php the_content();?>
+	
+	<?php
+		
+		if( is_user_logged_in( ) ){
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'panm360' ),
+				'after'  => '</div>',
+			) );			
+		}
+		
+		
+	?>
+	
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
@@ -43,7 +56,11 @@
 				'<span class="edit-link">',
 				'</span>'
 			);
+			
+			
 			?>
+			
+			
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

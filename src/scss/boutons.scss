@@ -23,6 +23,14 @@
 	}
 }
 
+.post-edit-link {
+	@extend .bouton;
+	background-color: $bleu;
+	border-color: $bleu;
+	display: inline-block;
+	margin: 2em 0;
+}
+
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,

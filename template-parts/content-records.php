@@ -83,7 +83,13 @@
 
 		</article><!-- #post-<?php the_ID(); ?> -->
 
+		<?php
 
+			if ( is_user_logged_in() && comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+			
+		?>
 		<?php endwhile; ?>
 		<section class="section">
 			<div class="section-inner">

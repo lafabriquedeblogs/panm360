@@ -36,7 +36,7 @@ textarea {
 	border: none;
 	background-color: $gris_ultra_light;
 	width: 100%;
-	border-bottom: 2px solid $bleu;
+	border-bottom: 2px solid $gris_light;
 }
 select {
 	border: none;
@@ -66,7 +66,7 @@ select {
 		border: none;
 		background-color: $gris_ultra_light;
 		width: 100%;
-		border-bottom: 2px solid $bleu;
+		border-bottom: 2px solid $gris_light;
 	}
 	
 	.gfield_checkbox {
@@ -133,6 +133,11 @@ select {
 		padding: 0;
 	}
 }
+
+.comment-notes {
+	font-size: 0.825em;
+}
+
 @media screen and (min-width: 980px){
 	#gform_fields_4{
 		display: flex;
@@ -160,5 +165,42 @@ select {
 		#field_6_1, #field_6_4 {
 			flex-basis: 100%;
 		}
-	}	
+	}
+	
+		
+}
+
+
+@supports(display: grid){
+	
+	@media screen and (min-width: 600px){
+		#commentform {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			grid-template-areas: 
+				"message message"
+				"nom email"
+				"commentaire commentaire"
+				"envoi .";
+			grid-column-gap: 36px;
+			.comment-notes {
+				grid-area: message;
+			}
+			.comment-form-comment {
+				grid-area: commentaire;
+			}
+			.comment-form-author {
+				grid-area: nom;
+			}
+			.comment-form-email {
+				grid-area: email;
+			}
+			.form-submit {
+				grid-area: envoi;
+			}
+			
+		}
+	}
+	
 }

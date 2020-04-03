@@ -1137,6 +1137,72 @@ p {
     width: 100%;
     height: 100%; }
 
+.page-links {
+  font-size: 0.825em;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  padding: 2em 0; }
+  .page-links .post-page-numbers {
+    display: inline-block;
+    margin: 0 3px;
+    text-align: center;
+    padding: 5px 8px;
+    border: 1px solid #333;
+    border-radius: 50px;
+    text-decoration: none;
+    line-height: 1; }
+    .page-links .post-page-numbers.current {
+      font-weight: 700;
+      border: 1px solid #333;
+      background: #333;
+      color: #fff; }
+
+#respond {
+  max-width: 700px; }
+
+#comments {
+  padding: 2em 0 0 0;
+  margin-top: 3em;
+  border-top: 1px solid #E6E6EA; }
+  #comments .logged-in-as {
+    font-size: 0.825em; }
+    #comments .logged-in-as a {
+      text-decoration: none;
+      font-weight: 700; }
+  #comments .comment-list li {
+    list-style-type: none;
+    margin-bottom: 3em; }
+  #comments .comment-list a {
+    text-decoration: none; }
+  #comments .comment-list .says {
+    display: none; }
+  #comments .comment-list .fn {
+    font-size: 1.3em;
+    text-decoration: none;
+    text-transform: uppercase; }
+  #comments .comment-list .comment-metadata {
+    font-size: 0.75em;
+    opacity: .75; }
+    #comments .comment-list .comment-metadata .edit-link {
+      font-weight: 700; }
+  #comments .comment-list .comment-content {
+    margin: 1em 0 0;
+    font-size: 0.900em;
+    max-width: 750px; }
+    #comments .comment-list .comment-content p {
+      margin-bottom: 1em; }
+  #comments .comment-list .comment-reply-link {
+    font-size: 0.6em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    color: #ccc;
+    border: 1px #ccc solid;
+    border-radius: 2px; }
+    #comments .comment-list .comment-reply-link:hover {
+      color: #666;
+      border-color: #666; }
+
 @media screen and (min-width: 535px) {
   .section-titre {
     padding-left: 0; }
@@ -1548,7 +1614,7 @@ h2.annee-top {
   line-height: 1.3; }
   .restrited-content-message h3 {
     font-weight: 500; }
-  .restrited-content-message .bouton, .restrited-content-message .woocommerce #respond input#submit.alt, .woocommerce #respond .restrited-content-message input#submit.alt,
+  .restrited-content-message .bouton, .restrited-content-message .post-edit-link, .restrited-content-message .woocommerce #respond input#submit.alt, .woocommerce #respond .restrited-content-message input#submit.alt,
   .restrited-content-message .woocommerce a.button.alt, .woocommerce .restrited-content-message a.button.alt,
   .restrited-content-message .woocommerce button.button.alt, .woocommerce .restrited-content-message button.button.alt,
   .restrited-content-message .woocommerce input.button.alt, .woocommerce .restrited-content-message input.button.alt, .restrited-content-message .is-style-plus-infos a, .is-style-plus-infos .restrited-content-message a {
@@ -1683,6 +1749,7 @@ h2.annee-top {
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce .bouton.edit,
+.woocommerce .edit.post-edit-link,
 .woocommerce #respond input.edit#submit.alt,
 .woocommerce a.edit.button.alt,
 .woocommerce button.edit.button.alt,
@@ -1700,6 +1767,7 @@ h2.annee-top {
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce .bouton.edit,
+.woocommerce .edit.post-edit-link,
 .woocommerce #respond input.edit#submit.alt,
 .woocommerce a.edit.button.alt,
 .woocommerce button.edit.button.alt,
@@ -1726,6 +1794,7 @@ h2.annee-top {
   .woocommerce button.button:hover,
   .woocommerce input.button:hover,
   .woocommerce .bouton.edit:hover,
+  .woocommerce .edit.post-edit-link:hover,
   .woocommerce #respond input.edit#submit.alt:hover,
   .woocommerce a.edit.button.alt:hover,
   .woocommerce button.edit.button.alt:hover,
@@ -1743,6 +1812,7 @@ h2.annee-top {
   .woocommerce button.button:hover,
   .woocommerce input.button:hover,
   .woocommerce .bouton.edit:hover,
+  .woocommerce .edit.post-edit-link:hover,
   .woocommerce #respond input.edit#submit.alt:hover,
   .woocommerce a.edit.button.alt:hover,
   .woocommerce button.edit.button.alt:hover,
@@ -1761,6 +1831,7 @@ h2.annee-top {
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce .bouton.edit,
+.woocommerce .edit.post-edit-link,
 .woocommerce #respond input.edit#submit.alt,
 .woocommerce a.edit.button.alt,
 .woocommerce button.edit.button.alt,
@@ -1776,6 +1847,7 @@ h2.annee-top {
 .woocommerce-MyAccount-paymentMethods a.button,
 .subscription_details, .order_details a.button,
 .woocommerce .bouton.edit,
+.woocommerce .edit.post-edit-link,
 .woocommerce #respond input.edit#submit.alt,
 .woocommerce a.edit.button.alt,
 .woocommerce button.edit.button.alt,
@@ -1794,6 +1866,7 @@ h2.annee-top {
 
 
 .woocommerce .bouton.edit,
+.woocommerce .edit.post-edit-link,
 .woocommerce #respond input.edit#submit.alt,
 .woocommerce a.edit.button.alt,
 .woocommerce button.edit.button.alt,
@@ -2089,7 +2162,7 @@ textarea {
   border: none;
   background-color: #F4F4F8;
   width: 100%;
-  border-bottom: 2px solid #5BC6E8; }
+  border-bottom: 2px solid #E6E6EA; }
 
 select {
   border: none;
@@ -2117,7 +2190,7 @@ select {
   border: none;
   background-color: #F4F4F8;
   width: 100%;
-  border-bottom: 2px solid #5BC6E8; }
+  border-bottom: 2px solid #E6E6EA; }
 
 .gform_wrapper .gfield_checkbox input {
   position: absolute;
@@ -2173,6 +2246,9 @@ select {
             appearance: none;
     padding: 0; }
 
+.comment-notes {
+  font-size: 0.825em; }
+
 @media screen and (min-width: 980px) {
   #gform_fields_4 {
     display: -webkit-box;
@@ -2209,7 +2285,26 @@ select {
     #gform_fields_6 #field_6_4 {
       flex-basis: 100%; } }
 
-.bouton, .woocommerce #respond input#submit.alt,
+@supports (display: grid) {
+  @media screen and (min-width: 600px) {
+    #commentform {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "message message" "nom email" "commentaire commentaire" "envoi .";
+      grid-column-gap: 36px; }
+      #commentform .comment-notes {
+        grid-area: message; }
+      #commentform .comment-form-comment {
+        grid-area: commentaire; }
+      #commentform .comment-form-author {
+        grid-area: nom; }
+      #commentform .comment-form-email {
+        grid-area: email; }
+      #commentform .form-submit {
+        grid-area: envoi; } } }
+
+.bouton, .post-edit-link, .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt, .is-style-plus-infos a, button, input[type="submit"] {
@@ -2227,18 +2322,24 @@ select {
   transition: all .3s ease-out;
   cursor: pointer;
   text-decoration: none; }
-  .bouton:hover, .woocommerce #respond input#submit.alt:hover,
+  .bouton:hover, .post-edit-link:hover, .woocommerce #respond input#submit.alt:hover,
   .woocommerce a.button.alt:hover,
   .woocommerce button.button.alt:hover,
   .woocommerce input.button.alt:hover, .is-style-plus-infos a:hover, button:hover, input[type="submit"]:hover {
     box-shadow: 0px 0px 0px 2px #add9e7;
     border-color: #5BC6E8;
     border-color: #fff; }
-  .bouton.disabled, .woocommerce #respond input.disabled#submit.alt,
+  .bouton.disabled, .disabled.post-edit-link, .woocommerce #respond input.disabled#submit.alt,
   .woocommerce a.disabled.button.alt,
   .woocommerce button.disabled.button.alt,
   .woocommerce input.disabled.button.alt, .is-style-plus-infos a.disabled, button.disabled, input[type="submit"].disabled {
     background: #FED766; }
+
+.post-edit-link {
+  background-color: #5BC6E8;
+  border-color: #5BC6E8;
+  display: inline-block;
+  margin: 2em 0; }
 
 .woocommerce #respond input#submit.alt:hover,
 .woocommerce a.button.alt:hover,
@@ -2265,10 +2366,10 @@ select {
   width: 25px;
   height: 25px; }
 
-.new-featured-slider--slide.element a.bouton,
+.new-featured-slider--slide.element a.bouton, .new-featured-slider--slide.element a.post-edit-link,
 .new-featured-slider--slide.element .woocommerce a.button.alt, .woocommerce .new-featured-slider--slide.element a.button.alt, .new-featured-slider--slide.element .is-style-plus-infos a, .is-style-plus-infos .new-featured-slider--slide.element a {
   background: #333333 !important; }
-  .new-featured-slider--slide.element a.bouton:hover,
+  .new-featured-slider--slide.element a.bouton:hover, .new-featured-slider--slide.element a.post-edit-link:hover,
   .new-featured-slider--slide.element .woocommerce a.button.alt:hover, .woocommerce .new-featured-slider--slide.element a.button.alt:hover, .new-featured-slider--slide.element .is-style-plus-infos a:hover, .is-style-plus-infos .new-featured-slider--slide.element a:hover {
     text-decoration: none;
     background: #5BC6E8 !important; }
@@ -2441,7 +2542,7 @@ select {
     font-weight: 300; }
     .square-featured-slider--slide--content .element-location .medium {
       display: inline; }
-  .square-featured-slider--slide--content .bouton, .square-featured-slider--slide--content .woocommerce #respond input#submit.alt, .woocommerce #respond .square-featured-slider--slide--content input#submit.alt,
+  .square-featured-slider--slide--content .bouton, .square-featured-slider--slide--content .post-edit-link, .square-featured-slider--slide--content .woocommerce #respond input#submit.alt, .woocommerce #respond .square-featured-slider--slide--content input#submit.alt,
   .square-featured-slider--slide--content .woocommerce a.button.alt, .woocommerce .square-featured-slider--slide--content a.button.alt,
   .square-featured-slider--slide--content .woocommerce button.button.alt, .woocommerce .square-featured-slider--slide--content button.button.alt,
   .square-featured-slider--slide--content .woocommerce input.button.alt, .woocommerce .square-featured-slider--slide--content input.button.alt, .square-featured-slider--slide--content .is-style-plus-infos a, .is-style-plus-infos .square-featured-slider--slide--content a {
@@ -3131,8 +3232,8 @@ img.lozad {
     flex-wrap: nowrap;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-            align-items: center; }
+    -webkit-box-align: stretch;
+            align-items: stretch; }
     .element.main-item > * {
       width: calc( 50% - 18px); }
   .section-content--has-6-columns .album {

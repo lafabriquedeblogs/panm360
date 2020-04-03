@@ -21,8 +21,7 @@ get_header();
 						<div class="section-content--main">
 							<div class="section--element">
 																
-								<h4 class="section-titre"><span><?php _e('Interviews','panm360'); ?></span> <a href="<?php echo get_permalink( $interviews );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
-								
+								<?php /*<h4 class="section-titre"><span><?php _e('Interviews','panm360'); ?></span> <a href="<?php echo get_permalink( $interviews );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4> */?>								
 								<?php
 									
 									$interviews_args = array(

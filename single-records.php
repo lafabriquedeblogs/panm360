@@ -55,6 +55,16 @@
 					<?php panm360_entry_footer(); ?>
 				</footer><!-- .entry-footer -->
 
+
+		<?php
+
+			if ( is_user_logged_in() && comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+			
+		?>
+		
+		
 			</div>
 		
 
