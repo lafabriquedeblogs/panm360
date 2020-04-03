@@ -121,7 +121,11 @@ li {
 		list-style-type: disc;
 		list-style-position: inside;
 		padding-bottom: 1em;
+		&.blocks-gallery-item {
+			list-style-type: none;
+		}		
 	}
+	
 }
 p {
 	padding: 0;

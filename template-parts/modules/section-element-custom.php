@@ -1,7 +1,7 @@
 <div class="section--element">
 	<h4 class="section-titre"><span><?php echo $page_titre; ?></span> <a href="<?php echo get_permalink( $page_id );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 	<?php
-		wp_reset_query();
+		//wp_reset_query();
 		$args = array(
 			'post_type' => $post_type,
 			'posts_per_page' => $posts_per_page,
@@ -13,6 +13,8 @@
 		$section_query = new WP_Query($args);
 		$section_posts = $section_query->posts;
 		$article = array_shift($section_posts);
+		
+		wp_reset_query();
 	?>
 	<?php
 		$post_id = $article->ID;

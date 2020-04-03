@@ -65,6 +65,406 @@
                             "load_terms": 0,
                             "return_format": "id",
                             "multiple": 0
+                        },
+                        {
+                            "key": "field_5e879849a5ee8",
+                            "label": "Line vers la page",
+                            "name": "line_vers_la_page",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "wpml_cf_preferences": 2,
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_5e8798aca5ee9",
+                            "label": "Choisir les types de pages",
+                            "name": "choisir_les_types_de_pages",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "post": "Article",
+                                "page": "Page",
+                                "interviews": "Interview",
+                                "records": "Albums",
+                                "agenda": "Agenda"
+                            },
+                            "allow_custom": 0,
+                            "default_value": [
+                                "Article"
+                            ],
+                            "layout": "vertical",
+                            "toggle": 0,
+                            "return_format": "value",
+                            "wpml_cf_preferences": 1,
+                            "save_custom": 0
+                        },
+                        {
+                            "key": "field_5e8799dba5eea",
+                            "label": "Nombre d'articles à afficher",
+                            "name": "nombre_darticles_a_afficher",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 2,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "wpml_cf_preferences": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e879a364088b": {
+                    "key": "layout_5e879a364088b",
+                    "name": "custom",
+                    "label": "Custom",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e879a364088c",
+                            "label": "Titre de la catégorie",
+                            "name": "titre_de_la_categorie",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e879a364088e",
+                            "label": "Line vers la page",
+                            "name": "line_vers_la_page",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": "",
+                            "post_type": [
+                                "page"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_5e879a364088f",
+                            "label": "Choisir les types de pages",
+                            "name": "choisir_les_types_de_pages",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": "",
+                            "choices": {
+                                "post": "Article",
+                                "page": "Page",
+                                "interviews": "Interview",
+                                "records": "Albums",
+                                "agenda": "Agenda"
+                            },
+                            "allow_custom": 0,
+                            "save_custom": 0,
+                            "default_value": [
+                                "Article"
+                            ],
+                            "layout": "",
+                            "toggle": 0,
+                            "return_format": ""
+                        },
+                        {
+                            "key": "field_5e879a3640890",
+                            "label": "Nombre d'articles à afficher",
+                            "name": "nombre_darticles_a_afficher",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": "",
+                            "default_value": 2,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e879a6e40891": {
+                    "key": "layout_5e879a6e40891",
+                    "name": "albums",
+                    "label": "Albums",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e879a6e40892",
+                            "label": "Titre de la catégorie",
+                            "name": "titre_de_la_categorie",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e879a6e40893",
+                            "label": "Line vers la page",
+                            "name": "line_vers_la_page",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "post_type": [
+                                "page"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_5e879a6e40894",
+                            "label": "Choisir les types de pages",
+                            "name": "choisir_les_types_de_pages",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "post": "Article",
+                                "page": "Page",
+                                "interviews": "Interview",
+                                "records": "Albums",
+                                "agenda": "Agenda"
+                            },
+                            "allow_custom": 0,
+                            "save_custom": 0,
+                            "default_value": [
+                                "Article"
+                            ],
+                            "layout": "vertical",
+                            "toggle": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5e879a6e40895",
+                            "label": "Nombre d'articles à afficher",
+                            "name": "nombre_darticles_a_afficher",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 2,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        },
+                        {
+                            "key": "field_5e879a7f40896",
+                            "label": "Ne pas inclure la ou les categorie",
+                            "name": "ne_pas_inclure_la_ou_les_categorie",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "taxonomy": "category",
+                            "field_type": "multi_select",
+                            "allow_null": 0,
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_5e879ab840897",
+                            "label": "Ne pas inclure la ou les etiquettes",
+                            "name": "ne_pas_inclure_la_ou_les_etiquettes",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "taxonomy": "post_tag",
+                            "field_type": "multi_select",
+                            "allow_null": 0,
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_5e879f78cfb3b",
+                            "label": "Inclure la catégorie",
+                            "name": "inclure_la_categorie",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "taxonomy": "category",
+                            "field_type": "multi_select",
+                            "allow_null": 0,
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_5e879f9acfb3c",
+                            "label": "Inclure l'étiquette",
+                            "name": "inclure_letiquette",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "multi_select",
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "wpml_cf_preferences": 1,
+                            "multiple": 0,
+                            "allow_null": 0
+                        },
+                        {
+                            "key": "field_5e879fcbe2ea3",
+                            "label": "Choisir le genre",
+                            "name": "choisir_le_genre",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "genre",
+                            "field_type": "multi_select",
+                            "allow_null": 0,
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "wpml_cf_preferences": 1,
+                            "multiple": 0
                         }
                     ],
                     "min": "",
@@ -93,5 +493,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1585942281
+    "modified": 1585947308
 }

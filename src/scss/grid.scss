@@ -234,6 +234,14 @@
 @supports(display: grid){
 	@media (min-width: 535px){
 		
+		.section-list-albums{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 36px;
+			.album {
+				max-width: none;
+			}
+		}
 		.section-content--has-3-columns {
 			display: block;
 			> * {
@@ -283,6 +291,8 @@
 			grid-template-columns: 1fr 1fr 1fr;		
 		}
 	}
+	
+
 	@media screen and(min-width:900px){
 		.section-content--has-6-columns {
 			grid-template-columns: 1fr 1fr 1fr 1fr;		
@@ -290,15 +300,33 @@
 		.section-content--has-3-columns {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
+	
+	}
+	@media screen and(min-width:980px){
+		.section-list-albums{
+			grid-template-columns: 1fr 1fr 1fr;
+			
+		}
 	}
 	@media screen and(min-width:1150px){
 		.section-content--has-6-columns {
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;		
 		}
+
+
+
+	}
+	@media screen and(min-width:1200px){
+		.section-list-albums{
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			
+		}		
 	}
 	@media screen and(min-width:1280px){
 		.section-content--has-6-columns {
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;		
 		}
+
 	}
 }
+
