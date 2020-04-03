@@ -18,6 +18,7 @@
 		width: 100%;
 		display: flex;
 		padding: 0;
+		justify-content: space-between;
 		
 		.wp-block-columns {
 			padding: 0;
@@ -56,9 +57,17 @@
 		
 	}	
 }
-@media screen and (min-width: 980px){
-	.wp-block-columns{
-		
+
+@supports(display: gridx){
+	@media screen and (min-width: 980px){
+		.wp-block-columns{
+			display: grid;
+			
+			&.has-2-columns {
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: auto;
+				grid-column-gap: 36px;
+			}
+		}
 	}
-	
 }

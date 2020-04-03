@@ -65,6 +65,22 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/acf-json/fr/group_5e87733f57bf0.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5e87733f57bf0-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/fr/group_5e878c4421d5d.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5e878c4421d5d-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1041,6 +1057,22 @@
 		"oAP": "/page-critiques-dalbums.php",
 		"oF": 0
 		},
+	"/page-ecouter.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-ecouter.php",
+		"oF": 0
+		},
+	"/page-generic-panm360.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-generic-panm360.php",
+		"oF": 0
+		},
 	"/page-interviews.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1590,7 +1622,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/src/js/min/block-columns-min.js",
 		"oF": 0,
 		"sC": 3,
@@ -2337,6 +2369,14 @@
 		"oAP": "/template-parts/blocks/block_lecteur_audio.php",
 		"oF": 0
 		},
+	"/template-parts/blocks/block_page_accueil.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/blocks/block_page_accueil.php",
+		"oF": 0
+		},
 	"/template-parts/blocks/block_single_agenda.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2551,6 +2591,30 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/modules/element-slider.php",
+		"oF": 0
+		},
+	"/template-parts/modules/section-element-albums.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/section-element-albums.php",
+		"oF": 0
+		},
+	"/template-parts/modules/section-element-category.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/section-element-category.php",
+		"oF": 0
+		},
+	"/template-parts/modules/section-element-custom.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/section-element-custom.php",
 		"oF": 0
 		},
 	"/template-parts/modules/six-columns-albums.php": {

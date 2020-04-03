@@ -5,6 +5,10 @@
 */
 
 get_header();
+
+
+
+
 ?>
 
 	<div id="primary" class="content-area">
@@ -13,7 +17,16 @@ get_header();
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 			</header>
 						
-			<?php the_content(); ?>
+			<?php
+				
+				while( have_posts()): the_post();
+					
+
+					the_content();
+				
+				endwhile;	
+			
+			?>
 
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
@@ -23,7 +36,7 @@ get_header();
 																
 								<?php /*<h4 class="section-titre"><span><?php _e('Interviews','panm360'); ?></span> <a href="<?php echo get_permalink( $interviews );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4> */?>								
 								<?php
-									
+																		
 									$interviews_args = array(
 										'post_type' => 'interviews',
 										'posts_per_page' => -1,

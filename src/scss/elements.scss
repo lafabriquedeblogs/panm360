@@ -252,6 +252,9 @@ img.lozad {
 			font-size: 0.938em;
 			font-weight: 400;
 		}
+		.picture {
+			min-height: 250px;
+		}
 		.details {
 			padding-left: 1.125em;
 			padding-right: 1.125em;
@@ -393,9 +396,9 @@ img.lozad {
 
 .lead {
 	p {
-		font-size: 24px;
+		font-size: 19px;
     	font-family: $rubik;
-    	font-weight: 300;
+    	font-weight: 500;
     	line-height: 1.3;		
 	}
 }

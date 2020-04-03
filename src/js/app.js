@@ -1,7 +1,7 @@
 import main_menu_subMenu from './sub_menu.js';
 
 import ajax_search_agenda from './agenda.js';
-
+import block_has_columns from './block-columns.js';
 
 ( function( $, d , w ) {
 	
@@ -146,6 +146,7 @@ import ajax_search_agenda from './agenda.js';
 		main_menu_subMenu();
 		reportWindowSize();
 		ajax_search_agenda();
+		block_has_columns();
 	});
 	
 })( jQuery, document , window );
