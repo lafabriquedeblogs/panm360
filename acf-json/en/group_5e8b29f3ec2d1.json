@@ -1,9 +1,9 @@
 {
-    "key": "group_5e878c4421d5d",
+    "key": "group_5e8b29f3ec2d1",
     "title": "Ajouter des sections",
     "fields": [
         {
-            "key": "field_5e878c4d0c489",
+            "key": "field_5e8b29f3ec2e8",
             "label": "Sections",
             "name": "sections",
             "type": "flexible_content",
@@ -24,7 +24,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e878c8be97e8",
+                            "key": "field_5e8b29f3f1545",
                             "label": "Titre de la catégorie",
                             "name": "titre_de_la_categorie",
                             "type": "text",
@@ -44,7 +44,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5e878cc2e97e9",
+                            "key": "field_5e8b29f3f1551",
                             "label": "Catégorie",
                             "name": "id_categorie",
                             "type": "taxonomy",
@@ -67,7 +67,7 @@
                             "multiple": 0
                         },
                         {
-                            "key": "field_5e879849a5ee8",
+                            "key": "field_5e8b29f3f1564",
                             "label": "Line vers la page",
                             "name": "line_vers_la_page",
                             "type": "post_object",
@@ -90,7 +90,7 @@
                             "ui": 1
                         },
                         {
-                            "key": "field_5e8798aca5ee9",
+                            "key": "field_5e8b29f3f157f",
                             "label": "Choisir les types de pages",
                             "name": "choisir_les_types_de_pages",
                             "type": "checkbox",
@@ -120,7 +120,7 @@
                             "save_custom": 0
                         },
                         {
-                            "key": "field_5e8799dba5eea",
+                            "key": "field_5e8b29f3f1589",
                             "label": "Nombre d'articles à afficher",
                             "name": "nombre_darticles_a_afficher",
                             "type": "number",
@@ -152,7 +152,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e879a364088c",
+                            "key": "field_5e8b29f3f1593",
                             "label": "Titre de la catégorie",
                             "name": "titre_de_la_categorie",
                             "type": "text",
@@ -172,7 +172,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5e879a364088e",
+                            "key": "field_5e8b29f3f15b6",
                             "label": "Line vers la page",
                             "name": "line_vers_la_page",
                             "type": "post_object",
@@ -195,7 +195,7 @@
                             "ui": 1
                         },
                         {
-                            "key": "field_5e879a364088f",
+                            "key": "field_5e8b29f3f15c0",
                             "label": "Choisir les types de pages",
                             "name": "choisir_les_types_de_pages",
                             "type": "checkbox",
@@ -225,7 +225,7 @@
                             "return_format": ""
                         },
                         {
-                            "key": "field_5e879a3640890",
+                            "key": "field_5e8b29f3f15d2",
                             "label": "Nombre d'articles à afficher",
                             "name": "nombre_darticles_a_afficher",
                             "type": "number",
@@ -257,7 +257,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e879a6e40892",
+                            "key": "field_5e8b29f3f15ee",
                             "label": "Titre de la catégorie",
                             "name": "titre_de_la_categorie",
                             "type": "text",
@@ -277,7 +277,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5e879a6e40893",
+                            "key": "field_5e8b29f3f15f8",
                             "label": "Line vers la page",
                             "name": "line_vers_la_page",
                             "type": "post_object",
@@ -300,7 +300,7 @@
                             "ui": 1
                         },
                         {
-                            "key": "field_5e879a6e40894",
+                            "key": "field_5e8b29f3f160a",
                             "label": "Choisir les types de pages",
                             "name": "choisir_les_types_de_pages",
                             "type": "checkbox",
@@ -330,7 +330,7 @@
                             "return_format": "value"
                         },
                         {
-                            "key": "field_5e879a6e40895",
+                            "key": "field_5e8b29f3f161e",
                             "label": "Nombre d'articles à afficher",
                             "name": "nombre_darticles_a_afficher",
                             "type": "number",
@@ -352,7 +352,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_5e879a7f40896",
+                            "key": "field_5e8b29f3f1630",
                             "label": "Ne pas inclure la ou les categorie",
                             "name": "ne_pas_inclure_la_ou_les_categorie",
                             "type": "taxonomy",
@@ -375,7 +375,7 @@
                             "multiple": 0
                         },
                         {
-                            "key": "field_5e879ab840897",
+                            "key": "field_5e8b29f3f1642",
                             "label": "Ne pas inclure la ou les etiquettes",
                             "name": "ne_pas_inclure_la_ou_les_etiquettes",
                             "type": "taxonomy",
@@ -398,7 +398,7 @@
                             "multiple": 0
                         },
                         {
-                            "key": "field_5e879f78cfb3b",
+                            "key": "field_5e8b29f3f165d",
                             "label": "Inclure la catégorie",
                             "name": "inclure_la_categorie",
                             "type": "taxonomy",
@@ -421,7 +421,7 @@
                             "multiple": 0
                         },
                         {
-                            "key": "field_5e879f9acfb3c",
+                            "key": "field_5e8b29f3f1667",
                             "label": "Inclure l'étiquette",
                             "name": "inclure_letiquette",
                             "type": "taxonomy",
@@ -444,7 +444,7 @@
                             "allow_null": 0
                         },
                         {
-                            "key": "field_5e879fcbe2ea3",
+                            "key": "field_5e8b29f3f1679",
                             "label": "Choisir le genre",
                             "name": "choisir_le_genre",
                             "type": "taxonomy",
@@ -491,7 +491,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1586178562
+    "modified": 1586178550
 }

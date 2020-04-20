@@ -80,6 +80,8 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 		add_image_size( 'panm360_square', 500, 500,true);
 		add_image_size( 'panm360_medium', 500, 0);
 		add_image_size( 'panm360_home_slider', 664, 350,true);
+		add_image_size( 'panm360_home_slider_alt', 500, 263,true);
+		add_image_size( 'panm360_home_slider_small', 250, 132,true);
 		
 		add_theme_support( 'responsive-embeds' );
 	}
@@ -351,6 +353,9 @@ function my_translate_object_id( $object_id, $type ) {
 function iam_author_contributor(){
 	//$current_user = wp_get_current_user();
 	$user = get_userdata( get_current_user_id() );
+	
+	if( !$user ) return false;
+	
 	$user_roles = $user->roles;
 	
 	if( is_user_logged_in() && in_array( 'author', $user_roles, true ) ){

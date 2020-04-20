@@ -172,7 +172,7 @@ function panm360_taxonomies() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'label', array( 'artiste','records' ), $args_label );
+	register_taxonomy( 'label', array( 'post','artiste','records' ), $args_label );
 
 	$salles_labels = array(
 		'name'                       => _x( 'Salles', 'Taxonomy General Name', 'panm360' ),
@@ -206,7 +206,7 @@ function panm360_taxonomies() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'salle', array( 'agenda', 'gig_review' ), $args_salle );
+	register_taxonomy( 'salle', array( 'post','agenda', 'gig_review' ), $args_salle );
 
 	$labels_villes = array(
 		'name'                       => _x( 'Villes', 'Taxonomy General Name', 'panm360' ),
@@ -240,7 +240,7 @@ function panm360_taxonomies() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'ville', array( 'agenda', 'gig_review' ), $args_ville );
+	register_taxonomy( 'ville', array( 'post','agenda', 'gig_review' ), $args_ville );
 }
 add_action( 'init', 'panm360_taxonomies', 0 );
 	

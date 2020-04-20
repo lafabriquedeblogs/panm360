@@ -11,6 +11,8 @@
 	
 	$image = get_the_post_thumbnail_url( $article->ID ,'panm360_home_slider' );//$image_data['sizes']['medium_large'];
 	
+
+	
 	if( $image == false ){
 		$image = get_replacement_image('panm360_home_slider' );
 	}
@@ -55,12 +57,8 @@
 <?php
 	
 	$post_id = get_the_id();
-	$image = get_the_post_thumbnail_url( $post_id ,'panm360_home_slider' );//$image_data['sizes']['medium_large'];
 
-	if( $image == false ){
-		$image = get_replacement_image('panm360_home_slider' );
-	}
-	
+	$image = get_image_thumb_article( $post_id , 'panm360_home_slider'  );
 	
 	$permalien = get_permalink( $post_id );
 	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$post_id);
@@ -68,22 +66,19 @@
 	
 	$title = get_the_title();
 	
-	//$genre = get_genre( $post_id ); 	
 	$genre = get_genre( $post_id ,true );
 	
 	$author = get_the_author_meta('display_name', $article->post_author);
 	$auteur_link =  get_author_posts_url( $article->post_author );
 	
-/*
+	//$content = return_post_excerpt_list_item( $post_id );
+	$content = return_post_excerpt_list_item( $post_id );
 	$lead = get_field('lead');
 	
 	if( $lead == false ):
-		$lead = get_first_paragraph($post_id);
-	endif;
-*/
-
-	$content = return_post_excerpt_list_item( $post_id );
-	
+		//$lead = get_first_paragraph($post_id);
+		$lead = $content;
+	endif;		
 ?>
 
 <div  id="article-element-<?php echo $post_id;?>" class="article element">
@@ -92,7 +87,7 @@
 	</div>
 	<div class="details">
 		<span class="element-title album-title"><a href="<?php echo $permalien;?>"><?php echo $title;?></a></span>
-		<p><?php echo $content;?></p>
+		<div class="element-lead"><?php echo $lead;?></div>
 		
 		<?php if( !empty($genre)): ?>
 			<span class="genre album-genre"><?php echo $genre;?></span>

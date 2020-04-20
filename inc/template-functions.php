@@ -628,6 +628,30 @@ function lien_page_interviews(){
 	return $permalien_interviews_complet;		
 }
 
+function get_image_thumb_article( $post_id , $size ){
+	
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ) , $size );//$image_data['sizes']['medium_large'];
+	
+	if( !$image ){
+		$image = get_replacement_image('panm360_home_slider' );
+		return $image;
+	};
+	
+	
+	if( $image[1] > 663 ) {
+		return $image[0];
+	}
+	
+	if( $image[1] > 250  && $image[1] < 664) {
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ) , 'panm360_home_slider_alt' );
+		return $image[0];
+	}
+	
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ) , 'panm360_home_slider_small' );
+	return $image[0];
+		
+	
+}
 
 function get_replacement_image( $size ){
 	$attachment_id = 15051;
@@ -773,19 +797,40 @@ function return_nombre_de_posts_consultes( $viewed_posts , $last = false ){
 			echo $excerpt;	
 }
 
-function return_post_excerpt( $content, $post, $member = false ){
+function return_post_excerpt( $content, $postit, $member = false ){
 		
-		$content_strip = strip_tags($post->post_content);
+/*
+		$content_strip = strip_tags($postit->post_content);
 		$content_total_length = str_word_count($content_strip);
 		$words = $content_total_length / 5 ;
 		$more = '…';
-		 
-		$excerpt = wp_trim_words( $content, $words, $more );
+		$excerpt = wp_trim_words( $content_strip, $words, $more );
+*/
 		
+/*
+		$content_ = apply_filters( 'the_content', $content );
+		
+		echo '<pre>';
+			var_dump($content_);
+		echo '</pre>';
+*/
+
+
+		$content_total_length = strlen( $content );
+		$words = $content_total_length / 5 ;
+		$excerpto = substr( $content , 0, $words );
+		$excerpt = balancetags( $excerpto );
+		$excerpt .= '[...]';
+				
 		if( !$member ){
 			ob_start();
 ?>
 			
+			<div style="position:relative;">
+				
+				<div style="position:absolute; bottom: 0; left:0;width:100%;z-index: 50;background: linear-gradient(180deg, rgba(255,255,255,0) 0%,rgba(255,255,255,.5) 20%, rgba(255,255,255,1) 100%);height: 120px;">&nbsp;</div>
+				
+			</div>
 			<div class="restrited-content-message please-subscribe">
 			<!-- <h3><a href="#">Abonnez-vous</a> ou <a href="#">connectez-vous</a> afin d'accéder à la totalité du contenu</h3> -->
 				<img src="<?php echo get_template_directory_uri();?>/assets/img/panm-icones/250x250/m-blanc-sur-bleu.jpg" alt="m-blanc-sur-bleu" width="250" height="250" />

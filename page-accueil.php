@@ -11,12 +11,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 						
-			<?php
-				
-				the_content();
-				
-
-			?>
+			<?php the_content();	?>
 
 			<section class="section">
 				<div class="section-inner">

@@ -61,13 +61,14 @@
 		
 		<?php */ ?>
 		
+		<?php if( !is_user_logged_in() ): ?>
 		<li id="panm-signin" class="menu-item">
 				<a href="<?php echo get_lien_abonnements();?>">
 					<svg class="icon"><use xlink:href="#fingerprint"></use></svg>
 					<span><?php _e('S\'abonner','panm360'); ?></span>
 				</a>
 		</li>
-		
+		<?php endif; ?>
 		
 		<li id="menu-toggle-mobile">
 			<a class="bouton-menu-toggle-mobile">

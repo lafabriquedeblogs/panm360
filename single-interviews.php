@@ -147,9 +147,11 @@
 									   // Case: Download layout.
 									   elseif( get_row_layout() == 'lecteur_audio_bandcampspotify' ): 
 										   
-										   $lecteurs = get_sub_field('lecteur');
+										$lecteurs = get_sub_field('lecteur');
+										
+										if( $lecteurs != false ):
 										  
-										  foreach( $lecteurs as $lecteur ):
+										foreach( $lecteurs as $lecteur ):
 									?>
 										<div class="wp-block-group">
 											<div class="wp-block-group__inner-container">
@@ -158,7 +160,7 @@
 										</div>									
 									<?php
 										endforeach;
-										
+										endif;
 										
 										$new_lecteurs = get_sub_field( 'code' );
 										

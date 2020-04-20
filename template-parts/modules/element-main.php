@@ -18,7 +18,7 @@
 	$author = get_the_author_meta('display_name', $article->post_author);
 	$auteur_link =  get_author_posts_url( $article->post_author );
 		
-	
+
 	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$article->ID);
 	$iam_free = ($free == '1') ? '<div class="iam-free">'.__('gratuit','panm360').'</div>' : '';	
 ?>
@@ -49,7 +49,7 @@
 	
 	$image = get_the_post_thumbnail_url( $post_id ,'medium_large' );//$image_data['sizes']['medium_large'];
 
-	$content = return_post_excerpt_list_item( $post_id );
+
 	
 	//$genre = get_genre( $post_id ); 
 	$genre = get_genre( $post_id ,true ); 
@@ -62,6 +62,14 @@
 	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$article->ID);
 	$iam_free = ($free == '1') ? '<div class="iam-free">'.__('gratuit','panm360').'</div>' : '';		
 	
+	
+	$content = return_post_excerpt_list_item( $post_id );
+	$lead = get_field('lead');
+	
+	if( $lead == false ):
+		//$lead = get_first_paragraph($post_id);
+		$lead = $content;
+	endif;	
 	
 ?>
 
@@ -84,7 +92,7 @@
 			<span class="sub-title"><?php echo $Sous_titre;?></span>
 		<?php endif; ?>
 		
-		<p><?php echo $content;?></p>
+		<div class="element-lead"><?php echo $lead;?></div>
 		<a class="author article-author" href="<?php echo $auteur_link;?>"><?php _e('par','panm360'); ?>: <?php echo $author;?></a>
 		<p class="lire-la-suite"><a href="<?php echo $permalien;?>"><?php _e('Lire la suite','panm360'); ?></a></p>
 
