@@ -161,8 +161,9 @@
 }
 @media screen and (max-width: 1024px) {
 	#menu-top-container #menu-top #menu-panm,
-	#panm-signin,
-	#panm-accoun {
+	#menu-top-container #menu-top #panm-signin,
+	#menu-top-container #menu-top #panm-accoun,
+	#menu-top-container #menu-top #panm-connexion {
 		display: none;
 	}
 }

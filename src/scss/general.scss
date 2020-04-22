@@ -54,6 +54,9 @@ a {
 	max-width: 980px;
 	margin: 0 auto;
 }
+.hide {
+	opacity:0;
+}
 .single .entry-content {
 	overflow: hidden;
 	p, ul, ol {
@@ -480,8 +483,66 @@ h1.category-title {
     height: 16px;
   }
 }
+
+/************************************/
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border: 2px solid #5BC6E8;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #5BC6E8 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 /* END-LOADER */
 
+#loading-infinite {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	p {
+		margin: 0;
+		padding: 0 20px 0 0;
+		font-size: 11px;
+		font-weight: 500;
+		font-family: $rubik;
+		font-style: italic;
+		color: $gris_dark;
+	}
+	button {
+		margin-right: 25px;
+	}
+}
 
 .single-album-list {
 	li {

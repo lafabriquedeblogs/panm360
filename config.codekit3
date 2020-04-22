@@ -611,8 +611,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/assets/js/min/app-min.js",
-		"oF": 0,
+		"oAP": "/assets/js/app-min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 1
 		},
@@ -1129,6 +1129,14 @@
 		"oAP": "/page-top-200.php",
 		"oF": 0
 		},
+	"/page-wow.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-wow.php",
+		"oF": 0
+		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1280,56 +1288,6 @@
 		"oA": 0,
 		"oAP": "/single.php",
 		"oF": 0
-		},
-	"/src/css/agenda.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/css/agenda-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/css/header.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/css/header-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/css/main.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/css/main-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/css/single_agenda.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/css/single_agenda-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/css/woocommerce.css": {
-		"aP": 1,
-		"bl": 1,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/css/woocommerce-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/src/fonts/Open_Sans/LICENSE.txt": {
 		"cB": 0,
@@ -1620,8 +1578,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/src/js/min/app-min.js",
-		"oF": 0,
+		"oAP": "/assets/js/app-min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 1
 		},
@@ -1693,6 +1651,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/src/node_modules/js-datepicker/dist/min/datepicker.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/src/node_modules/lozad/dist/lozad.min.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/src/node_modules/lozad/dist/min/lozad.min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1

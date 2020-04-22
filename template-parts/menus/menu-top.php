@@ -1,9 +1,3 @@
-<?php
-
-	// Page mon compte
-	$moncompte_id = apply_filters( 'wpml_object_id', 6966, 'page', TRUE  );
-	$moncompte_lonk = get_permalink( $moncompte_id );
-?>
 <div id="menu-top-container">
 	<ul id="menu-top" class="menu">
 
@@ -27,19 +21,10 @@
 			?>	
 			</ul>
 		</li>
-		
-		
-		<?php /**/ ?>
-		
-		
-		<?php
-			
-		/*
-			
-		?>
+
 		<?php if( is_user_logged_in() ): ?>
 			<li id="panm-account" class="menu-item">
-				<a href="<?php echo $moncompte_lonk;?>">
+				<a href="<?php echo get_lien_page_mon_compte();?>">
 					<svg class="icon"><use xlink:href="#fingerprint"></use></svg>
 					<span><?php _e('Mon compte','panm360'); ?></span>
 				</a>
@@ -52,23 +37,28 @@
 			</li>
 		<?php else: ?>
 			<li id="panm-connexion" class="menu-item">
-				<a href="<?php echo $moncompte_lonk;?>">
+				<a href="<?php echo get_lien_page_mon_compte();?>">
 					<svg class="icon"><use xlink:href="#fingerprint"></use></svg>
-					<span><?php _e('Connexion','panm360'); ?></span>
+					<span><?php _e('Mon compte','panm360'); ?></span>
+				</a>
+			</li>
+			<li id="panm-signin" class="menu-item">
+				<a href="<?php echo get_lien_abonnements();?>">
+					<svg class="icon"><use xlink:href="#fingerprint"></use></svg>
+					<span><?php _e('S\'abonner','panm360'); ?></span>
 				</a>
 			</li>
 		<?php endif; ?>
+
 		
-		<?php */ ?>
-		
-		<?php if( !is_user_logged_in() ): ?>
+		<?php /*if( !is_user_logged_in() ): ?>
 		<li id="panm-signin" class="menu-item">
 				<a href="<?php echo get_lien_abonnements();?>">
 					<svg class="icon"><use xlink:href="#fingerprint"></use></svg>
 					<span><?php _e('S\'abonner','panm360'); ?></span>
 				</a>
 		</li>
-		<?php endif; ?>
+		<?php endif; */?>
 		
 		<li id="menu-toggle-mobile">
 			<a class="bouton-menu-toggle-mobile">

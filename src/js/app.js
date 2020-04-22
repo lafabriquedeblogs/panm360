@@ -3,6 +3,8 @@ import main_menu_subMenu from './sub_menu.js';
 import ajax_search_agenda from './agenda.js';
 import block_has_columns from './block-columns.js';
 
+//import lozad from '../node_modules/lozad/dist/lozad.min.js';
+
 ( function( $, d , w ) {
 	
 	"use-strict";
@@ -18,9 +20,8 @@ import block_has_columns from './block-columns.js';
 
 	
 	let spotify = d.querySelector(".wp-block-embed-spotify .wp-block-embed__wrapper iframe");
-	
-	
-	
+
+			
 	function toggle_menu(){
 		menu_mobile.classList.toggle("open");
 		menu_mobile_open = d.querySelector("#site-navigation.open");
@@ -133,16 +134,44 @@ import block_has_columns from './block-columns.js';
 		
 		if( spotify != null) spotify.setAttribute("width","100%");
 
-
 		const observer = lozad('.lozad', {
-			rootMargin: '10px 0px', // syntax similar to that of CSS Margin
-			threshold: 0, // ratio of element convergence
-			loaded: function(el) {
-				el.classList.add('img-loaded');
-			}
+				rootMargin: '10px 0px', // syntax similar to that of CSS Margin
+				threshold: 0, // ratio of element convergence
+				loaded: function(el) {
+					el.classList.add('img-loaded');
+				}
+			});
+		
+		observer.observe();	
+
+		var $container = $('.section-list-albums').infiniteScroll({
+		  // options
+		  path: 'page/{{#}}',
+		  append: '.album',
+		  history: false,
+		  ///button: '.view-more-button',
+		  // load pages on button click
+		  scrollThreshold: 300,
+		  //scrollThreshold: 600,
+		  	  										  
 		});
-		observer.observe();		
-				
+		
+		$container.on( 'request.infiniteScroll', function( event, path ) {
+		  $(".lds-ring").removeClass("hide");
+		});
+			
+		$container.on( 'append.infiniteScroll', function( event, response, path ) {
+		  observer.observe();
+		  $(".lds-ring").addClass("hide");
+		});				
+		
+/*
+		$(".view-more-button").on("click",function(e){
+			//e.preventDefault();
+			$(".lds-ring").removeClass("hide");
+		});
+*/
+		
 		main_menu_subMenu();
 		reportWindowSize();
 		ajax_search_agenda();

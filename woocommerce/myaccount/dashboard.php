@@ -37,9 +37,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 		<ul>
 			<li><a href="/wp-admin">Accéder à l'admin de WP</a></li>
+			<li><a href="/wp-admin/edit.php?post_type=page">Accéder aux pages</a></li>
 			<li><a href="/wp-admin/edit.php?post_type=interviews">Accéder aux interviews</a></li>
 			<li><a href="/wp-admin/edit.php?post_type=records">Accéder aux Critiques d'albums</a></li>
 			<li><a href="/wp-admin/edit.php?post_type=agenda">Accéder à l'agenda</a></li>
+			<li><a href="/wp-admin/nav-menus.php">Accéder aux menus</a></li>
+			<li><a href="/wp-admin/admin.php?page=wc-settings">Woocommerce réglages</a></li>
+			<li><a href="/wp-admin/admin.php?page=wc-settings&tab=memberships">Woocommerce Membership</a></li>
+			<li><a href="/wp-admin/admin.php?page=wc-settings&tab=subscriptions">Woocommerce Abonnements</a></li>
 		</ul>
 		
 	<?php

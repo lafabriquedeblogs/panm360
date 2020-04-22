@@ -1,7 +1,7 @@
 <?php
 
 /*
-	Template name: Critiques Albums
+	Template name: Wow
 */
 
 get_header();
@@ -12,14 +12,14 @@ get_header();
 		<main id="main" class="site-main">			
 			
 			<article>
-			<?php /**/ ?>	
+				<?php /* ?>
 			<div id="wrap-square-featured-slider">
 				<ul id="square-featured-slider">
 					<?php
 				
 						$args = array(
 							'post_type' => 'records',
-							'posts_per_page' => 15,
+							'category__in' => array(5250,5255),
 							'post_status' => array('publish'),
 							'orderby' => 'date',	
 							'order' => 'DESC',
@@ -33,7 +33,8 @@ get_header();
 					?>
 				</ul><!-- new-featured-slider -->
 			</div><!-- wrap-new-featured-slider -->
-			<?php /**/ ?>						
+			<?php */ ?>	
+							
 			<?php the_content(); ?>
 
 			<section class="section">
@@ -45,18 +46,19 @@ get_header();
 							
 							
 							<div class="section--element">
-								<h4 class="section-titre"><span><?php _e('Critiques d\'albums','panm360'); ?></span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+								<h4 class="section-titre"><span><?php _e('Albums WoW','panm360'); ?></span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 								
 								<ul class="section-list-albums">
 								<?php
 									
 									$albums_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-									$albums_count = 12;	
+									$albums_count = 36;	
 									
 									$args = array(
 										'post_type' => 'records',
 										'posts_per_page' => $albums_count,
 										'post_status' => array('publish'),
+										'category__in' => array(5250,5255),
 										'category__not_in' => array(969),
 										'tag__not_in' => array(2512),
 										'orderby' => 'date',	
@@ -70,18 +72,11 @@ get_header();
 											$albums->the_post();
 											
 											include( locate_template( '/template-parts/modules/element-album.php', false, false ) );
-										//$albums_count--;
+										$albums_count--;
 									}
 								?>
 								</ul>
-								<div id="loading-infinite">
-									<!-- <button class="view-more-button"><?php _e('+ d\'albums','panm360'); ?></button> -->
-									<p>Chargement de + d'albums</p>
-									<div class="lds-ring hide"><div></div><div></div><div></div><div></div></div>
-								</div>
-
-								
-								<?php /* ?>	
+	
 								<div id="pages-liste-navigation">
 									<nav class="navigation pagination" role="navigation" aria-label="Publications">
 										<div class="nav-links">
@@ -98,9 +93,7 @@ get_header();
 										?>
 										</div>
 									</nav>
-								</div><!-- pages-liste-navigation -->
-								<?php */ ?>
-														
+								</div><!-- pages-liste-navigation -->						
 								<?php wp_reset_postdata(); ?>
 								
 							</div><!-- section--element -->
@@ -185,9 +178,59 @@ get_header();
 					
 				</div>
 			</section>
-			
-
+		
 		</article>
+<?php /* ?>			
+			<div id="top-360-hero" class="wide-screen"></div>			
+			<div id="text-introduction-panm360">
+				<?php
+					
+					$top360_id = apply_filters( 'wpml_object_id', 2683, 'page', TRUE  );
+					$top360_content = get_post( $top360_id );
+					$top360_content = $top360_content->post_content;
+					
+					echo $top360_content;
+				?>
+			</div>
+			
+			<section class="section">
+				<div id="critiques-albums" class="section-inner">
+				
+					<div class="section-content-c">
+						
+						<?php
+							
+							$top_args = array(
+								'posts_per_page' => 18,
+								'post_type' => 'records',
+								'orderby' => 'rand'
+							);
+							
+							$top_query = new WP_Query($top_args);
+							
+							$posts_array = $top_query->posts;
+							?>
+								<ul class="section-content--has-6-columns">
+							<?php
+								foreach( $posts_array as $post ){
+								
+									setup_postdata( $post );
+																	
+									include( locate_template( '/template-parts/modules/element-album.php', false, false ) ); 
+											
+								}
+
+								?>
+								</ul>
+							<?php
+								wp_reset_postdata();								
+							
+						?>			
+					</div>
+					
+				</div>
+			</section>
+<?php */ ?>	
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
