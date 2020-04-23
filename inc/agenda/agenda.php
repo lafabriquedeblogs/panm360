@@ -62,14 +62,14 @@
     	}
 	*/
 		$dates = createDateRange( $start , $end );
-				
+		
+		
 		$concerts = array();
 		$i = 0;
 		
 		add_filter( 'posts_where','my_posts_where' );
 		
-		
-		while( $i <= count($dates)-1 ){
+		while( $i <= count($dates)-1 ){ // toutes les dates sur 1 mois
 		
 			$args = array(
 			    'post_type' => 'agenda',

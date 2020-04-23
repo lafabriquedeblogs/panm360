@@ -12,28 +12,6 @@ get_header();
 		<main id="main" class="site-main">			
 			
 			<article>
-				<?php /* ?>
-			<div id="wrap-square-featured-slider">
-				<ul id="square-featured-slider">
-					<?php
-				
-						$args = array(
-							'post_type' => 'records',
-							'category__in' => array(5250,5255),
-							'post_status' => array('publish'),
-							'orderby' => 'date',	
-							'order' => 'DESC',
-						);
-						
-						$albums_query = new WP_Query($args);
-						$albums = $albums_query->posts;
-						foreach( $albums as $item ){
-							include( locate_template( '/template-parts/modules/element-slider-square.php', false, false ) );
-						}
-					?>
-				</ul><!-- new-featured-slider -->
-			</div><!-- wrap-new-featured-slider -->
-			<?php */ ?>	
 							
 			<?php the_content(); ?>
 
@@ -46,7 +24,7 @@ get_header();
 							
 							
 							<div class="section--element">
-								<h4 class="section-titre"><span><?php _e('Albums WoW','panm360'); ?></span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+								<h4 id="albums-wow--title" class="section-titre"><span><?php _e('Albums','panm360'); ?></span> <img src="<?php echo get_template_directory_uri(  ) ;?>/assets/img/wow.svg"  width="151px" height="53px"  alt="wow" /></h4>
 								
 								<ul class="section-list-albums">
 								<?php

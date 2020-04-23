@@ -594,6 +594,16 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/img/wow.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/wow.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/js/app-min.js": {
 		"bF": 6,
 		"ft": 64,
@@ -1655,17 +1665,6 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"/src/node_modules/lozad/dist/lozad.min.js": {
-		"bF": 6,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/src/node_modules/lozad/dist/min/lozad.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
 	"/src/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -1905,7 +1904,7 @@
 		"oA": 0,
 		"oAP": "/assets/css/main.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"/src/scss/main_menu.scss": {
@@ -2496,6 +2495,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/menus/menu-top.php",
+		"oF": 0
+		},
+	"/template-parts/modules/agenda-mini.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/agenda-mini.php",
 		"oF": 0
 		},
 	"/template-parts/modules/element-album.php": {

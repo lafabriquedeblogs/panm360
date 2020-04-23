@@ -76,9 +76,17 @@ if ( ! function_exists( 'panm360_setup' ) ) :
 		add_post_type_support( 'records', 'author' );
 		add_post_type_support( 'agenda', 'author' );
 		//add_theme_support( 'editor-style' );
-		
+		add_image_size( 'panm360_square_150', 150, 150,true);
+		add_image_size( 'panm360_square_200', 200, 200,true);
+		add_image_size( 'panm360_square_300', 300, 300,true);
+		add_image_size( 'panm360_square_400', 400, 400,true);
 		add_image_size( 'panm360_square', 500, 500,true);
+		
+		add_image_size( 'panm360_medium_200', 200, 0);
+		add_image_size( 'panm360_medium_300', 300, 0);
+		add_image_size( 'panm360_medium_400', 400, 0);
 		add_image_size( 'panm360_medium', 500, 0);
+		
 		add_image_size( 'panm360_home_slider', 664, 350,true);
 		add_image_size( 'panm360_home_slider_alt', 500, 263,true);
 		add_image_size( 'panm360_home_slider_small', 250, 132,true);

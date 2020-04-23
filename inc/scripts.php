@@ -19,9 +19,9 @@ function panm360_scripts() {
 	//wp_dequeue_style( 'wp-block-library' );
 	wp_enqueue_style( 'panm360-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Rubik:300,400,500,700,900&display=swap' );
 	wp_enqueue_style( 'panm360-slick', get_template_directory_uri().'/assets/js/lib/slick/slick.css' );
-	wp_enqueue_style( 'panm360-style', get_template_directory_uri().'/assets/css/main.css' );
-	
 
+	wp_enqueue_style( 'panm360-style', get_template_directory_uri().'/assets/css/main.css', array(), filemtime(get_template_directory().'/assets/css/main.css'));
+	
 	wp_enqueue_script( 'script-infinite-scroll', '//unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js', array('jquery'), false, false );
 	wp_enqueue_script( 'script-slick', get_template_directory_uri() . '/assets/js/lib/slick/slick.min.js', array('jquery'), false, false );
 	wp_enqueue_script( 'script-lozad', get_template_directory_uri() . '/assets/js/lib/lozad.min.js', array('jquery'), false, false );

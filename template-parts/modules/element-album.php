@@ -17,7 +17,14 @@
 	$auteur = get_the_author_meta('display_name');
 	$auteur_link =  get_author_posts_url($auteur_id) ;
 	
-	$pochette = get_the_post_thumbnail_url( $album_id, array(500,500) );
+	$pochette = get_the_post_thumbnail_url( $album_id, 'panm360_square_200' );
+	//$pochette_200 = get_the_post_thumbnail_url( $album_id, 'panm360_square_200' );
+	$pochette_300 = get_the_post_thumbnail_url( $album_id, 'panm360_square_300' );
+	$pochette_400 = get_the_post_thumbnail_url( $album_id, 'panm360_square_400' );
+	
+	echo '<pre>';
+		var_dump($pochette);
+	echo '</pre>';
 	
 	if( !$pochette ) $pochette =  get_template_directory_uri()."/assets/img/default/sample-album.png";
 	
@@ -29,7 +36,15 @@
 
 <li id="album-<?php echo $album_id;?>" class="album element" data-filter="<?php echo $data_genre." ".$data_annee." ".$auteur;?>">
 	<div class="picture">
-		<a href="<?php echo $lien;?>"><img class="lozad" data-src="<?php echo $pochette; ?>" alt="<?php echo $titre;?>" width="100%" height="auto" /><?php echo $iam_free;?></a>
+		<a href="<?php echo $lien;?>">
+			<img
+			class="lozad"
+			data-src="<?php echo $pochette; ?>" 
+			data-srcset="<?php echo $pochette_400;?> 400w, <?php echo $pochette_300;?> 300w, <?php echo $pochette;?> 768w"
+			alt="<?php echo $titre;?>"
+			width="100%"
+			height="auto" /><?php //echo $iam_free;?>
+		</a>
 		
 	</div>
 	<div class="details">

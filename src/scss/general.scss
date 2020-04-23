@@ -656,7 +656,14 @@ h1.category-title {
 			}
 		}	
 	}
-}   
+}
+
+#albums-wow--title {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin-bottom: 35px;
+} 
 @media screen and (min-width:535px){
 	.section-titre {
 		padding-left: 0;
