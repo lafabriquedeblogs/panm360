@@ -7,7 +7,7 @@
 		"uuidString": "27B44F81-D0DA-428E-BBC0-0FE08C15D78E"
 		}
 	],
-"creatorBuild": "32001",
+"creatorBuild": "32137",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -658,6 +658,17 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/assets/js/lib/infinite-scroll.pkgd.min.js": {
+		"bF": 6,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/lib/min/infinite-scroll.pkgd.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/assets/js/lib/lozad.min.js": {
 		"bF": 6,
 		"ft": 64,
@@ -749,14 +760,14 @@
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/js/lib/css/slick-theme.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/js/lib/slick/slick.css": {
 		"aP": 1,
@@ -810,14 +821,14 @@
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/js/lib/css/slick.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/author.php": {
 		"cB": 0,
@@ -1677,391 +1688,391 @@
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/abonnements.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/agenda.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/agenda.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/boutons.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/boutons.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/classes.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/classes.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/dev.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/dev.css",
 		"oF": 1,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/elements.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/elements.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/footer.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/footer.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/forms.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/forms.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/general.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/general.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/grid-2.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/grid-2.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/grid.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/grid.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/header.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/header.css",
 		"oF": 2,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/header/menu_desktop.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/scss/css/menu_desktop.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/header/menu_mobile.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/scss/css/menu_mobile.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/header/menu_top.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/scss/css/menu_top.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/header/searchform.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/scss/css/searchform.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/header/submenu_desktop.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/scss/css/submenu_desktop.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/main.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/main.css",
 		"oF": 2,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/main_menu.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/src/css/main_menu.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/normalize.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/normalize.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/single_agenda.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/single_agenda.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/single_interview.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/single_interview.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/single_record.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/single_record.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/slider_home.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/slider_home.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/slider_square.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/slider_square.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/top-360-hero.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/top-360-hero.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/variables.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/variables.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/woocommerce.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/woocommerce.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/woocommerce/product.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/scss/css/product.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/scss/wp-blocks.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/css/wp-blocks.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
+		"sct": 1
 		},
 	"/src/svg/eject.svg": {
 		"ft": 2097152,
@@ -2898,8 +2909,8 @@
 	"creationDate": 595725235.74526298,
 	"displayValue": "panm360",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "brackets_magenta",
-	"iconImageWasSetByUser": 0
+	"iconImageName": "meme-ron",
+	"iconImageWasSetByUser": 1
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -4400,7 +4411,7 @@
 	"externalServerAddress": "http://panm.test/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "agendAjax, response,console",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
@@ -4919,13 +4930,13 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
+		"compilerType": 1,
 		"createSourceMap": 0,
-		"debugStyle": 0,
 		"decimalPrecision": 10,
+		"emitCharset": 1,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
+		"shouldRunBless": 1
 		},
 	"languageDefaultsSLIM": {
 		"autoOutputAction": 0,
@@ -4993,7 +5004,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
+	"skippedFoldersString": "/storage/framework/sessions,_logs,logs,log,.idea,_cache,cache,node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,

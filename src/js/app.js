@@ -62,6 +62,7 @@ import block_has_columns from './block-columns.js';
 	/*
 		----------------------------------------------------------------------------------------------------
 	*/
+
 	
 	$(document).ready(function(){
 		
@@ -134,6 +135,7 @@ import block_has_columns from './block-columns.js';
 		
 		if( spotify != null) spotify.setAttribute("width","100%");
 
+/*
 		const observer = lozad('.lozad', {
 				rootMargin: '10px 0px', // syntax similar to that of CSS Margin
 				threshold: 0, // ratio of element convergence
@@ -143,7 +145,8 @@ import block_has_columns from './block-columns.js';
 			});
 		
 		observer.observe();	
-
+*/
+/*
 		var $container = $('.section-list-albums').infiniteScroll({
 		  // options
 		  path: 'page/{{#}}',
@@ -152,7 +155,7 @@ import block_has_columns from './block-columns.js';
 		  ///button: '.view-more-button',
 		  // load pages on button click
 		  scrollThreshold: 300,
-		  //scrollThreshold: 600,
+		  prefill: true
 		  	  										  
 		});
 		
@@ -161,10 +164,10 @@ import block_has_columns from './block-columns.js';
 		});
 			
 		$container.on( 'append.infiniteScroll', function( event, response, path ) {
-		  observer.observe();
+		  //observer.observe();
 		  $(".lds-ring").addClass("hide");
 		});				
-		
+*/		
 /*
 		$(".view-more-button").on("click",function(e){
 			//e.preventDefault();

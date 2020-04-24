@@ -1,10 +1,10 @@
 export default function main_menu_subMenu(){
 
 	let _to_menu;
-	let active_archive_menu;
-	let mouse_moving_on_header = false;
-	let e, g, x, y;
-	let archive_is_defined = document.querySelector(".archive");
+	//let active_archive_menu;
+	//let mouse_moving_on_header = false;
+	//let g, x, y;
+	//let archive_is_defined = document.querySelector(".archive");
 		
 	function go_to_slide_menu( id ){
 		jQuery("#sub-nav-desktop").slick("slickGoTo", id - 1 ,false);
@@ -26,7 +26,7 @@ export default function main_menu_subMenu(){
 	}
 	//jQuery(document).ready(function(){
 		
-		active_archive_menu = jQuery("body.archive #main-menu-desktop .current-menu-ancestor a");
+		//active_archive_menu = jQuery("body.archive #main-menu-desktop .current-menu-ancestor a");
 		var active_archive_menu_index = jQuery("body.archive #main-menu-desktop .current-menu-ancestor").index();
 		 		
 		jQuery("#sub-nav-desktop").slick({
@@ -37,7 +37,7 @@ export default function main_menu_subMenu(){
 		
 		
 		
-		jQuery("#main-menu-desktop > li > a").each( function(i){
+		jQuery("#main-menu-desktop > li > a").each( function(){
 			
 			//return;
 			
@@ -68,7 +68,7 @@ export default function main_menu_subMenu(){
 
 		jQuery("#main-menu-desktop a").on("mousemove",function(e){
 			let _ok = jQuery(e.target).parent().index();
-			mouse_moving_on_header = true;
+			//mouse_moving_on_header = true;
 			
 			if( _ok <= 0 ) return;
 		});	

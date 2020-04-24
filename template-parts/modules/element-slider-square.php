@@ -74,7 +74,7 @@
 	$genres = get_genre_parents( $item->ID , false );
 	$permalien = get_permalink( $item->ID );
 	$artiste = get_artiste( $item->ID , false );
-	$vignette_featured = get_the_post_thumbnail_url( $item->ID, 'medium-large' );
+	$vignette_featured = get_the_post_thumbnail_url( $item->ID, 'panm360_square_400' );
 	
 	$artiste = get_artiste( $item->ID , false );
 ?>

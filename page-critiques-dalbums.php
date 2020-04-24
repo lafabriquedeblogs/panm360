@@ -51,7 +51,7 @@ get_header();
 								<?php
 									
 									$albums_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-									$albums_count = 12;	
+									$albums_count = 36;	
 									
 									$args = array(
 										'post_type' => 'records',
@@ -74,14 +74,16 @@ get_header();
 									}
 								?>
 								</ul>
+								
+								<?php /* ?>
 								<div id="loading-infinite">
 									<!-- <button class="view-more-button"><?php _e('+ d\'albums','panm360'); ?></button> -->
 									<p><?php _e('Chargement de + d\'album','panm360'); ?>s</p>
 									<div class="lds-ring hide"><div></div><div></div><div></div><div></div></div>
 								</div>
-
+								<?php */ ?>
 								
-								<?php /* ?>	
+								<?php /**/ ?>	
 								<div id="pages-liste-navigation">
 									<nav class="navigation pagination" role="navigation" aria-label="Publications">
 										<div class="nav-links">
@@ -99,7 +101,7 @@ get_header();
 										</div>
 									</nav>
 								</div><!-- pages-liste-navigation -->
-								<?php */ ?>
+								<?php /**/ ?>
 														
 								<?php wp_reset_postdata(); ?>
 								

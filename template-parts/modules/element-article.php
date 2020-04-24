@@ -9,7 +9,7 @@
 	$genre = get_genre( $article->ID ); 
 	$permalien = get_permalink( $article->ID );
 	
-	$image = get_the_post_thumbnail_url( $article->ID ,'panm360_home_slider' );//$image_data['sizes']['medium_large'];
+	$image = get_the_post_thumbnail_url( $article->ID ,'panm360_home_slider_small' );//$image_data['sizes']['medium_large'];
 	
 
 	
@@ -58,7 +58,7 @@
 	
 	$post_id = get_the_id();
 
-	$image = get_image_thumb_article( $post_id , 'panm360_home_slider'  );
+	$image = get_image_thumb_article( $post_id , 'panm360_home_slider_small'  );
 	
 	$permalien = get_permalink( $post_id );
 	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$post_id);
