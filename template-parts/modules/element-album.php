@@ -45,10 +45,11 @@
 -->
 			<img
 			class="--lozad"
-			srcset="<?php echo $pochette; ?> 980w,
+			srcset="
 					<?php echo $pochette_300; ?> 375w,
 					<?php echo $pochette_400; ?> 400w,
-					<?php echo $pochette_500; ?> 500w
+					<?php echo $pochette_500; ?> 500w,
+					<?php echo $pochette; ?> 980w,
 			"
 			sizes="(max-width:400px) 400px,
 					(max-width:768px) 300px,

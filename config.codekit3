@@ -57,6 +57,22 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/acf-json/en/group_5ea84b63f310e.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/en/group_5ea84b63f310e-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/fr/group_5e6572519d7cb.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/fr/group_5e6572519d7cb-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/acf-json/fr/group_5e6687120cc07.json": {
 		"ft": 524288,
 		"oA": 1,

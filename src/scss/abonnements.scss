@@ -141,7 +141,7 @@
     bottom: 0;
     width: 100%;
     background-color: $bleu;
-    z-index: 10;
+    z-index: 500;
     left: 0;
     padding: 3em 2em;
     text-align: center;
@@ -167,6 +167,26 @@
 	    text-align: center;
 	    padding: 0 10px;
 	    z-index: 5;
+    }
+    
+    &.message_cookie {
+	    .message_cookie--content {
+			color: #000;
+			font-weight: 700;
+			max-width: 700px;
+			margin: 0 auto;
+			text-transform: uppercase;
+			p:first-child{
+				padding-top: 20px;
+			}
+			a {
+				text-shadow: none;
+				color: #fff;
+			}
+			strong, .strong {
+				color: #fff;
+			}
+	    }
     }
 }
 

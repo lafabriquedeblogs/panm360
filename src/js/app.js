@@ -35,7 +35,6 @@ import block_has_columns from './block-columns.js';
 		}
 		//
 	}	
-
 		
 	/*
 		----------------------------------------------------------------------------------------------------
@@ -62,7 +61,11 @@ import block_has_columns from './block-columns.js';
 	/*
 		----------------------------------------------------------------------------------------------------
 	*/
-
+		function initAddThis() {
+		    addthis.init()
+		 }
+		
+			
 	
 	$(document).ready(function(){
 		
@@ -70,6 +73,7 @@ import block_has_columns from './block-columns.js';
 		
 		$(w).load(function(){
 			$(".at-share-btn-elements").prepend('<a class="a-icon-instagram-link" role="button" href="https://www.instagram.com/panm360/" target="_blank"><svg class="icon-instagram-link"><use xlink:href="#instagram"></use></svg></a>');
+			initAddThis();
 		});
 		
 		if( $("#new-featured-slider").length > 0 ){
