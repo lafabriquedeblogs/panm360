@@ -45,11 +45,15 @@ $is_pub = false;
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<article>
-
+			<?php
+				$agendas_commentes = get_agendas_commentes();
+				if( count($agendas_commentes) > 0 ):
+			?>
 			<div id="wrap-square-featured-slider">
 				<ul id="square-featured-slider">
 					<?php
-						$agendas_commentes = get_agendas_commentes();
+						
+						
 						$agendas_commentes = array_slice($agendas_commentes,0, 10);
 						foreach( $agendas_commentes as $item ){
 							include( locate_template( '/template-parts/modules/element-slider-square.php', false, false ) );
@@ -57,6 +61,8 @@ $is_pub = false;
 					?>
 				</ul><!-- new-featured-slider -->
 			</div><!-- wrap-new-featured-slider -->
+			<?php endif; ?>
+			
 							
 				<header class="entry-header">
 					<h1 class="entry-title has-text-align-center entry-title-agenda"><?php _e('Agenda','panm360'); ?> <span class="bold">360</span></h1>

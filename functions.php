@@ -133,6 +133,7 @@ function disable_emojis() {
 }
 add_action( 'init', 'disable_emojis' );
 
+/*
 function create_new_roles_panm360(){
 	add_role( 'membre_free', 'Abonné gratuit', array(
 		'read' => true,
@@ -146,6 +147,7 @@ function create_new_roles_panm360(){
 	) );	
 }
 add_action( 'init', 'create_new_roles_panm360' );
+*/
 /**
  * Filter function used to remove the tinymce emoji plugin.
  * 
@@ -396,6 +398,7 @@ function unset_url_field($fields){
    } 
        return $fields;
 }
+
 
 
 /* ----------- / END REDIRECTS / --------------- */

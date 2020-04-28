@@ -663,6 +663,11 @@ h1.category-title {
 	flex-wrap: nowrap;
 	align-items: center;
 	margin-bottom: 35px;
+	&.lang-en {
+		img {
+			margin-right: 15px;
+		}
+	}
 } 
 @media screen and (min-width:535px){
 	.section-titre {

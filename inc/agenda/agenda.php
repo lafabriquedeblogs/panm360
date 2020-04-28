@@ -164,14 +164,14 @@
 		$end = date('Y/m/d', strtotime("+30 days"));
 		
 		$dates = createDateRange( $start , $end );
-					
+
+		
 		$concerts = array();
 		$i = 0;
 		
 		add_filter( 'posts_where','my_posts_where' );
 		
 		// !!!!!!!
-		
 		//$dates = array_slice($dates, 10);
 		// !!!!!!!
 		

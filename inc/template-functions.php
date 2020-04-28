@@ -737,10 +737,11 @@ function increase_user_viewed_posts( $user_id, $post_id ){
 	$viewed_posts = get_user_meta( $user_id , 'viewed_posts', false );
 	echo return_nombre_de_posts_consultes( $viewed_posts );
 }
+
 function return_nombre_de_posts_consultes( $viewed_posts , $last = false ){
 		// nombre d'article maximum autorisé
 		// todo: créer l'option dans l'admin
-		$max_posts = 5;
+		$max_posts = 10;
 		
 		$current_posts = count($viewed_posts);
 		$remain_posts = $max_posts - $current_posts;
@@ -762,6 +763,22 @@ function return_nombre_de_posts_consultes( $viewed_posts , $last = false ){
 				break;
 			case 5:
 				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'cinquième' : 'fifth';
+				break;
+			case 6:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'sixième' : 'sixth';
+				break;	
+			case 7:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'septième' : 'seventh';
+				break;	
+			case 8:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'huitième' : 'eighth';
+				break;
+			case 9:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'neuvième' : 'ninth';
+				break;
+			case 10:
+				$article = ( ICL_LANGUAGE_CODE == 'fr' ) ? 'dixième' : 'tenth';
+				break;
 		}
 
 		if( $last ) {

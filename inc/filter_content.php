@@ -9,34 +9,76 @@ function filter_the_content_in_the_main_loop( $content ) {
 	
 	
 	$is_good = get_field( 'rendre_ce_contenu_accessible_dans_abonnement', $post->ID);
-
 	
-	if( iam_admin() || iam_author_contributor() || $is_good == '1'){
+	$user_id = get_current_user_id();
+	$user_premium = is_user_membership_premium( $user_id );	
+	
+	$ok_by_cookie = true;
+
+	if( is_single() ){
+	
+		$limit = 5;
+		$cookie = $_COOKIE['wpb_visit_time'];
+		
+		if( isset( $cookie ) ):
+			
+			
+			$cookie_array = explode(",", $cookie);
+			
+			
+			if( count($cookie_array)-1 >= $limit ){
+			
+				$ok_by_cookie = false;
+			
+			} else {
+			
+				$visit_time = date($cookie_array[0]);
+				$end_time =  strtotime($visit_time) + (30 * DAY_IN_SECONDS);
+				//$end_time =  strtotime($visit_time) + (5 * MINUTE_IN_SECONDS);
+				$new_cookie_content = $cookie .",". $post->ID;
+				setcookie( 'wpb_visit_time', $new_cookie_content, $end_time, COOKIEPATH, COOKIE_DOMAIN, is_ssl() );
+				$ok_by_cookie = true;		
+			}
+			
+		else:
+		
+				$visit_time = date('Y/m/d');
+				setcookie( 'wpb_visit_time', $visit_time . ",". $post->ID, time() + (30 * DAY_IN_SECONDS), COOKIEPATH, COOKIE_DOMAIN, is_ssl() );		
+		
+		
+		endif;
+	}
+	
+		
+	if( iam_admin() || iam_author_contributor() || $is_good == '1' || is_page() || $user_premium || $ok_by_cookie ){
 		return $content;
 	}
 	
-	$user_id = get_current_user_id();
-	
-	$user_premium = is_user_membership_premium( $user_id );
+
 	
 	$viewed_posts = get_user_meta( $user_id , 'viewed_posts', false );
 	
 
-	
-	
 	// l'utilisateur est un abonné premium
 	// ou on est sur une page 
 	// full accès au contenu
+/*
 	if( is_page() || $user_premium ){
 		return $content;
 	}
+*/
 	
+		
 	// on est sur une page single
-	// l'utilisateur n'est pas un abonné premium ou gratuit
+	// l'utilisateur n'est pas un abonné premium ou gratuit et le cookie est plein
 	// restricted accès au contenu	
 	if( $user_id == 0 && !is_page() && is_main_query() && in_the_loop() ){
 		
+		//if( !$ok_by_cookie ){
+			//return return_post_excerpt( $content, $post );
+		//}
 		return return_post_excerpt( $content, $post );
+		
 	}
 	
 	// on est sur une page single
@@ -67,7 +109,7 @@ function filter_the_content_in_the_main_loop( $content ) {
 		
 		// nombre d'article maximum autorisé
 		// todo: créer l'option dans l'admin
-		$max_posts = 5;
+		$max_posts = 10;
 		
 		// on regarde combien d'articles l'utilisateur a lu
 		// et si la date du prochain renouvellement d'abonnement
@@ -90,4 +132,19 @@ function filter_the_content_in_the_main_loop( $content ) {
 	}
 	
 }
+
+
+function check_for_cookies_in_singles(){
+	
+	
+	if( !isset( $_COOKIE['wpb_visit_time'] )){
+
+		$visit_time = date('Y/m/d');
+		//setcookie( 'wpb_visit_time', $visit_time, time() + (5 * MINUTE_IN_SECONDS), COOKIEPATH, COOKIE_DOMAIN, is_ssl() );
+		setcookie( 'wpb_visit_time', $visit_time, time() + (30 * DAY_IN_SECONDS), COOKIEPATH, COOKIE_DOMAIN, is_ssl() );
+		
+	}	
+}
+add_action('init', 'check_for_cookies_in_singles'); 
+
 

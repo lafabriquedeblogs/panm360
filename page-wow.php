@@ -24,8 +24,13 @@ get_header();
 							
 							
 							<div class="section--element">
-								<h4 id="albums-wow--title" class="section-titre"><span><?php _e('Albums','panm360'); ?></span> <img src="<?php echo get_template_directory_uri(  ) ;?>/assets/img/wow.svg"  width="151px" height="53px"  alt="wow" /></h4>
-								
+								<h4 id="albums-wow--title" class="section-titre lang-<?php echo ICL_LANGUAGE_CODE;?>">
+									<?php if( ICL_LANGUAGE_CODE == 'fr' ): ?>
+										<span>Albums</span> <img src="<?php echo get_template_directory_uri(  ) ;?>/assets/img/wow.svg"  width="151px" height="53px"  alt="wow" />
+									<?php else: ?>
+										<img src="<?php echo get_template_directory_uri(  ) ;?>/assets/img/wow.svg"  width="151px" height="53px"  alt="wow" /> <span>Albums</span>
+									<?php endif; ?>
+								</h4>	
 								<ul class="section-list-albums">
 								<?php
 									
