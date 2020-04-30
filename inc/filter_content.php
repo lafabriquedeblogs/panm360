@@ -187,11 +187,8 @@ function check_for_cookies_in_singles(){
 	if( !isset( $_COOKIE['wpb_visit_time'] )){
 
 		$visit_time = date('Y/m/d');
-		//setcookie( 'wpb_visit_time', $visit_time, time() + (5 * MINUTE_IN_SECONDS), COOKIEPATH, COOKIE_DOMAIN, is_ssl() );
 		setcookie( 'wpb_visit_time', $visit_time, time() + (30 * DAY_IN_SECONDS), COOKIEPATH, COOKIE_DOMAIN, is_ssl() );
 		
 	}	
 }
-add_action('init', 'check_for_cookies_in_singles'); 
-
-
+add_action('init', 'check_for_cookies_in_singles');

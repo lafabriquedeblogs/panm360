@@ -65,7 +65,31 @@ import block_has_columns from './block-columns.js';
 		    addthis.init()
 		 }
 		
-			
+	// Référence: http://www.html5rocks.com/en/tutorials/speed/animations/
+	
+	var derniere_position_de_scroll_connue = 0;
+	var ticking = false;
+	
+	function faireQuelqueChose(position_scroll) {
+	  // faire quelque chose avec la position du scroll
+	  if(jQuery(".message_cookie").is(":visible")){
+		   jQuery(".message_cookie").fadeOut(200);
+	  }
+	  
+	}
+	
+	window.addEventListener('scroll', function(e) {
+	  derniere_position_de_scroll_connue = window.scrollY;
+	
+	  if (!ticking) {
+	    window.requestAnimationFrame(function() {
+	      faireQuelqueChose(derniere_position_de_scroll_connue);
+	      ticking = false;
+	    });
+	  }
+	
+	  ticking = true;
+	});			
 	
 	$(document).ready(function(){
 		

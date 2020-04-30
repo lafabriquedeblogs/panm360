@@ -88,6 +88,12 @@ p.lire-la-suite {
 		}
 	}
 }
+.section-text {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin: 0 1.125em 75px;
+    color: #333;	
+}
 .has-text-align-center {
 	text-align: center;	
 }
@@ -341,6 +347,7 @@ h1.category-title {
 	font-family: $rubik;
 	font-weight: 700;
 	font-size: 1.250em;
+	min-width: 0;
 	.nav-links {
 		display: flex;
 		
@@ -678,6 +685,9 @@ h1.category-title {
 	}
 	.plus-de {
 		margin: 0;
+	}
+	.section-text {
+    	margin: 0 1.125em 75px 0;
 	}
 }
 @media screen and (min-width:600px){

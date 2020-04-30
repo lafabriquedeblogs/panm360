@@ -20,7 +20,9 @@
 									endwhile;
 																
 								?>
-								<li id="pages-liste-navigation" >
+
+							</ul><!-- section-content--has-6-columns -->
+								<div id="pages-liste-navigation" >
 									<?php
 											the_posts_pagination( array(
 											'mid_size'  => 4,
@@ -28,9 +30,7 @@
 											'next_text' => __( 'Suivante', 'panm360' ),
 										) );
 									?>
-								</li>
-							</ul><!-- section-content--has-6-columns -->
-						
+								</div>						
 					</div><!-- section-content-c -->
 					
 				</div><!-- section-inner -->

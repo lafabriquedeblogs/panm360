@@ -836,8 +836,8 @@ function return_post_excerpt( $content, $postit, $member = false ){
 		$content_total_length = strlen( $content );
 		$words = $content_total_length / 5 ;
 		$excerpto = substr( $content , 0, $words );
-		$excerpt = balancetags( $excerpto );
-		$excerpt .= '[...]';
+		$excerpt = balancetags( $excerpto , true);
+		
 				
 		if( !$member ){
 			ob_start();

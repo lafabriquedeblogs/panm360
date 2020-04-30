@@ -18,7 +18,7 @@
 	&.open {
 		display: block;
 		position: absolute;
-		top: 105px;
+		top: 100px;
 		width: 100vw;
 		z-index: 5;
 		@include wide-screen;

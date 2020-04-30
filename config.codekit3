@@ -1086,6 +1086,14 @@
 		"oAP": "/page-agenda.php",
 		"oF": 0
 		},
+	"/page-borealis.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-borealis.php",
+		"oF": 0
+		},
 	"/page-boutique.php": {
 		"cB": 0,
 		"ft": 8192,
