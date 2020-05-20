@@ -92,7 +92,7 @@ function add_addthis(){
 	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="google-site-verification" content="=VTCijZR84yTYbBCjuRst-zSYuF6B-qWIRe9ItH1ceSE" />
-	<script type="text/javascript" async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df97d325d480cb8&async=1&domready=1"></script>
+<!-- 	<script type="text/javascript" async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df97d325d480cb8&async=1&domready=1"></script> -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147470280-1"></script>
 	<script>

@@ -43,11 +43,22 @@ export default function main_menu_subMenu(){
 			
 			let _index = jQuery(this).parent().index();
 			
+			
+			
 			if( _index == 0) return;
 			
 			if( jQuery(this).parent().hasClass("menu-item-has-children") ){
 				
 				jQuery(this).on("mouseover", function(){
+					
+					/*
+					 *	temporaire tant que ecouter n'a pas de sous menu
+					*/
+					if( _index == 3) _index = 2;
+					/*
+					 *	------------------------------------------------
+					*/
+					
 					clearTimeout(_to_menu);
 					jQuery("#sub-nav-desktop").addClass("active");
 					go_to_slide_menu( _index );

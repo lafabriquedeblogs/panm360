@@ -41,6 +41,7 @@
 		color: $gris_light_alt;
 		margin-top: 30px;
 		//margin-bottom: 4.500em;
+		
 		a:nth-child(1){
 				display: none;
 		}
@@ -58,7 +59,7 @@
 			font-size: 0.9em;
 			text-decoration: none;
 			font-family: $rubik;
-			
+			pointer-events: none;
 			&.current-menu-item {
 				font-weight: 500;
 				color: #fff;
@@ -76,6 +77,9 @@
 		&.active {
 			opacity: 1;
 			transition: opacity 300ms ease-out;
+			.sub-menu a {
+				pointer-events: auto;
+			}
 		}
 	}
 	

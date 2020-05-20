@@ -387,7 +387,8 @@
       color: #b5b5b5;
       font-size: 0.9em;
       text-decoration: none;
-      font-family: "Rubik", sans-serif; }
+      font-family: "Rubik", sans-serif;
+      pointer-events: none; }
       #sub-nav-desktop .sub-menu a.current-menu-item {
         font-weight: 500;
         color: #fff; }
@@ -399,6 +400,8 @@
     #sub-nav-desktop.active {
       opacity: 1;
       transition: opacity 300ms ease-out; }
+      #sub-nav-desktop.active .sub-menu a {
+        pointer-events: auto; }
   .archive #sub-nav-desktop {
     opacity: 1; } }
 
