@@ -185,6 +185,19 @@ h1.category-title {
 		width: 19px;
 		height: 27px;
 	}
+	small {
+		font-size: 10px;
+		font-weight: 400;
+		text-transform: none;
+		font-family: $open;
+		padding-right: 10px;
+	}
+	
+	.lien-full-content {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
 }
 .home {
 	.section-titre {
