@@ -27,66 +27,66 @@ get_header();
 				<div id="critiques-albums" class="section-inner">
 					<div class="section-content ">
 						<div class="section-content--main">
+
+
 							<div class="section--element">
-																		
+								<h4 class="section-titre"><span><?php _e('Listes d\'écoutes','panm360'); ?></span> <a><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+								
+								<ul class="section-list-albums">
 								<?php
 									
-									$regarder_args = array(
-										'post_type' => 'post',
-										'category__in' => array( 5104 , 280 ),
-										'posts_per_page' => 1,
+									$albums_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+									$albums_count = 36;	
+									
+									$args = array(
+										'post_type' => 'ecoutes',
+										'posts_per_page' => $albums_count,
 										'post_status' => array('publish'),
-										'orderby' => 'date',
-										'order' => 'DESC'
+										'orderby' => 'date',	
+										'order' => 'DESC',
+										'paged' => $albums_paged,																
 									);
 									
-									$article = new WP_Query($regarder_args);
-									$regarder = $article->posts;
-									//$article = array_shift($regarder);
+									$albums = new WP_Query($args);
 									
-									while ( $article->have_posts() ) :
-										$article->the_post();
-											include( locate_template( '/template-parts/modules/element-main.php', false, false ) );
-									endwhile;
-									wp_reset_query() ;
+									while($albums->have_posts() ){
+											$albums->the_post();
+											
+											include( locate_template( '/template-parts/modules/element-album.php', false, false ) );
+										//$albums_count--;
+									}
 								?>
-								
-								<?php if( count($regarder) > 0 ):
-									
-									$regarder_args_suite = array(
-										'post_type' => 'post',
-										'category__in' => array(5104,280),
-										'posts_per_page' => 24,
-										'offset' => 1,
-										'post_status' => array('publish'),
-										'orderby' => 'date',
-										'order' => 'DESC'
-									);
-									
-									$articles = new WP_Query($regarder_args_suite);
-									
-								?>	
-								<ul class="content-list-articles--max-2-cols">
-									
-									<?php
-										while( $articles->have_posts() ){
-											$articles->the_post();
-										//foreach( $regarder as $article ){
-									?>
-										<li>
-											<?php include( locate_template( '/template-parts/modules/element-article.php', false, false ) ); ?>
-										</li>									
-									<?php		
-										}
-										wp_reset_query(  );
-									?>
-
 								</ul>
-								<?php endif; ?>
+
 								
+								<?php /**/ ?>	
+								<div id="pages-liste-navigation">
+									<nav class="navigation pagination" role="navigation" aria-label="Publications">
+										<div class="nav-links">
+										     <?php
+										     $big = 999999999;
+										     echo paginate_links( array(
+										          'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+										          'format' => '?paged=%#%',
+										          'current' => max( 1, get_query_var('paged') ),
+										          'total' => $albums->max_num_pages,
+										          'prev_text' => '&laquo;',
+										          'next_text' => '&raquo;'
+										     ) );
+										?>
+										</div>
+									</nav>
+								</div><!-- pages-liste-navigation -->
+								<?php /**/ ?>
+														
+								<?php wp_reset_postdata(); ?>
 								
 							</div><!-- section--element -->
 							
+
+							<?php include( locate_template( '/template-parts/modules/sections.php', false, false ) ); ?>
+
+								
 						</div> <!-- section-content--main -->
 						
 						<div class="aside-content">
@@ -106,57 +106,6 @@ get_header();
 				</div>
 			</section>
 
-<?php /* ?>			
-			<div id="top-360-hero" class="wide-screen"></div>			
-			<div id="text-introduction-panm360">
-				<?php
-					
-					$top360_id = apply_filters( 'wpml_object_id', 2683, 'page', TRUE  );
-					$top360_content = get_post( $top360_id );
-					$top360_content = $top360_content->post_content;
-					
-					echo $top360_content;
-				?>
-			</div>
-			
-			<section class="section">
-				<div id="critiques-albums" class="section-inner">
-				
-					<div class="section-content-c">
-						
-						<?php
-							
-							$top_args = array(
-								'posts_per_page' => 18,
-								'post_type' => 'records',
-								'orderby' => 'rand'
-							);
-							
-							$top_query = new WP_Query($top_args);
-							
-							$posts_array = $top_query->posts;
-							?>
-								<ul class="section-content--has-6-columns">
-							<?php
-								foreach( $posts_array as $post ){
-								
-									setup_postdata( $post );
-																	
-									include( locate_template( '/template-parts/modules/element-album.php', false, false ) ); 
-											
-								}
-
-								?>
-								</ul>
-							<?php
-								wp_reset_postdata();								
-							
-						?>			
-					</div>
-					
-				</div>
-			</section>
-<?php */ ?>	
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

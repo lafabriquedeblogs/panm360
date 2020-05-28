@@ -28,7 +28,6 @@
 					<?php panm360_post_thumbnail(); ?>
 				</div>
 				<div class="lp-metas-addthis">
-<!--
 					<div class="lp-metas">
 						<?php if( $pays ): ?>
 							<span class="single-album-pays"><span  class="bleu bold meta-name"><?php _e('Pays','panm360'); ?> : </span><?php echo $pays;?></span>
@@ -43,7 +42,6 @@
 							<span class="single-album-annee"><span class="bleu bold meta-name"><?php _e('Année','panm360'); ?> : </span><?php echo $annee;?></span>
 						<?php endif; ?>
 					</div>
--->
 					<!-- Go to www.addthis.com/dashboard to customize your tools -->
 					<div class="addthis_inline_share_toolbox"></div>
 				</div>
