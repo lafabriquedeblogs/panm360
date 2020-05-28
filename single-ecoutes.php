@@ -59,6 +59,7 @@
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div><!-- .entry-content -->				
+				
 				<footer class="entry-footer">
 					
 					<?php panm360_entry_footer(); ?>
@@ -74,7 +75,7 @@
 		?>
 		
 		
-			</div>
+			</div> <!-- .single-album-body.playlist-body -->
 		
 
 		</article><!-- #post-<?php the_ID(); ?> -->
