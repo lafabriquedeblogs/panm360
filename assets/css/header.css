@@ -258,8 +258,11 @@
         display: block;
         padding: 2px 0; }
 
-#menu-top-container #menu-top #panm-lang-switch a {
+#menu-top-container #menu-top a {
   font-weight: 700; }
+
+#menu-top-container #menu-top #top-sub-menu a {
+  font-weight: 400; }
 
 @media screen and (min-width: 1024px) {
   #menu-top-container ul {
@@ -269,16 +272,38 @@
     display: none; } }
 
 @media screen and (max-width: 1024px) {
-  #menu-top-container #menu-top #menu-panm,
+  #menu-top-container #menu-top #menu-panm {
+    display: none; } }
+
+@media screen and (max-width: 525px) {
   #menu-top-container #menu-top #panm-signin {
-    display: none; }
-  #menu-top-container #panm-connexion {
-    order: 10; } }
+    display: none; } }
 
 @media screen and (max-width: 440px) {
-  #menu-top-container #panm-connexion {
-    display: none !important; } }
+  #menu-top-container #menu-top #panm-connexion {
+    display: none; } }
 
+/*
+@media screen and (max-width: 1024px) {
+	#menu-top-container #menu-top #menu-panm,
+	#menu-top-container #menu-top #panm-signin,
+	#menu-top-container #panm-deconnexion {
+		display: none;
+	}
+	#menu-top-container #panm-connexion {
+		order:11;
+	}
+	#menu-top-container #panm-account {
+		order:10;
+	}
+
+}
+@media screen and (max-width: 440px) {
+	#menu-top-container #panm-connexion {
+		display: none !important;
+	}
+}
+*/
 #main-menu-mobile {
   display: none;
   background: #fff;

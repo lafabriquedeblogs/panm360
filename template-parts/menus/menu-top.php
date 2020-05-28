@@ -1,6 +1,19 @@
 <div id="menu-top-container">
 	<ul id="menu-top" class="menu">
-
+		
+		
+		<li id="menu-toggle-mobile">
+			<a class="bouton-menu-toggle-mobile">
+				<svg class="icon"><use xlink:href="#buenu"></use></svg>
+			</a>			
+		</li>
+		<li id="logo-mobile" >
+				<a href="<?php echo get_site_url();?>">
+					<?php /*<img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="Panm360"/>*/ ?>
+					<svg class="icon"><use xlink:href="#panm360"></use></svg>
+					<span class="baseline"><?php _e('Les meilleures musiques de partout','panm360'); ?></span>
+				</a>
+		</li>
 		
 		<li id="menu-panm" >
 			<a class="cross">
@@ -29,12 +42,14 @@
 					<span><?php _e('Mon compte','panm360'); ?></span>
 				</a>
 			</li>
+<!--
 			<li id="panm-deconnexion" class="menu-item">
 				<a href="<?php echo wp_logout_url(); ?>">
 					<svg class="icon"><use xlink:href="#eject"></use></svg>
 					<span><?php _e('Deconnexion','panm360'); ?></span>
 				</a>
 			</li>
+-->
 		<?php else: ?>
 			<li id="panm-connexion" class="menu-item">
 				<a href="<?php echo get_lien_page_mon_compte();?>">
@@ -60,18 +75,7 @@
 		</li>
 		<?php endif; */?>
 		
-		<li id="menu-toggle-mobile">
-			<a class="bouton-menu-toggle-mobile">
-				<svg class="icon"><use xlink:href="#buenu"></use></svg>
-			</a>			
-		</li>
-		<li id="logo-mobile" >
-				<a href="<?php echo get_site_url();?>">
-					<?php /*<img src="<?php echo get_template_directory_uri( );?>/assets/img/panm360.png"  alt="Panm360"/>*/ ?>
-					<svg class="icon"><use xlink:href="#panm360"></use></svg>
-					<span class="baseline"><?php _e('Les meilleures musiques de partout','panm360'); ?></span>
-				</a>
-		</li>
+		
 	
 
 		<li id="panm-search" class="menu-item">

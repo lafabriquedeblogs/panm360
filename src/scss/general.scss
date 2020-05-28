@@ -171,11 +171,12 @@ h1.category-title {
 .section-titre {
 	font-weight: 700;
 	text-transform: uppercase;
-	font-size: 	1.125em;
-	display: flex;
+	font-size: 	1.8em;
+	display: box;
 	flex-wrap: nowrap;
 	align-content: center;
 	padding-left: 1.125em;
+	line-height: 1;
 	span {
 		//display: block;
 		margin-right: .7em;
@@ -186,7 +187,7 @@ h1.category-title {
 		height: 27px;
 	}
 	small {
-		font-size: 10px;
+		font-size: 0.50em;
 		font-weight: 400;
 		text-transform: none;
 		font-family: $open;
@@ -754,6 +755,17 @@ h1.category-title {
 	}
 	.parent-title {	
 		margin-bottom: -40px;
+	}
+}
+
+@media screen and (min-width:1024px){
+		.section-titre {
+			display: flex;
+		}
+	.home {
+		.section-titre {
+			display: flex;
+		}
 	}
 }
 @media screen and (min-width:1280px){
