@@ -1,24 +1,22 @@
 <?php
+	$count = 12;
+	
+	$start = date('Y/m/d');
+	$end = date('Y/m/d', strtotime($start. ' + 15 days'));
 	
 	$year = date('Y');
 	$month =  date('m');
 	$nonce = wp_create_nonce("my_user_like_nonce");
-								
-	//$post_start = 1;
+	
+	//$calendrier = get_post_meta( 6944, 'agenda_mini', true );
+	
+	$calendrier = get_transient( 'agenda-mini' );
+	
+	if( false === ( $calendrier = get_transient( 'agenda-mini' )) ){
+		$calendrier = get_liste_concerts( $start, $end , $count );
+		set_transient( 'agenda-mini',$calendrier, 1 * DAY_IN_SECONDS );
+	}
 
-	//$timeout = false;
-	//$today_timestamp = strtotime($start);
-	
-	
-	$calendrier = get_transient( 'liste_journaliere_des_concerts' );
-		
-    if ( false === $calendrier ) {
-	    $calendrier = get_liste_concerts( $start, $end , $count );
-        set_transient( 'liste_journaliere_des_concerts', $calendrier, 1 * DAY_IN_SECONDS );
-    }
-	
-	
-	//$calendrier = get_liste_concerts( $start, $end , $count );
 ?>
 	
 		

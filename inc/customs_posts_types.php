@@ -320,7 +320,66 @@ function panm360_customs_posts_types() {
 		);
 		
 	register_post_type( 'interviews', $args_interviews );
-	
+
+	$labels_ecoutes = array(
+		'name'                  => _x( 'Liste d\'écoutes', 'Post Type General Name', 'panm360' ),
+		'singular_name'         => _x( 'Liste d\'écoute', 'Post Type Singular Name', 'panm360' ),
+		'menu_name'             => __( 'Liste d\'écoute', 'panm360' ),
+		'name_admin_bar'        => __( 'Liste d\'écoute', 'panm360' ),
+		'archives'              => __( 'Item Archives', '' ),
+		'attributes'            => __( 'Item Attributes', '' ),
+		'parent_item_colon'     => __( 'Parent Item:', '' ),
+		'all_items'             => __( 'All Items', '' ),
+		'add_new_item'          => __( 'Add New Item', '' ),
+		'add_new'               => __( 'Add New', '' ),
+		'new_item'              => __( 'New Item', '' ),
+		'edit_item'             => __( 'Edit Item', '' ),
+		'update_item'           => __( 'Update Item', '' ),
+		'view_item'             => __( 'View Item', '' ),
+		'view_items'            => __( 'View Items', '' ),
+		'search_items'          => __( 'Search Item', '' ),
+		'not_found'             => __( 'Not found', '' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', '' ),
+		'featured_image'        => __( 'Featured Image', '' ),
+		'set_featured_image'    => __( 'Set featured image', '' ),
+		'remove_featured_image' => __( 'Remove featured image', '' ),
+		'use_featured_image'    => __( 'Use as featured image', '' ),
+		'insert_into_item'      => __( 'Insert into item', '' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', '' ),
+		'items_list'            => __( 'Items list', '' ),
+		'items_list_navigation' => __( 'Items list navigation', '' ),
+		'filter_items_list'     => __( 'Filter items list', '' ),
+	);
+	$rewrite_ecoutes = array(
+		'slug'                  => 'ecoutes-panm360',
+		'with_front'            => false,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+	$args_ecoutes = array(
+		'label'                 => __( 'Liste d\'écoute', 'panm360' ),
+		'description'           => __( 'Liste d\'écoute', 'panm360' ),
+		'labels'                => $labels_ecoutes,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes', 'post-formats','author','excerpt', 'comments'  ),
+		'taxonomies'            => array( 'category', 'post_tag', 'pays', 'genre' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 20,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'post',
+		'show_in_rest'          => true,
+		'rewrite'				=> $rewrite_ecoutes
+		);
+		
+	register_post_type( 'ecoutes', $args_ecoutes );
+		
 }
 add_action( 'init', 'panm360_customs_posts_types', 0 );
 

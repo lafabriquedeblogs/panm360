@@ -162,7 +162,6 @@ function disable_emojis_tinymce( $plugins ) {
 	}
 }
 
-
 function tenpixelsleft_custom_posts_per_page($query) {
     
     if (!is_admin() && $query->is_main_query() && $query->is_tax(array('genre','annee','label','pays')) ){

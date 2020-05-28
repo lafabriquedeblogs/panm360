@@ -1270,6 +1270,14 @@
 		"oAP": "/single-concerts.php",
 		"oF": 0
 		},
+	"/single-ecoutes.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-ecoutes.php",
+		"oF": 0
+		},
 	"/single-interviews.php": {
 		"cB": 0,
 		"ft": 8192,

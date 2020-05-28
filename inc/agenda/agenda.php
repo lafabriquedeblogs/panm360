@@ -51,18 +51,8 @@
 	}
 	
 	function get_liste_concerts( $start, $end, $count , $genre = false ){
-		
 
-  	
-	/*
-    	$result = get_transient( 'liste_journaliere_des_concerts' );
-		
-    	if ( false === $result ) {
-    	    set_transient( 'liste_journaliere_des_concerts', $result, DAY_IN_SECONDS );
-    	}
-	*/
 		$dates = createDateRange( $start , $end );
-		
 		
 		$concerts = array();
 		$i = 0;
@@ -220,3 +210,16 @@
 			
 		return $re_sult;
 	}
+
+function my_project_updated_send_email( $post_id ) {
+ 
+    // If this is just a revision, don't send the email.
+    if ( wp_is_post_revision( $post_id ) || get_post_type( $post_id ) != 'agenda') {
+        return;
+    }
+    $start = date('Y/m/d');
+	$end = date('Y/m/d', strtotime($start. ' + 15 days'));
+	$calendrier = get_liste_concerts( $start, $end , 12 );
+	update_post_meta( 6944, 'agenda_mini', $calendrier );
+}
+//add_action( 'save_post', 'my_project_updated_send_email' );
