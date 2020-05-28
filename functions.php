@@ -166,7 +166,7 @@ function tenpixelsleft_custom_posts_per_page($query) {
     
     if (!is_admin() && $query->is_main_query() && $query->is_tax(array('genre','annee','label','pays')) ){
 	    $query->set('posts_per_page', '24');
-	    $query->set( 'post_type', 'records' );
+	    $query->set( 'post_type', array('records','ecoutes') );
     }
     
     return $query;

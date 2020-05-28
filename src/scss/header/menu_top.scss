@@ -159,12 +159,18 @@
 		display: none;
 	}
 }
+
 @media screen and (max-width: 1024px) {
 	#menu-top-container #menu-top #menu-panm,
-	#menu-top-container #menu-top #panm-signin,
-	#menu-top-container #menu-top #panm-accoun,
-	#menu-top-container #menu-top #panm-connexion {
+	#menu-top-container #menu-top #panm-signin {
 		display: none;
 	}
+	#menu-top-container #panm-connexion {
+		order:10;
+	}
 }
-
+@media screen and (max-width: 440px) {
+	#menu-top-container #panm-connexion {
+		display: none !important;
+	}
+}
