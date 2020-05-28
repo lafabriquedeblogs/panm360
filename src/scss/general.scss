@@ -703,6 +703,17 @@ h1.category-title {
     	margin: 0 1.125em 75px 0;
 	}
 }
+
+.parent-title {
+	font-family: $rubik;
+	font-size: 1.850em;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: block;
+	margin-bottom: -60px;
+}
+
 @media screen and (min-width:600px){
 	.filtres-content-tabs {
 		flex-direction: row;
@@ -733,6 +744,16 @@ h1.category-title {
 	}
 	.addthis_inline_share_toolbox {
 		transform: scale(0.8,0.8) translateX(-20px);
+	}
+	
+	.post-album.ecoutes {
+		h1.entry-title {
+			border-bottom: 1px #ccc solid;
+			padding-bottom: 0.5em;
+		}
+	}
+	.parent-title {	
+		margin-bottom: -40px;
 	}
 }
 @media screen and (min-width:1280px){
