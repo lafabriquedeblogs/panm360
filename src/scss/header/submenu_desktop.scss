@@ -36,11 +36,10 @@
 		max-width: 100vw;
 		text-align: center;
 		background-color: #333;
-		opacity: 0;
-		transition: opacity 300ms ease-out;
+		//opacity: 0;
+		//transition: opacity 300ms ease-out;
 		color: $gris_light_alt;
 		margin-top: 30px;
-		//margin-bottom: 4.500em;
 		
 		a:nth-child(1){
 				display: none;
@@ -59,7 +58,7 @@
 			font-size: 0.9em;
 			text-decoration: none;
 			font-family: $rubik;
-			pointer-events: none;
+			//pointer-events: none;
 			&.current-menu-item {
 				font-weight: 500;
 				color: #fff;
@@ -88,5 +87,24 @@
 			opacity: 1;
 		}
 	}
-	
+
+
+	#sub-nav-desktop {
+		border-top: 1px solid #E6E6EA;
+		background-color: #fff;
+		color: #333;
+		margin-top: 45px;
+		.sub-menu a {
+			color: #333;
+			&.current-menu-item {
+				color: #000;
+				color: $bleu;
+			}
+			
+			&:hover {
+				color: #333;
+			}
+
+		}
+	}	
 }

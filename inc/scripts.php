@@ -24,7 +24,7 @@ function panm360_scripts() {
 	
 	wp_enqueue_script( 'script-infinite-scroll', get_template_directory_uri() .'/assets/js/lib/infinite-scroll.pkgd.min.js', array('jquery'), false, true );
 	wp_enqueue_script( 'script-slick', get_template_directory_uri() . '/assets/js/lib/slick/slick.min.js', array('jquery'), false, false );
-	wp_enqueue_script( 'script-app', get_template_directory_uri() . '/assets/js/app-min.js', array(), false, true );
+	wp_enqueue_script( 'script-app', get_template_directory_uri() . '/assets/js/app-min.js?v=1', array(), false, true );
 	
 	if( is_page( array( 6944 , 10003 ) ) ){
 		wp_enqueue_style( 'panm360-datepicker-style', get_template_directory_uri().'/assets/js/lib/datepicker/datepicker.min.css' );

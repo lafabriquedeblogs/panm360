@@ -370,8 +370,6 @@
     max-width: 100vw;
     text-align: center;
     background-color: #333;
-    opacity: 0;
-    transition: opacity 300ms ease-out;
     color: #b5b5b5;
     margin-top: 30px; }
     #sub-nav-desktop a:nth-child(1) {
@@ -387,8 +385,7 @@
       color: #b5b5b5;
       font-size: 0.9em;
       text-decoration: none;
-      font-family: "Rubik", sans-serif;
-      pointer-events: none; }
+      font-family: "Rubik", sans-serif; }
       #sub-nav-desktop .sub-menu a.current-menu-item {
         font-weight: 500;
         color: #fff; }
@@ -403,7 +400,19 @@
       #sub-nav-desktop.active .sub-menu a {
         pointer-events: auto; }
   .archive #sub-nav-desktop {
-    opacity: 1; } }
+    opacity: 1; }
+  #sub-nav-desktop {
+    border-top: 1px solid #E6E6EA;
+    background-color: #fff;
+    color: #333;
+    margin-top: 45px; }
+    #sub-nav-desktop .sub-menu a {
+      color: #333; }
+      #sub-nav-desktop .sub-menu a.current-menu-item {
+        color: #000;
+        color: #5BC6E8; }
+      #sub-nav-desktop .sub-menu a:hover {
+        color: #333; } }
 
 @media screen and (min-width: 1024px) {
   #panm360-ghost, .menu-toggle {

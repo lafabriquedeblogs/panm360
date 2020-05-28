@@ -399,6 +399,13 @@ function set_default_object_terms( $post_id, $post ) {
                     wp_set_object_terms( $post_id, $defaults[$taxonomy], $taxonomy );
                 }
             }
+            
+			delete_transient( 'agenda-mini' );
+			$count = 12;
+			$start = date('Y/m/d');
+			$end = date('Y/m/d', strtotime($start. ' + 15 days'));			
+			$calendrier = get_liste_concerts( $start, $end , $count );
+			set_transient( 'agenda-mini',$calendrier, 1 * DAY_IN_SECONDS );      
         }
     }
 add_action( 'save_post', 'set_default_object_terms', 0, 2 );	

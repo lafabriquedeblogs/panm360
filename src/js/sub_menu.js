@@ -20,7 +20,8 @@ export default function main_menu_subMenu(){
 			}
 		
 			_to_menu = setTimeout(function(){
-				jQuery("#sub-nav-desktop").removeClass("active");
+				//jQuery("#sub-nav-desktop").removeClass("active");
+				go_to_slide_menu( 1 );
 			}, 100);		
 	
 	}

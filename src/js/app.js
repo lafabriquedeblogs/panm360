@@ -163,9 +163,11 @@ import block_has_columns from './block-columns.js';
 		
 		if( spotify != null) spotify.setAttribute("width","100%");
 
+/*
 $.getScript("//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5df97d325d480cb8&async=1&domready=1", function(){
    //alert("Script loaded and executed.");
 });
+*/
 /*
 		const observer = lozad('.lozad', {
 				rootMargin: '10px 0px', // syntax similar to that of CSS Margin
