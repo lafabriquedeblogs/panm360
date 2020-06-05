@@ -684,6 +684,9 @@ h1.category-title {
 	flex-wrap: nowrap;
 	align-items: center;
 	margin-bottom: 35px;
+	img {
+		max-width: 100px;
+	}
 	&.lang-en {
 		img {
 			margin-right: 15px;
