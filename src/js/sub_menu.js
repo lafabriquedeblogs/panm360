@@ -51,11 +51,11 @@ export default function main_menu_subMenu(){
 			if( jQuery(this).parent().hasClass("menu-item-has-children") ){
 				
 				jQuery(this).on("mouseover", function(){
-					
+					console.log(_index);
 					/*
 					 *	temporaire tant que ecouter n'a pas de sous menu
 					*/
-					if( _index == 3) _index = 2;
+					//if( _index == 3) _index = 2;
 					/*
 					 *	------------------------------------------------
 					*/
