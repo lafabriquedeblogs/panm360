@@ -250,6 +250,27 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/M.png": {
+		"ft": 32768,
+		"iS": 815,
+		"oA": 0,
+		"oAP": "/assets/img/M.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/M.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/M.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/panm-icones/100x100/m-blanc-sur-bleu.jpg": {
 		"ft": 16384,
 		"iS": 18967,
@@ -1078,6 +1099,14 @@
 		"oAP": "/page-agenda.php",
 		"oF": 0
 		},
+	"/page-balados.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-balados.php",
+		"oF": 0
+		},
 	"/page-borealis.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1140,6 +1169,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-nouvelles.php",
+		"oF": 0
+		},
+	"/page-playlistes.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-playlistes.php",
 		"oF": 0
 		},
 	"/page-regarder.php": {
@@ -1284,6 +1321,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/single-interviews.php",
+		"oF": 0
+		},
+	"/single-podcast.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-podcast.php",
 		"oF": 0
 		},
 	"/single-product-abonnement-panm360.php": {

@@ -12,6 +12,8 @@
 				$image = get_the_post_thumbnail_url( get_the_id(),'medium_large' );//$image_data['sizes']['medium_large'];
 				$introduction_presentation = get_field('lead');
 				$author = get_the_author();
+				
+				$genres = get_genre($page_id);
 		?>
 
 			<div id="header_interview">
@@ -36,9 +38,15 @@
 
 				<div class="wp-block-column">
 					
+					<?php if($genres): ?>
+					<div class="lp-metas lp-metas-interviews">
+						<span class="single-album-genre"><span class="bleu bold meta-name"><?php _e('Genres et styles','panm360'); ?> : </span><?php echo $genres;?></span>
+					</div>
+					<?php endif; ?>
+					
 					<div class="addthis_inline_share_toolbox"></div>
 					
-					<h4><?php _e('renseignements supplémentaires','panm360'); ?></h4>
+					<h4 class="infos-supp"><?php _e('renseignements supplémentaires','panm360'); ?></h4>
 						<?php
 							
 							if( have_rows('informations_supplementaires', $page_id ) ):
@@ -147,11 +155,9 @@
 									   // Case: Download layout.
 									   elseif( get_row_layout() == 'lecteur_audio_bandcampspotify' ): 
 										   
-										$lecteurs = get_sub_field('lecteur');
-										
-										if( $lecteurs != false ):
+										   $lecteurs = get_sub_field('lecteur');
 										  
-										foreach( $lecteurs as $lecteur ):
+										  foreach( $lecteurs as $lecteur ):
 									?>
 										<div class="wp-block-group">
 											<div class="wp-block-group__inner-container">
@@ -160,7 +166,7 @@
 										</div>									
 									<?php
 										endforeach;
-										endif;
+										
 										
 										$new_lecteurs = get_sub_field( 'code' );
 										

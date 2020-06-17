@@ -48,6 +48,7 @@ import block_has_columns from './block-columns.js';
 	
 	loupe_search.addEventListener('click', event => {
 		search_div.classList.toggle('active');
+		jQuery("#searchform .search-field").val('').focus();
 	});
 	
 	close_searchform.addEventListener('click', event => {

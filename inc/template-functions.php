@@ -704,6 +704,12 @@ function is_user_membership_premium( $user_id ){
 		'status' => array( 'active', 'complimentary', 'pending','free_trial'),
 	);  
 	
+/*
+	if ( ! function_exists( 'wc_memberships' ) ) {
+		return false;
+	}
+*/
+	
 	$active_memberships = wc_memberships_get_user_memberships( $user_id, $args );
 	
 	$active_memberships_names = array();
@@ -833,12 +839,16 @@ function return_post_excerpt( $content, $postit, $member = false ){
 		echo '</pre>';
 */
 		
-		// on supprime les iframes pour eviter les erreurs d'affichage;
+		// on supprime les iframes, les figure, .embed-liste-ecoute pour eviter les erreurs d'affichage;
+		
 		$pattern_iframe = "#<iframe[^>]+>.*?</iframe>#is";
 		$pattern_embed = "#<div class=\"embed-liste-ecoute\"[^>]+>.*?</div>#is";
+		$pattern_figure = "#<figure[^>]+>.*?</figure>#is";
+		
 		$content = preg_replace($pattern_embed, "", $content);
 		$content = preg_replace($pattern_iframe, "", $content);
-
+		$content = preg_replace($pattern_figure, "", $content);
+		
 		$content_total_length = strlen( $content );
 		$words = $content_total_length / 5 ;
 		$excerpto = substr( $content , 0, $words );

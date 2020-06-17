@@ -1,7 +1,7 @@
 <?php
 
 	$from = strtotime("2020-06-05");
-	$to = strtotime("2020-06-08");
+	$to = strtotime("2020-07-31");
 	$to_day = date("Y-m-d");
 	$today = strtotime($to_day);
 		

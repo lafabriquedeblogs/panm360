@@ -124,10 +124,17 @@ if ( ! function_exists( 'panm360_post_thumbnail' ) ) :
 		}
 
 		if ( is_singular() ) :
+		
+			$thumb = get_the_post_thumbnail( null,$size,'');
+			
+			if( empty($thumb)){
+				
+			}
+		
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail( $size ); ?>
+				<?php echo $thumb;//the_post_thumbnail( $size ); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
