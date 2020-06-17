@@ -25,7 +25,9 @@
 				
 				$author = get_the_author();
 				$lead = get_field('lead');
-	
+				
+				$genres = get_genre($page_id);
+				
 				if( $lead == false ):
 					//$lead = get_first_paragraph($post_id);
 					$lead = '';
@@ -40,6 +42,7 @@
 					<img src="<?php echo $image;?>" />
 				</div>
 				<div class="interview-header">
+					<span class="genre"><?php echo $genres;?></span>
 					<h1><?php the_title(); ?></h1>
 					<span class="author"><?php _e('par','panm360'); ?> <?php echo $author;?></span>
 					<div class="lead"><?php echo $lead;?></div>

@@ -40,7 +40,7 @@
 		}
 	}
 	h1 {
-		padding: 27px 0;
+		padding: 20px 0 27px;
 		border-bottom: 1px $gris_light solid;
 		margin: 0;
 	}
@@ -49,7 +49,16 @@
 		font-size: 0.813em;
 		padding: 27px 0;
 		display: block;
-	}	
+	}
+	
+	.genre {
+		
+		font-size: 20px;
+		text-transform: uppercase;
+		a {
+			text-decoration: none;
+		}
+	}
 }
 
 .panm-columns-1 {
