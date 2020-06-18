@@ -40,12 +40,17 @@
 						style="background-image: url('<?php echo $image;?>');background-size:cover; background-repeat: no-repeat;background-position: center center;"
 				>
 					<img src="<?php echo $image;?>" />
+					
 				</div>
 				<div class="interview-header">
 					<span class="genre"><?php echo $genres;?></span>
 					<h1><?php the_title(); ?></h1>
+					<div class="addthis_inline_share_toolbox"></div>
 					<span class="author"><?php _e('par','panm360'); ?> <?php echo $author;?></span>
-					<div class="lead"><?php echo $lead;?></div>
+					<?php if( !empty($lead)): ?>
+						<div class="lead"><?php echo $lead;?></div>
+					<?php endif; ?>
+					
 				</div>
 			</div><!-- wrap-new-featured-slider -->	
 

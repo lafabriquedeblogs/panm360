@@ -52,12 +52,17 @@
 	}
 	
 	.genre {
-		
+		display: inline-block;
+		padding-top: 27px;
 		font-size: 20px;
 		text-transform: uppercase;
 		a {
 			text-decoration: none;
 		}
+	}
+	
+	.addthis_inline_share_toolbox {
+		transform: none;
 	}
 }
 
@@ -139,6 +144,10 @@
 				position: absolute;
 				left: -999em;
 			}
+		}
+		
+		.genre {
+			padding-top: 0;
 		}
 		.interview-header {
 			flex: 0 0 50%;
