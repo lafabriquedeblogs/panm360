@@ -456,7 +456,7 @@ function get_liste_filtre_artiste(){
 function get_articles_par_terms( $term , $posts_per_page = -1 ){
 	$args = array(
 		'posts_per_page' => $posts_per_page,
-		'post_type' => array('records','post','gig_review'),
+		'post_type' => array('records','post','gig_review','interviews'),
 		'post_status' => 'publish',
 		'tax_query' => array(
 		    array(

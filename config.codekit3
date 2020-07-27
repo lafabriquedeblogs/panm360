@@ -1108,6 +1108,22 @@
 		"oAP": "/languages/readme.txt",
 		"oF": 0
 		},
+	"/liste_des_genres.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/liste_des_genres.php",
+		"oF": 0
+		},
+	"/liste_des_interviews.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/liste_des_interviews.php",
+		"oF": 0
+		},
 	"/page-accueil-old.php": {
 		"cB": 0,
 		"ft": 8192,
