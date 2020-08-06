@@ -53,7 +53,7 @@ get_header();
 					    'show_option_none'   => __( 'Pas de genre' ),
 					    'number'             => null,
 					    'echo'               => 1,
-					    'depth'              => 0,
+					    'depth'              => 1,
 					    'current_category'   => 0,
 					    'pad_counts'         => 0,
 					    'taxonomy'           => 'genre',

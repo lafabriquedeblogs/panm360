@@ -57,7 +57,8 @@
 	$permalien = get_permalink( $post_id );
 	
 	$author = get_the_author_meta('display_name', $article->post_author);
-	$auteur_link =  get_author_posts_url( $article->post_author );
+	$author_nicename = get_the_author_meta('nicename', $article->post_author);
+	$auteur_link =  get_author_posts_url( $article->post_author , $author_nicename);
 		
 	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$article->ID);
 	$iam_free = ($free == '1') ? '<div class="iam-free">'.__('gratuit','panm360').'</div>' : '';		

@@ -8,6 +8,11 @@
  */
 
 get_header();
+
+$term = get_queried_object();
+$child_terms = get_term_children( $term->term_id, 'genre' );
+$child_terms_array = array();
+
 ?>
 
 	<div id="primary" class="content-area">

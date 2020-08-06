@@ -10,25 +10,6 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<article>
-
-			<?php
-				$from = strtotime("2020-02-17");
-				$to = strtotime("2020-02-23");
-				$to_day = date("Y-m-d");
-				$today = strtotime($to_day);
-				
-				if( $from < $today && $to > $today && is_page( array( 2691 , 5750 ))):
-					
-			?>
-				<section class="publicite publicite-banniere">
-					<a href="https://sixmedia.ca/" target="_blank">
-						<img src="https://panm360.com/wp-content/uploads/2020/02/728X90.jpg" width="728" height="90" alt="publicite"/>
-					</a> 
-				</section>
-	
-			<?php endif; ?>
-
-	
 				<header class="entry-header section">
 					<h1 class="entry-title has-text-align-center"><?php the_title(); ?></h1>
 				</header>

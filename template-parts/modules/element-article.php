@@ -69,7 +69,8 @@
 	$genre = get_genre( $post_id ,true );
 	
 	$author = get_the_author_meta('display_name', $article->post_author);
-	$auteur_link =  get_author_posts_url( $article->post_author );
+	$author_nicename = get_the_author_meta('nicename', $article->post_author);
+	$auteur_link =  get_author_posts_url( $article->post_author , $author_nicename);
 	
 	//$content = return_post_excerpt_list_item( $post_id );
 	$content = return_post_excerpt_list_item( $post_id );

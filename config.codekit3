@@ -2101,6 +2101,19 @@
 		"oS": 0,
 		"sct": 1
 		},
+	"/src/scss/slider_genres.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/css/slider_genres.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
 	"/src/scss/slider_home.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -2744,6 +2757,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/modules/six-columns-albums.php",
+		"oF": 0
+		},
+	"/template-parts/modules/slider_genres.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/modules/slider_genres.php",
 		"oF": 0
 		},
 	"/template-parts/my-account-preferences.php": {

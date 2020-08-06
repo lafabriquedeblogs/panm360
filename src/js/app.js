@@ -103,7 +103,7 @@ import block_has_columns from './block-columns.js';
 		
 		if( $("#new-featured-slider").length > 0 ){
 			$("#new-featured-slider").slick({
-				autoplay: true,
+				autoplay: false,
 				autoplaySpeed: 4000,
 				prevArrow: '<div class="slick-prev-arrow"><svg class="icone"><use xlink:href="#slider-left-arrow"></use></svg></div>',
 				nextArrow: '<div class="slick-next-arrow"><svg class="icone"><use xlink:href="#slider-right-arrow"></use></svg></div>',
