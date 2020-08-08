@@ -1,12 +1,13 @@
 #liste-des-genres {
 	//border: 1px red solid;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
+	margin-top: -50px;
+	
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0;
-// 		width: 100%;
 		min-height: min-content;
 		li {
 			padding: 5px;
@@ -33,6 +34,20 @@
 		
 	}
 	
+	.icone {
+		border-radius: 200px;
+		box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+	}
+	
+	#slider-genres {
+		opacity: 0;
+		visibility: hidden;
+		
+		&.slick-initialized {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 }
 
 @media screen and (min-width:768px){
@@ -44,16 +59,44 @@
 		}
 	}
 }
-/*
-@supports(display: grid){
-	#liste-des-genres { 
-		overflow:hidden;
+@media screen and (min-width:782px){
+	#liste-des-genres {
+		margin-top: 0;
+	}
+}
+@media screen and (min-width:782px) and (max-width: 980px){
+	#liste-des-genres {
 		ul {
-			display: grid;
-			grid-template-columns: repeat(4,200px);
-			grid-template-rows: auto auto;		
+			li {
+				flex: 0 0 50%;
+
+			}
+		}
+	}	
+}
+
+@media screen and (min-width:980px){
+	#liste-des-genres {
+		ul {
+			li {
+				flex: 0 0 25%;	
+				a {
+					font-size: 0.6em;
+				}
+			}
 		}
 	}
-	
 }
-*/
+
+@media screen and (min-width:1130px){
+	#liste-des-genres {
+		ul {
+			li {
+				flex: 0 0 25%;	
+				a {
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+}

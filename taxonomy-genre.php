@@ -13,13 +13,25 @@ $term = get_queried_object();
 $child_terms = get_term_children( $term->term_id, 'genre' );
 $child_terms_array = array();
 
+foreach( $child_terms as $child ){
+	$term = get_term( $child , 'genre' );
+	$child_terms_array[] = '<a href="'.get_term_link( $term, 'genre' ).'">'.$term->name.'</a>';
+}
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<article>
 			<header class="section">
-				<h1 clas="entry-title"><span class="light"><?php echo single_cat_title( '', false ); ?></span></h1>
+				<?php if( count($child_terms) > 0 ): ?>
+						<p class="explore-genres">Explorer les styles</p>
+					<?php endif; ?>
+				<h1 class="entry-title genre-title"><span class="light"><?php echo single_cat_title( '', false ); ?></span>
+				<?php if( count($child_terms) > 0 ): ?>
+					<span class="sub-genre light"><?php echo implode(' / ', $child_terms_array ); ?></span>
+					
+				<?php endif; ?>
+				</h1>
 			</header>
 			<section class="section">
 				<div class="section-inner">
@@ -30,6 +42,13 @@ $child_terms_array = array();
 									
 									while ( have_posts() ) :
 										the_post();
+										
+										$interviews = array();
+										$postType = get_post_type();
+										if( $postType == 'interviews'){
+											echo '<h3>Interview</h3>';
+										}
+										
 										$posts_count = '';
 										include( locate_template( '/template-parts/modules/element-album.php', false, false ) );
 									endwhile;

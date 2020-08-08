@@ -155,7 +155,23 @@ h1.category-title {
 	}
 }
 
-    
+p.explore-genres {
+	font-size: 1.2em;
+	margin: 0 0 0.6em;
+	font-style: italic;
+	text-transform: uppercase;
+	
+}
+h1.genre-title {
+	line-height: 0.67em;
+	.sub-genre {
+		font-size: 0.6em;
+		a {
+			text-decoration: none;
+		}
+	}  		
+}
+
     
 .section {
 	margin-top: 80px;

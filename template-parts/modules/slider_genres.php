@@ -37,18 +37,3 @@
 		
 	</div> <!-- /#slider-genres -->
 </div> <!-- /#liste-des-genres -->
-<script>
-	
-	jQuery(document).ready( function($){
-		
-		$("#slider-genres").slick(
-			{
-				slidesToShow: 1,
-				dots: false,
-				infinite: false,
-			}
-		);
-		
-	});
-	
-</script>

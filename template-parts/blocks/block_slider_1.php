@@ -35,7 +35,7 @@ function slider_1_render_callback( $block, $content = '', $is_preview = false ){
 		if( have_rows('slide') ){
 	?>
 			<div id="wrap-new-featured-slider">
-				<ul id="new-featured-slider">					
+				<div id="new-featured-slider">					
 					<?php
 					while( have_rows('slide') ){
 						the_row();
@@ -55,7 +55,7 @@ function slider_1_render_callback( $block, $content = '', $is_preview = false ){
 						
 						?>
 						
-						<li class="new-featured-slider--slide element">
+						<div class="new-featured-slider--slide element">
 							<div class="new-featured-slider--slide--row">
 								
 								<div class="new-featured-slider--slide--content">
@@ -75,10 +75,10 @@ function slider_1_render_callback( $block, $content = '', $is_preview = false ){
 									<img src="<?php echo $image;?>"  class="hidden" alt="title"/>
 								</div>
 							</div><!-- new-featured-slider--slide--row -->
-						</li><!-- new-featured-slider--slide -->
+						</div><!-- new-featured-slider--slide -->
 						
 				<?php }	?>
-				</ul><!-- new-featured-slider -->
+				</div><!-- new-featured-slider -->
 			</div><!-- wrap-new-featured-slider -->						
 		<?php
 		}

@@ -109,7 +109,20 @@ import block_has_columns from './block-columns.js';
 				nextArrow: '<div class="slick-next-arrow"><svg class="icone"><use xlink:href="#slider-right-arrow"></use></svg></div>',
 			});
 		}
-
+		
+		if( $("#slider-genres").length > 0 ){
+			$("#slider-genres").slick(
+				{
+					slidesToShow: 1,
+					dots: false,
+					infinite: false,
+					prevArrow: '<div class="slick-prev-arrow"><svg class="icone"><use xlink:href="#slider-left-arrow"></use></svg></div>',
+					nextArrow: '<div class="slick-next-arrow"><svg class="icone"><use xlink:href="#slider-right-arrow"></use></svg></div>',
+				}
+			);			
+			
+		}
+	
 		
 		$(".filtres-content-tabs").on("click"," li a", function(e){
 			let _f = $(this).data("content");
