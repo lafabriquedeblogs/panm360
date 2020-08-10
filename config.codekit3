@@ -2431,12 +2431,28 @@
 		"oAP": "/taxonomy-generale-albums.php",
 		"oF": 0
 		},
+	"/taxonomy-genre copie.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-genre copie.php",
+		"oF": 0
+		},
 	"/taxonomy-genre.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taxonomy-genre.php",
+		"oF": 0
+		},
+	"/taxonomy-interviews.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-interviews.php",
 		"oF": 0
 		},
 	"/taxonomy-label.php": {

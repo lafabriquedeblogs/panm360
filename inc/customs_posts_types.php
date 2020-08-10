@@ -475,5 +475,20 @@ function set_default_object_terms( $post_id, $post ) {
 			set_transient( 'agenda-mini',$calendrier, 1 * DAY_IN_SECONDS );      
         }
     }
-add_action( 'save_post', 'set_default_object_terms', 0, 2 );	
+add_action( 'save_post', 'set_default_object_terms', 0, 2 );
+
+
+function return_posttype_name( $postype ){
+	
+	$cpts = array(
+		
+		'records' => __('Albums','panm360'),
+		'interviews' => __('Interviews','panm360'),
+		'ecoutes' => __('Liste d\'écoutes','panm360'),
+		'podcasts' => __('Balados','panm360')
+	);
+	
+	return $cpts[$postype];
+}
+	
 ?>

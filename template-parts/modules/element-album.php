@@ -28,21 +28,23 @@
 	$free = get_field('rendre_ce_contenu_accessible_dans_abonnement',$album_id);
 	$iam_free = ($free == '1') ? '<div class="iam-free">'.__('gratuit','panm360').'</div>' : '';
 	
-
+	//$postype
+	$cpt = '';
+	if( !empty($postype) ):
+		
+		if( $postype != 'post' && $postype != 'records'){
+			
+			$cpt = '<span class="content-category">'.return_posttype_name( $postype ).'</span>';
+		}
+	endif;
 ?>
 
 <li id="album-<?php echo $album_id;?>" class="album element" data-filter="<?php echo $data_genre." ".$data_annee." ".$auteur;?>">
 	<div class="picture">
 		<a href="<?php echo $lien;?>">
-<!--
-			<img
-			class="lozad"
-			data-src="<?php echo $pochette; ?>" 
-			data-srcset="<?php echo $pochette_400;?> 400w, <?php echo $pochette_300;?> 300w, <?php echo $pochette_500;?> 500w, <?php echo $pochette_400;?> 768w,<?php echo $pochette_400;?> 780w"
-			alt="<?php echo $titre;?>"
-			width="100%"
-			height="auto" /><?php //echo $iam_free;?>
--->
+			
+			
+			
 			<img
 			class="--lozad"
 			srcset="
@@ -68,6 +70,9 @@
 		<?php if(!empty($annee)): ?>
 			<span class="artiste album-annee"><?php echo $annee;?></span>
 		<?php endif; ?>
+		
+		<?php echo $cpt; ?>
+		
 		<?php if(!empty($genres)): ?>
 			<span class="genre album-genre"><?php echo $genres;?></span>
 		<?php endif; ?>

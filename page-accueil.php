@@ -24,7 +24,10 @@ get_header();
 							
 							<!-- //slider_genres.php -->
 
-							<?php include( locate_template( '/template-parts/modules/slider_genres.php', false, false ) ); ?>
+							<?php
+								$direct_link = 1;	
+								include( locate_template( '/template-parts/modules/slider_genres.php', false, false ) );
+							?>
 							<?php include( locate_template( '/template-parts/modules/sections.php', false, false ) ); ?>
 														
 						</div><!-- section-content -->	

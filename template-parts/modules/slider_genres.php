@@ -1,38 +1,71 @@
+<?php
+	
+	
+	// home
+	// interviews
+	// Listes d'écoutes
+	// Balados
+	// Sessions 360
+	// Quoi voir
+	// Dossiers
+	
+	//@class - term_id;
+?>
 <div id="liste-des-genres">
+	
+	<p class="explore-genres">
+		<?php _e('Explorer par genre','panm360'); ?>
+		<?php
+			
+			if(!empty($genre)):
+				$genre_name = get_term_by( 'id', absint( $genre ), 'genre' );
+				
+				$term = get_term($genre, 'genre');
+				if( $term->parent > 0 ):
+					$parent_term = get_term( $term->parent, 'genre');
+					$parent_term_id = $term->parent;
+					echo '<span class="current-genre-parent"> :  <a href="'.get_term_link( $term->parent, 'genre' ).'">'.$parent_term ->name.'</a></span>';
+				endif;				
+				echo '<span class="current-genre"> :  '.$genre_name ->name.'</span>';
+				
+
+				
+			endif;
+		?>
+	</p>
+	
 	<div id="slider-genres">
 			<?php
-				$genres = wp_list_categories(array(
-    			    'depth'               => 1,
-    			    'echo'                => 0,
-    			    'hide_empty'          => 1,
-    			    'hide_title_if_empty' => false,
-    			    'hierarchical'        => true,
-    			    'separator'           => '*',
-    			    'show_option_all'     => '',
-    			    'show_option_none'    => '',
-    			    'style'               => '',
-    			    'taxonomy'            => 'genre')
+    			
+    			$genres = get_terms(
+					array(
+						'hide_empty' => 1,
+						'parent' => 0,
+    			    	'taxonomy' => 'genre',
+    			    	'post_types' => $post_types
+    			    )	    			
     			);
-    			
-    			$genres_array = explode('*', $genres);
-    			$last = array_pop($genres_array);
-    			
-    			$splits = array_chunk( $genres_array, 8);
+
+    			$splits = array_chunk( $genres, 8);
     			
     			foreach( $splits as $a ){
+
 	    			?>
 	    			<ul class="liste-des-genres--ul">
 	    			<?php
     				foreach( $a as $b ){
+	    				$term_link = $direct_link ? get_term_link( $b->term_id, 'genre' ) : '?genre='.$b->term_id;
+	    				
 	    				?>
-	    					<li><?php echo $b;?></li>
+	    					<li><a id="<?php echo $b->term_id;?>" <?php if($genre == $b->term_id || $b->term_id == $parent_term_id) echo 'class="current-tax-genre"'?> href="<?php echo $term_link;?>"><?php echo $b->name;?></a></li>
 	    				<?php
     				}	    			
  	    			?>
 	    			</ul>
 	    			<?php
     			}
-    			
+
+                          			
 			?>
 		
 	</div> <!-- /#slider-genres -->

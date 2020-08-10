@@ -6,8 +6,19 @@
 
 get_header();
 
-
-
+if( isset($_GET['genre']) && !empty($_GET['genre']) ){
+	$genre = $_GET['genre'];
+	$tax_query = array(
+		array(
+		    'taxonomy' => 'genre',
+		    'field'    => 'term_id',
+		    'terms'    => $genre,
+		),
+	);
+					
+} else {
+	$tax_query = array();
+}
 
 ?>
 
@@ -29,8 +40,20 @@ get_header();
 
 			<section class="section">
 				<div id="critiques-albums" class="section-inner">
+					
+					
 					<div class="section-content ">
 						<div class="section-content--main">
+							
+							<div class="section--element margin-bottom-0">
+								<?php
+									$direct_link = false;
+									$post_types = 'interviews';
+									include( locate_template( '/template-parts/modules/slider_genres.php', false, false ) );
+								
+								?>
+							</div>
+							
 							<div class="section--element">
 																
 								<?php /*<h4 class="section-titre"><span><?php _e('Interviews','panm360'); ?></span> <a href="<?php echo get_permalink( $interviews );?>"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4> */?>								
@@ -40,6 +63,7 @@ get_header();
 										'post_type' => 'interviews',
 										'posts_per_page' => -1,
 										'post_status' => array('publish'),
+										'tax_query' => $tax_query,										
 										'orderby' => 'date',
 										'order' => 'DESC'
 									);
@@ -47,7 +71,8 @@ get_header();
 									$interviews_query = new WP_Query($interviews_args);
 									$interviews = $interviews_query->posts;
 									$article = array_shift($interviews);
-
+									
+									if( $interviews_query->have_posts()):
 									include( locate_template( '/template-parts/modules/element-main.php', false, false ) );
 									
 								?>
@@ -70,7 +95,9 @@ get_header();
 								</ul>
 								<?php endif; ?>
 								
-								
+								<?php else: ?>
+								<h2><?php _e('AUCUN RÉSULTAT','panm360'); ?></h2>
+								<?php endif; //have_posts ?>
 							</div><!-- section--element -->
 							
 						</div> <!-- section-content--main -->

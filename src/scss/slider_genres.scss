@@ -3,7 +3,7 @@
 	width: 100%;
 	margin-bottom: 50px;
 	margin-top: -50px;
-	
+	//margin-left: -5px;
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -28,6 +28,10 @@
 				&:hover {
 					background-color: $gris_dark;
 				}
+				
+				&.current-tax-genre {
+					background-color: $gris_dark;
+				}
 			}
 			
 		}
@@ -50,8 +54,23 @@
 	}
 }
 
+p.explore-genres {
+	font-size: 1.1em;
+	margin: 0 0 0.2em 5px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+.tax-genre p.explore-genres{
+	margin: 0 0 0.6em;
+}
+.current-genre {
+	font-size: 0.7em;
+	color:$bleu;
+}
+
 @media screen and (min-width:768px){
 	#liste-des-genres {
+		
 		ul {
 			li {
 				flex: 0 0 25%;	
@@ -61,11 +80,13 @@
 }
 @media screen and (min-width:782px){
 	#liste-des-genres {
-		margin-top: 0;
+		margin-top: -5px;
+		margin-left: -5px;
 	}
 }
 @media screen and (min-width:782px) and (max-width: 980px){
 	#liste-des-genres {
+		
 		ul {
 			li {
 				flex: 0 0 50%;
@@ -77,6 +98,7 @@
 
 @media screen and (min-width:980px){
 	#liste-des-genres {
+		
 		ul {
 			li {
 				flex: 0 0 25%;	
