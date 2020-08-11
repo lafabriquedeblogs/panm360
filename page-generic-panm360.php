@@ -5,6 +5,22 @@
 */
 
 get_header();
+
+if( isset($_GET['genre']) && !empty($_GET['genre']) ){
+	$genre = $_GET['genre'];
+	$tax_query = array(
+		array(
+		    'taxonomy' => 'genre',
+		    'field'    => 'term_id',
+		    'terms'    => $genre,
+		),
+	);
+					
+} else {
+	$tax_query = array();
+}
+
+
 ?>
 
 	<div id="primary" class="content-area">
@@ -30,6 +46,15 @@ get_header();
 				<div id="critiques-albums" class="section-inner">
 					<div class="section-content ">
 						<div class="section-content--main">
+							<div class="section--element margin-bottom-0">
+								<?php
+									$direct_link = false;
+									$post_types = 'post';
+									$main_tax = 'category';
+									$main_tax_term = 'dossiers';
+									include( locate_template( '/template-parts/modules/slider_genres.php', false, false ) );
+								?>
+							</div>
 							<div class="section--element">
 								
 								<?php
@@ -38,6 +63,7 @@ get_header();
 										'post_type' => array('post','page'),
 										'category__in' => $display_categories,
 										'posts_per_page' => 1,
+										'tax_query' => $tax_query,
 										'post_status' => array('publish'),
 										'orderby' => 'date',
 										'order' => 'DESC'
@@ -46,6 +72,8 @@ get_header();
 									$article = new WP_Query($regarder_args);
 									$regarder = $article->posts;
 									//$article = array_shift($regarder);
+									
+									if( $article->have_posts(  )):
 									
 									while ( $article->have_posts() ) :
 										$article->the_post();
@@ -61,6 +89,7 @@ get_header();
 										'category__in' => $display_categories,
 										'posts_per_page' => 24,
 										'offset' => 1,
+										'tax_query' => $tax_query,
 										'post_status' => array('publish'),
 										'orderby' => 'date',
 										'order' => 'DESC'
@@ -87,7 +116,18 @@ get_header();
 								</ul>
 								<?php endif; ?>
 								
+								<?php else: ?>
+									<p class="panm360-message panm360-message-not-found">
+									<?php
+										
+										$genre_term = get_term( $genre, 'genre' );
+										$link = get_term_link( $genre_term, 'genre' );
+										_e('Désolé,</br>Il n\'existe pas encore de contenu appartenant au genre musical: <a href="'. $link .'"><strong>'.$genre_term->name.'</strong></a> dans cette rubrique.','panm360');
+									
+									?>
+								</p>									
 								
+								<?php endif; ?>
 							</div><!-- section--element -->
 							
 						</div> <!-- section-content--main -->

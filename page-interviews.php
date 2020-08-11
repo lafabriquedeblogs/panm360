@@ -6,19 +6,8 @@
 
 get_header();
 
-if( isset($_GET['genre']) && !empty($_GET['genre']) ){
-	$genre = $_GET['genre'];
-	$tax_query = array(
-		array(
-		    'taxonomy' => 'genre',
-		    'field'    => 'term_id',
-		    'terms'    => $genre,
-		),
-	);
-					
-} else {
-	$tax_query = array();
-}
+
+$tax_query = query_var_genre();
 
 ?>
 
@@ -63,7 +52,7 @@ if( isset($_GET['genre']) && !empty($_GET['genre']) ){
 										'post_type' => 'interviews',
 										'posts_per_page' => -1,
 										'post_status' => array('publish'),
-										'tax_query' => $tax_query,										
+										'tax_query' => $tax_query['tax'],										
 										'orderby' => 'date',
 										'order' => 'DESC'
 									);
@@ -96,7 +85,17 @@ if( isset($_GET['genre']) && !empty($_GET['genre']) ){
 								<?php endif; ?>
 								
 								<?php else: ?>
-								<h2><?php _e('AUCUN RÉSULTAT','panm360'); ?></h2>
+								
+								<p class="panm360-message panm360-message-not-found">
+									<?php
+										
+										$genre_term = get_term( $genre, 'genre' );
+										$link = get_term_link( $genre_term, 'genre' );
+										_e('Désolé,</br>Il n\'existe pas encore de contenu appartenant au genre musical: <a href="'. $link .'"><strong>'.$genre_term->name.'</strong></a> dans cette rubrique.','panm360');
+									
+									?>
+								</p>
+								
 								<?php endif; //have_posts ?>
 							</div><!-- section--element -->
 							

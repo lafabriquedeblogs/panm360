@@ -38,7 +38,7 @@
 		<?php echo $content;?>
 		
 		<?php if( !empty($genre)): ?>
-			<?php echo $genre;?>
+			<span class="genre album-genre"><?php echo $genre;?></span>
 		<?php endif; ?>
 		
 		<p class="lire-la-suite"><a href="<?php echo $permalien;?>"><?php _e('Lire l\'interview','panm360'); ?></a></p>

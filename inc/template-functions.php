@@ -675,6 +675,25 @@ function get_first_paragraph( $post_id ){
 	return $str;
 }
 
+function query_var_genre(){
+	
+	if( get_query_var('genre') ){
+		$genre = get_query_var('genre');
+		$tax_query['genre'] = $genre;
+		$tax_query['tax'] = array(
+			array(
+			    'taxonomy' => 'genre',
+			    'field'    => 'term_id',
+			    'terms'    => $genre,
+			),
+		);		
+	} else {
+		$tax_query = false;
+	}
+	
+	return $tax_query;
+}
+//add_action( 'parse_query','query_var_genre' );
 /**
  * my_terms_clauses
  *
@@ -686,6 +705,7 @@ function get_first_paragraph( $post_id ){
  * @return array
  * @link http://wordpress.stackexchange.com/a/183200/45728
  **/
+/*
 function my_terms_clauses( $clauses, $taxonomy, $args ) {
   global $wpdb;
 
@@ -701,9 +721,22 @@ function my_terms_clauses( $clauses, $taxonomy, $args ) {
   }
   return $clauses;
 }
-add_filter('terms_clauses', 'my_terms_clauses', 99999, 3);
+*/
+//add_filter('terms_clauses', 'my_terms_clauses', 99999, 3);
+/*
 
+function my_rewrite_rules() {
 
+    add_rewrite_rule(
+        'lire/dossier/([[A-Za-z0-9\-]+)?/?$',
+        'index.php?page_id=1234&genre=$matches[1]',
+        'top'
+    );
+
+    flush_rewrite_rules();
+}
+*/
+//add_action( 'init', 'my_rewrite_rules' );
 
 /********************************************************************************/
 /*

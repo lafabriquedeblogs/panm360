@@ -34,6 +34,21 @@ foreach( $child_terms as $child ){
 						<p class="explore-genres"><?php _e('Explorer par genre','panm360'); ?></p>
 					<?php endif;
 				*/ ?>
+				
+				<?php
+					if(!empty($genre)):
+						$genre_name = get_term_by( 'id', absint( $genre ), 'genre' );
+						
+						$term = get_term($genre, 'genre');
+						if( $term->parent > 0 ):
+							$parent_term = get_term( $term->parent, 'genre');
+							$parent_term_id = $term->parent;
+							echo '<span class="tax-genre current-genre-parent"><a href="'.get_term_link( $term->parent, 'genre' ).'">« '.$parent_term ->name.'</a></span>';
+						endif;				
+						
+						
+					endif;					
+				?>
 					
 				<h1 class="entry-title genre-title"><span class="light"><?php echo single_cat_title( '', false ); ?></span>
 				<?php if( count($child_terms) > 0 ): ?>

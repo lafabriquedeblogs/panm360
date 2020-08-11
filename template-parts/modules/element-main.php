@@ -31,7 +31,7 @@
 		<!-- <a class="genre article-genre" href="">Genre</a> -->
 		
 		<?php if( !empty($genre)): ?>
-			<?php echo $genre;?>
+			<span class="genre album-genre"><?php echo $genre;?></span>
 		<?php endif; ?>
 		
 		<h4 class="element-title album-title"><a href="<?php echo $permalien;?>"><?php echo $title;?></a></h4>

@@ -1,7 +1,3 @@
-<?php echo '<pre>';
-	var_dump($post_type);
-echo '</pre>';
- ?>
 <div class="section--element">
 	<h4 class="section-titre"><span><?php echo $page_titre; ?></span> <a class="lien-full-content" href="<?php echo get_permalink( $page_id );?>"><small><?php _e('Voir tout','panm360'); ?></small> <svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 	<?php

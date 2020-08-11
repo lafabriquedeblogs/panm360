@@ -5,7 +5,7 @@
 */
 
 get_header();
-
+$tax_query = query_var_genre();
 ?>
 
 	<div id="primary" class="content-area">
@@ -33,7 +33,7 @@ get_header();
 					?>
 				</ul><!-- new-featured-slider -->
 			</div><!-- wrap-new-featured-slider -->
-			<?php /**/ ?>						
+									
 			<?php the_content(); ?>
 
 			<section class="section">
@@ -42,10 +42,24 @@ get_header();
 					<div class="section-content ">
 						
 						<div class="section-content--main">
-							
+							<div class="section--element margin-bottom-0">
+								<?php
+									$direct_link = false;
+									$post_types = 'records';
+									include( locate_template( '/template-parts/modules/slider_genres.php', false, false ) );
+								
+								?>
+							</div>							
 							
 							<div class="section--element">
-								<h4 class="section-titre"><span><?php _e('Critiques d\'albums','panm360'); ?></span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+								<h4 class="section-titre"><span><?php _e('Critiques d\'albums','panm360'); ?></span>
+									<?php
+										if( $tax_query ):
+											$term = get_term( $tax_query['genre'], 'genre');
+											echo '<span class="sub-genre light">'.$term->name.'</span>';	
+										endif;
+									?>
+									 <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
 								
 								<ul class="section-list-albums">
 								<?php
@@ -61,7 +75,8 @@ get_header();
 										'tag__not_in' => array(2512),
 										'orderby' => 'date',	
 										'order' => 'DESC',
-										'paged' => $albums_paged,																
+										'paged' => $albums_paged,
+										'tax_query' => $tax_query['tax']															
 									);
 									
 									$albums = new WP_Query($args);
