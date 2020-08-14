@@ -50,6 +50,8 @@
 						'hide_empty' => 0,
 						'parent' => 0,
     			    	'taxonomy' => array($taxonomy),
+    			    	'orderby' => 'count',
+    			    	'order' => 'DESC'
     			    )	    			
     			);
 				

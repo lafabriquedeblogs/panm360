@@ -681,10 +681,12 @@ function query_var_genre(){
 		$genre = get_query_var('genre');
 		$tax_query['genre'] = $genre;
 		$tax_query['tax'] = array(
+			//'relation' => 'AND',
 			array(
 			    'taxonomy' => 'genre',
 			    'field'    => 'term_id',
 			    'terms'    => $genre,
+			    'operator' => 'IN'
 			),
 		);		
 	} else {

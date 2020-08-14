@@ -5,7 +5,7 @@
 */
 
 get_header();
-
+$tax_query = query_var_genre();
 ?>
 
 	<div id="primary" class="content-area">
@@ -16,33 +16,34 @@ get_header();
 			<div id="wrap-square-featured-slider">
 				<ul id="square-featured-slider">
 					<?php
-				
+						$albums_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 						$args = array(
 							'post_type' => 'records',
-							'posts_per_page' => 15,
+							'posts_per_page' => 16,
 							'post_status' => array('publish'),
 							'tax_query' => array(
-								'relation' => 'OR',
-								array(
-									'taxonomy' => 'pays',
-									'field'    => 'slug',
-									'terms'    => 'canada'
-								),
-								array(
-									'taxonomy' => 'pays',
-									'field'    => 'slug',
-									'terms'    => 'quebec'
-								),
-								array(
-									'taxonomy' => 'pays',
-									'field'    => 'slug',
-									'terms'    => 'canadaquebec'
-								),
+									'relation' => 'OR',
+									array(
+										'taxonomy' => 'pays',
+										'field'    => 'slug',
+										'terms'    => 'canada'
+									),
+									array(
+										'taxonomy' => 'pays',
+										'field'    => 'slug',
+										'terms'    => 'quebec'
+									),
+									array(
+										'taxonomy' => 'pays',
+										'field'    => 'slug',
+										'terms'    => 'canadaquebec'
+									),
 							),
 							'orderby' => 'date',	
 							'order' => 'DESC',
+
 						);
-						
+	
 						$albums_query = new WP_Query($args);
 						$albums = $albums_query->posts;
 						foreach( $albums as $item ){
@@ -64,9 +65,17 @@ get_header();
 							
 							<div class="section--element">
 								<h4 class="section-titre"><span><?php _e('Borealis','panm360'); ?></span> <a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
-
 								<?php the_content(); ?>
-								
+							</div>
+							<div class="section--element margin-bottom-0">
+								<?php
+									$direct_link = false;
+									$post_types = 'records';
+									$main_tax = 'borealis';
+									include( locate_template( '/template-parts/modules/slider_genres.php', false, false ) );
+								?>
+							</div>
+							<div class="section--element">	
 								<ul class="section-list-albums">
 								<?php
 									
@@ -80,22 +89,26 @@ get_header();
 										//'category__not_in' => array(969),
 										//'tag__not_in' => array(2512),
 										'tax_query' => array(
-											'relation' => 'OR',
+											$tax_query['tax'],
 											array(
-												'taxonomy' => 'pays',
-												'field'    => 'slug',
-												'terms'    => 'canada'
-											),
-											array(
-												'taxonomy' => 'pays',
-												'field'    => 'slug',
-												'terms'    => 'quebec'
-											),
-											array(
-												'taxonomy' => 'pays',
-												'field'    => 'slug',
-												'terms'    => 'canadaquebec'
-											),
+												'relation' => 'OR',
+												array(
+													'taxonomy' => 'pays',
+													'field'    => 'slug',
+													'terms'    => 'canada'
+												),
+												array(
+													'taxonomy' => 'pays',
+													'field'    => 'slug',
+													'terms'    => 'quebec'
+												),
+												array(
+													'taxonomy' => 'pays',
+													'field'    => 'slug',
+													'terms'    => 'canadaquebec'
+												),
+											)
+											
 										),
 										'orderby' => 'date',	
 										'order' => 'DESC',
