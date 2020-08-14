@@ -781,9 +781,9 @@ span.sub-genre {
 	}
 }
 	.entry-title {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
+		display: block;
+		//flex-direction: row;
+		//align-items: center;
 		
 		span.sub-genre {
 			padding-left: 20px;
