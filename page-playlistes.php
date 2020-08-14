@@ -14,7 +14,14 @@ $tax_query = query_var_genre();
 			<?php while ( have_posts() ) :
 				the_post(); ?>
 					<header class="entry-header section">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<h1 class="entry-title"><?php the_title(); ?>
+							<?php
+								if( $tax_query ):
+									$term = get_term( $tax_query['genre'], 'genre');
+									echo '<span class="sub-genre light">'.$term->name.'</span>';	
+								endif;
+							?>							
+						</h1>
 					</header>
 						
 			<?php
