@@ -40,7 +40,7 @@ $tax_query = query_var_genre();
 							<div class="section--element">
 <!-- 								<h4 class="section-titre"><span><?php _e('Listes d\'écoutes','panm360'); ?></span> <a><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4> -->
 								
-								<ul class="section-list-albums">
+								
 								<?php
 									
 									$albums_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -58,15 +58,28 @@ $tax_query = query_var_genre();
 									
 									$albums = new WP_Query($args);
 									
-									while($albums->have_posts() ){
-											$albums->the_post();
-											
-											include( locate_template( '/template-parts/modules/element-album.php', false, false ) );
-										//$albums_count--;
-									}
-								?>
-								</ul>
-
+									if( $albums->have_posts() ):?>
+									
+									<ul class="section-list-albums">
+									<?php
+										while($albums->have_posts() ){
+												$albums->the_post();
+												
+												include( locate_template( '/template-parts/modules/element-album.php', false, false ) );
+											//$albums_count--;
+										}
+									?>
+									</ul>
+									
+									<?php
+										
+										else:
+										
+										echo_no_genre_found($genre);
+										
+										endif;//have_posts
+										
+									?>
 								
 								<?php /**/ ?>	
 								<div id="pages-liste-navigation">

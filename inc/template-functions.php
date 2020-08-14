@@ -695,6 +695,22 @@ function query_var_genre(){
 	
 	return $tax_query;
 }
+
+function echo_no_genre_found($genre){
+	
+	?>
+		<p class="panm360-message panm360-message-not-found">
+			<?php
+				
+				$genre_term = get_term( $genre, 'genre' );
+				$link = get_term_link( $genre_term, 'genre' );
+				_e('Désolé,</br>Il n\'existe pas encore de contenu appartenant au genre musical: <a href="'. $link .'"><strong>'.$genre_term->name.'</strong></a> dans cette rubrique.','panm360');
+			
+			?>
+		</p>	
+	<?php
+	
+}
 //add_action( 'parse_query','query_var_genre' );
 /**
  * my_terms_clauses

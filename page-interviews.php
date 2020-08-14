@@ -84,19 +84,13 @@ $tax_query = query_var_genre();
 								</ul>
 								<?php endif; ?>
 								
-								<?php else: ?>
-								
-								<p class="panm360-message panm360-message-not-found">
-									<?php
-										
-										$genre_term = get_term( $genre, 'genre' );
-										$link = get_term_link( $genre_term, 'genre' );
-										_e('Désolé,</br>Il n\'existe pas encore de contenu appartenant au genre musical: <a href="'. $link .'"><strong>'.$genre_term->name.'</strong></a> dans cette rubrique.','panm360');
+								<?php
+									else: 
 									
-									?>
-								</p>
-								
-								<?php endif; //have_posts ?>
+										echo_no_genre_found($genre);
+									
+									endif; //have_posts ?>
+									
 							</div><!-- section--element -->
 							
 						</div> <!-- section-content--main -->
