@@ -64,14 +64,15 @@ $tax_query = query_var_genre();
 							
 							
 							<div class="section--element">
-								<h4 class="section-titre"><span><?php _e('Borealis','panm360'); ?></span> <a href="#">
+								<h4 class="section-titre"><span><?php _e('Borealis','panm360'); ?></span>
 									<?php
 										if( $tax_query ):
 											$term = get_term( $tax_query['genre'], 'genre');
 											echo '<span class="sub-genre light">'.$term->name.'</span>';	
 										endif;
-									?>								
-								<svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a></h4>
+									?>	
+									<a href="#"><svg class="icone"><use xlink:href="#fleche-lien"></use></svg></a>
+								</h4>
 								<?php the_content(); ?>
 							</div>
 							<div class="section--element margin-bottom-0">
