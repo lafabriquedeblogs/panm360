@@ -784,6 +784,10 @@ span.sub-genre {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		
+		span.sub-genre {
+			padding-left: 20px;
+		}
 	}
 }
 @media screen and (min-width:980px){
