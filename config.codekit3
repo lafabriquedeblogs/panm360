@@ -1124,14 +1124,6 @@
 		"oAP": "/liste_des_interviews.php",
 		"oF": 0
 		},
-	"/page-accueil-old.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-accueil-old.php",
-		"oF": 0
-		},
 	"/page-accueil.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1801,6 +1793,14 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"/src/page-accueil-old.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/page-accueil-old.php",
+		"oF": 0
 		},
 	"/src/scss/abonnements.scss": {
 		"aP": 1,

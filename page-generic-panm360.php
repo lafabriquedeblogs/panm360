@@ -5,21 +5,7 @@
 */
 
 get_header();
-
-if( isset($_GET['genre']) && !empty($_GET['genre']) ){
-	$genre = $_GET['genre'];
-	$tax_query = array(
-		array(
-		    'taxonomy' => 'genre',
-		    'field'    => 'term_id',
-		    'terms'    => $genre,
-		),
-	);
-					
-} else {
-	$tax_query = array();
-}
-
+$tax_query = query_var_genre();
 
 ?>
 
@@ -29,7 +15,14 @@ if( isset($_GET['genre']) && !empty($_GET['genre']) ){
 			<?php while ( have_posts() ) : the_post(); ?>
 			
 					<header class="entry-header section">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<h1 class="entry-title"><?php the_title(); ?>
+							<?php
+								if( $tax_query ):
+									$term = get_term( $tax_query['genre'], 'genre');
+									echo '<span class="sub-genre light">'.$term->name.'</span>';	
+								endif;
+							?>							
+						</h1>
 					</header>
 						
 			<?php
