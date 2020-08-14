@@ -38,7 +38,12 @@ $tax_query = query_var_genre();
 									<?php else: ?>
 										<img src="<?php echo get_template_directory_uri(  ) ;?>/assets/img/wow.svg"  width="151px" height="53px"  alt="wow" /> <span>Albums</span>
 									<?php endif; ?>
-
+									<?php
+										if( $tax_query ):
+											$term = get_term( $tax_query['genre'], 'genre');
+											echo '<span class="sub-genre light">'.$term->name.'</span>';	
+										endif;
+									?>
 								</h4>
 							
 								<?php
