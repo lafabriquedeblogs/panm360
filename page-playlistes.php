@@ -39,7 +39,7 @@ $tax_query = query_var_genre();
 							
 							<div class="section--element">
 								
-								<ul class="section-list-albums">
+								
 								<?php
 									
 									$albums_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -57,6 +57,12 @@ $tax_query = query_var_genre();
 									
 									$albums = new WP_Query($args);
 									
+									if( $albums->have_posts() ):
+									
+									?>
+									<ul class="section-list-albums">
+									<?php
+									
 									while($albums->have_posts() ){
 											$albums->the_post();
 											
@@ -65,8 +71,17 @@ $tax_query = query_var_genre();
 									}
 								?>
 								</ul>
-
 								
+									<?php
+										
+										else:
+										
+										echo_no_genre_found($genre);
+										
+										endif;//have_posts
+										
+									?>
+																	
 								<?php /**/ ?>	
 								<div id="pages-liste-navigation">
 									<nav class="navigation pagination" role="navigation" aria-label="Publications">
