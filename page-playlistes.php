@@ -5,6 +5,7 @@
 */
 
 get_header();
+$tax_query = query_var_genre();
 ?>
 
 	<div id="primary" class="content-area">
@@ -28,7 +29,14 @@ get_header();
 					<div class="section-content ">
 						<div class="section-content--main">
 
-
+							<div class="section--element margin-bottom-0">
+								<?php
+									$direct_link = false;
+									$post_types = 'ecoutes';
+									include( locate_template( '/template-parts/modules/slider_genres.php', false, false ) );
+								?>
+							</div>
+							
 							<div class="section--element">
 								
 								<ul class="section-list-albums">
@@ -43,7 +51,8 @@ get_header();
 										'post_status' => array('publish'),
 										'orderby' => 'date',	
 										'order' => 'DESC',
-										'paged' => $albums_paged,																
+										'paged' => $albums_paged,
+										'tax_query' => $tax_query['tax']																
 									);
 									
 									$albums = new WP_Query($args);
