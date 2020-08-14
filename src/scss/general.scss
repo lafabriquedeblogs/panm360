@@ -40,6 +40,11 @@ h3 {
 	line-height: 1;
 	margin:0 0 .7em 0;
 }
+
+.entry-tile {
+	display: flex;
+	flex-direction: column;
+}
 img {
 	display: block;
 	max-width: 100%;
@@ -773,6 +778,11 @@ span.sub-genre {
 	.section-titre {
 		//display: flex;
 	}
+}
+.entry-tile {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 }
 @media screen and (min-width:980px){
