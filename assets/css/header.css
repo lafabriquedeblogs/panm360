@@ -267,6 +267,9 @@
 @media screen and (min-width: 1024px) {
   #menu-top-container ul {
     justify-content: flex-end; }
+  #menu-top-container a span, #menu-top-container #panm-lang-switch a {
+    font-size: 14px !important;
+    font-weight: 300; }
   #menu-top-container #menu-top #menu-toggle-mobile,
   #menu-top-container #menu-top #logo-mobile {
     display: none; } }
