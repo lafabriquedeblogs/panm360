@@ -4587,7 +4587,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://panm.test/",
+	"externalServerAddress": "https://127.0.0.1:8080",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "agendAjax, response,console",

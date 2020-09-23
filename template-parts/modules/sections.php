@@ -38,7 +38,11 @@
 				
 				$choisir_le_genre = get_sub_field( 'choisir_le_genre' );
 				
-				include( locate_template( '/template-parts/modules/section-element-albums.php', false, false ) );										
+				include( locate_template( '/template-parts/modules/section-element-albums.php', false, false ) );
+				
+				if( is_front_page() ){
+					get_template_part( '/template-parts/publicites/publicite', 'banniere-analekta' ); 
+				}									
 			
 			endif;
 
