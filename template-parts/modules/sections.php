@@ -39,16 +39,40 @@
 				$choisir_le_genre = get_sub_field( 'choisir_le_genre' );
 				
 				include( locate_template( '/template-parts/modules/section-element-albums.php', false, false ) );
-				
-				if( is_front_page() ){
-					get_template_part( '/template-parts/publicites/publicite', 'banniere-analekta' ); 
-				}									
+								
 			
+			elseif( get_row_layout() == 'publicite' ):
+					
+					$date_de_debut = get_sub_field("date_de_debut");
+					$date_de_fin = get_sub_field("date_de_fin");
+					
+					$from = strtotime($date_de_debut);
+					$to = strtotime($date_de_fin);
+
+					$to_day = date("Y-m-d H:i:s");
+					$today = strtotime($to_day);
+					
+					$image_data = get_sub_field("image");
+					$src_image = $image_data["url"];
+					
+					$lien = get_sub_field("lien");
+					
+					if( $from <= $today && $to >= $today && is_front_page()){
+				?>
+
+					<section class="publicite publicite-banniere" style="margin: -30px 0 90px 0;">
+						<a href="<?php echo $lien;?>" target="_blank">
+							<img src="<?php echo $src_image;?>" width="728" height="90" alt="publicite"/>
+						</a> 
+					</section>
+				
+				<?php		
+					}
 			endif;
 
 			
 				
-		}//while_have_roes
+		}//while_have_rows
 		
 		
 	endif;//have_rows	

@@ -14,14 +14,10 @@
 	
 	if( $from <= $today && $to >= $today && is_front_page() ):
 ?>	
-	<section class="publicite publicite-banniere" style="margin: 40px 0;">
-		<a href="<?php echo $lien_accueil_bottom;?>" target="_blank">
-			<img src="<?php echo $image_accueil_bottom["url"];?>" width="728" height="90" alt="publicite"/>
-		</a> 
-	</section>
+		<section class="publicite publicite-banniere" style="margin: 40px 0;">
+			<a href="<?php echo $lien_accueil_bottom;?>" target="_blank">
+				<img src="<?php echo $image_accueil_bottom["url"];?>" width="728" height="90" alt="publicite"/>
+			</a> 
+		</section>
 
-	<?php else: ?>
-	
-		<?php get_template_part( '/template-parts/publicites/publicite', 'banniere-google' ); ?>
-	
-	<?php endif; ?>
+<?php endif; ?>

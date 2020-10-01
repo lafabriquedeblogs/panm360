@@ -11,7 +11,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<?php get_template_part( '/template-parts/publicites/publicite', 'banniere-pop-montreal' ); ?>
+			<?php include( locate_template( '/template-parts/publicites/accueil-top.php', false, false ) ); ?>
 						
 			<?php the_content();	?>
 
@@ -34,7 +34,6 @@ get_header();
 						
 						<div class="aside-content">
 							<?php include( locate_template( '/template-parts/modules/agenda-mini.php', false, false ) ); ?>
-							<?php //get_template_part( '/template-parts/publicites/publicite', 'ilot' ); ?>
 							
 						</div><!-- .aside-content -->
 						
